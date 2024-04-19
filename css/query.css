@@ -18,7 +18,7 @@
 }
 
 /* 只針對手機 */
-@media only screen and (max-device-width: 768px) {
+@media (max-width: 768px) {
   .cube-div img:hover {
     scale: 1;
   }
@@ -63,7 +63,7 @@
 }
 
 /* 只針對平板 */
-@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+@media (max-width: 1024px) {
   .cube-div img:hover {
     scale: 1;
   }
