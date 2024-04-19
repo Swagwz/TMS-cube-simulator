@@ -780,6 +780,7 @@ const renderTotalCost = function () {
   btnSoul,
   btnReturn,
   btnHexa,
+  btnHexaAgain,
   btnCombine,
   btnEqal,
   btnReflect,
@@ -788,6 +789,7 @@ const renderTotalCost = function () {
   btnAdditional,
   btnWhiteAdditional,
   btnAbs,
+  btnShine
 ].forEach((btn) =>
   btn.addEventListener("click", function () {
     renderTotalCost();
