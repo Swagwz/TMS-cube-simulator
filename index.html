@@ -1,118 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.2907fa2e.css" />
-    <link rel="stylesheet" href="index.c381577a.css" />
-    <script defer src="index.f5d9e900.js" type="module"></script>
+    <meta charset="UTF-8" />
+    <meta
+      name="desciption"
+      content="楓之谷方塊模擬器，模擬洗方塊的過程，裝備跳框、洗潛能、洗武公寶珠，全部TMS的方塊都有模擬，來試試裝備有多花錢吧 "
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <script defer src="js/controller.js" type="module"></script>
     <title>楓之谷 方塊模擬器</title>
-    <link rel="icon" type="image/x-icon" href="名匠方塊.807a8f63.png" />
+    <link rel="icon" type="image/x-icon" href="img/名匠方塊.png" />
   </head>
   <body>
     <main class="container">
       <section class="section-cube">
         <div class="cube-div">
-          <img class="img-soul" src="武公寶珠.0d3579d9.png" alt="武公寶珠" />
+          <img class="img-soul" src="img/武公寶珠.png" alt="武公寶珠" />
           <div class="count-num counter-soul">0</div>
         </div>
+
         <div class="cube-div">
-          <img src="固定潛能.ce4e6c99.png" alt="固定潛能" />
+          <img src="img/固定潛能.png" alt="固定潛能" />
           <div class="count-num counter-fixed">0</div>
         </div>
+
         <div class="cube-div">
-          <img
-            class="img-return"
-            src="恢復方塊.d0e75e73.png"
-            alt="恢復方塊"
-          />
+          <img class="img-return" src="img/恢復方塊.png" alt="恢復方塊" />
           <div class="count-num counter-return">0</div>
         </div>
+
         <div class="cube-div">
-          <img class="img-hexa" src="閃炫方塊.7b8a72be.png" alt="閃炫方塊" />
+          <img class="img-hexa" src="img/閃炫方塊.png" alt="閃炫方塊" />
           <div class="count-num counter-hexa">0</div>
         </div>
+
         <div class="cube-div">
-          <img
-            class="img-combine"
-            src="結合方塊.72f06ba7.png"
-            alt="結合方塊"
-          />
+          <img class="img-combine" src="img/結合方塊.png" alt="結合方塊" />
           <div class="count-num counter-combine">0</div>
         </div>
+
         <div class="cube-div">
-          <img
-            class="img-eqal"
-            src="新對等方塊.30e7a830.png"
-            alt="新對等方塊"
-          />
+          <img class="img-eqal" src="img/新對等方塊.png" alt="新對等方塊" />
           <div class="count-num counter-eqal">0</div>
         </div>
+
         <div class="cube-div">
           <img
             class="img-reflect"
-            src="閃耀鏡射方塊.90331c70.png"
+            src="img/閃耀鏡射方塊.png"
             alt="閃耀鏡射方塊"
           />
           <div class="count-num counter-reflect">0</div>
         </div>
+
         <div class="cube-div">
-          <img
-            class="img-artisan"
-            src="工匠方塊.b1958ef2.png"
-            alt="工匠方塊"
-          />
+          <img class="img-artisan" src="img/工匠方塊.png" alt="工匠方塊" />
           <div class="count-num counter-artisan">0</div>
         </div>
+
         <div class="cube-div">
-          <img
-            class="img-master"
-            src="名匠方塊.807a8f63.png"
-            alt="名匠方塊"
-          />
+          <img class="img-master" src="img/名匠方塊.png" alt="名匠方塊" />
           <div class="count-num counter-master">0</div>
         </div>
+
         <div class="cube-div">
           <img
             class="img-additional"
-            src="珍貴附加方塊.54a8e102.png"
+            src="img/珍貴附加方塊.png"
             alt="珍貴附加方塊"
           />
           <div class="count-num counter-additional">0</div>
         </div>
+
         <div class="cube-div">
           <img
             class="img-white-additional"
-            src="恢復附加方塊.cf029c47.png"
+            src="img/恢復附加方塊.png"
             alt="恢復附加方塊"
           />
           <div class="count-num counter-white-additional">0</div>
         </div>
+
         <div class="cube-div">
-          <img
-            class="img-abs"
-            src="絕對附加方塊.0ac3520f.png"
-            alt="絕對附加方塊"
-          />
+          <img class="img-abs" src="img/絕對附加方塊.png" alt="絕對附加方塊" />
           <div class="count-num counter-abs">0</div>
         </div>
+
         <div class="cube-div">
           <img
             class="img-shine"
-            src="閃亮附加方塊.fabd00a8.png"
+            src="img/閃亮附加方塊.png"
             alt="閃亮附加方塊"
           />
           <div class="count-num counter-shine">0</div>
         </div>
       </section>
+
       <section class="section-play">
-        <div class="display-none play play-soul">
-          <h3>武公寶珠</h3>
-          <div class="pot-div result"></div>
+        <!-- 武公寶珠 -->
+        <div class="play play-soul display-none">
+          <div>
+            <h3>武公寶珠</h3>
+            <div class="price-input">
+              <span>$</span>
+              <input
+                type="text"
+                inputmode="numeric"
+                id="soul-price"
+                value="4500"
+              />
+            </div>
+          </div>
+          <div class="result pot-div"></div>
           <button class="btn-soul">使用</button>
         </div>
-        <div class="display-none play play-return">
-          <h3>閃耀方塊</h3>
+
+        <!-- 恢復方塊 -->
+        <div class="play play-return display-none">
+          <h3>恢復方塊</h3>
           <h4>before</h4>
           <div class="part-before pot-div">
             <h4 class="before-pot-lv"></h4>
@@ -129,7 +135,9 @@
           </div>
           <button class="btn-return">使用</button>
         </div>
-        <div class="display-none play play-hexa">
+
+        <!-- 閃炫方塊 -->
+        <div class="play play-hexa display-none">
           <h3>閃炫方塊</h3>
           <div class="part-hexa pot-div">
             <h4 class="pot-lv"></h4>
@@ -142,10 +150,13 @@
           </div>
           <div class="btn-div">
             <button class="btn-hexa">使用</button>
+            <button class="btn-hexa-again display-none">再一次</button>
             <button class="btn-hexa-comfirm">確認</button>
           </div>
         </div>
-        <div class="display-none play play-combine">
+
+        <!-- 結合方塊 -->
+        <div class="play play-combine display-none">
           <h3>結合方塊</h3>
           <div class="part-combine pot-div">
             <h4 class="pot-lv"></h4>
@@ -158,7 +169,9 @@
             <button class="btn-combine-start">進行</button>
           </div>
         </div>
-        <div class="display-none play play-eqal">
+
+        <!-- 新對等方塊 -->
+        <div class="play play-eqal display-none">
           <h3>新對等方塊</h3>
           <div class="part-eqal pot-div">
             <h4 class="pot-lv"></h4>
@@ -168,7 +181,9 @@
           </div>
           <button class="btn-eqal">使用</button>
         </div>
-        <div class="display-none play play-reflect">
+
+        <!-- 閃耀鏡射方塊 -->
+        <div class="play play-reflect display-none">
           <h3>閃耀鏡射方塊</h3>
           <div class="part-reflect pot-div">
             <h4 class="pot-lv"></h4>
@@ -178,7 +193,9 @@
           </div>
           <button class="btn-reflect">使用</button>
         </div>
-        <div class="display-none play play-artisan">
+
+        <!-- 工匠方塊 -->
+        <div class="play play-artisan display-none">
           <h3>工匠方塊</h3>
           <div class="part-artisan pot-div">
             <h4 class="pot-lv"></h4>
@@ -188,7 +205,9 @@
           </div>
           <button class="btn-artisan">使用</button>
         </div>
-        <div class="display-none play play-master">
+
+        <!-- 名匠方塊 -->
+        <div class="play play-master display-none">
           <h3>名匠方塊</h3>
           <div class="part-master pot-div">
             <h4 class="pot-lv"></h4>
@@ -198,7 +217,9 @@
           </div>
           <button class="btn-master">使用</button>
         </div>
-        <div class="display-none play play-addit">
+
+        <!-- 珍貴附加方塊 -->
+        <div class="play play-addit display-none">
           <h3>珍貴附加方塊</h3>
           <div class="part-addit pot-div">
             <h4 class="pot-lv"></h4>
@@ -208,7 +229,9 @@
           </div>
           <button class="btn-additional">使用</button>
         </div>
-        <div class="display-none play play-white-additional">
+
+        <!-- 恢復附加方塊 -->
+        <div class="play play-white-additional display-none">
           <h3>恢復附加方塊</h3>
           <h4>before</h4>
           <div class="part-before pot-div">
@@ -226,7 +249,9 @@
           </div>
           <button class="btn-white-additional">使用</button>
         </div>
-        <div class="display-none play play-abs">
+
+        <!-- 絕對附加方塊 -->
+        <div class="play play-abs display-none">
           <h3>絕對附加方塊</h3>
           <div class="part-abs pot-div">
             <h4 class="pot-lv"></h4>
@@ -236,7 +261,9 @@
           </div>
           <button class="btn-abs">使用</button>
         </div>
-        <div class="display-none play play-shine">
+
+        <!-- 閃亮附加方塊 -->
+        <div class="play play-shine display-none">
           <h3>閃亮附加方塊</h3>
           <div class="shine-lv-up">
             <h4>等級上升機率:</h4>
@@ -251,14 +278,31 @@
           <button class="btn-shine">使用</button>
         </div>
       </section>
+
       <section class="section-display">
         <div class="display-option">
           <label for="item-select">選擇裝備</label>
-          <select id="item-select">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="btn-set"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+            />
+          </svg>
+
+          <select name="" id="item-select">
             <option value="weapon">武器</option>
             <option value="second-weapon">副武器</option>
             <option value="shield">盾牌</option>
             <option value="badge">能源</option>
+
             <option value="heart">心臟</option>
             <option value="hat">帽子</option>
             <option value="top">上衣</option>
@@ -268,6 +312,7 @@
             <option value="gloves">手套</option>
             <option value="shoulder">肩膀</option>
             <option value="cloak">披風</option>
+
             <option value="ring">戒指</option>
             <option value="necklace">項鍊</option>
             <option value="belt">腰帶</option>
@@ -276,6 +321,7 @@
             <option value="eyes">眼飾</option>
           </select>
         </div>
+
         <div class="main-potential">
           <div class="display-option">
             <label for="pot-select">潛在屬性</label>
@@ -283,20 +329,26 @@
               <option value="1">特殊</option>
               <option value="2">稀有</option>
               <option value="3">罕見</option>
-              <option value="4" selected>傳說</option>
+              <option value="4" selected="selected">傳說</option>
             </select>
           </div>
+
           <div class="result">
+            <select class="setting main-set-first display-none"></select>
+            <select class="setting main-set-second display-none"></select>
+            <select class="setting main-set-third display-none"></select>
             <p class="main-first"></p>
             <p class="main-second"></p>
             <p class="main-third"></p>
           </div>
         </div>
-        <div class="display-none soul">
+
+        <div class="soul display-none">
           <p>靈魂球: 0/1000 (攻擊力 +0, 魔力: +0)</p>
           <div class="result"></div>
           <p>技能名: 無雙之力</p>
         </div>
+
         <div class="additional-potential">
           <div class="display-option">
             <label for="sec-pot-select">附加潛在屬性</label>
@@ -304,16 +356,37 @@
               <option value="1">特殊</option>
               <option value="2">稀有</option>
               <option value="3">罕見</option>
-              <option value="4" selected>傳說</option>
+              <option value="4" selected="selected">傳說</option>
             </select>
           </div>
           <div class="result">
+            <select class="setting additional-set-first display-none"></select>
+            <select class="setting additional-set-second display-none"></select>
+            <select class="setting additional-set-third display-none"></select>
             <p class="additional-first"></p>
             <p class="additional-second"></p>
             <p class="additional-third"></p>
           </div>
         </div>
-        <button class="btn-init">初始化</button>
+        <div class="display-end">
+          <button class="btn-init">初始化</button>
+          <button class="btn-set-comfirm display-none">確認潛能</button>
+          <div>
+            <div class="display-end-input">
+              <input
+                type="number"
+                inputmode="numeric"
+                value="10"
+                id="discount"
+              />
+              <p>% off</p>
+            </div>
+            <div class="display-end-text">
+              <p class="total-cost">總花費:</p>
+              <p class="total-cost-num"></p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>

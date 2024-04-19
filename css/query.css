@@ -1,0 +1,108 @@
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .section-display {
+    width: 50%;
+    justify-items: center;
+    width: 38rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* 只針對手機 */
+@media only screen and (max-device-width: 768px) {
+  .cube-div img:hover {
+    scale: 1;
+  }
+
+  .play button:hover {
+    background-color: #f2613f;
+    box-shadow: 0px 0px 1px 1px hsla(0, 0%, 0%, 0.3);
+  }
+
+  .play button:active {
+    background-color: #f2613f;
+    box-shadow: 0px 0px 1px 1px hsla(0, 0%, 0%, 0.3);
+  }
+
+  .part-before:hover,
+  .part-after:hover {
+    cursor: pointer;
+    background-color: #feefec;
+    box-shadow: 0px 1px 3px 3px hsla (0, 0%, 0%, 0.3);
+  }
+
+  .play-return .part-before p:hover {
+    background-color: #feefec;
+  }
+
+  .play-return .part-before p:active {
+    background-color: #cbbfbd;
+  }
+
+  .fixed-pot {
+    background-color: #cbbfbd !important;
+  }
+
+  .btn-init:hover {
+    background-color: #f2613f;
+    box-shadow: 0px 0px 1px 1px hsla(0, 0%, 0%, 0.3);
+  }
+
+  svg:hover {
+    color: #ddd;
+  }
+}
+
+/* 只針對平板 */
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+  .cube-div img:hover {
+    scale: 1;
+  }
+
+  .play button:hover {
+    background-color: #f2613f;
+    box-shadow: 0px 0px 1px 1px hsla(0, 0%, 0%, 0.3);
+  }
+
+  .play button:active {
+    background-color: #f2613f;
+    box-shadow: 0px 0px 1px 1px hsla(0, 0%, 0%, 0.3);
+  }
+
+  .part-before:hover,
+  .part-after:hover {
+    cursor: pointer;
+    background-color: #feefec;
+    box-shadow: 0px 1px 3px 3px hsla (0, 0%, 0%, 0.3);
+  }
+
+  .play-return .part-before p:hover {
+    background-color: #feefec;
+  }
+
+  .play-return .part-before p:active {
+    background-color: #cbbfbd;
+  }
+
+  .fixed-pot {
+    background-color: #cbbfbd !important;
+  }
+
+  .btn-init:hover {
+    background-color: #f2613f;
+    box-shadow: 0px 0px 1px 1px hsla(0, 0%, 0%, 0.3);
+  }
+
+  svg:hover {
+    color: #ddd;
+  }
+}
