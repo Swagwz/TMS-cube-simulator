@@ -767,7 +767,7 @@ const calcTotalCost = function () {
         abs * 100 +
         shine * 60);
 
-  return totalCost;
+  return totalCost.toFixed(0);
 };
 
 const renderTotalCost = function () {
