@@ -50,3 +50,5 @@
 只能用於附加傳說等級的裝備，第一、二排必定傳說，第三排必定罕見
 14. 閃亮附加方塊<br>
 每洗一次如果沒跳框，跳框機率上升
+
+機率依照[遊戲橘子](https://maplestory-event.beanfun.com/eventad/eventad?eventadid=8421)提供
