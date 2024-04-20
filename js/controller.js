@@ -172,6 +172,16 @@ function initSelectBtn() {
   document.querySelector(".btn-set-comfirm").classList.add("display-none");
 }
 
+// 顯示section-display的潛能
+function displayResult() {
+  document.querySelector(".main-first").classList.remove("display-none");
+  document.querySelector(".main-second").classList.remove("display-none");
+  document.querySelector(".main-third").classList.remove("display-none");
+  document.querySelector(".additional-first").classList.remove("display-none");
+  document.querySelector(".additional-second").classList.remove("display-none");
+  document.querySelector(".additional-third").classList.remove("display-none");
+}
+
 ////////////////////////////////////////////////////
 // 初始化
 const allInit = function () {
@@ -239,6 +249,9 @@ const init = function () {
 
   // 清空select option
   clearSelectOption();
+
+  // 顯示section-display的潛能
+  displayResult()
 };
 
 ////////////////////////////////////////////////////
