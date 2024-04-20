@@ -301,9 +301,13 @@ input[type="number"]::-webkit-outer-spin-button {
   gap: 0.5rem;
 }
 
-.result .setting {
+.result {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
+.result .setting {
   font-size: 1.4rem;
   background-color: #555;
   color: #ddd;
