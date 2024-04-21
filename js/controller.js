@@ -13,6 +13,7 @@ import * as additionalModel from "./model/additionalModel.js";
 import * as whiteAdditionalModel from "./model/whiteadditionalModel.js";
 import * as absModel from "./model/absModel.js";
 import * as shineModel from "./model/shineModel.js";
+import * as monsterModel from "./model/monsterModel.js";
 import * as setModel from "./model/setModel.js";
 import * as additSetModel from "./model/additSetModel.js";
 
@@ -32,6 +33,8 @@ const btnAdditional = document.querySelector(".btn-additional");
 const btnWhiteAdditional = document.querySelector(".btn-white-additional");
 const btnAbs = document.querySelector(".btn-abs");
 const btnShine = document.querySelector(".btn-shine");
+const btnMonsterSingle = document.querySelector(".btn-monster-single");
+const btnMonsterDouble = document.querySelector(".btn-monster-double");
 const btnInit = document.querySelector(".btn-init");
 const selectItem = document.querySelector("#item-select");
 const btnSet = document.querySelector(".btn-set");
@@ -50,6 +53,7 @@ const imgAdditional = document.querySelector(".img-additional");
 const imgWhiteAdditional = document.querySelector(".img-white-additional");
 const imgAbs = document.querySelector(".img-abs");
 const imgShine = document.querySelector(".img-shine");
+const imgMonster = document.querySelector(".img-monster");
 
 // cube div selector
 const returnAfter = document.querySelector(".play-return .part-after");
@@ -111,6 +115,13 @@ function clearAdditSelectOption() {
 function clearSelectOption() {
   clearMainSelectOption();
   clearAdditSelectOption();
+}
+
+// 清空萌獸方塊潛能
+function clearMonster() {
+  document.querySelector(".monster-first").textContent = "";
+  document.querySelector(".monster-second").textContent = "";
+  document.querySelector(".monster-third").textContent = "";
 }
 
 // 隱藏sectioni-display的武公
@@ -181,7 +192,6 @@ function displayResult() {
   document.querySelector(".additional-second").classList.remove("display-none");
   document.querySelector(".additional-third").classList.remove("display-none");
 }
-
 ////////////////////////////////////////////////////
 // 初始化
 const allInit = function () {
@@ -199,6 +209,9 @@ const allInit = function () {
 
   // 清空閃炫方塊潛能
   clearHexaResult();
+
+  // 清空萌獸方塊潛能
+  clearMonster();
 
   // 隱藏sectioni-display的武公
   hideSoul();
@@ -250,8 +263,8 @@ const init = function () {
   // 清空select option
   clearSelectOption();
 
-  // 顯示section-display的潛能
-  displayResult()
+  // 顯示section result的潛能
+  displayResult();
 };
 
 ////////////////////////////////////////////////////
@@ -746,6 +759,35 @@ document
   .addEventListener("change", updateShineLvProb);
 
 ////////////////////////////////////////////////////
+// 萌獸方塊
+
+imgMonster.addEventListener("click", function () {
+  init();
+  // 顯示section-play
+  document.querySelector(".play-monster").classList.remove("display-none");
+});
+
+// 單終以上
+btnMonsterSingle.addEventListener("click", function () {
+  init();
+  // 顯示section-play
+  document.querySelector(".play-monster").classList.remove("display-none");
+
+  // 洗潛能
+  monsterModel.renderMonsterSingle(monsterModel.monsterProb);
+});
+
+// 雙終以上
+btnMonsterDouble.addEventListener("click", function () {
+  init();
+  // 顯示section-play
+  document.querySelector(".play-monster").classList.remove("display-none");
+
+  // 洗潛能
+  monsterModel.renderMonsterDouble(monsterModel.monsterProb);
+});
+
+////////////////////////////////////////////////////
 // 計算花費
 const calcTotalCost = function () {
   const soul = document.querySelector(".counter-soul").textContent;
@@ -762,6 +804,7 @@ const calcTotalCost = function () {
   ).textContent;
   const abs = document.querySelector(".counter-abs").textContent;
   const shine = document.querySelector(".counter-shine").textContent;
+  const monster = document.querySelector(".counter-monster").textContent;
   const discount = document.querySelector("#discount").value;
 
   if (discount > 100 || discount < 0) return "折扣超出範圍";
@@ -778,9 +821,10 @@ const calcTotalCost = function () {
         addit * 70 +
         whiteAddit * 75 +
         abs * 100 +
-        shine * 60);
+        shine * 60 +
+        monster * 30);
 
-  return Math.round(totalCost);
+  return totalCost.toFixed(0);
 };
 
 const renderTotalCost = function () {
@@ -802,7 +846,9 @@ const renderTotalCost = function () {
   btnAdditional,
   btnWhiteAdditional,
   btnAbs,
-  btnShine
+  btnShine,
+  btnMonsterSingle,
+  btnMonsterDouble,
 ].forEach((btn) =>
   btn.addEventListener("click", function () {
     renderTotalCost();
