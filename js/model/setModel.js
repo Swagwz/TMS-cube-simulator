@@ -1429,7 +1429,7 @@ function sortByNumber(a, b) {
 }
 
 function renderMarkup(pot) {
-  return `<option>${pot}</option>`;
+  return `<option value="${pot}">${pot}</option>`;
 }
 
 export const renderOption = function (arrProb) {
@@ -1466,4 +1466,11 @@ export const renderOption = function (arrProb) {
       .querySelector(".main-set-third")
       .insertAdjacentHTML("afterbegin", renderMarkup(sortedPot[index]))
   );
+
+   document.querySelector(".main-set-first").value =
+    document.querySelector(".main-first").textContent;
+  document.querySelector(".main-set-second").value =
+    document.querySelector(".main-second").textContent;
+  document.querySelector(".main-set-third").value =
+    document.querySelector(".main-third").textContent;
 };
