@@ -49,30 +49,14 @@ const checkPot1 = function (playPotArr) {
 const checkPot2 = function (playPotArr) {
   const count = {};
   playPotArr.forEach((pot) => {
-    if (pot.includes("無視怪物防禦率")) {
-      count["penetration"] = (count["penetration"] || 0) + 1;
-    }
     if (pot.includes("機率無視")) {
       count["ignore"] = (count["ignore"] || 0) + 1;
     }
     if (pot.includes("內無敵")) {
       count["invisibleTime"] = (count["invisibleTime"] || 0) + 1;
     }
-    if (pot.includes("BOSS怪物")) {
-      count["bossing"] = (count["bossing"] || 0) + 1;
-    }
-    if (pot.includes("道具掉落率")) {
-      count["drop"] = (count["drop"] || 0) + 1;
-    }
   });
-  if (
-    count.penetration >= 3 ||
-    count.ignore >= 3 ||
-    count.invisibleTime >= 3 ||
-    count.bossing >= 3 ||
-    count.drop >= 3
-  )
-    return false;
+  if (count.ignore >= 3 || count.invisibleTime >= 3) return false;
   else return true;
 };
 /////////////////////////////////////////////////////////
@@ -464,10 +448,10 @@ export const renderAbsResult = function (arrProb) {
   playPotArr.push(renderProbResult(selectLower.prob));
 
   // 確認潛能 2024/6/26不再限定潛能
-  // if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-  //   renderadditionalResult(additionalProb);
-  //   return;
-  // }
+  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
+    renderadditionalResult(additionalProb);
+    return;
+  }
 
   document.querySelector(".part-abs .pot-lv").textContent =
     potToText(potSelect);
