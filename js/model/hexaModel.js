@@ -982,11 +982,12 @@ export const renderHexaResult = function (arrProb) {
       playPotArr.push(renderProbResult(selectLower.prob));
     }
   }
-  // 確認潛能
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderHexaResult(hexaProb);
-    return;
-  }
+  // 確認潛能 2024/6/26不再限定潛能
+  // if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
+  //   renderHexaResult(hexaProb);
+  //   return;
+  // }
+
   document.querySelector(".play-hexa .hexa-first").textContent = playPotArr[0];
   document.querySelector(".play-hexa .hexa-second").textContent = playPotArr[1];
   document.querySelector(".play-hexa .hexa-third").textContent = playPotArr[2];

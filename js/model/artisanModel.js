@@ -776,11 +776,11 @@ export const renderArtisanResult = function (arrProb) {
     return;
   }
 
-  // 確認潛能
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderArtisanResult(artisanProb);
-    return;
-  }
+  // 確認潛能 2024/6/26不再限定潛能
+  // if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
+  //   renderArtisanResult(artisanProb);
+  //   return;
+  // }
 
   document.querySelector(".part-artisan .pot-lv").textContent =
     potToText(potSelect);

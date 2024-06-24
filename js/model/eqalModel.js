@@ -770,15 +770,15 @@ export const renderEqalResult = function (arrProb) {
     (el) => el.item.find((item) => item === itemSelect) && el.lv === potSelect
   );
 
-  // 確認潛能
+  // 確認潛能 2024/6/26不再限定潛能
   playPotArr[0] = renderProbResult(select.prob);
   playPotArr[1] = renderProbResult(select.prob);
   playPotArr[2] = renderProbResult(select.prob);
 
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderEqalResult(eqalProb);
-    return;
-  }
+  // if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
+  //   renderEqalResult(eqalProb);
+  //   return;
+  // }
 
   document.querySelector(".part-eqal .pot-lv").textContent =
     potToText(potSelect);

@@ -897,10 +897,12 @@ export const renderCombineResult = function (arrProb) {
   };
 
   playPotArr[checkFixedIndex()] = document.querySelector(".chosen").textContent;
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderCombineResult(combineProb);
-    return;
-  }
+
+  // 確認潛能 2024/6/26不再限定潛能
+  // if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
+  //   renderCombineResult(combineProb);
+  //   return;
+  // }
 
   document.querySelector(".part-combine .pot-lv").textContent =
     potToText(potSelect);

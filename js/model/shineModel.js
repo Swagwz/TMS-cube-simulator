@@ -849,11 +849,11 @@ export const renderShineResult = function (arrProb) {
     }
   }
 
-  // 確認潛能
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderShineResult(shineProb);
-    return;
-  }
+  // 確認潛能 2024/6/26不再限定潛能
+  // if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
+  //   renderShineResult(shineProb);
+  //   return;
+  // }
 
   document.querySelector(".part-shine .pot-lv").textContent =
     potToText(potSelect);

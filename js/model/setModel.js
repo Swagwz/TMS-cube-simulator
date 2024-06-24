@@ -1467,7 +1467,7 @@ export const renderOption = function (arrProb) {
       .insertAdjacentHTML("afterbegin", renderMarkup(sortedPot[index]))
   );
 
-   document.querySelector(".main-set-first").value =
+  document.querySelector(".main-set-first").value =
     document.querySelector(".main-first").textContent;
   document.querySelector(".main-set-second").value =
     document.querySelector(".main-second").textContent;
