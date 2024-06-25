@@ -56,8 +56,24 @@ const checkPot2 = function (playPotArr) {
     if (pot.includes("內無敵")) {
       count["invisibleTime"] = (count["invisibleTime"] || 0) + 1;
     }
+    if (pot.includes("BOSS")) {
+      count["boss"] = (count["boss"] || 0) + 1;
+    }
+    if (pot.includes("無視怪物")) {
+      count["penetrate"] = (count["penetrate"] || 0) + 1;
+    }
+    if (pot.includes("道具掉落")) {
+      count["drop"] = (count["drop"] || 0) + 1;
+    }
   });
-  if (count.ignore >= 3 || count.invisibleTime >= 3) return false;
+  if (
+    count.ignore >= 3 ||
+    count.invisibleTime >= 3 ||
+    count.boss > 3 ||
+    count.penetrate > 3 ||
+    count.drop > 3
+  )
+    return false;
   else return true;
 };
 /////////////////////////////////////////////////////////
