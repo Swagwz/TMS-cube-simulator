@@ -28,7 +28,7 @@ body {
   row-gap: 2rem;
   justify-content: center;
 
-  max-width: 90rem;
+  max-width: 92rem;
   margin: 0 auto;
   align-self: center;
 }
@@ -38,14 +38,18 @@ label {
   font-weight: 600;
 }
 
-svg {
-  width: 2.5rem;
-  margin-left: -12rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 
-svg:hover {
-  cursor: pointer;
-  color: #cbbfbd;
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /* ///////////////////////////////////////// */
 /* REUSABLE */
@@ -216,6 +220,15 @@ svg:hover {
 /* ///////////////////////////////////////// */
 /* SECTION -- DISPLAY */
 /* ///////////////////////////////////////// */
+svg {
+  width: 2.5rem;
+}
+
+svg:hover {
+  cursor: pointer;
+  color: #cbbfbd;
+}
+
 .section-display {
   height: max-content;
   display: flex;
@@ -233,6 +246,40 @@ svg:hover {
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
+}
+
+.display-option .form-check {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.display-option .form-check::after {
+  position: absolute;
+  content: "加倍";
+  top: -1.5rem;
+  left: 1rem;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.form-check-input:checked {
+  background-color: #f2613f;
+  border-color: #f2613f;
+}
+
+.form-check-input:focus {
+  border-color: #f2613f;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #f2603f32;
+}
+
+.form-switch .form-check-input:focus {
+  --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'-4%20-4%208%208'%3E%3Ccircle%20r%3D'3'%20fill%3D'%23f2613f'%2F%3E%3C%2Fsvg%3E");
+}
+
+.form-switch .form-check-input:checked {
+  --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'-4%20-4%208%208'%3E%3Ccircle%20r%3D'3'%20fill%3D'%23fff'%2F%3E%3C%2Fsvg%3E");
 }
 
 .section-display select {
