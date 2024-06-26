@@ -740,12 +740,37 @@ const eqalLevelUp = function () {
   }
 };
 
+const doubleLevelUp = function () {
+  let potSelect = document.querySelector("#pot-select").value;
+
+  if (Number(potSelect) === 1) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [0, 1],
+      [100, 2],
+    ]);
+  } else if (Number(potSelect) === 2) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [94, 2],
+      [6, 3],
+    ]);
+  } else if (Number(potSelect) === 3) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [97.3, 3],
+      [2.7, 4],
+    ]);
+  }
+};
+
 // 點新對等
 export const renderEqalResult = function (arrProb) {
   // 暫時存放確認用的潛能
   const playPotArr = [];
   // 先看有沒有跳框
-  eqalLevelUp();
+  if (document.getElementById("double").checked) {
+    doubleLevelUp();
+  } else {
+    eqalLevelUp();
+  }
 
   const itemSelect = document.querySelector("#item-select").value;
   const potSelect = Number(document.querySelector("#pot-select").value);

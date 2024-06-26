@@ -760,12 +760,48 @@ const returnLevelUp = function () {
   }
 };
 
+const doubleLevelUp = function () {
+  let potSelect = document.querySelector("#pot-select").value;
+
+  if (Number(potSelect) === 1) {
+    potentialLV[0] = potToText(
+      renderProbResult([
+        [0, 1],
+        [97.7, 2],
+        [2, 3],
+        [0.3, 4],
+      ])
+    );
+  } else if (Number(potSelect) === 2) {
+    potentialLV[0] = potToText(
+      renderProbResult([
+        [82.8, 2],
+        [16, 3],
+        [1.2, 4],
+      ])
+    );
+  } else if (Number(potSelect) === 3) {
+    potentialLV[0] = potToText(
+      renderProbResult([
+        [95.8, 3],
+        [4.2, 4],
+      ])
+    );
+  } else if (Number(potSelect) === 4) {
+    potentialLV[0] = potToText(renderProbResult([[100, 4]]));
+  }
+};
+
 // 點閃耀
 export const renderReturnResult = function (arrProb) {
   // 暫時存放確認用的潛能
   const playPotArr = [];
   // 先看有沒有跳框
-  returnLevelUp();
+  if (document.getElementById("double").checked) {
+    doubleLevelUp();
+  } else {
+    returnLevelUp();
+  }
 
   const itemSelect = document.querySelector("#item-select").value;
   const potSelect = TextToPot(potentialLV[0]);

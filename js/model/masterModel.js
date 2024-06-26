@@ -887,12 +887,37 @@ const masterLevelUp = function () {
   }
 };
 
+const doubleLevelUp = function () {
+  let potSelect = document.querySelector("#pot-select").value;
+
+  if (Number(potSelect) === 1) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [84, 1],
+      [16, 2],
+    ]);
+  } else if (Number(potSelect) === 2) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [96.6, 2],
+      [3.4, 3],
+    ]);
+  } else if (Number(potSelect) === 3) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [99.6, 3],
+      [0.4, 4],
+    ]);
+  }
+};
+
 // 點名匠
 export const renderMasterResult = function (arrProb) {
   // 暫時存放確認用的潛能
   const playPotArr = [];
   // 先看有沒有跳框
-  masterLevelUp();
+  if (document.getElementById("double").checked) {
+    doubleLevelUp();
+  } else {
+    masterLevelUp();
+  }
 
   const itemSelect = document.querySelector("#item-select").value;
   const potSelect = Number(document.querySelector("#pot-select").value);

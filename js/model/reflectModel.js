@@ -704,7 +704,7 @@ const reflectLevelUp = function () {
   if (Number(potSelect) === 1) {
     document.querySelector("#pot-select").value = renderProbResult([
       [3, 1],
-      [97.7, 2],
+      [97, 2],
     ]);
   } else if (Number(potSelect) === 2) {
     document.querySelector("#pot-select").value = renderProbResult([
@@ -719,12 +719,37 @@ const reflectLevelUp = function () {
   }
 };
 
+const doubleLevelUp = function () {
+  let potSelect = document.querySelector("#pot-select").value;
+
+  if (Number(potSelect) === 1) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [0, 1],
+      [100, 2],
+    ]);
+  } else if (Number(potSelect) === 2) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [95.5, 2],
+      [4.5, 3],
+    ]);
+  } else if (Number(potSelect) === 3) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [98.02, 3],
+      [1.98, 4],
+    ]);
+  }
+};
+
 // 點閃耀鏡射
 export const renderReflectResult = function (arrProb) {
   // 暫時存放確認用的潛能
   const playPotArr = [];
   // 先看有沒有跳框
-  reflectLevelUp();
+  if (document.getElementById("double").checked) {
+    doubleLevelUp();
+  } else {
+    reflectLevelUp();
+  }
 
   const itemSelect = document.querySelector("#item-select").value;
   const potSelect = Number(document.querySelector("#pot-select").value);

@@ -667,12 +667,32 @@ const artisanLevelUp = function () {
   }
 };
 
+const doubleLevelUp = function () {
+  let potSelect = document.querySelector("#pot-select").value;
+
+  if (Number(potSelect) === 1) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [90.48, 1],
+      [9.52, 2],
+    ]);
+  } else if (Number(potSelect) === 2) {
+    document.querySelector("#pot-select").value = renderProbResult([
+      [97.62, 2],
+      [2.38, 3],
+    ]);
+  }
+};
+
 // 點工匠
 export const renderArtisanResult = function (arrProb) {
   // 暫時存放確認用的潛能
   const playPotArr = [];
   // 先看有沒有跳框
-  artisanLevelUp();
+  if (document.getElementById("double").checked) {
+    doubleLevelUp();
+  } else {
+    artisanLevelUp();
+  }
 
   const itemSelect = document.querySelector("#item-select").value;
   const potSelect = Number(document.querySelector("#pot-select").value);

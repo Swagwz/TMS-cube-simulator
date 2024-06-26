@@ -697,12 +697,37 @@ const additionalLevelUp = function () {
   }
 };
 
+const doubleLevelUp = function () {
+  let secpotSelect = document.querySelector("#sec-pot-select").value;
+
+  if (Number(secpotSelect) === 1) {
+    document.querySelector("#sec-pot-select").value = renderProbResult([
+      [90.48, 1],
+      [9.52, 2],
+    ]);
+  } else if (Number(secpotSelect) === 2) {
+    document.querySelector("#sec-pot-select").value = renderProbResult([
+      [96.08, 2],
+      [3.92, 3],
+    ]);
+  } else if (Number(secpotSelect) === 3) {
+    document.querySelector("#sec-pot-select").value = renderProbResult([
+      [99, 3],
+      [1, 4],
+    ]);
+  }
+};
+
 // 點附加
 export const renderadditionalResult = function (arrProb) {
   // 暫時存放確認用的潛能
   const playPotArr = [];
   // 先看有沒有跳框
-  additionalLevelUp();
+  if (document.getElementById("double").checked) {
+    doubleLevelUp();
+  } else {
+    additionalLevelUp();
+  }
 
   const itemSelect = document.querySelector("#item-select").value;
   const potSelect = Number(document.querySelector("#sec-pot-select").value);
