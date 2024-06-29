@@ -731,6 +731,8 @@ const doubleLevelUp = function () {
       [99, 3],
       [1, 4],
     ]);
+  } else if (Number(secpotSelect) === 4) {
+    potentialLV[0] = potToText(renderProbResult([[100, 4]]));
   }
 };
 
@@ -757,6 +759,7 @@ export const renderWhiteAdditionalResult = function (arrProb) {
     (el) =>
       el.item.find((item) => item === itemSelect) && el.lv === potSelect - 1
   );
+
   if (
     document.querySelector(".play-white-additional .part-after p")
       .textContent === ""
@@ -852,7 +855,7 @@ export const renderWhiteAdditionalResult = function (arrProb) {
 
     // 確認潛能 2024/6/26不再限定潛能
     if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-      renderReturnResult(returnProb);
+      renderWhiteAdditionalResult(whiteAdditionalProb);
       return;
     }
 

@@ -1051,7 +1051,6 @@ export const selectHexaPot = function (ev) {
     ev.target.classList.remove("chosen");
     OnlyRemove(selectedPot, ev.target);
   }
-  console.log(selectedPot);
 };
 
 export const clearSelectPot = function () {
