@@ -717,20 +717,26 @@ const doubleLevelUp = function () {
   let secpotSelect = document.querySelector("#sec-pot-select").value;
 
   if (Number(secpotSelect) === 1) {
-    document.querySelector("#sec-pot-select").value = renderProbResult([
-      [90.48, 1],
-      [9.52, 2],
-    ]);
+    potentialLV[0] = potToText(
+      renderProbResult([
+        [90.48, 1],
+        [9.52, 2],
+      ])
+    );
   } else if (Number(secpotSelect) === 2) {
-    document.querySelector("#sec-pot-select").value = renderProbResult([
-      [96.08, 2],
-      [3.92, 3],
-    ]);
+    potentialLV[0] = potToText(
+      renderProbResult([
+        [96.08, 2],
+        [3.92, 3],
+      ])
+    );
   } else if (Number(secpotSelect) === 3) {
-    document.querySelector("#sec-pot-select").value = renderProbResult([
-      [99, 3],
-      [1, 4],
-    ]);
+    potentialLV[0] = potToText(
+      renderProbResult([
+        [99, 3],
+        [1, 4],
+      ])
+    );
   } else if (Number(secpotSelect) === 4) {
     potentialLV[0] = potToText(renderProbResult([[100, 4]]));
   }
