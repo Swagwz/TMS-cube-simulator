@@ -653,7 +653,6 @@ btnWhiteAdditional.addEventListener("click", function () {
     document.querySelector(".additional-second").textContent;
   document.querySelector(".play-white-additional .before-third").textContent =
     document.querySelector(".additional-third").textContent;
-
   // 顯示section-play
   document
     .querySelector(".play-white-additional")
@@ -945,3 +944,140 @@ document
 btnInit.addEventListener("click", allInit);
 
 selectItem.addEventListener("change", allInit);
+
+// bootstrap
+class ScopedBootstrap extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: "open" });
+
+    // 添加 Bootstrap 样式
+    const style = document.createElement("link");
+    style.rel = "stylesheet";
+    style.href =
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+
+    const customStyle = document.createElement("link");
+    customStyle.rel = "stylesheet";
+    customStyle.href = "../css/style.css";
+    // 插入内容
+    const content = document.createElement("div");
+    content.innerHTML = this.innerHTML;
+    shadow.appendChild(style);
+    shadow.appendChild(customStyle);
+    shadow.appendChild(content);
+  }
+}
+
+customElements.define("scoped-bootstrap", ScopedBootstrap);
+
+// section-cube下拉功能
+let btnExpand = document.querySelector(".btn-expand");
+let btnCollapse = document.querySelector(".btn-collapse");
+let sectionCube = document.querySelector(".section-cube");
+
+[btnExpand, btnCollapse].forEach((btn) =>
+  btn.addEventListener("click", (e) => {
+    btnExpand.classList.toggle("display-none");
+    btnCollapse.classList.toggle("display-none");
+
+    if (e.target.classList.contains("btn-expand")) {
+      sectionCube.style.flexWrap = "wrap";
+    } else {
+      sectionCube.style.flexWrap = "";
+    }
+  })
+);
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// 一鍵模擬
+// let secPot = document.querySelector(".master-second");
+// let thrPot = document.querySelector(".master-third");
+
+// function repeat() {
+//   document.querySelector(".btn-master").click();
+
+//   // 使用 setTimeout 进行递归调用
+//   setTimeout(() => {
+//     if (
+//       !secPot.textContent.includes("掉落") &&
+//       !thrPot.textContent.includes("20")
+//     ) {
+//       repeat();
+//     } else return;
+//   }, 0); // 0 毫秒的延迟，确保递归调用不会立即执行，避免填满调用栈
+// }
+
+// 萌獸方塊
+
+// let firPot = document.querySelector(".monster-first");
+// let secPot = document.querySelector(".monster-second");
+// let thrPot = document.querySelector(".monster-third");
+
+// function repeat() {
+//   document.querySelector(".btn-monster-double").click();
+
+//   // 使用 setTimeout 进行递归调用
+//   setTimeout(() => {
+//     if (
+//       !(
+//         firPot.textContent.includes("最終") &&
+//         secPot.textContent.includes("最終") &&
+//         thrPot.textContent.includes("最終")
+//       )
+//     ) {
+//       repeat();
+//     } else return;
+//   }, 0); // 0 毫秒的延迟，确保递归调用不会立即执行，避免填满调用栈
+// }
+
+//閃炫
+// let firstPot = document.querySelector(".hexa-first");
+// let secondPot = document.querySelector(".hexa-second");
+// let thirdPot = document.querySelector(".hexa-third");
+// let fourPot = document.querySelector(".hexa-fourth");
+// let fivePot = document.querySelector(".hexa-fifth");
+// let sixPot = document.querySelector(".hexa-sixth");
+
+// function repeat() {
+//   document.querySelector(".btn-hexa-again").click();
+//   let counter = 0;
+//   if (firstPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
+//   if (secondPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
+//   if (thirdPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
+//   if (fourPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
+//   if (fivePot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
+//   if (sixPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
+
+//   // 使用 setTimeout 进行递归调用
+//   setTimeout(() => {
+//     if (counter < 3) {
+//       repeat();
+//     } else return;
+//   }, 0); // 0 毫秒的延迟，确保递归调用不会立即执行，避免填满调用栈
+// }
+
+// 附加大三物
+// let firstPot = document.querySelector(".addit-first");
+// let secondPot = document.querySelector(".addit-second");
+// let thirdPot = document.querySelector(".addit-third");
+
+// function repeat() {
+//   document.querySelector(".btn-additional").click();
+//   let counter = 0;
+//   if (firstPot.textContent.includes("物理攻擊")) counter++;
+//   if (secondPot.textContent.includes("物理攻擊")) counter++;
+//   if (thirdPot.textContent.includes("物理攻擊")) counter++;
+
+//   // 使用 setTimeout 进行递归调用
+//   setTimeout(() => {
+//     if (counter < 3) {
+//       repeat();
+//     } else return;
+//   }, 0); // 0 毫秒的延迟，确保递归调用不会立即执行，避免填满调用栈
+// }
+// repeat();
