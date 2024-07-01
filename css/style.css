@@ -28,9 +28,11 @@ body {
   row-gap: 2rem;
   justify-content: center;
 
-  max-width: 92rem;
+  max-width: 100rem;
   margin: 0 auto;
   align-self: center;
+
+  position: relative;
 }
 
 label {
@@ -61,17 +63,27 @@ p {
 /* ///////////////////////////////////////// */
 /* SECTION -- CUBE */
 /* ///////////////////////////////////////// */
+.section-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.expand {
+  display: none;
+}
+
 .section-cube {
   grid-column: 1/-1;
   padding: 1.5rem 1.5rem 0 1.5rem;
-  width: 100%;
-  height: max-content;
+  /* width: 100%; */
+  /* height: auto; */
   display: flex;
   overflow-x: auto;
   gap: 3rem;
   justify-self: center;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 }
 
 .section-cube img {
@@ -92,6 +104,7 @@ p {
   font-size: 2rem;
   text-align: center;
 }
+
 /* ///////////////////////////////////////// */
 /* SECTION -- PLAY */
 /* ///////////////////////////////////////// */
@@ -239,6 +252,7 @@ svg:hover {
   justify-content: space-evenly;
   color: #ddd;
   border-radius: 9px;
+  position: relative;
 }
 
 .display-option {
@@ -248,37 +262,37 @@ svg:hover {
   justify-content: space-between;
 }
 
-.display-option .form-check {
+#double {
   display: flex;
   justify-content: center;
   position: relative;
+  background-color: #fff;
 }
 
-.display-option .form-check::after {
+#double::after {
   position: absolute;
   content: "加倍";
   top: -1.5rem;
-  left: 1rem;
   font-size: 1rem;
   color: #ddd;
 }
 
-.form-check-input:checked {
+#double:checked {
   background-color: #f2613f;
   border-color: #f2613f;
 }
 
-.form-check-input:focus {
+#double:focus {
   border-color: #f2613f;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #f2603f32;
 }
 
-.form-switch .form-check-input:focus {
+.form-switch #double:focus {
   --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'-4%20-4%208%208'%3E%3Ccircle%20r%3D'3'%20fill%3D'%23f2613f'%2F%3E%3C%2Fsvg%3E");
 }
 
-.form-switch .form-check-input:checked {
+.form-switch #double:checked {
   --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'-4%20-4%208%208'%3E%3Ccircle%20r%3D'3'%20fill%3D'%23fff'%2F%3E%3C%2Fsvg%3E");
 }
 
