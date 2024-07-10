@@ -980,7 +980,7 @@ let sectionCube = document.querySelector(".section-cube");
   btn.addEventListener("click", (e) => {
     btnExpand.classList.toggle("display-none");
     btnCollapse.classList.toggle("display-none");
-    console.log(e.target);
+
     if (e.target.classList.contains("btn-expand")) {
       sectionCube.style.flexWrap = "wrap";
     } else {
