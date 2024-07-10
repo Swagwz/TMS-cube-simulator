@@ -699,7 +699,7 @@ const additionalLevelUp = function () {
 
 const doubleLevelUp = function () {
   let secpotSelect = document.querySelector("#sec-pot-select").value;
-
+  console.log("正在加倍");
   if (Number(secpotSelect) === 1) {
     document.querySelector("#sec-pot-select").value = renderProbResult([
       [90.48, 1],

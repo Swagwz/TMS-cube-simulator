@@ -946,30 +946,30 @@ btnInit.addEventListener("click", allInit);
 selectItem.addEventListener("change", allInit);
 
 // bootstrap
-class ScopedBootstrap extends HTMLElement {
-  constructor() {
-    super();
-    const shadow = this.attachShadow({ mode: "open" });
+// class ScopedBootstrap extends HTMLElement {
+//   constructor() {
+//     super();
+//     const shadow = this.attachShadow({ mode: "open" });
 
-    // 添加 Bootstrap 样式
-    const style = document.createElement("link");
-    style.rel = "stylesheet";
-    style.href =
-      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+//     // 添加 Bootstrap 样式
+//     const style = document.createElement("link");
+//     style.rel = "stylesheet";
+//     style.href =
+//       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
 
-    const customStyle = document.createElement("link");
-    customStyle.rel = "stylesheet";
-    customStyle.href = "../css/style.css";
-    // 插入内容
-    const content = document.createElement("div");
-    content.innerHTML = this.innerHTML;
-    shadow.appendChild(style);
-    shadow.appendChild(customStyle);
-    shadow.appendChild(content);
-  }
-}
+//     const customStyle = document.createElement("link");
+//     customStyle.rel = "stylesheet";
+//     customStyle.href = "../css/style.css";
+//     // 插入内容
+//     const content = document.createElement("div");
+//     content.innerHTML = this.innerHTML;
+//     shadow.appendChild(style);
+//     shadow.appendChild(customStyle);
+//     shadow.appendChild(content);
+//   }
+// }
 
-customElements.define("scoped-bootstrap", ScopedBootstrap);
+// customElements.define("scoped-bootstrap", ScopedBootstrap);
 
 // section-cube下拉功能
 let btnExpand = document.querySelector(".btn-expand");
