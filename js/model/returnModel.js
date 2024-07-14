@@ -1091,7 +1091,7 @@ export const selectBefore = function () {
 
   document
     .querySelectorAll(".play-return .part-before p")
-    .forEach((p) => currentPot.push(p.innerHTML));
+    .forEach((p) => currentPot.push(p.textContent));
 
   document.querySelector("#pot-select").value = TextToPot(
     document.querySelector(".play-return .before-pot-lv").textContent
