@@ -1,65 +1,14 @@
 "use strict";
-// 產生機率對應的結果
-const renderProbResult = function (arrProb) {
-  let factor = 0;
-  const sum = arrProb.map((el) => el[0]).reduce((acc, cur) => acc + cur, 0);
-  const random = Math.random() * sum;
-  for (const el of arrProb) {
-    factor = Number((factor + el[0]).toFixed(4));
-    if (random < factor) {
-      return el[1];
-    }
-  }
-};
 
-// 潛能等級
-export const potToText = function (num) {
-  if (num === 1) return "特殊";
-  if (num === 2) return "稀有";
-  if (num === 3) return "罕見";
-  if (num === 4) return "傳說";
-};
+import {
+  getRandomResultByProbability,
+  getTextFromSelectValue,
+  findProbability,
+  checkPotential,
+  $doc,
+  $docAll,
+} from "./helper.js";
 
-// *下方潛在能力屬性只能最多設定一個
-
-// 實用的技能系列
-// 被擊後無敵時間增加
-
-const checkPot1 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("實用")) {
-      count["useful"] = (count["useful"] || 0) + 1;
-    }
-    if (pot.includes("被擊中後無敵時間增加")) {
-      count["invicible"] = (count["invicible"] || 0) + 1;
-    }
-  });
-  if (count.useful >= 2 || count.invicible >= 2) return false;
-  else return true;
-};
-
-// *下方潛在能力屬性只能最多設定兩個(閃耀鏡射方塊不在此限制內)
-
-// 怪物防禦率無視 +%
-// 被擊時以一定機率無視傷害 %
-// 被擊時以一定機率一定時間內無敵
-// BOSS怪物攻擊時傷害 +%
-// 道具掉落率 +%
-
-const checkPot2 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("機率無視")) {
-      count["ignore"] = (count["ignore"] || 0) + 1;
-    }
-    if (pot.includes("內無敵")) {
-      count["invisibleTime"] = (count["invisibleTime"] || 0) + 1;
-    }
-  });
-  if (count.ignore >= 3 || count.invisibleTime >= 3) return false;
-  else return true;
-};
 /////////////////////////////////////////////////////////
 // 結合方塊
 const combine1 = {
@@ -800,105 +749,69 @@ export const combineProb = [
 
 export const chooseOne = function () {
   // 移除結合鎖定的class
-  Array.from(document.querySelectorAll(".part-combine p")).map((el) =>
-    el.classList.remove("chosen")
-  );
+  $docAll(".part-combine p").forEach((el) => el.classList.remove("chosen"));
 
   // 選擇洗哪排
-  const chooseOne = renderProbResult([
-    [1, "first"],
-    [1, "second"],
-    [1, "third"],
+  const chooseOne = getRandomResultByProbability([
+    [1, "1"],
+    [1, "2"],
+    [1, "3"],
   ]);
-  document.querySelector(".combine-first").textContent =
-    document.querySelector(".main-first").textContent;
 
-  document.querySelector(".combine-second").textContent =
-    document.querySelector(".main-second").textContent;
-
-  document.querySelector(".combine-third").textContent =
-    document.querySelector(".main-third").textContent;
-
-  document.querySelector(`.combine-${chooseOne}`).classList.add("chosen");
-  document.querySelector(".counter-combine").textContent++;
+  $doc(`.combine-${chooseOne}`).classList.add("chosen");
+  $doc(".counter-combine").textContent++;
 };
 
 // 點結合
-export const renderCombineResult = function (arrProb) {
+export const processCombine = function () {
   // 暫時存放確認用的潛能
-  const playPotArr = [];
+  const tempPotentailArray = [];
+  const itemName = $doc("#item-select").value;
+  const potentialLevel = +$doc("#pot-select").value;
 
-  const itemSelect = document.querySelector("#item-select").value;
-  const potSelect = Number(document.querySelector("#pot-select").value);
   // 同等潛能
-  const [select] = arrProb.filter(
-    (el) => el.item.find((item) => item === itemSelect) && el.lv === potSelect
-  );
+  const sameLV = findProbability(combineProb, itemName, potentialLevel);
   // 低一階潛能
-  const [selectLower] = arrProb.filter(
-    (el) =>
-      el.item.find((item) => item === itemSelect) && el.lv === potSelect - 1
-  );
+  const lowerLV = findProbability(combineProb, itemName, potentialLevel - 1);
 
-  let potLv = renderProbResult([
+  let sameOrLower = getRandomResultByProbability([
     [15, "same"],
     [85, "lower"],
   ]);
-  if (potLv === "same") {
-    document.querySelector(".chosen").textContent = renderProbResult(
-      select.prob
-    );
-  } else if (potLv === "lower") {
-    document.querySelector(".chosen").textContent = renderProbResult(
-      selectLower.prob
-    );
+
+  // 確認還沒洗之前的潛能
+  for (let i = 0; i < 3; i++) {
+    tempPotentailArray[i] = $doc(`.combine-${i + 1}`).textContent;
   }
 
-  // 確認潛能
-  playPotArr[0] = document.querySelector(".combine-first").textContent;
-  playPotArr[1] = document.querySelector(".combine-second").textContent;
-  playPotArr[2] = document.querySelector(".combine-third").textContent;
+  switch (sameOrLower) {
+    case "same":
+      $doc(".chosen").textContent = getRandomResultByProbability(sameLV.prob);
+      break;
+    case "lower":
+      $doc(".chosen").textContent = getRandomResultByProbability(lowerLV.prob);
+      break;
+  }
 
-  const checkFixedIndex = function () {
-    if (
-      Array.from(document.querySelector(".chosen").classList).some((cl) =>
-        cl.includes("first")
-      )
-    )
-      return 0;
-    if (
-      Array.from(document.querySelector(".chosen").classList).some((cl) =>
-        cl.includes("second")
-      )
-    )
-      return 1;
-    if (
-      Array.from(document.querySelector(".chosen").classList).some((cl) =>
-        cl.includes("third")
-      )
-    )
-      return 2;
-  };
+  const chosenIndex = Array.from($docAll(".part-combine p")).findIndex((el) =>
+    el.classList.contains("chosen")
+  );
 
-  playPotArr[checkFixedIndex()] = document.querySelector(".chosen").textContent;
+  tempPotentailArray[chosenIndex] = $doc(".chosen").textContent;
 
   // 確認潛能 2024/6/26不再限定潛能
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderCombineResult(combineProb);
+  if (!checkPotential(tempPotentailArray)) {
+    processCombine();
     return;
   }
 
-  document.querySelector(".part-combine .pot-lv").textContent =
-    potToText(potSelect);
+  $doc(".part-combine .pot-lv").textContent =
+    getTextFromSelectValue(potentialLevel);
 
-  document.querySelector(".main-first").textContent = playPotArr[0];
-  document.querySelector(".combine-first").textContent = playPotArr[0];
+  for (let i = 0; i < 3; i++) {
+    $doc(`.main-${i + 1}`).textContent = tempPotentailArray[i];
+    $doc(`.combine-${i + 1}`).textContent = tempPotentailArray[i];
+  }
 
-  document.querySelector(".main-second").textContent = playPotArr[1];
-  document.querySelector(".combine-second").textContent = playPotArr[1];
-
-  document.querySelector(".main-third").textContent = playPotArr[2];
-  document.querySelector(".combine-third").textContent = playPotArr[2];
-
-  document.querySelector(".chosen").classList.remove("chosen");
+  $doc(".chosen").classList.remove("chosen");
 };

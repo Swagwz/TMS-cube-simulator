@@ -1,65 +1,13 @@
 "use strict";
-// 產生機率對應的結果
-const renderProbResult = function (arrProb) {
-  let factor = 0;
-  const sum = arrProb.map((el) => el[0]).reduce((acc, cur) => acc + cur, 0);
-  const random = Math.random() * sum;
-  for (const el of arrProb) {
-    factor = Number((factor + el[0]).toFixed(2));
-    if (random < factor) {
-      return el[1];
-    }
-  }
-};
 
-// 潛能等級
-export const potToText = function (num) {
-  if (num === 1) return "特殊";
-  if (num === 2) return "稀有";
-  if (num === 3) return "罕見";
-  if (num === 4) return "傳說";
-};
+import {
+  getRandomResultByProbability,
+  getTextFromSelectValue,
+  findProbability,
+  checkPotential,
+  $doc,
+} from "./helper.js";
 
-// *下方潛在能力屬性只能最多設定一個
-
-// 實用的技能系列
-// 被擊後無敵時間增加
-
-const checkPot1 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("實用")) {
-      count["useful"] = (count["useful"] || 0) + 1;
-    }
-    if (pot.includes("被擊中後無敵時間增加")) {
-      count["invicible"] = (count["invicible"] || 0) + 1;
-    }
-  });
-  if (count.useful >= 2 || count.invicible >= 2) return false;
-  else return true;
-};
-
-// *下方潛在能力屬性只能最多設定兩個(閃耀鏡射方塊不在此限制內)
-
-// 怪物防禦率無視 +%
-// 被擊時以一定機率無視傷害 %
-// 被擊時以一定機率一定時間內無敵
-// BOSS怪物攻擊時傷害 +%
-// 道具掉落率 +%
-
-const checkPot2 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("機率無視")) {
-      count["ignore"] = (count["ignore"] || 0) + 1;
-    }
-    if (pot.includes("內無敵")) {
-      count["invisibleTime"] = (count["invisibleTime"] || 0) + 1;
-    }
-  });
-  if (count.ignore >= 3 || count.invisibleTime >= 3) return false;
-  else return true;
-};
 /////////////////////////////////////////////////////////
 // 閃炫方塊
 // 特殊等級
@@ -719,296 +667,110 @@ export const hexaProb = [
 ];
 
 // 閃炫跳框機率
-const hexaLevelUp = function () {
-  let potSelect = document.querySelector("#pot-select").value;
-
-  if (Number(potSelect) === 1) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [3, 1],
-      [97, 2],
-    ]);
-  } else if (Number(potSelect) === 2) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [97, 2],
-      [3, 3],
-    ]);
-  } else if (Number(potSelect) === 3) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [98.65, 3],
-      [1.35, 4],
-    ]);
+function levelUp() {
+  let potentialLevel = +$doc("#pot-select").value;
+  switch (potentialLevel) {
+    case 1:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [3, 1],
+        [97, 2],
+      ]);
+      break;
+    case 2:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [97, 2],
+        [3, 3],
+      ]);
+      break;
+    case 3:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [98.65, 3],
+        [1.35, 4],
+      ]);
+      break;
   }
-};
-
-const doubleLevelUp = function () {
-  let potSelect = document.querySelector("#pot-select").value;
-
-  if (Number(potSelect) === 1) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [0, 1],
-      [100, 2],
-    ]);
-  } else if (Number(potSelect) === 2) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [94, 2],
-      [6, 3],
-    ]);
-  } else if (Number(potSelect) === 3) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [97.3, 3],
-      [2.7, 4],
-    ]);
+}
+function doubleLevelUp() {
+  let potentialLevel = +$doc("#pot-select").value;
+  switch (potentialLevel) {
+    case 1:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [0, 1],
+        [100, 2],
+      ]);
+      break;
+    case 2:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [94, 2],
+        [6, 3],
+      ]);
+      break;
+    case 3:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [97.3, 3],
+        [2.7, 4],
+      ]);
+      break;
   }
-};
+}
 
 // 點閃炫
-export const renderHexaResult = function (arrProb) {
+export const processHexa = function () {
   // 暫時存放確認用的潛能
-  const playPotArr = [];
+  const tempPotentailArray = [];
+
   // 先看有沒有跳框
-  if (document.getElementById("double").checked) {
+  if ($doc("#double").checked) {
     doubleLevelUp();
   } else {
-    hexaLevelUp();
+    levelUp();
   }
 
-  const itemSelect = document.querySelector("#item-select").value;
-  const potSelect = Number(document.querySelector("#pot-select").value);
+  const itemName = $doc("#item-select").value;
+  const potentialLevel = +$doc("#pot-select").value;
   // 同等潛能
-  const [select] = arrProb.filter(
-    (el) => el.item.find((item) => item === itemSelect) && el.lv === potSelect
-  );
+  const sameLV = findProbability(hexaProb, itemName, potentialLevel);
   // 低一階潛能
-  const [selectLower] = arrProb.filter(
-    (el) =>
-      el.item.find((item) => item === itemSelect) && el.lv === potSelect - 1
-  );
-  // 特殊
-  if (potSelect === 1) {
-    // 第一排
-    playPotArr.push(renderProbResult(select.prob));
+  const lowerLV = findProbability(hexaProb, itemName, potentialLevel - 1);
 
-    // 第二排
-    let secondPotLv = renderProbResult([
-      [20, "same"],
-      [80, "lower"],
+  function pushToPotentialArray(same, lower) {
+    let sameOrLower = getRandomResultByProbability([
+      [same, "same"],
+      [lower, "lower"],
     ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第三排
-    let thirdPotLv = renderProbResult([
-      [15, "same"],
-      [85, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第四排
-    playPotArr.push(renderProbResult(select.prob));
-
-    // 第五排
-    let fifthPotLv = renderProbResult([
-      [20, "same"],
-      [80, "lower"],
-    ]);
-    if (fifthPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (fifthPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第六排
-    let sixthPotLv = renderProbResult([
-      [15, "same"],
-      [85, "lower"],
-    ]);
-    if (sixthPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (sixthPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
+    tempPotentailArray.push(
+      sameOrLower === "same"
+        ? getRandomResultByProbability(sameLV.prob)
+        : getRandomResultByProbability(lowerLV.prob)
+    );
   }
-  // 稀有
-  if (potSelect === 2) {
-    // 第一排
-    playPotArr.push(renderProbResult(select.prob));
 
-    // 第二排
-    let secondPotLv = renderProbResult([
-      [20, "same"],
-      [80, "lower"],
-    ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第三排
-    let thirdPotLv = renderProbResult([
-      [15, "same"],
-      [85, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第四排
-    playPotArr.push(renderProbResult(select.prob));
-
-    // 第五排
-    let fifthPotLv = renderProbResult([
-      [20, "same"],
-      [80, "lower"],
-    ]);
-    if (fifthPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (fifthPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第六排
-    let sixthPotLv = renderProbResult([
-      [15, "same"],
-      [85, "lower"],
-    ]);
-    if (sixthPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (sixthPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
+  switch (potentialLevel) {
+    default:
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(20, 80);
+      pushToPotentialArray(15, 85);
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(20, 80);
+      pushToPotentialArray(15, 85);
+      break;
   }
-  // 罕見
-  if (potSelect === 3) {
-    // 第一排
-    playPotArr.push(renderProbResult(select.prob));
 
-    // 第二排
-    let secondPotLv = renderProbResult([
-      [20, "same"],
-      [80, "lower"],
-    ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第三排
-    let thirdPotLv = renderProbResult([
-      [15, "same"],
-      [85, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第四排
-    playPotArr.push(renderProbResult(select.prob));
-
-    // 第五排
-    let fifthPotLv = renderProbResult([
-      [20, "same"],
-      [80, "lower"],
-    ]);
-    if (fifthPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (fifthPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第六排
-    let sixthPotLv = renderProbResult([
-      [15, "same"],
-      [85, "lower"],
-    ]);
-    if (sixthPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (sixthPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-  }
-  // 傳說
-  if (potSelect === 4) {
-    // 第一排
-    playPotArr.push(renderProbResult(select.prob));
-
-    // 第二排
-    let secondPotLv = renderProbResult([
-      [20, "same"],
-      [80, "lower"],
-    ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第三排
-    let thirdPotLv = renderProbResult([
-      [15, "same"],
-      [85, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第四排
-    playPotArr.push(renderProbResult(select.prob));
-
-    // 第五排
-    let fifthPotLv = renderProbResult([
-      [20, "same"],
-      [80, "lower"],
-    ]);
-    if (fifthPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (fifthPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-
-    // 第六排
-    let sixthPotLv = renderProbResult([
-      [15, "same"],
-      [85, "lower"],
-    ]);
-    if (sixthPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (sixthPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-  }
   // 確認潛能 2024/6/26不再限定潛能
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderHexaResult(hexaProb);
+  if (!checkPotential(tempPotentailArray)) {
+    processHexa();
     return;
   }
 
-  document.querySelector(".play-hexa .hexa-first").textContent = playPotArr[0];
-  document.querySelector(".play-hexa .hexa-second").textContent = playPotArr[1];
-  document.querySelector(".play-hexa .hexa-third").textContent = playPotArr[2];
-  document.querySelector(".play-hexa .hexa-fourth").textContent = playPotArr[3];
-  document.querySelector(".play-hexa .hexa-fifth").textContent = playPotArr[4];
-  document.querySelector(".play-hexa .hexa-sixth").textContent = playPotArr[5];
-  // 計數器++
-  document.querySelector(".counter-hexa").textContent++;
+  for (let i = 0; i < 6; i++) {
+    $doc(`.play-hexa .hexa-${i + 1}`).textContent = tempPotentailArray[i];
+  }
+
+  $doc(".counter-hexa").textContent++;
 };
 
 function addOrRemove(array, value) {
-  var index = array.indexOf(value);
+  const index = array.indexOf(value);
 
   if (index === -1) {
     array.push(value);
@@ -1018,17 +780,14 @@ function addOrRemove(array, value) {
 }
 
 function OnlyRemove(array, value) {
-  var index = array.indexOf(value);
+  const index = array.indexOf(value);
   if (array.includes(value)) array.splice(index, 1);
 }
 
 export const selectedPot = [];
 
 export const selectHexaPot = function (ev) {
-  if (
-    selectedPot.length < 3 &&
-    document.querySelector(".hexa-fourth").textContent !== ""
-  ) {
+  if (selectedPot.length < 3 && $doc(".hexa-4").textContent !== "") {
     ev.target.classList.toggle("chosen");
     addOrRemove(selectedPot, ev.target);
   } else if (selectedPot.length === 3) {

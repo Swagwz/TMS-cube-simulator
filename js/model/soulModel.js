@@ -1,16 +1,6 @@
 "use strict";
-// 產生機率對應的結果
-export const renderProbResult = function (arrProb) {
-  let factor = 0;
-  const sum = arrProb.map((el) => el[0]).reduce((acc, cur) => acc + cur, 0);
-  const random = Math.random() * sum;
-  for (const el of arrProb) {
-    factor = Number((factor + el[0]).toFixed(2));
-    if (random < factor) {
-      return el[1];
-    }
-  }
-};
+
+import { getRandomResultByProbability, $doc } from "./helper.js";
 
 /////////////////////////////////////////////////////////
 // 武公寶珠
@@ -46,23 +36,15 @@ export const soulProb = [
 ];
 
 // 點武公
-export const renderSoulResult = function (arrProb) {
-  const itemSelect = document.querySelector("#item-select").value;
-  if (itemSelect === "weapon") {
-    document.querySelector(".soul").classList.remove("display-none");
-    document.querySelector(".soul .result").textContent =
-      renderProbResult(arrProb);
-
-    document.querySelector(".play .result").textContent =
-      document.querySelector(".soul .result").textContent;
-
-    document.querySelector(".counter-soul").textContent++;
-  } else if (itemSelect !== "weapon") {
-    document.querySelector(".play .result").textContent =
-      "武公寶珠只能套用在武器上";
-
-    document
-      .querySelector(".section-display .soul")
-      .classList.add("display-none");
+export const processSoul = function () {
+  const itemName = $doc("#item-select").value;
+  if (itemName === "weapon") {
+    $doc(".soul").classList.remove("display-none");
+    $doc(".soul .result").textContent = getRandomResultByProbability(soulProb);
+    $doc(".play .result").textContent = $doc(".soul .result").textContent;
+    $doc(".counter-soul").textContent++;
+  } else {
+    $doc(".soul").classList.add("display-none");
+    $doc(".play .result").textContent = "武公寶珠只能套用在武器上";
   }
 };
