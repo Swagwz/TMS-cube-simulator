@@ -1,64 +1,13 @@
 "use strict";
-// 產生機率對應的結果
-const renderProbResult = function (arrProb) {
-  let factor = 0;
-  const sum = arrProb.map((el) => el[0]).reduce((acc, cur) => acc + cur, 0);
-  const random = Math.random() * sum;
-  for (const el of arrProb) {
-    factor = Number((factor + el[0]).toFixed(4));
-    if (random < factor) {
-      return el[1];
-    }
-  }
-};
 
-// 潛能等級
-export const potToText = function (num) {
-  if (num === 1) return "特殊";
-  if (num === 2) return "稀有";
-  if (num === 3) return "罕見";
-  if (num === 4) return "傳說";
-};
-// *下方潛在能力屬性只能最多設定一個
+import {
+  getRandomResultByProbability,
+  getTextFromSelectValue,
+  findProbability,
+  checkPotential,
+  $doc,
+} from "./helper.js";
 
-// 實用的技能系列
-// 被擊後無敵時間增加
-
-const checkPot1 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("實用")) {
-      count["useful"] = (count["useful"] || 0) + 1;
-    }
-    if (pot.includes("被擊中後無敵時間增加")) {
-      count["invicible"] = (count["invicible"] || 0) + 1;
-    }
-  });
-  if (count.useful >= 2 || count.invicible >= 2) return false;
-  else return true;
-};
-
-// *下方潛在能力屬性只能最多設定兩個(閃耀鏡射方塊不在此限制內)
-
-// 怪物防禦率無視 +%
-// 被擊時以一定機率無視傷害 %
-// 被擊時以一定機率一定時間內無敵
-// BOSS怪物攻擊時傷害 +%
-// 道具掉落率 +%
-
-const checkPot2 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("機率無視")) {
-      count["ignore"] = (count["ignore"] || 0) + 1;
-    }
-    if (pot.includes("內無敵")) {
-      count["invisibleTime"] = (count["invisibleTime"] || 0) + 1;
-    }
-  });
-  if (count.ignore >= 3 || count.invisibleTime >= 3) return false;
-  else return true;
-};
 /////////////////////////////////////////////////////////
 // 閃亮附加方塊
 // 特殊等級
@@ -692,164 +641,101 @@ export const resetLvProb = function () {
 };
 
 // 閃亮附加跳框機率
-const shineLevelUp = function (arrProb) {
-  let secpotSelect = document.querySelector("#sec-pot-select").value;
-  const resultLvUp = renderProbResult([
-    [LevelUpProb[+secpotSelect - 1][0], +secpotSelect + 1],
-    [100 - LevelUpProb[+secpotSelect - 1][0], +secpotSelect],
+const levelUp = function () {
+  let secpotSelect = +$doc("#sec-pot-select").value;
+  const levelUpResult = getRandomResultByProbability([
+    [LevelUpProb[secpotSelect - 1][0], secpotSelect + 1],
+    [100 - LevelUpProb[secpotSelect - 1][0], secpotSelect],
   ]);
 
-  if (+secpotSelect === 1) {
-    if (resultLvUp === 1) {
-      LevelUpProb[0][0] += 0.05;
-    } else if (resultLvUp === 2) {
-      LevelUpProb[0][0] = 4.7;
-      secpotSelect = 2;
-    }
-  } else if (+secpotSelect === 2) {
-    if (resultLvUp === 2) {
-      LevelUpProb[1][0] += 0.01;
-    } else if (resultLvUp === 3) {
-      LevelUpProb[1][0] = 1.8;
-      secpotSelect = 3;
-    }
-  } else if (+secpotSelect === 3) {
-    if (resultLvUp === 3) {
-      LevelUpProb[2][0] += 0.005;
-    } else if (resultLvUp === 4) {
-      LevelUpProb[2][0] = 0.3;
-      secpotSelect = 4;
+  function updateProbability(currentLevel, increment, resetValue) {
+    if (levelUpResult === currentLevel) {
+      LevelUpProb[currentLevel - 1][0] += increment;
+    } else if (levelUpResult === currentLevel + 1) {
+      LevelUpProb[currentLevel - 1][0] = resetValue;
+      secpotSelect = currentLevel + 1;
     }
   }
-  document.querySelector("#sec-pot-select").value = secpotSelect;
-  document.querySelector(".lv-prob").textContent =
+
+  switch (secpotSelect) {
+    case 1:
+      updateProbability(1, 0.05, 4.7);
+      break;
+    case 2:
+      updateProbability(2, 0.01, 1.8);
+      break;
+    case 3:
+      updateProbability(3, 0.005, 0.3);
+      break;
+  }
+
+  $doc("#sec-pot-select").value = secpotSelect;
+  $doc(".lv-prob").textContent =
     LevelUpProb[+secpotSelect - 1][0].toFixed(3) + "%";
 };
 
 // 點閃亮附加
-export const renderShineResult = function (arrProb) {
+export const processShine = function (arrProb) {
   // 暫時存放確認用的潛能
-  const playPotArr = [];
+  const tempPotentailArray = [];
   // 先看有沒有跳框
-  shineLevelUp(LevelUpProb);
+  levelUp();
 
-  const itemSelect = document.querySelector("#item-select").value;
-  const potSelect = Number(document.querySelector("#sec-pot-select").value);
+  const itemName = $doc("#item-select").value;
+  const potentialLevel = +$doc("#sec-pot-select").value;
   // 同等潛能
-  const [select] = arrProb.filter(
-    (el) => el.item.find((item) => item === itemSelect) && el.lv === potSelect
-  );
+  const sameLV = findProbability(shineProb, itemName, potentialLevel);
   // 低一階潛能
-  const [selectLower] = arrProb.filter(
-    (el) =>
-      el.item.find((item) => item === itemSelect) && el.lv === potSelect - 1
-  );
-  // 特殊
-  if (potSelect === 1) {
-    playPotArr.push(renderProbResult(select.prob));
-    let secondPotLv = renderProbResult([
-      [1.96, "same"],
-      [98.04, "lower"],
+  const lowerLV = findProbability(shineProb, itemName, potentialLevel - 1);
+
+  function pushToPotentialArray(same, lower) {
+    let sameOrLower = getRandomResultByProbability([
+      [same, "same"],
+      [lower, "lower"],
     ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-    let thirdPotLv = renderProbResult([
-      [1.96, "same"],
-      [98.04, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
+    tempPotentailArray.push(
+      sameOrLower === "same"
+        ? getRandomResultByProbability(sameLV.prob)
+        : getRandomResultByProbability(lowerLV.prob)
+    );
   }
-  // 稀有
-  if (potSelect === 2) {
-    playPotArr.push(renderProbResult(select.prob));
-    let secondPotLv = renderProbResult([
-      [4.76, "same"],
-      [95.24, "lower"],
-    ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-    let thirdPotLv = renderProbResult([
-      [4.76, "same"],
-      [95.24, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-  }
-  // 罕見
-  if (potSelect === 3) {
-    playPotArr.push(renderProbResult(select.prob));
-    let secondPotLv = renderProbResult([
-      [1.96, "same"],
-      [98.04, "lower"],
-    ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-    let thirdPotLv = renderProbResult([
-      [1.96, "same"],
-      [98.04, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-  }
-  // 傳說
-  if (potSelect === 4) {
-    playPotArr.push(renderProbResult(select.prob));
-    let secondPotLv = renderProbResult([
-      [0.5, "same"],
-      [99.5, "lower"],
-    ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-    let thirdPotLv = renderProbResult([
-      [0.5, "same"],
-      [99.5, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
+
+  switch (potentialLevel) {
+    case 1: // 特殊
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(1.96, 98.04);
+      pushToPotentialArray(1.96, 98.04);
+      break;
+    case 2: // 稀有
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(4.76, 95.24);
+      pushToPotentialArray(4.76, 95.24);
+      break;
+    case 3: // 罕見
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(1.96, 98.04);
+      pushToPotentialArray(1.96, 98.04);
+      break;
+    case 4: // 傳說
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(0.5, 99.5);
+      pushToPotentialArray(0.5, 99.5);
+      break;
   }
 
   // 確認潛能 2024/6/26不再限定潛能
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderShineResult(shineProb);
+  if (!checkPotential(tempPotentailArray)) {
+    processShine();
     return;
   }
 
-  document.querySelector(".part-shine .pot-lv").textContent =
-    potToText(potSelect);
+  $doc(".part-shine .pot-lv").textContent =
+    getTextFromSelectValue(potentialLevel);
 
-  document.querySelector(".shine-first").textContent = playPotArr[0];
-  document.querySelector(".additional-first").textContent = playPotArr[0];
+  for (let i = 0; i < 3; i++) {
+    $doc(`.shine-${i + 1}`).textContent = tempPotentailArray[i];
+    $doc(`.additional-${i + 1}`).textContent = tempPotentailArray[i];
+  }
 
-  document.querySelector(".shine-second").textContent = playPotArr[1];
-  document.querySelector(".additional-second").textContent = playPotArr[1];
-
-  document.querySelector(".shine-third").textContent = playPotArr[2];
-  document.querySelector(".additional-third").textContent = playPotArr[2];
-
-  document.querySelector(".counter-shine").textContent++;
+  $doc(".counter-shine").textContent++;
 };

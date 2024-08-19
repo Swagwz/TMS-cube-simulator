@@ -1,20 +1,10 @@
 "use strict";
-// 產生機率對應的結果
-export const renderProbResult = function (arrProb) {
-  let factor = 0;
-  const sum = arrProb.map((el) => el[0]).reduce((acc, cur) => acc + cur, 0);
-  const random = Math.random() * sum;
-  for (const el of arrProb) {
-    factor = Number((factor + el[0]).toFixed(2));
-    if (random < factor) {
-      return el[1];
-    }
-  }
-};
+
+import { getRandomResultByProbability, $doc } from "./helper.js";
 
 /////////////////////////////////////////////////////////
 // 萌獸方塊
-export const monsterProb = [
+const monsterProb = [
   [0.83, "STR +20"],
   [0.83, "DEX +20"],
   [0.83, "INT +20"],
@@ -58,59 +48,35 @@ export const monsterProb = [
 ];
 
 // 點萌獸方塊
-export const renderMonsterDouble = function (arrProb) {
-  document.querySelector(".monster-first").textContent =
-    renderProbResult(monsterProb);
-  document.querySelector(".monster-second").textContent =
-    renderProbResult(monsterProb);
-  document.querySelector(".monster-third").textContent =
-    renderProbResult(monsterProb);
+export const processMonster = function (num) {
+  return new Promise((resolve) => {
+    const tillFinalDamage = setInterval(() => {
+      $doc(".btn-monster-double").disabled = true;
+      $doc(".btn-monster-single").disabled = true;
 
-  function checkPot() {
-    if (
-      (document.querySelector(".monster-first").textContent ===
-        "最終傷害 +20%" &&
-        document.querySelector(".monster-second").textContent ===
-          "最終傷害 +20%") ||
-      (document.querySelector(".monster-first").textContent ===
-        "最終傷害 +20%" &&
-        document.querySelector(".monster-third").textContent ===
-          "最終傷害 +20%") ||
-      (document.querySelector(".monster-second").textContent ===
-        "最終傷害 +20%" &&
-        document.querySelector(".monster-third").textContent ===
-          "最終傷害 +20%")
-    ) {
-      return;
-    }
-    {
-      renderMonsterDouble(monsterProb);
-    }
-  }
-  checkPot();
+      let tempPotentailArray = [];
+      for (let i = 0; i < 3; i++) {
+        tempPotentailArray.push(getRandomResultByProbability(monsterProb));
+      }
+      $doc(".counter-monster").textContent++;
 
-  document.querySelector(".counter-monster").textContent++;
-};
-export const renderMonsterSingle = function (arrProb) {
-  document.querySelector(".monster-first").textContent =
-    renderProbResult(monsterProb);
-  document.querySelector(".monster-second").textContent =
-    renderProbResult(monsterProb);
-  document.querySelector(".monster-third").textContent =
-    renderProbResult(monsterProb);
+      let count = {};
+      tempPotentailArray.forEach((pot) => {
+        if (pot.includes("最終")) {
+          count["finalDamage"] = (count["finalDamage"] || 0) + 1;
+        }
+      });
 
-  function checkPot() {
-    if (
-      document.querySelector(".monster-first").textContent !==
-        "最終傷害 +20%" &&
-      document.querySelector(".monster-second").textContent !==
-        "最終傷害 +20%" &&
-      document.querySelector(".monster-third").textContent !== "最終傷害 +20%"
-    ) {
-      renderMonsterSingle(monsterProb);
-    }
-  }
-  checkPot();
+      if (count["finalDamage"] >= num) {
+        clearInterval(tillFinalDamage);
+        for (let i = 0; i < 3; i++) {
+          $doc(`.monster-${i + 1}`).textContent = tempPotentailArray[i];
+        }
+        $doc(".btn-monster-double").disabled = false;
+        $doc(".btn-monster-single").disabled = false;
 
-  document.querySelector(".counter-monster").textContent++;
+        resolve(); // Fulfill the promise here
+      }
+    }, 0);
+  });
 };

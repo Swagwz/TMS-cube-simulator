@@ -1,5 +1,8 @@
 "use strict";
 
+// helper
+import { getTextFromSelectValue, $doc, $docAll } from "./model/helper.js";
+
 // model
 import * as soulModel from "./model/soulModel.js";
 import * as returnModel from "./model/returnModel.js";
@@ -18,98 +21,90 @@ import * as setModel from "./model/setModel.js";
 import * as additSetModel from "./model/additSetModel.js";
 
 // button selector
-const btnSoul = document.querySelector(".btn-soul");
-const btnReturn = document.querySelector(".btn-return");
-const btnHexa = document.querySelector(".btn-hexa");
-const btnHexaComfirm = document.querySelector(".btn-hexa-comfirm");
-const btnHexaAgain = document.querySelector(".btn-hexa-again");
-const btnCombine = document.querySelector(".btn-combine");
-const btnCombineStart = document.querySelector(".btn-combine-start");
-const btnEqal = document.querySelector(".btn-eqal");
-const btnReflect = document.querySelector(".btn-reflect");
-const btnArtisan = document.querySelector(".btn-artisan");
-const btnMaster = document.querySelector(".btn-master");
-const btnAdditional = document.querySelector(".btn-additional");
-const btnWhiteAdditional = document.querySelector(".btn-white-additional");
-const btnAbs = document.querySelector(".btn-abs");
-const btnShine = document.querySelector(".btn-shine");
-const btnMonsterSingle = document.querySelector(".btn-monster-single");
-const btnMonsterDouble = document.querySelector(".btn-monster-double");
-const btnInit = document.querySelector(".btn-init");
-const selectItem = document.querySelector("#item-select");
-const btnSet = document.querySelector(".btn-set");
-const btnSetComfirm = document.querySelector(".btn-set-comfirm");
+const btnSoul = $doc(".btn-soul");
+const btnReturn = $doc(".btn-return");
+const btnHexa = $doc(".btn-hexa");
+const btnHexaComfirm = $doc(".btn-hexa-comfirm");
+const btnHexaAgain = $doc(".btn-hexa-again");
+const btnCombine = $doc(".btn-combine");
+const btnCombineStart = $doc(".btn-combine-start");
+const btnEqal = $doc(".btn-eqal");
+const btnReflect = $doc(".btn-reflect");
+const btnArtisan = $doc(".btn-artisan");
+const btnMaster = $doc(".btn-master");
+const btnAdditional = $doc(".btn-additional");
+const btnWhiteAdditional = $doc(".btn-white-additional");
+const btnAbs = $doc(".btn-abs");
+const btnShine = $doc(".btn-shine");
+const btnMonsterSingle = $doc(".btn-monster-single");
+const btnMonsterDouble = $doc(".btn-monster-double");
+const btnInit = $doc(".btn-init");
+const selectItem = $doc("#item-select");
+const btnSet = $doc(".btn-set");
+const btnSetComfirm = $doc(".btn-set-comfirm");
 
 // img selector
-const imgSoul = document.querySelector(".img-soul");
-const imgReturn = document.querySelector(".img-return");
-const imgHexa = document.querySelector(".img-hexa");
-const imgCombine = document.querySelector(".img-combine");
-const imgEqal = document.querySelector(".img-eqal");
-const imgReflect = document.querySelector(".img-reflect");
-const imgArtisan = document.querySelector(".img-artisan");
-const imgMaster = document.querySelector(".img-master");
-const imgAdditional = document.querySelector(".img-additional");
-const imgWhiteAdditional = document.querySelector(".img-white-additional");
-const imgAbs = document.querySelector(".img-abs");
-const imgShine = document.querySelector(".img-shine");
-const imgMonster = document.querySelector(".img-monster");
+const imgSoul = $doc(".img-soul");
+const imgReturn = $doc(".img-return");
+const imgHexa = $doc(".img-hexa");
+const imgCombine = $doc(".img-combine");
+const imgEqal = $doc(".img-eqal");
+const imgReflect = $doc(".img-reflect");
+const imgArtisan = $doc(".img-artisan");
+const imgMaster = $doc(".img-master");
+const imgAdditional = $doc(".img-additional");
+const imgWhiteAdditional = $doc(".img-white-additional");
+const imgAbs = $doc(".img-abs");
+const imgShine = $doc(".img-shine");
+const imgMonster = $doc(".img-monster");
 
 // cube div selector
-const returnAfter = document.querySelector(".play-return .part-after");
-const returnBefore = document.querySelector(".play-return .part-before");
-const whiteAfter = document.querySelector(".play-white-additional .part-after");
-const whiteBefore = document.querySelector(
-  ".play-white-additional .part-before"
-);
+const returnAfter = $doc(".play-return .part-after");
+const returnBefore = $doc(".play-return .part-before");
+const whiteAfter = $doc(".play-white-additional .part-after");
+const whiteBefore = $doc(".play-white-additional .part-before");
 
 ////////////////////////////////////////////////////
 // function
 
 // 計數器歸零
 function counterZero() {
-  document.querySelectorAll(".count-num").forEach((el) => (el.textContent = 0));
+  $docAll(".count-num").forEach((el) => (el.textContent = 0));
 }
 
 // 總花費歸零
 function totalZero() {
-  document.querySelector(".total-cost-num").textContent = "";
+  $doc(".total-cost-num").textContent = "";
 }
 
 // 清空section-display的潛能
 function clearSectionDisplay() {
-  document.querySelectorAll(".result p").forEach((el) => (el.textContent = ""));
-  document
-    .querySelectorAll(".pot-div h4")
-    .forEach((el) => (el.textContent = ""));
-  document.querySelector(".soul .result").textContent = "";
+  $docAll(".result p").forEach((el) => (el.textContent = ""));
+  $docAll(".pot-div h4").forEach((el) => (el.textContent = ""));
+  $doc(".soul .result").textContent = "";
 }
 
 // 清空閃耀方塊part-after
 function clearPartAfter() {
-  document
-    .querySelectorAll(".part-after p")
-    .forEach((el) => (el.textContent = ""));
+  $docAll(".part-after p").forEach((el) => (el.textContent = ""));
 }
 
 // 清空閃炫方塊潛能
 function clearHexaResult() {
-  Array.from(document.querySelector(".part-hexa").children).forEach(
-    (p) => (p.textContent = "")
-  );
+  Array.from($doc(".part-hexa").children).forEach((p) => (p.textContent = ""));
 }
 
 // 清空select option
 function clearMainSelectOption() {
-  document.querySelector(".main-set-first").innerHTML = "";
-  document.querySelector(".main-set-second").innerHTML = "";
-  document.querySelector(".main-set-third").innerHTML = "";
+  for (let i = 1; i < 4; i++) {
+    $doc(`.main-set-${i}`).innerHTML = "";
+  }
 }
 
 function clearAdditSelectOption() {
-  document.querySelector(".additional-set-first").innerHTML = "";
-  document.querySelector(".additional-set-second").innerHTML = "";
-  document.querySelector(".additional-set-third").innerHTML = "";
+  for (let i = 1; i < 4; i++) {
+    $doc(`.additional-set-${i}`).innerHTML = "";
+  }
 }
 
 function clearSelectOption() {
@@ -119,82 +114,72 @@ function clearSelectOption() {
 
 // 清空萌獸方塊潛能
 function clearMonster() {
-  document.querySelector(".monster-first").textContent = "";
-  document.querySelector(".monster-second").textContent = "";
-  document.querySelector(".monster-third").textContent = "";
+  for (let i = 1; i < 4; i++) {
+    $doc(`.monster-${i}`).textContent = "";
+  }
 }
 
 // 隱藏sectioni-display的武公
 function hideSoul() {
-  document.querySelector(".soul").classList.add("display-none");
+  $doc(".soul").classList.add("display-none");
 }
 
 // 隱藏section-play
 function hideSectionDisplay() {
-  document
-    .querySelectorAll(".play")
-    .forEach((divPlay) => divPlay.classList.add("display-none"));
+  $docAll(".play").forEach((divPlay) => divPlay.classList.add("display-none"));
 }
 
 // 隱藏select option選項
 function hideSelect() {
-  document
-    .querySelectorAll(".setting")
-    .forEach((select) => select.classList.add("display-none"));
+  $docAll(".setting").forEach((select) => select.classList.add("display-none"));
 }
 
 // 隱藏section-display的潛能
 function hidePotential() {
-  document
-    .querySelectorAll(".result p")
-    .forEach((select) => select.classList.add("display-none"));
+  $docAll(".result p").forEach((select) =>
+    select.classList.add("display-none")
+  );
 }
 
 // 移除紅石鎖定的class
 function removeFixed() {
-  document
-    .querySelectorAll(".part-before p")
-    .forEach((el) => el.classList.remove("fixed-pot"));
+  $docAll(".part-before p").forEach((el) => el.classList.remove("fixed-pot"));
 }
 
 // 移除結合鎖定的class
 function removeCombineChosen() {
-  document
-    .querySelectorAll(".part-combine p")
-    .forEach((el) => el.classList.remove("chosen"));
+  $docAll(".part-combine p").forEach((el) => el.classList.remove("chosen"));
 }
 
 // 移除閃炫鎖定的class
 function removeHexaChosen() {
-  Array.from(document.querySelector(".part-hexa").children).forEach((el) =>
+  Array.from($doc(".part-hexa").children).forEach((el) =>
     el.classList.remove("chosen")
   );
 }
 
 // 切換閃炫的按鈕
 function initHexaBtn() {
-  document.querySelector(".btn-hexa").classList.remove("display-none");
-  document.querySelector(".btn-hexa-again").classList.add("display-none");
+  $doc(".btn-hexa").classList.remove("display-none");
+  $doc(".btn-hexa-again").classList.add("display-none");
 }
 
 // 切換select option按鈕
 function initSelectBtn() {
-  document.querySelector(".btn-init").classList.remove("display-none");
-  document.querySelector(".btn-set-comfirm").classList.add("display-none");
+  $doc(".btn-init").classList.remove("display-none");
+  $doc(".btn-set-comfirm").classList.add("display-none");
 }
 
 // 顯示section-display的潛能
 function displayResult() {
-  document.querySelector(".main-first").classList.remove("display-none");
-  document.querySelector(".main-second").classList.remove("display-none");
-  document.querySelector(".main-third").classList.remove("display-none");
-  document.querySelector(".additional-first").classList.remove("display-none");
-  document.querySelector(".additional-second").classList.remove("display-none");
-  document.querySelector(".additional-third").classList.remove("display-none");
+  for (let i = 1; i < 4; i++) {
+    $doc(`.main-${i}`).classList.remove("display-none");
+    $doc(`.additional-${i}`).classList.remove("display-none");
+  }
 }
 ////////////////////////////////////////////////////
 // 初始化
-const allInit = function () {
+function allInit() {
   // 計數器歸零
   counterZero();
 
@@ -233,9 +218,9 @@ const allInit = function () {
 
   // 重製閃亮方塊等級提升機率
   shineModel.resetLvProb();
-};
+}
 
-const init = function () {
+function init() {
   // section-play隱藏
   hideSectionDisplay();
 
@@ -265,21 +250,20 @@ const init = function () {
 
   // 顯示section result的潛能
   displayResult();
-};
+}
 
 ////////////////////////////////////////////////////
 // 武公寶珠
 imgSoul.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-soul").classList.remove("display-none");
+  $doc(".play-soul").classList.remove("display-none");
 
-  document.querySelector(".play .result").textContent =
-    document.querySelector(".soul .result").textContent;
+  $doc(".play .result").textContent = $doc(".soul .result").textContent;
 });
 
 btnSoul.addEventListener("click", function () {
-  soulModel.renderSoulResult(soulModel.soulProb);
+  soulModel.processSoul();
 });
 
 ////////////////////////////////////////////////////
@@ -288,44 +272,43 @@ btnSoul.addEventListener("click", function () {
 imgReturn.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-return").classList.remove("display-none");
+  $doc(".play-return").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".play-return .before-first").textContent =
-    document.querySelector(".main-first").textContent;
-  document.querySelector(".play-return .before-second").textContent =
-    document.querySelector(".main-second").textContent;
-  document.querySelector(".play-return .before-third").textContent =
-    document.querySelector(".main-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.play-return .before-${i}`).textContent = $doc(
+      `.main-${i}`
+    ).textContent;
+  }
+
   //顯示潛能等級
-  if (document.querySelector(".main-first").textContent !== "")
-    document.querySelector(".play-return .before-pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#pot-select").value);
+  if ($doc(".main-1").textContent !== "")
+    $doc(".play-return .before-pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#pot-select").value
+    );
 });
 
 btnReturn.addEventListener("click", function () {
   init();
 
   // 顯示section-play
-  document.querySelector(".play-return").classList.remove("display-none");
+  $doc(".play-return").classList.remove("display-none");
 
   // 洗潛能
-  returnModel.renderReturnResult(returnModel.returnProb);
+  returnModel.processReturn();
 });
 
 // 選前後
 returnAfter.addEventListener("click", returnModel.selectAfter);
 returnBefore.addEventListener("click", returnModel.selectBefore);
 
-// before-pot select
-const beforeFirst = document.querySelector(".play-return .before-first");
-const beforeSecond = document.querySelector(".play-return .before-second");
-const beforeThird = document.querySelector(".play-return .before-third");
-
-// 紅石
-beforeFirst.addEventListener("click", returnModel.fixedPot);
-beforeSecond.addEventListener("click", returnModel.fixedPot);
-beforeThird.addEventListener("click", returnModel.fixedPot);
+// 固定潛能
+for (let i = 1; i < 4; i++) {
+  $doc(`.play-return .before-${i}`).addEventListener(
+    "click",
+    returnModel.fixedPot
+  );
+}
 
 ////////////////////////////////////////////////////
 // 閃炫方塊
@@ -333,47 +316,40 @@ beforeThird.addEventListener("click", returnModel.fixedPot);
 imgHexa.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-hexa").classList.remove("display-none");
+  $doc(".play-hexa").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".hexa-first").textContent =
-    document.querySelector(".main-first").textContent;
-  document.querySelector(".hexa-second").textContent =
-    document.querySelector(".main-second").textContent;
-  document.querySelector(".hexa-third").textContent =
-    document.querySelector(".main-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.hexa-${i}`).textContent = $doc(`.main-${i}`).textContent;
+  }
 
   //顯示潛能等級
-  if (document.querySelector(".main-first").textContent !== "")
-    document.querySelector(".part-hexa .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#pot-select").value);
+  if ($doc(".main-1").textContent !== "")
+    $doc(".part-hexa .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#pot-select").value
+    );
 });
 
 btnHexa.addEventListener("click", function () {
-  if (document.querySelector(".hexa-fourth").textContent !== "") return;
+  if ($doc(".hexa-4").textContent !== "") return;
   init();
   // 顯示section-play
-  document.querySelector(".play-hexa").classList.remove("display-none");
+  $doc(".play-hexa").classList.remove("display-none");
 
   // 產生六排潛能
-  hexaModel.renderHexaResult(hexaModel.hexaProb);
-  document.querySelector(".btn-hexa").classList.add("display-none");
-  document.querySelector(".btn-hexa-again").classList.remove("display-none");
+  hexaModel.processHexa();
+  $doc(".btn-hexa").classList.add("display-none");
+  $doc(".btn-hexa-again").classList.remove("display-none");
 
   removeFixed();
 });
 
 btnHexaAgain.addEventListener("click", function () {
-  document.querySelector(".main-first").textContent =
-    document.querySelector(".hexa-first").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.main-${i}`).textContent = $doc(`.hexa-${i}`).textContent;
+  }
 
-  document.querySelector(".main-second").textContent =
-    document.querySelector(".hexa-second").textContent;
-
-  document.querySelector(".main-third").textContent =
-    document.querySelector(".hexa-third").textContent;
-
-  hexaModel.renderHexaResult(hexaModel.hexaProb);
+  hexaModel.processHexa();
   // 移除閃炫鎖定的class
   removeHexaChosen();
   // 重製閃炫潛能array
@@ -381,41 +357,26 @@ btnHexaAgain.addEventListener("click", function () {
 });
 
 // HEXA potential select
-const hexaFirst = document.querySelector(".hexa-first");
-const hexaSecond = document.querySelector(".hexa-second");
-const hexaThird = document.querySelector(".hexa-third");
-const hexaFourth = document.querySelector(".hexa-fourth");
-const hexaFifth = document.querySelector(".hexa-fifth");
-const hexaSixth = document.querySelector(".hexa-sixth");
-
-hexaFirst.addEventListener("click", hexaModel.selectHexaPot);
-hexaSecond.addEventListener("click", hexaModel.selectHexaPot);
-hexaThird.addEventListener("click", hexaModel.selectHexaPot);
-hexaFourth.addEventListener("click", hexaModel.selectHexaPot);
-hexaFifth.addEventListener("click", hexaModel.selectHexaPot);
-hexaSixth.addEventListener("click", hexaModel.selectHexaPot);
+for (let i = 1; i < 7; i++) {
+  $doc(`.hexa-${i}`).addEventListener("click", hexaModel.selectHexaPot);
+}
 
 btnHexaComfirm.addEventListener("click", function () {
   if (hexaModel.selectedPot.length === 3) {
-    document.querySelector(".main-first").textContent =
-      hexaModel.selectedPot[0].textContent;
-    document.querySelector(".main-second").textContent =
-      hexaModel.selectedPot[1].textContent;
-    document.querySelector(".main-third").textContent =
-      hexaModel.selectedPot[2].textContent;
+    for (let i = 0; i < 3; i++) {
+      $doc(`.main-${i + 1}`).textContent = hexaModel.selectedPot[i].textContent;
+    }
 
-    document.querySelector(".part-hexa .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#pot-select").value);
+    $doc(".part-hexa .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#pot-select").value
+    );
 
-    document.querySelector(".hexa-first").textContent =
-      document.querySelector(".main-first").textContent;
-    document.querySelector(".hexa-second").textContent =
-      document.querySelector(".main-second").textContent;
-    document.querySelector(".hexa-third").textContent =
-      document.querySelector(".main-third").textContent;
-    document.querySelector(".hexa-fourth").textContent = "";
-    document.querySelector(".hexa-fifth").textContent = "";
-    document.querySelector(".hexa-sixth").textContent = "";
+    for (let i = 1; i < 4; i++) {
+      $doc(`.hexa-${i}`).textContent = $doc(`.main-${i}`).textContent;
+    }
+    for (let i = 4; i < 7; i++) {
+      $doc(`.hexa-${i}`).textContent = "";
+    }
 
     // 移除閃炫鎖定的class
     removeHexaChosen();
@@ -423,8 +384,8 @@ btnHexaComfirm.addEventListener("click", function () {
     // 重製閃炫潛能array
     hexaModel.clearSelectPot();
 
-    document.querySelector(".btn-hexa").classList.remove("display-none");
-    document.querySelector(".btn-hexa-again").classList.add("display-none");
+    $doc(".btn-hexa").classList.remove("display-none");
+    $doc(".btn-hexa-again").classList.add("display-none");
   }
 });
 
@@ -434,27 +395,25 @@ btnHexaComfirm.addEventListener("click", function () {
 imgCombine.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-combine").classList.remove("display-none");
+  $doc(".play-combine").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".combine-first").textContent =
-    document.querySelector(".main-first").textContent;
-  document.querySelector(".combine-second").textContent =
-    document.querySelector(".main-second").textContent;
-  document.querySelector(".combine-third").textContent =
-    document.querySelector(".main-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.combine-${i}`).textContent = $doc(`.main-${i}`).textContent;
+  }
 
   // 顯示潛能等級
-  if (document.querySelector(".main-first").textContent !== "")
-    document.querySelector(".part-combine .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#pot-select").value);
+  if ($doc(".main-1").textContent !== "")
+    $doc(".part-combine .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#pot-select").value
+    );
 });
 
 btnCombine.addEventListener("click", function () {
-  if (document.querySelector(".main-first").textContent === "") return;
+  if ($doc(".main-1").textContent === "") return;
   init();
   // 顯示section-play
-  document.querySelector(".play-combine").classList.remove("display-none");
+  $doc(".play-combine").classList.remove("display-none");
 
   // 選擇洗哪排
   combineModel.chooseOne();
@@ -462,7 +421,7 @@ btnCombine.addEventListener("click", function () {
 
 btnCombineStart.addEventListener("click", function () {
   // 洗潛能
-  combineModel.renderCombineResult(combineModel.combineProb);
+  combineModel.processCombine();
 });
 
 ////////////////////////////////////////////////////
@@ -471,29 +430,27 @@ btnCombineStart.addEventListener("click", function () {
 imgEqal.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-eqal").classList.remove("display-none");
+  $doc(".play-eqal").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".eqal-first").textContent =
-    document.querySelector(".main-first").textContent;
-  document.querySelector(".eqal-second").textContent =
-    document.querySelector(".main-second").textContent;
-  document.querySelector(".eqal-third").textContent =
-    document.querySelector(".main-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.eqal-${i}`).textContent = $doc(`.main-${i}`).textContent;
+  }
 
   //顯示潛能等級
-  if (document.querySelector(".main-first").textContent !== "")
-    document.querySelector(".part-eqal .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#pot-select").value);
+  if ($doc(".main-1").textContent !== "")
+    $doc(".part-eqal .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#pot-select").value
+    );
 });
 
 btnEqal.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-eqal").classList.remove("display-none");
+  $doc(".play-eqal").classList.remove("display-none");
 
   // 洗潛能
-  eqalModel.renderEqalResult(eqalModel.eqalProb);
+  eqalModel.processEqal();
 });
 
 ////////////////////////////////////////////////////
@@ -502,29 +459,27 @@ btnEqal.addEventListener("click", function () {
 imgReflect.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-reflect").classList.remove("display-none");
+  $doc(".play-reflect").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".reflect-first").textContent =
-    document.querySelector(".main-first").textContent;
-  document.querySelector(".reflect-second").textContent =
-    document.querySelector(".main-second").textContent;
-  document.querySelector(".reflect-third").textContent =
-    document.querySelector(".main-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.reflect-${i}`).textContent = $doc(`.main-${i}`).textContent;
+  }
 
   //顯示潛能等級
-  if (document.querySelector(".main-first").textContent !== "")
-    document.querySelector(".part-reflect .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#pot-select").value);
+  if ($doc(".main-1").textContent !== "")
+    $doc(".part-reflect .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#pot-select").value
+    );
 });
 
 btnReflect.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-reflect").classList.remove("display-none");
+  $doc(".play-reflect").classList.remove("display-none");
 
   // 洗潛能
-  reflectModel.renderReflectResult(reflectModel.reflectProb);
+  reflectModel.processReflect();
 });
 
 ////////////////////////////////////////////////////
@@ -533,29 +488,27 @@ btnReflect.addEventListener("click", function () {
 imgArtisan.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-artisan").classList.remove("display-none");
+  $doc(".play-artisan").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".artisan-first").textContent =
-    document.querySelector(".main-first").textContent;
-  document.querySelector(".artisan-second").textContent =
-    document.querySelector(".main-second").textContent;
-  document.querySelector(".artisan-third").textContent =
-    document.querySelector(".main-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.artisan-${i}`).textContent = $doc(`.main-${i}`).textContent;
+  }
 
   //顯示潛能等級
-  if (document.querySelector(".main-first").textContent !== "")
-    document.querySelector(".part-artisan .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#pot-select").value);
+  if ($doc(".main-1").textContent !== "")
+    $doc(".part-artisan .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#pot-select").value
+    );
 });
 
 btnArtisan.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-artisan").classList.remove("display-none");
+  $doc(".play-artisan").classList.remove("display-none");
 
   // 洗潛能
-  artisanModel.renderArtisanResult(artisanModel.artisanProb);
+  artisanModel.processArtisan();
 });
 
 ////////////////////////////////////////////////////
@@ -564,29 +517,27 @@ btnArtisan.addEventListener("click", function () {
 imgMaster.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-master").classList.remove("display-none");
+  $doc(".play-master").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".master-first").textContent =
-    document.querySelector(".main-first").textContent;
-  document.querySelector(".master-second").textContent =
-    document.querySelector(".main-second").textContent;
-  document.querySelector(".master-third").textContent =
-    document.querySelector(".main-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.master-${i}`).textContent = $doc(`.main-${i}`).textContent;
+  }
 
   //顯示潛能等級
-  if (document.querySelector(".main-first").textContent !== "")
-    document.querySelector(".part-master .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#pot-select").value);
+  if ($doc(".main-1").textContent !== "")
+    $doc(".part-master .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#pot-select").value
+    );
 });
 
 btnMaster.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-master").classList.remove("display-none");
+  $doc(".play-master").classList.remove("display-none");
 
   // 洗潛能
-  masterModel.renderMasterResult(masterModel.masterProb);
+  masterModel.processMaster();
 });
 
 ////////////////////////////////////////////////////
@@ -595,29 +546,27 @@ btnMaster.addEventListener("click", function () {
 imgAdditional.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-addit").classList.remove("display-none");
+  $doc(".play-addit").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".addit-first").textContent =
-    document.querySelector(".additional-first").textContent;
-  document.querySelector(".addit-second").textContent =
-    document.querySelector(".additional-second").textContent;
-  document.querySelector(".addit-third").textContent =
-    document.querySelector(".additional-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.addit-${i}`).textContent = $doc(`.additional-${i}`).textContent;
+  }
 
   //顯示潛能等級
-  if (document.querySelector(".additional-first").textContent !== "")
-    document.querySelector(".part-addit .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#sec-pot-select").value);
+  if ($doc(".additional-1").textContent !== "")
+    $doc(".part-addit .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#sec-pot-select").value
+    );
 });
 
 btnAdditional.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-addit").classList.remove("display-none");
+  $doc(".play-addit").classList.remove("display-none");
 
   // 洗潛能
-  additionalModel.renderadditionalResult(additionalModel.additionalProb);
+  additionalModel.processAdditional();
 });
 
 ////////////////////////////////////////////////////
@@ -626,42 +575,33 @@ btnAdditional.addEventListener("click", function () {
 imgWhiteAdditional.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document
-    .querySelector(".play-white-additional")
-    .classList.remove("display-none");
+  $doc(".play-white-additional").classList.remove("display-none");
 
-  document.querySelector(".play-white-additional .before-first").textContent =
-    document.querySelector(".additional-first").textContent;
-  document.querySelector(".play-white-additional .before-second").textContent =
-    document.querySelector(".additional-second").textContent;
-  document.querySelector(".play-white-additional .before-third").textContent =
-    document.querySelector(".additional-third").textContent;
-  if (document.querySelector(".additional-first").textContent !== "")
-    document.querySelector(
-      ".play-white-additional .before-pot-lv"
-    ).textContent = returnModel.potToText(
-      +document.querySelector("#sec-pot-select").value
-    );
+  for (let i = 1; i < 4; i++) {
+    $doc(`.play-white-additional .before-${i}`).textContent = $doc(
+      `.additional-${i}`
+    ).textContent;
+  }
+
+  if ($doc(".additional-1").textContent !== "")
+    $doc(".play-white-additional .before-pot-lv").textContent =
+      getTextFromSelectValue(+$doc("#sec-pot-select").value);
 });
 
 btnWhiteAdditional.addEventListener("click", function () {
   init();
 
-  document.querySelector(".play-white-additional .before-first").textContent =
-    document.querySelector(".additional-first").textContent;
-  document.querySelector(".play-white-additional .before-second").textContent =
-    document.querySelector(".additional-second").textContent;
-  document.querySelector(".play-white-additional .before-third").textContent =
-    document.querySelector(".additional-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.play-white-additional .before-${i}`).textContent = $doc(
+      `.additional-${i}`
+    ).textContent;
+  }
+
   // 顯示section-play
-  document
-    .querySelector(".play-white-additional")
-    .classList.remove("display-none");
+  $doc(".play-white-additional").classList.remove("display-none");
 
   // 洗潛能
-  whiteAdditionalModel.renderWhiteAdditionalResult(
-    whiteAdditionalModel.whiteAdditionalProb
-  );
+  whiteAdditionalModel.processWhiteAdditional();
 });
 
 whiteAfter.addEventListener("click", whiteAdditionalModel.selectAfter);
@@ -673,89 +613,90 @@ whiteBefore.addEventListener("click", whiteAdditionalModel.selectBefore);
 imgAbs.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-abs").classList.remove("display-none");
+  $doc(".play-abs").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".abs-first").textContent =
-    document.querySelector(".additional-first").textContent;
-  document.querySelector(".abs-second").textContent =
-    document.querySelector(".additional-second").textContent;
-  document.querySelector(".abs-third").textContent =
-    document.querySelector(".additional-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.abs-${i}`).textContent = $doc(`.additional-${i}`).textContent;
+  }
 
   //顯示潛能等級
-  if (document.querySelector(".additional-first").textContent !== "")
-    document.querySelector(".part-abs .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#sec-pot-select").value);
+  if ($doc(".additional-1").textContent !== "")
+    $doc(".part-abs .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#sec-pot-select").value
+    );
 });
 
 btnAbs.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-abs").classList.remove("display-none");
+  $doc(".play-abs").classList.remove("display-none");
 
   // 洗潛能
-  absModel.renderAbsResult(absModel.absProb);
+  absModel.processAbs();
 });
 
 ////////////////////////////////////////////////////
 // 閃亮附加方塊
 
 // 讀取的時候Level=[0], 所以按imgShine一定會更新提升機率
-const Level = [0];
+let Level = 0;
 const updateShineLvProb = function () {
-  if (+document.querySelector("#sec-pot-select").value === 1)
-    document.querySelector(".lv-prob").textContent = "4.700%";
-  if (+document.querySelector("#sec-pot-select").value === 2)
-    document.querySelector(".lv-prob").textContent = "1.800%";
-  if (+document.querySelector("#sec-pot-select").value === 3)
-    document.querySelector(".lv-prob").textContent = "0.300%";
-  if (+document.querySelector("#sec-pot-select").value === 4)
-    document.querySelector(".lv-prob").textContent = "0.000%";
+  switch (+$doc("#sec-pot-select").value) {
+    case 1:
+      $doc(".lv-prob").textContent = "4.700%";
+      break;
+    case 2:
+      $doc(".lv-prob").textContent = "1.800%";
+      break;
+    case 3:
+      $doc(".lv-prob").textContent = "0.300%";
+      break;
+    case 4:
+      $doc(".lv-prob").textContent = "0.000%";
+      break;
+  }
 };
 
 imgShine.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-shine").classList.remove("display-none");
+  $doc(".play-shine").classList.remove("display-none");
 
   // 顯示目前潛能
-  document.querySelector(".shine-first").textContent =
-    document.querySelector(".additional-first").textContent;
-  document.querySelector(".shine-second").textContent =
-    document.querySelector(".additional-second").textContent;
-  document.querySelector(".shine-third").textContent =
-    document.querySelector(".additional-third").textContent;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.shine-${i}`).textContent = $doc(`.additional-${i}`).textContent;
+  }
+
   // 更新潛能提升機率
-  if (+document.querySelector("#sec-pot-select").value !== Level[0]) {
-    Level[0] = +document.querySelector("#sec-pot-select").value;
+  if (+$doc("#sec-pot-select").value !== Level) {
+    Level = +$doc("#sec-pot-select").value;
     updateShineLvProb();
   }
 
   // 顯示潛能等級
-  if (document.querySelector(".additional-first").textContent !== "")
-    document.querySelector(".part-shine .pot-lv").textContent =
-      returnModel.potToText(+document.querySelector("#sec-pot-select").value);
+  if ($doc(".additional-1").textContent !== "")
+    $doc(".part-shine .pot-lv").textContent = getTextFromSelectValue(
+      +$doc("#sec-pot-select").value
+    );
 });
 
 btnShine.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-shine").classList.remove("display-none");
+  $doc(".play-shine").classList.remove("display-none");
 
   // 更新潛能提升機率
-  if (+document.querySelector("#sec-pot-select").value !== Level[0]) {
-    Level[0] = +document.querySelector("#sec-pot-select").value;
+  if (+$doc("#sec-pot-select").value !== Level) {
+    Level = +$doc("#sec-pot-select").value;
     updateShineLvProb();
   }
 
   // 洗潛能
-  shineModel.renderShineResult(shineModel.shineProb);
+  shineModel.processShine();
 });
 
-document
-  .querySelector("#sec-pot-select")
-  .addEventListener("change", updateShineLvProb);
+$doc("#sec-pot-select").addEventListener("change", updateShineLvProb);
 
 ////////////////////////////////////////////////////
 // 萌獸方塊
@@ -763,48 +704,52 @@ document
 imgMonster.addEventListener("click", function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-monster").classList.remove("display-none");
+  $doc(".play-monster").classList.remove("display-none");
 });
 
 // 單終以上
-btnMonsterSingle.addEventListener("click", function () {
+btnMonsterSingle.addEventListener("click", async function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-monster").classList.remove("display-none");
+  $doc(".play-monster").classList.remove("display-none");
+  $doc(".part-monster").classList.add("running");
 
   // 洗潛能
-  monsterModel.renderMonsterSingle(monsterModel.monsterProb);
+  await monsterModel.processMonster(1);
+  $doc(".part-monster").classList.remove("running");
+  renderTotalCost();
 });
 
 // 雙終以上
-btnMonsterDouble.addEventListener("click", function () {
+btnMonsterDouble.addEventListener("click", async function () {
   init();
   // 顯示section-play
-  document.querySelector(".play-monster").classList.remove("display-none");
+  $doc(".play-monster").classList.remove("display-none");
+  $doc(".part-monster").classList.add("running");
 
   // 洗潛能
-  monsterModel.renderMonsterDouble(monsterModel.monsterProb);
+  await monsterModel.processMonster(2);
+  $doc(".part-monster").classList.remove("running");
+  renderTotalCost();
 });
 
 ////////////////////////////////////////////////////
 // 計算花費
-const calcTotalCost = function () {
-  const soul = document.querySelector(".counter-soul").textContent;
-  const soulPrice = document.querySelector("#soul-price").value;
-  const retrn = document.querySelector(".counter-return").textContent;
-  const hexa = document.querySelector(".counter-hexa").textContent;
-  const combine = document.querySelector(".counter-combine").textContent;
-  const eqal = document.querySelector(".counter-eqal").textContent;
-  const reflect = document.querySelector(".counter-reflect").textContent;
+function calcTotalCost() {
+  const soul = $doc(".counter-soul").textContent;
+  const soulPrice = $doc("#soul-price").value;
+  const retrn = $doc(".counter-return").textContent;
+  const hexa = $doc(".counter-hexa").textContent;
+  const combine = $doc(".counter-combine").textContent;
+  const eqal = $doc(".counter-eqal").textContent;
+  const reflect = $doc(".counter-reflect").textContent;
 
-  const addit = document.querySelector(".counter-additional").textContent;
-  const whiteAddit = document.querySelector(
-    ".counter-white-additional"
-  ).textContent;
-  const abs = document.querySelector(".counter-abs").textContent;
-  const shine = document.querySelector(".counter-shine").textContent;
-  const monster = document.querySelector(".counter-monster").textContent;
-  const discount = document.querySelector("#discount").value;
+  const addit = $doc(".counter-additional").textContent;
+  const whiteAddit = $doc(".counter-white-additional").textContent;
+  const abs = $doc(".counter-abs").textContent;
+  const shine = $doc(".counter-shine").textContent;
+  const monster = $doc(".counter-monster").textContent;
+  const discount = $doc("#discount").value;
 
   if (discount > 100 || discount < 0) return "折扣超出範圍";
 
@@ -824,13 +769,11 @@ const calcTotalCost = function () {
         monster * 30);
 
   return totalCost.toFixed(0);
-};
+}
 
-const renderTotalCost = function () {
-  document.querySelector(
-    ".total-cost-num"
-  ).textContent = `$ ${calcTotalCost()}`;
-};
+function renderTotalCost() {
+  $doc(".total-cost-num").textContent = `$ ${calcTotalCost()}`;
+}
 
 [
   btnSoul,
@@ -860,7 +803,7 @@ btnSet.addEventListener("click", function () {
   // 清空select option
   clearSelectOption();
 
-  if (document.querySelector(".main-set-first").value !== "") return;
+  if ($doc(".main-set-1").value !== "") return;
   // section-display的潛能清空
   hidePotential();
 
@@ -868,16 +811,16 @@ btnSet.addEventListener("click", function () {
   hideSoul();
 
   // 切換按鈕
-  document.querySelector(".btn-init").classList.add("display-none");
-  document.querySelector(".btn-set-comfirm").classList.remove("display-none");
+  $doc(".btn-init").classList.add("display-none");
+  $doc(".btn-set-comfirm").classList.remove("display-none");
 
   // 顯示選項
-  document
-    .querySelectorAll(".setting")
-    .forEach((select) => select.classList.remove("display-none"));
+  $docAll(".setting").forEach((select) =>
+    select.classList.remove("display-none")
+  );
 
-  setModel.renderOption(setModel.settingProb);
-  additSetModel.renderOption(additSetModel.settingProb);
+  setModel.renderOption();
+  additSetModel.renderOption();
 });
 
 ////////////////////////////////////////////////////
@@ -890,91 +833,50 @@ btnSetComfirm.addEventListener("click", function () {
   initSelectBtn();
 
   // 關閉選項
-  document
-    .querySelectorAll(".setting")
-    .forEach((select) => select.classList.add("display-none"));
+  $docAll(".setting").forEach((select) => select.classList.add("display-none"));
 
-  document
-    .querySelectorAll(".result p")
-    .forEach((p) => p.classList.remove("display-none"));
+  $docAll(".result p").forEach((p) => p.classList.remove("display-none"));
 
   // 產生潛能
-  document.querySelector(".main-first").textContent =
-    document.querySelector(".main-set-first").value;
-  document.querySelector(".main-second").textContent =
-    document.querySelector(".main-set-second").value;
-  document.querySelector(".main-third").textContent =
-    document.querySelector(".main-set-third").value;
-
-  document.querySelector(".additional-first").textContent =
-    document.querySelector(".additional-set-first").value;
-  document.querySelector(".additional-second").textContent =
-    document.querySelector(".additional-set-second").value;
-  document.querySelector(".additional-third").textContent =
-    document.querySelector(".additional-set-third").value;
+  for (let i = 1; i < 4; i++) {
+    $doc(`.main-${i}`).textContent = $doc(`.main-set-${i}`).value;
+    $doc(`.additional-${i}`).textContent = $doc(`.additional-set-${i}`).value;
+  }
 
   // 清空select option
   clearSelectOption();
 });
 
-document.querySelector("#item-select").addEventListener("change", function () {
+$doc("#item-select").addEventListener("change", function () {
   // 清空select option
   clearSelectOption();
 
-  setModel.renderOption(setModel.settingProb);
-  additSetModel.renderOption(additSetModel.settingProb);
+  setModel.renderOption();
+  additSetModel.renderOption();
 });
 
-document.querySelector("#pot-select").addEventListener("change", function () {
+$doc("#pot-select").addEventListener("change", function () {
   // 清空select option
   clearMainSelectOption();
 
-  setModel.renderOption(setModel.settingProb);
+  setModel.renderOption();
 });
 
-document
-  .querySelector("#sec-pot-select")
-  .addEventListener("change", function () {
-    // 清空select option
-    clearAdditSelectOption();
+$doc("#sec-pot-select").addEventListener("change", function () {
+  // 清空select option
+  clearAdditSelectOption();
 
-    additSetModel.renderOption(additSetModel.settingProb);
-  });
+  additSetModel.renderOption();
+});
 
 btnInit.addEventListener("click", allInit);
 
 selectItem.addEventListener("change", allInit);
 
-// bootstrap
-// class ScopedBootstrap extends HTMLElement {
-//   constructor() {
-//     super();
-//     const shadow = this.attachShadow({ mode: "open" });
-
-//     // 添加 Bootstrap 样式
-//     const style = document.createElement("link");
-//     style.rel = "stylesheet";
-//     style.href =
-//       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
-
-//     const customStyle = document.createElement("link");
-//     customStyle.rel = "stylesheet";
-//     customStyle.href = "../css/style.css";
-//     // 插入内容
-//     const content = document.createElement("div");
-//     content.innerHTML = this.innerHTML;
-//     shadow.appendChild(style);
-//     shadow.appendChild(customStyle);
-//     shadow.appendChild(content);
-//   }
-// }
-
-// customElements.define("scoped-bootstrap", ScopedBootstrap);
-
 // section-cube下拉功能
-let btnExpand = document.querySelector(".btn-expand");
-let btnCollapse = document.querySelector(".btn-collapse");
-let sectionCube = document.querySelector(".section-cube");
+let btnExpand = $doc(".btn-expand");
+let btnCollapse = $doc(".btn-collapse");
+let sectionCube = $doc(".section-cube");
 
 [btnExpand, btnCollapse].forEach((btn) =>
   btn.addEventListener("click", (e) => {
@@ -988,96 +890,3 @@ let sectionCube = document.querySelector(".section-cube");
     }
   })
 );
-
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// 一鍵模擬
-// let secPot = document.querySelector(".master-second");
-// let thrPot = document.querySelector(".master-third");
-
-// function repeat() {
-//   document.querySelector(".btn-master").click();
-
-//   // 使用 setTimeout 进行递归调用
-//   setTimeout(() => {
-//     if (
-//       !secPot.textContent.includes("掉落") &&
-//       !thrPot.textContent.includes("20")
-//     ) {
-//       repeat();
-//     } else return;
-//   }, 0); // 0 毫秒的延迟，确保递归调用不会立即执行，避免填满调用栈
-// }
-
-// 萌獸方塊
-
-// let firPot = document.querySelector(".monster-first");
-// let secPot = document.querySelector(".monster-second");
-// let thrPot = document.querySelector(".monster-third");
-
-// function repeat() {
-//   document.querySelector(".btn-monster-double").click();
-
-//   // 使用 setTimeout 进行递归调用
-//   setTimeout(() => {
-//     if (
-//       !(
-//         firPot.textContent.includes("最終") &&
-//         secPot.textContent.includes("最終") &&
-//         thrPot.textContent.includes("最終")
-//       )
-//     ) {
-//       repeat();
-//     } else return;
-//   }, 0); // 0 毫秒的延迟，确保递归调用不会立即执行，避免填满调用栈
-// }
-
-//閃炫
-// let firstPot = document.querySelector(".hexa-first");
-// let secondPot = document.querySelector(".hexa-second");
-// let thirdPot = document.querySelector(".hexa-third");
-// let fourPot = document.querySelector(".hexa-fourth");
-// let fivePot = document.querySelector(".hexa-fifth");
-// let sixPot = document.querySelector(".hexa-sixth");
-
-// function repeat() {
-//   document.querySelector(".btn-hexa-again").click();
-//   let counter = 0;
-//   if (firstPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
-//   if (secondPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
-//   if (thirdPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
-//   if (fourPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
-//   if (fivePot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
-//   if (sixPot.textContent.includes("BOSS怪物時傷害增加 +40%")) counter++;
-
-//   // 使用 setTimeout 进行递归调用
-//   setTimeout(() => {
-//     if (counter < 3) {
-//       repeat();
-//     } else return;
-//   }, 0); // 0 毫秒的延迟，确保递归调用不会立即执行，避免填满调用栈
-// }
-
-// 附加大三物
-// let firstPot = document.querySelector(".addit-first");
-// let secondPot = document.querySelector(".addit-second");
-// let thirdPot = document.querySelector(".addit-third");
-
-// function repeat() {
-//   document.querySelector(".btn-additional").click();
-//   let counter = 0;
-//   if (firstPot.textContent.includes("物理攻擊")) counter++;
-//   if (secondPot.textContent.includes("物理攻擊")) counter++;
-//   if (thirdPot.textContent.includes("物理攻擊")) counter++;
-
-//   // 使用 setTimeout 进行递归调用
-//   setTimeout(() => {
-//     if (counter < 3) {
-//       repeat();
-//     } else return;
-//   }, 0); // 0 毫秒的延迟，确保递归调用不会立即执行，避免填满调用栈
-// }
-// repeat();

@@ -231,6 +231,11 @@ p {
   text-align: center;
   border-radius: 3px;
 }
+
+.running {
+  background-color: #eeccc5;
+  color: #777;
+}
 /* ///////////////////////////////////////// */
 /* SECTION -- DISPLAY */
 /* ///////////////////////////////////////// */

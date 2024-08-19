@@ -1,65 +1,13 @@
 "use strict";
-// 產生機率對應的結果
-const renderProbResult = function (arrProb) {
-  let factor = 0;
-  const sum = arrProb.map((el) => el[0]).reduce((acc, cur) => acc + cur, 0);
-  const random = Math.random() * sum;
-  for (const el of arrProb) {
-    factor = Number((factor + el[0]).toFixed(4));
-    if (random < factor) {
-      return el[1];
-    }
-  }
-};
 
-// 潛能等級
-export const potToText = function (num) {
-  if (num === 1) return "特殊";
-  if (num === 2) return "稀有";
-  if (num === 3) return "罕見";
-  if (num === 4) return "傳說";
-};
+import {
+  getRandomResultByProbability,
+  getTextFromSelectValue,
+  findProbability,
+  checkPotential,
+  $doc,
+} from "./helper.js";
 
-// *下方潛在能力屬性只能最多設定一個
-
-// 實用的技能系列
-// 被擊後無敵時間增加
-
-const checkPot1 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("實用")) {
-      count["useful"] = (count["useful"] || 0) + 1;
-    }
-    if (pot.includes("被擊中後無敵時間增加")) {
-      count["invicible"] = (count["invicible"] || 0) + 1;
-    }
-  });
-  if (count.useful >= 2 || count.invicible >= 2) return false;
-  else return true;
-};
-
-// *下方潛在能力屬性只能最多設定兩個(閃耀鏡射方塊不在此限制內)
-
-// 怪物防禦率無視 +%
-// 被擊時以一定機率無視傷害 %
-// 被擊時以一定機率一定時間內無敵
-// BOSS怪物攻擊時傷害 +%
-// 道具掉落率 +%
-
-const checkPot2 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("機率無視")) {
-      count["ignore"] = (count["ignore"] || 0) + 1;
-    }
-    if (pot.includes("內無敵")) {
-      count["invisibleTime"] = (count["invisibleTime"] || 0) + 1;
-    }
-  });
-  if (count.ignore >= 3 || count.invisibleTime >= 3) return false;
-  else return true;
-};
 /////////////////////////////////////////////////////////
 // 工匠方塊
 // 帽子,上衣,套服,下衣,手套,披風,腰帶,肩膀,機器心臟
@@ -651,152 +599,109 @@ export const artisanProb = [
 ];
 
 // 工匠跳框機率
-const artisanLevelUp = function () {
-  let potSelect = document.querySelector("#pot-select").value;
-
-  if (Number(potSelect) === 1) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [95.24, 1],
-      [4.76, 2],
-    ]);
-  } else if (Number(potSelect) === 2) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [98.81, 2],
-      [1.19, 3],
-    ]);
+function levelUp() {
+  let potentialLevel = +$doc("#pot-select").value;
+  switch (potentialLevel) {
+    case 1:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [95.24, 1],
+        [4.76, 2],
+      ]);
+      break;
+    case 2:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [98.81, 2],
+        [1.19, 3],
+      ]);
+      break;
   }
-};
+}
 
-const doubleLevelUp = function () {
-  let potSelect = document.querySelector("#pot-select").value;
-
-  if (Number(potSelect) === 1) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [90.48, 1],
-      [9.52, 2],
-    ]);
-  } else if (Number(potSelect) === 2) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [97.62, 2],
-      [2.38, 3],
-    ]);
+function doubleLevelUp() {
+  let potentialLevel = +$doc("#pot-select").value;
+  switch (potentialLevel) {
+    case 1:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [90.48, 1],
+        [9.52, 2],
+      ]);
+      break;
+    case 2:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [97.62, 2],
+        [2.38, 3],
+      ]);
+      break;
   }
-};
+}
 
 // 點工匠
-export const renderArtisanResult = function (arrProb) {
+export const processArtisan = function () {
   // 暫時存放確認用的潛能
-  const playPotArr = [];
+  const tempPotentailArray = [];
+
   // 先看有沒有跳框
-  if (document.getElementById("double").checked) {
+  if ($doc("#double").checked) {
     doubleLevelUp();
   } else {
-    artisanLevelUp();
+    levelUp();
   }
 
-  const itemSelect = document.querySelector("#item-select").value;
-  const potSelect = Number(document.querySelector("#pot-select").value);
+  const itemName = $doc("#item-select").value;
+  const potentialLevel = +$doc("#pot-select").value;
   // 同等潛能
-  const [select] = arrProb.filter(
-    (el) => el.item.find((item) => item === itemSelect) && el.lv === potSelect
-  );
+  const sameLV = findProbability(artisanProb, itemName, potentialLevel);
   // 低一階潛能
-  const [selectLower] = arrProb.filter(
-    (el) =>
-      el.item.find((item) => item === itemSelect) && el.lv === potSelect - 1
-  );
-  // 特殊
-  if (potSelect === 1) {
-    playPotArr.push(renderProbResult(select.prob));
-    let secondPotLv = renderProbResult([
-      [16.67, "same"],
-      [83.33, "lower"],
+  const lowerLV = findProbability(artisanProb, itemName, potentialLevel - 1);
+
+  function pushToPotentialArray(same, lower) {
+    let sameOrLower = getRandomResultByProbability([
+      [same, "same"],
+      [lower, "lower"],
     ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-    let thirdPotLv = renderProbResult([
-      [16.67, "same"],
-      [83.33, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-  }
-  // 稀有
-  if (potSelect === 2) {
-    playPotArr.push(renderProbResult(select.prob));
-    let secondPotLv = renderProbResult([
-      [4.76, "same"],
-      [95.24, "lower"],
-    ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-    let thirdPotLv = renderProbResult([
-      [4.76, "same"],
-      [95.24, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-  }
-  // 罕見
-  if (potSelect === 3) {
-    playPotArr.push(renderProbResult(select.prob));
-    let secondPotLv = renderProbResult([
-      [1.19, "same"],
-      [98.81, "lower"],
-    ]);
-    if (secondPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (secondPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
-    let thirdPotLv = renderProbResult([
-      [1.19, "same"],
-      [98.81, "lower"],
-    ]);
-    if (thirdPotLv === "same") {
-      playPotArr.push(renderProbResult(select.prob));
-    } else if (thirdPotLv === "lower") {
-      playPotArr.push(renderProbResult(selectLower.prob));
-    }
+    tempPotentailArray.push(
+      sameOrLower === "same"
+        ? getRandomResultByProbability(sameLV.prob)
+        : getRandomResultByProbability(lowerLV.prob)
+    );
   }
 
-  if (potSelect === 4) {
-    document.querySelector(".artisan-first").textContent =
-      "工匠方塊只適用於罕見潛能以下的裝備";
-    document.querySelector(".artisan-second").textContent = "";
-    document.querySelector(".artisan-third").textContent = "";
-    return;
+  switch (potentialLevel) {
+    case 1: // 特殊
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(16.67, 83.33);
+      pushToPotentialArray(16.67, 83.33);
+      break;
+    case 2: // 稀有
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(4.76, 95.24);
+      pushToPotentialArray(4.76, 95.24);
+      break;
+    case 3: // 罕見
+      pushToPotentialArray(100, 0);
+      pushToPotentialArray(1.19, 98.81);
+      pushToPotentialArray(1.19, 98.81);
+      break;
+    case 4:
+      $doc(".artisan-1").textContent = "工匠方塊只適用於罕見潛能以下的裝備";
+      $doc(".artisan-2").textContent = "";
+      $doc(".artisan-3").textContent = "";
+      return;
   }
 
   // 確認潛能 2024/6/26不再限定潛能
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderArtisanResult(artisanProb);
+  if (!checkPotential(tempPotentailArray)) {
+    processArtisan();
     return;
   }
 
-  document.querySelector(".part-artisan .pot-lv").textContent =
-    potToText(potSelect);
+  $doc(".part-artisan .pot-lv").textContent =
+    getTextFromSelectValue(potentialLevel);
 
-  document.querySelector(".artisan-first").textContent = playPotArr[0];
-  document.querySelector(".main-first").textContent = playPotArr[0];
+  for (let i = 0; i < 3; i++) {
+    $doc(`.artisan-${i + 1}`).textContent = tempPotentailArray[i];
+    $doc(`.main-${i + 1}`).textContent = tempPotentailArray[i];
+  }
 
-  document.querySelector(".artisan-second").textContent = playPotArr[1];
-  document.querySelector(".main-second").textContent = playPotArr[1];
-
-  document.querySelector(".artisan-third").textContent = playPotArr[2];
-  document.querySelector(".main-third").textContent = playPotArr[2];
-
-  document.querySelector(".counter-artisan").textContent++;
+  $doc(".counter-artisan").textContent++;
 };

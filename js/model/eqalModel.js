@@ -1,65 +1,13 @@
 "use strict";
-// 產生機率對應的結果
-const renderProbResult = function (arrProb) {
-  let factor = 0;
-  const sum = arrProb.map((el) => el[0]).reduce((acc, cur) => acc + cur, 0);
-  const random = Math.random() * sum;
-  for (const el of arrProb) {
-    factor = Number((factor + el[0]).toFixed(2));
-    if (random < factor) {
-      return el[1];
-    }
-  }
-};
 
-// 潛能等級
-export const potToText = function (num) {
-  if (num === 1) return "特殊";
-  if (num === 2) return "稀有";
-  if (num === 3) return "罕見";
-  if (num === 4) return "傳說";
-};
+import {
+  getRandomResultByProbability,
+  getTextFromSelectValue,
+  findProbability,
+  checkPotential,
+  $doc,
+} from "./helper.js";
 
-// *下方潛在能力屬性只能最多設定一個
-
-// 實用的技能系列
-// 被擊後無敵時間增加
-
-const checkPot1 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("實用")) {
-      count["useful"] = (count["useful"] || 0) + 1;
-    }
-    if (pot.includes("被擊中後無敵時間增加")) {
-      count["invicible"] = (count["invicible"] || 0) + 1;
-    }
-  });
-  if (count.useful >= 2 || count.invicible >= 2) return false;
-  else return true;
-};
-
-// *下方潛在能力屬性只能最多設定兩個(閃耀鏡射方塊不在此限制內)
-
-// 怪物防禦率無視 +%
-// 被擊時以一定機率無視傷害 %
-// 被擊時以一定機率一定時間內無敵
-// BOSS怪物攻擊時傷害 +%
-// 道具掉落率 +%
-
-const checkPot2 = function (playPotArr) {
-  const count = {};
-  playPotArr.forEach((pot) => {
-    if (pot.includes("機率無視")) {
-      count["ignore"] = (count["ignore"] || 0) + 1;
-    }
-    if (pot.includes("內無敵")) {
-      count["invisibleTime"] = (count["invisibleTime"] || 0) + 1;
-    }
-  });
-  if (count.ignore >= 3 || count.invisibleTime >= 3) return false;
-  else return true;
-};
 /////////////////////////////////////////////////////////
 // 新對等方塊
 // 特殊等級
@@ -719,87 +667,88 @@ export const eqalProb = [
 ];
 
 // 新對等跳框機率
-const eqalLevelUp = function () {
-  let potSelect = document.querySelector("#pot-select").value;
-
-  if (Number(potSelect) === 1) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [3, 1],
-      [97, 2],
-    ]);
-  } else if (Number(potSelect) === 2) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [97, 2],
-      [3, 3],
-    ]);
-  } else if (Number(potSelect) === 3) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [98.65, 3],
-      [1.35, 4],
-    ]);
+function levelUp() {
+  let potentialLevel = +$doc("#pot-select").value;
+  switch (potentialLevel) {
+    case 1:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [3, 1],
+        [97, 2],
+      ]);
+      break;
+    case 2:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [97, 2],
+        [3, 3],
+      ]);
+      break;
+    case 3:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [98.65, 3],
+        [1.35, 4],
+      ]);
+      break;
   }
-};
+}
 
-const doubleLevelUp = function () {
-  let potSelect = document.querySelector("#pot-select").value;
-
-  if (Number(potSelect) === 1) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [0, 1],
-      [100, 2],
-    ]);
-  } else if (Number(potSelect) === 2) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [94, 2],
-      [6, 3],
-    ]);
-  } else if (Number(potSelect) === 3) {
-    document.querySelector("#pot-select").value = renderProbResult([
-      [97.3, 3],
-      [2.7, 4],
-    ]);
+function doubleLevelUp() {
+  let potentialLevel = +$doc("#pot-select").value;
+  switch (potentialLevel) {
+    case 1:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [0, 1],
+        [100, 2],
+      ]);
+      break;
+    case 2:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [94, 2],
+        [6, 3],
+      ]);
+      break;
+    case 3:
+      $doc("#pot-select").value = getRandomResultByProbability([
+        [97.3, 3],
+        [2.7, 4],
+      ]);
+      break;
   }
-};
+}
 
 // 點新對等
-export const renderEqalResult = function (arrProb) {
+export const processEqal = function () {
   // 暫時存放確認用的潛能
-  const playPotArr = [];
+  const tempPotentailArray = [];
+
   // 先看有沒有跳框
-  if (document.getElementById("double").checked) {
+  if ($doc("#double").checked) {
     doubleLevelUp();
   } else {
-    eqalLevelUp();
+    levelUp();
   }
 
-  const itemSelect = document.querySelector("#item-select").value;
-  const potSelect = Number(document.querySelector("#pot-select").value);
+  const itemName = $doc("#item-select").value;
+  const potentialLevel = +$doc("#pot-select").value;
   // 同等潛能
-  const [select] = arrProb.filter(
-    (el) => el.item.find((item) => item === itemSelect) && el.lv === potSelect
-  );
+  const sameLV = findProbability(eqalProb, itemName, potentialLevel);
+
+  for (let i = 0; i < 3; i++) {
+    tempPotentailArray[i] = getRandomResultByProbability(sameLV.prob);
+  }
 
   // 確認潛能 2024/6/26不再限定潛能
-  playPotArr[0] = renderProbResult(select.prob);
-  playPotArr[1] = renderProbResult(select.prob);
-  playPotArr[2] = renderProbResult(select.prob);
-
-  if (!checkPot1(playPotArr) || !checkPot2(playPotArr)) {
-    renderEqalResult(eqalProb);
+  if (!checkPotential(tempPotentailArray)) {
+    processEqal();
     return;
   }
 
-  document.querySelector(".part-eqal .pot-lv").textContent =
-    potToText(potSelect);
+  $doc(".part-eqal .pot-lv").textContent =
+    getTextFromSelectValue(potentialLevel);
 
-  document.querySelector(".eqal-first").textContent = playPotArr[0];
-  document.querySelector(".main-first").textContent = playPotArr[0];
+  for (let i = 0; i < 3; i++) {
+    $doc(`.eqal-${i + 1}`).textContent = tempPotentailArray[i];
+    $doc(`.main-${i + 1}`).textContent = tempPotentailArray[i];
+  }
 
-  document.querySelector(".eqal-second").textContent = playPotArr[1];
-  document.querySelector(".main-second").textContent = playPotArr[1];
-
-  document.querySelector(".eqal-third").textContent = playPotArr[2];
-  document.querySelector(".main-third").textContent = playPotArr[2];
-
-  document.querySelector(".counter-eqal").textContent++;
+  $doc(".counter-eqal").textContent++;
 };
