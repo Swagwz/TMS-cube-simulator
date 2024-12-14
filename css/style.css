@@ -81,7 +81,6 @@ p {
   display: flex;
   overflow-x: auto;
   gap: 3rem;
-  justify-self: center;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
