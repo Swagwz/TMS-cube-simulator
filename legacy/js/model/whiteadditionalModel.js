@@ -552,7 +552,7 @@ const whiteAdditionalSSR5 = {
 // 輔助武器(包含力量之盾, 靈魂盾牌)
 const whiteAdditionalSSR6 = {
   lv: 4,
-  item: [, "second-weapon", "shield"],
+  item: ["second-weapon", "shield"],
   prob: [
     [7.32, "最大HP +11%"],
     [7.32, "最大MP +11%"],
