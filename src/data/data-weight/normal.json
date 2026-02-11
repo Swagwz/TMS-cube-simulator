@@ -1,0 +1,4224 @@
+{
+  "normal": [
+    {
+      "apply": [
+        "hat",
+        "top",
+        "overall",
+        "bottom",
+        "gloves",
+        "cape",
+        "belt",
+        "shoulder",
+        "heart",
+        "badge",
+        "pendant",
+        "ring",
+        "face",
+        "eye",
+        "earrings"
+      ],
+      "data": [
+        {
+          "id": "caa9118b-6491-479a-8aa4-e7492178c58c",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "17e47152-f59b-4e9e-8d89-64581b3377ef",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "5a9bdb55-0647-4f60-ac42-2a10e39b3d31",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "c55dcb94-4485-433d-894b-3cabe1fc85fc",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "fd5aa4ff-dc7c-4731-8ed3-9ea9475405bf",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "dbf4cf44-1e54-47e5-9d2e-a83bee7b538c",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "2fa850d8-b442-48a2-9d4c-a29fadbe1839",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["shoes"],
+      "data": [
+        {
+          "id": "caa9118b-6491-479a-8aa4-e7492178c58c",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "17e47152-f59b-4e9e-8d89-64581b3377ef",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "5a9bdb55-0647-4f60-ac42-2a10e39b3d31",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "c55dcb94-4485-433d-894b-3cabe1fc85fc",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "fd5aa4ff-dc7c-4731-8ed3-9ea9475405bf",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "dbf4cf44-1e54-47e5-9d2e-a83bee7b538c",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "2fa850d8-b442-48a2-9d4c-a29fadbe1839",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "14512bcb-2f1c-48d4-9507-209a0bc60db1",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "fbf13f79-f9e4-4cf4-a0c5-1007a58eb8f2",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "emblem",
+        "secondary-weapon"
+      ],
+      "data": [
+        {
+          "id": "caa9118b-6491-479a-8aa4-e7492178c58c",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "17e47152-f59b-4e9e-8d89-64581b3377ef",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "5a9bdb55-0647-4f60-ac42-2a10e39b3d31",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "c55dcb94-4485-433d-894b-3cabe1fc85fc",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "fd5aa4ff-dc7c-4731-8ed3-9ea9475405bf",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "dbf4cf44-1e54-47e5-9d2e-a83bee7b538c",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "b1b4e2d1-7a79-4cfc-9f20-86eb3f5b9a5b",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "a5a6110f-7a25-4c85-81f0-1520550fa88d",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["secondary-weapon-other"],
+      "data": [
+        {
+          "id": "caa9118b-6491-479a-8aa4-e7492178c58c",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "17e47152-f59b-4e9e-8d89-64581b3377ef",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "5a9bdb55-0647-4f60-ac42-2a10e39b3d31",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "c55dcb94-4485-433d-894b-3cabe1fc85fc",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "fd5aa4ff-dc7c-4731-8ed3-9ea9475405bf",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "b1b4e2d1-7a79-4cfc-9f20-86eb3f5b9a5b",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "a5a6110f-7a25-4c85-81f0-1520550fa88d",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        }
+      ]
+    }
+  ],
+  "rare": [
+    {
+      "apply": [
+        "hat",
+        "top",
+        "overall",
+        "bottom",
+        "gloves",
+        "cape",
+        "belt",
+        "shoulder",
+        "heart",
+        "badge"
+      ],
+      "data": [
+        {
+          "id": "5dc25bf3-bc59-4df3-bd5a-a972733419eb",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "9458ecaf-8a02-4a6e-8bc9-fdc058e6d408",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "7684d530-da97-4b0e-8716-27725102b986",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "83e52753-8092-4e84-8428-000fdae6db89",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "f687d3f9-5079-4023-b035-6033db2aea01",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "d514963f-02f2-4577-8aba-7d0fa3332346",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "ab31a86b-9e36-4722-9665-9c68c3effe82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "6b264a79-c0dd-4b9a-9290-942dbc7d1af4",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "669de453-54f5-42a6-83b7-10cb4da5c143",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "ff790b27-1fba-4c6a-b4cf-a6d14d3d5427",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "1297acbd-a87d-4a7a-8866-221d7b2f7f12",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "78b4405f-a358-485f-8553-486e7f62f361",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "51a9d404-304f-403e-8b90-018642d09158",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "3963915f-67d7-450b-8f9a-dc0b5e0c2aa3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "0eee21c6-6ece-48e1-9577-e705ae9a6a24",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 9
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["shoes"],
+      "data": [
+        {
+          "id": "37ca5d59-de88-4d50-aaa0-2e31a5f30ec0",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 11
+          }
+        },
+        {
+          "id": "c89e8f64-1283-4fe0-9d41-9b808291a280",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 11
+          }
+        },
+        {
+          "id": "5dc25bf3-bc59-4df3-bd5a-a972733419eb",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "9458ecaf-8a02-4a6e-8bc9-fdc058e6d408",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "7684d530-da97-4b0e-8716-27725102b986",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "83e52753-8092-4e84-8428-000fdae6db89",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "f687d3f9-5079-4023-b035-6033db2aea01",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "d514963f-02f2-4577-8aba-7d0fa3332346",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "ab31a86b-9e36-4722-9665-9c68c3effe82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "6b264a79-c0dd-4b9a-9290-942dbc7d1af4",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "669de453-54f5-42a6-83b7-10cb4da5c143",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "ff790b27-1fba-4c6a-b4cf-a6d14d3d5427",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "1297acbd-a87d-4a7a-8866-221d7b2f7f12",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "78b4405f-a358-485f-8553-486e7f62f361",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "51a9d404-304f-403e-8b90-018642d09158",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "3963915f-67d7-450b-8f9a-dc0b5e0c2aa3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "0eee21c6-6ece-48e1-9577-e705ae9a6a24",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 10
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["pendant", "ring", "face", "eye", "earrings"],
+      "data": [
+        {
+          "id": "5dc25bf3-bc59-4df3-bd5a-a972733419eb",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "9458ecaf-8a02-4a6e-8bc9-fdc058e6d408",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "7684d530-da97-4b0e-8716-27725102b986",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "83e52753-8092-4e84-8428-000fdae6db89",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "f687d3f9-5079-4023-b035-6033db2aea01",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "d514963f-02f2-4577-8aba-7d0fa3332346",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "ab31a86b-9e36-4722-9665-9c68c3effe82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "6b264a79-c0dd-4b9a-9290-942dbc7d1af4",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "669de453-54f5-42a6-83b7-10cb4da5c143",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "ff790b27-1fba-4c6a-b4cf-a6d14d3d5427",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "1297acbd-a87d-4a7a-8866-221d7b2f7f12",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "78b4405f-a358-485f-8553-486e7f62f361",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "51a9d404-304f-403e-8b90-018642d09158",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "3963915f-67d7-450b-8f9a-dc0b5e0c2aa3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "0eee21c6-6ece-48e1-9577-e705ae9a6a24",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 9
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "emblem",
+        "secondary-weapon"
+      ],
+      "data": [
+        {
+          "id": "5dc25bf3-bc59-4df3-bd5a-a972733419eb",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "9458ecaf-8a02-4a6e-8bc9-fdc058e6d408",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "7684d530-da97-4b0e-8716-27725102b986",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "83e52753-8092-4e84-8428-000fdae6db89",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "f687d3f9-5079-4023-b035-6033db2aea01",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "d514963f-02f2-4577-8aba-7d0fa3332346",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "f6b5ebe5-c448-46f8-889a-06663326aec1",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "887129be-34e6-447a-bbda-d1d8d8fd88f2",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "6b264a79-c0dd-4b9a-9290-942dbc7d1af4",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "669de453-54f5-42a6-83b7-10cb4da5c143",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "ff790b27-1fba-4c6a-b4cf-a6d14d3d5427",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "1297acbd-a87d-4a7a-8866-221d7b2f7f12",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "c3380d2a-a28e-486a-bc14-c25f0a15e58f",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "bd11a92a-3f41-407f-9dfe-ef7ad2875bcb",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "3b1cfd13-f4a7-4cc6-a8b1-dc8051d82d93",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "9f8aca24-986e-4f89-b179-a39b9a37dced",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "0eee21c6-6ece-48e1-9577-e705ae9a6a24",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "946ec4d0-60b9-4f24-90e1-2b4f7f6ef929",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "37b2a818-d05c-42fc-a32f-a3daf643eeab",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "e606ad2d-1c78-4859-8471-19caea70a30b",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "22ddddc4-98df-41f3-92a4-2ebf63f9bdc2",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "7904828e-bab4-43d3-8a2e-0e69c5d7a85f",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "cf9e763e-95a1-4a88-910e-eff2a5104257",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "698d546a-7749-4e57-8670-afd427f9099d",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "eb23b6e9-72b0-4128-adff-3a9793207f05",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["secondary-weapon-other"],
+      "data": [
+        {
+          "id": "5dc25bf3-bc59-4df3-bd5a-a972733419eb",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "9458ecaf-8a02-4a6e-8bc9-fdc058e6d408",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "7684d530-da97-4b0e-8716-27725102b986",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "83e52753-8092-4e84-8428-000fdae6db89",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "f687d3f9-5079-4023-b035-6033db2aea01",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "f6b5ebe5-c448-46f8-889a-06663326aec1",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "887129be-34e6-447a-bbda-d1d8d8fd88f2",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "6b264a79-c0dd-4b9a-9290-942dbc7d1af4",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "669de453-54f5-42a6-83b7-10cb4da5c143",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "ff790b27-1fba-4c6a-b4cf-a6d14d3d5427",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "1297acbd-a87d-4a7a-8866-221d7b2f7f12",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "c3380d2a-a28e-486a-bc14-c25f0a15e58f",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "bd11a92a-3f41-407f-9dfe-ef7ad2875bcb",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "3b1cfd13-f4a7-4cc6-a8b1-dc8051d82d93",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "9f8aca24-986e-4f89-b179-a39b9a37dced",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "0eee21c6-6ece-48e1-9577-e705ae9a6a24",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "946ec4d0-60b9-4f24-90e1-2b4f7f6ef929",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "37b2a818-d05c-42fc-a32f-a3daf643eeab",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "e606ad2d-1c78-4859-8471-19caea70a30b",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "22ddddc4-98df-41f3-92a4-2ebf63f9bdc2",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "7904828e-bab4-43d3-8a2e-0e69c5d7a85f",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "cf9e763e-95a1-4a88-910e-eff2a5104257",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "698d546a-7749-4e57-8670-afd427f9099d",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "eb23b6e9-72b0-4128-adff-3a9793207f05",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 1
+          }
+        }
+      ]
+    }
+  ],
+  "epic": [
+    {
+      "apply": ["hat", "bottom", "cape", "belt", "shoulder", "heart", "badge"],
+      "data": [
+        {
+          "id": "01564c1a-683c-4420-8275-93c8de60722a",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "91938ca7-0300-4f10-9add-90562282c82b",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "0e6eb9be-7367-4563-94a9-e49d1e9f3c35",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "cc6d555d-2254-4be7-8af7-e515a0e408fc",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "2b452c72-81d2-4a0a-9e53-f8433ed26515",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "205087cb-6bc2-4fef-830b-5180406d6c3d",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "750935f8-8474-4a85-9761-08fd58d70156",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "e88319e4-ca08-4e5a-8731-570f8cb9ce8b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 1
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["top", "overall"],
+      "data": [
+        {
+          "id": "0e23a00d-4876-4045-82ef-5cb4e2a0f329",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "01564c1a-683c-4420-8275-93c8de60722a",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "91938ca7-0300-4f10-9add-90562282c82b",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "0e6eb9be-7367-4563-94a9-e49d1e9f3c35",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "cc6d555d-2254-4be7-8af7-e515a0e408fc",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "2b452c72-81d2-4a0a-9e53-f8433ed26515",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "205087cb-6bc2-4fef-830b-5180406d6c3d",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 15
+          }
+        },
+        {
+          "id": "750935f8-8474-4a85-9761-08fd58d70156",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 15
+          }
+        },
+        {
+          "id": "e88319e4-ca08-4e5a-8731-570f8cb9ce8b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 1
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["gloves"],
+      "data": [
+        {
+          "id": "170f8211-0a34-4504-a5f6-1fc8046cf6c7",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "93977924-0ec0-4c61-b2fc-a0bb40ee5b3b",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "01564c1a-683c-4420-8275-93c8de60722a",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "91938ca7-0300-4f10-9add-90562282c82b",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "0e6eb9be-7367-4563-94a9-e49d1e9f3c35",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "cc6d555d-2254-4be7-8af7-e515a0e408fc",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "2b452c72-81d2-4a0a-9e53-f8433ed26515",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 14
+          }
+        },
+        {
+          "id": "205087cb-6bc2-4fef-830b-5180406d6c3d",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 15
+          }
+        },
+        {
+          "id": "750935f8-8474-4a85-9761-08fd58d70156",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 15
+          }
+        },
+        {
+          "id": "e88319e4-ca08-4e5a-8731-570f8cb9ce8b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 1
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["shoes"],
+      "data": [
+        {
+          "id": "01564c1a-683c-4420-8275-93c8de60722a",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "91938ca7-0300-4f10-9add-90562282c82b",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "0e6eb9be-7367-4563-94a9-e49d1e9f3c35",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "cc6d555d-2254-4be7-8af7-e515a0e408fc",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "2b452c72-81d2-4a0a-9e53-f8433ed26515",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "205087cb-6bc2-4fef-830b-5180406d6c3d",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 11
+          }
+        },
+        {
+          "id": "750935f8-8474-4a85-9761-08fd58d70156",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 11
+          }
+        },
+        {
+          "id": "e88319e4-ca08-4e5a-8731-570f8cb9ce8b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 1
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["pendant", "ring", "face", "eye", "earrings"],
+      "data": [
+        {
+          "id": "01564c1a-683c-4420-8275-93c8de60722a",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "91938ca7-0300-4f10-9add-90562282c82b",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "0e6eb9be-7367-4563-94a9-e49d1e9f3c35",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "cc6d555d-2254-4be7-8af7-e515a0e408fc",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "2b452c72-81d2-4a0a-9e53-f8433ed26515",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "205087cb-6bc2-4fef-830b-5180406d6c3d",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 11
+          }
+        },
+        {
+          "id": "750935f8-8474-4a85-9761-08fd58d70156",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 11
+          }
+        },
+        {
+          "id": "e88319e4-ca08-4e5a-8731-570f8cb9ce8b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 1
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "emblem",
+        "secondary-weapon"
+      ],
+      "data": [
+        {
+          "id": "d9ad2bfa-151f-4600-864c-687792babbcb",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "f16bcc4e-2478-43bb-a9d6-a22b2d72e9b2",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "7c4556dd-f864-4946-b3fe-2e5f70f808b4",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "bfaef135-5edb-467e-88f2-ddf62b3260e1",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "886948cf-1c32-420d-8c4e-0f181bcd2275",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "fa436def-1b6a-467d-ac16-0fbb129c6798",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "254ca45a-cf07-4aae-a02c-72969fb78d83",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "01564c1a-683c-4420-8275-93c8de60722a",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "91938ca7-0300-4f10-9add-90562282c82b",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "0e6eb9be-7367-4563-94a9-e49d1e9f3c35",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "cc6d555d-2254-4be7-8af7-e515a0e408fc",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "2b452c72-81d2-4a0a-9e53-f8433ed26515",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "205087cb-6bc2-4fef-830b-5180406d6c3d",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "e88319e4-ca08-4e5a-8731-570f8cb9ce8b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 6
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["secondary-weapon-other"],
+      "data": [
+        {
+          "id": "d9ad2bfa-151f-4600-864c-687792babbcb",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "f16bcc4e-2478-43bb-a9d6-a22b2d72e9b2",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "7c4556dd-f864-4946-b3fe-2e5f70f808b4",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "bfaef135-5edb-467e-88f2-ddf62b3260e1",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "886948cf-1c32-420d-8c4e-0f181bcd2275",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "fa436def-1b6a-467d-ac16-0fbb129c6798",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "254ca45a-cf07-4aae-a02c-72969fb78d83",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "01564c1a-683c-4420-8275-93c8de60722a",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "91938ca7-0300-4f10-9add-90562282c82b",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "0e6eb9be-7367-4563-94a9-e49d1e9f3c35",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "cc6d555d-2254-4be7-8af7-e515a0e408fc",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "2b452c72-81d2-4a0a-9e53-f8433ed26515",
+          "weights": {
+            "restoreCube": 7,
+            "mirrorCube": 7,
+            "hexaCube": 7,
+            "equalCube": 7,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "e88319e4-ca08-4e5a-8731-570f8cb9ce8b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 6
+          }
+        }
+      ]
+    }
+  ],
+  "unique": [
+    {
+      "apply": ["hat"],
+      "data": [
+        {
+          "id": "64a3d7a4-92e2-4e18-9759-a8a13d8c03ba",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 6,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 3,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 3,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 3,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 3,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "4a6108c4-63f4-4df1-9d8e-8842db748526",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 3,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "9c57339d-bc66-4b67-8724-c8fb1e1f7a2e",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 9,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 3,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "2526474e-7594-4684-a111-19e6f60e1005",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 6,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "8a829e95-6bcb-444b-aaca-a4ee09330abb",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 6,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "2dc1b6bd-1fb7-4a40-9f2d-6f34b4213db4",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 8,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 8
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["top", "overall"],
+      "data": [
+        {
+          "id": "8a37ec8a-8f9f-459a-b98b-74668daa4020",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "3421b6b7-fbd8-4751-b2e5-ec97ed4ee8e6",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "d0e99571-0943-4b48-aa03-1793f00929fb",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "b286aba5-71d1-4e0e-912d-bb253bf76894",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "4a6108c4-63f4-4df1-9d8e-8842db748526",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 2,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "9c57339d-bc66-4b67-8724-c8fb1e1f7a2e",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "2526474e-7594-4684-a111-19e6f60e1005",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "8a829e95-6bcb-444b-aaca-a4ee09330abb",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "2dc1b6bd-1fb7-4a40-9f2d-6f34b4213db4",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 9
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["bottom"],
+      "data": [
+        {
+          "id": "b7030867-5975-40c6-b64c-4369a43a15dd",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "4a6108c4-63f4-4df1-9d8e-8842db748526",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 2,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "9c57339d-bc66-4b67-8724-c8fb1e1f7a2e",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "2526474e-7594-4684-a111-19e6f60e1005",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "8a829e95-6bcb-444b-aaca-a4ee09330abb",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "2dc1b6bd-1fb7-4a40-9f2d-6f34b4213db4",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 7
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["gloves"],
+      "data": [
+        {
+          "id": "d1725336-3ee2-42cf-ba73-e3f5cd5e27b9",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "46fdf26e-dd1a-4075-a127-01c426f71a73",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "2f5ef596-c8ed-4b5e-b2a3-e84a3f8a476c",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "22756466-8e72-4a5c-ab13-6164394a248f",
+          "weights": {
+            "restoreCube": 1,
+            "mirrorCube": 1,
+            "hexaCube": 1,
+            "equalCube": 1,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "26e11329-e2fe-46b4-b12a-634f36b68e6c",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "4a6108c4-63f4-4df1-9d8e-8842db748526",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 2,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "9c57339d-bc66-4b67-8724-c8fb1e1f7a2e",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "2526474e-7594-4684-a111-19e6f60e1005",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "8a829e95-6bcb-444b-aaca-a4ee09330abb",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "2dc1b6bd-1fb7-4a40-9f2d-6f34b4213db4",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 9
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["shoes"],
+      "data": [
+        {
+          "id": "45af7319-a03f-4e43-bdbc-2678a9ff70f0",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "4a6108c4-63f4-4df1-9d8e-8842db748526",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 2,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "9c57339d-bc66-4b67-8724-c8fb1e1f7a2e",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "2526474e-7594-4684-a111-19e6f60e1005",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "8a829e95-6bcb-444b-aaca-a4ee09330abb",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "2dc1b6bd-1fb7-4a40-9f2d-6f34b4213db4",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 10
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["cape", "belt", "shoulder", "heart", "badge"],
+      "data": [
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "4a6108c4-63f4-4df1-9d8e-8842db748526",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 2,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "9c57339d-bc66-4b67-8724-c8fb1e1f7a2e",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "2526474e-7594-4684-a111-19e6f60e1005",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "8a829e95-6bcb-444b-aaca-a4ee09330abb",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "2dc1b6bd-1fb7-4a40-9f2d-6f34b4213db4",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 8
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["pendant", "ring", "face", "eye", "earrings"],
+      "data": [
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 2,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "4a6108c4-63f4-4df1-9d8e-8842db748526",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 2,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "9c57339d-bc66-4b67-8724-c8fb1e1f7a2e",
+          "weights": {
+            "restoreCube": 6,
+            "mirrorCube": 6,
+            "hexaCube": 6,
+            "equalCube": 6,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "2dc1b6bd-1fb7-4a40-9f2d-6f34b4213db4",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 6
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "secondary-weapon",
+        "secondary-weapon-other"
+      ],
+      "data": [
+        {
+          "id": "0fbd8c9e-78f9-48b2-90e3-eb4749788214",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 1,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "5d0c5564-e8c6-4a23-bac9-12be8688c4d7",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 1,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "8e5952df-f342-4634-b7e2-170e79e514f4",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 1,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 12
+          }
+        },
+        {
+          "id": "e6865d87-e7b0-4a79-97f0-61c2d40a77b1",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 15
+          }
+        },
+        {
+          "id": "71e2576a-0a0e-4a65-92bd-9fe4da405579",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "3f0d52d6-1229-421e-b859-ea60fc37f3d9",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 20
+          }
+        },
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["emblem"],
+      "data": [
+        {
+          "id": "0fbd8c9e-78f9-48b2-90e3-eb4749788214",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 1,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "5d0c5564-e8c6-4a23-bac9-12be8688c4d7",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 1,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "8e5952df-f342-4634-b7e2-170e79e514f4",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 1,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 12
+          }
+        },
+        {
+          "id": "e6865d87-e7b0-4a79-97f0-61c2d40a77b1",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 15
+          }
+        },
+        {
+          "id": "3f0d52d6-1229-421e-b859-ea60fc37f3d9",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 20
+          }
+        },
+        {
+          "id": "927bf259-1f1b-41c1-8719-a73f0af7911c",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "0360b75f-4e00-4b21-bf54-209cb154178e",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "1387a2e2-965f-4871-9d6e-87676278d397",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "064653c5-8004-4350-9fe5-f483398668c3",
+          "weights": {
+            "restoreCube": 5,
+            "mirrorCube": 5,
+            "hexaCube": 5,
+            "equalCube": 5,
+            "combineCube": 2
+          }
+        }
+      ]
+    }
+  ],
+  "legendary": [
+    {
+      "apply": ["hat"],
+      "data": [
+        {
+          "id": "b02bc25a-011c-4a5c-ad7e-9c81731de44e",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "57cbb9b1-c21d-4f4d-b0c9-26f68eb6db4f",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 2,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "6265a455-28f4-4641-931c-9158e6c59c5a",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1f280351-4918-4a40-91e2-db176a1ca108",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "ba77d4ea-6f46-4806-8a8e-3bae65a90d82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "65dcb86e-36cb-47eb-b3e2-a5e8f07d1e0f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "108e7dc6-4165-4f64-9809-ace62a571505",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["top", "overall"],
+      "data": [
+        {
+          "id": "89f2fbdd-d3a6-4d04-b072-db55b2e1aea1",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "524e4111-539a-4532-9475-48c84b818fa9",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1f280351-4918-4a40-91e2-db176a1ca108",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "ba77d4ea-6f46-4806-8a8e-3bae65a90d82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "65dcb86e-36cb-47eb-b3e2-a5e8f07d1e0f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "108e7dc6-4165-4f64-9809-ace62a571505",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["bottom"],
+      "data": [
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1f280351-4918-4a40-91e2-db176a1ca108",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "ba77d4ea-6f46-4806-8a8e-3bae65a90d82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 1,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "65dcb86e-36cb-47eb-b3e2-a5e8f07d1e0f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "108e7dc6-4165-4f64-9809-ace62a571505",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 6
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["gloves"],
+      "data": [
+        {
+          "id": "c9538ff1-cb6e-4131-826f-e92a87378172",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 2
+          }
+        },
+        {
+          "id": "61662f0c-91f0-4d27-b6eb-2cf900ba667b",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1f280351-4918-4a40-91e2-db176a1ca108",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "ba77d4ea-6f46-4806-8a8e-3bae65a90d82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 10
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "65dcb86e-36cb-47eb-b3e2-a5e8f07d1e0f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        },
+        {
+          "id": "108e7dc6-4165-4f64-9809-ace62a571505",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 9
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["shoes"],
+      "data": [
+        {
+          "id": "29e4d223-ea04-456e-bdc7-6d6da08f5f6e",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1f280351-4918-4a40-91e2-db176a1ca108",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "ba77d4ea-6f46-4806-8a8e-3bae65a90d82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "65dcb86e-36cb-47eb-b3e2-a5e8f07d1e0f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "108e7dc6-4165-4f64-9809-ace62a571505",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["cape", "belt", "shoulder", "heart", "badge"],
+      "data": [
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": null,
+            "mirrorCube": null,
+            "hexaCube": null,
+            "equalCube": null,
+            "combineCube": null
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1f280351-4918-4a40-91e2-db176a1ca108",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "ba77d4ea-6f46-4806-8a8e-3bae65a90d82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 1,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 3
+          }
+        },
+        {
+          "id": "65dcb86e-36cb-47eb-b3e2-a5e8f07d1e0f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 5
+          }
+        },
+        {
+          "id": "108e7dc6-4165-4f64-9809-ace62a571505",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 5
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["pendant", "ring", "face", "eye", "earrings"],
+      "data": [
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "1f280351-4918-4a40-91e2-db176a1ca108",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
+          }
+        },
+        {
+          "id": "ba77d4ea-6f46-4806-8a8e-3bae65a90d82",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 1
+          }
+        },
+        {
+          "id": "d45377eb-b187-4aba-a928-2f9771715a7f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "bc5f52af-88d6-4474-8395-420fdbe6307f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 8
+          }
+        },
+        {
+          "id": "0f00976a-8b12-4485-91b9-d338c3670bf0",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 6
+          }
+        },
+        {
+          "id": "21737bf9-7f75-45a9-9b70-f345b450324a",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 6
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "secondary-weapon",
+        "secondary-weapon-other"
+      ],
+      "data": [
+        {
+          "id": "ac809599-5ffb-4ce4-92de-5218a52c7cc0",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 20
+          }
+        },
+        {
+          "id": "32433c23-8a81-4dc3-9ec0-a2c72ebc984b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 20
+          }
+        },
+        {
+          "id": "4f5d2eca-2268-493f-84f8-b8d1b16977c2",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 100
+          }
+        },
+        {
+          "id": "203743a0-0154-4e3a-9045-7dc0e9ec2660",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 160
+          }
+        },
+        {
+          "id": "e71feb82-4a06-4bea-a899-d993f23a1309",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 100
+          }
+        },
+        {
+          "id": "8dd776e2-e860-4d5e-b787-a91512c9f2b7",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 2,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 32
+          }
+        },
+        {
+          "id": "5dfc6747-e67d-457a-9dd3-d198008abcd2",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "3fe74cd9-92fd-4688-b1df-a787737780c0",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 130
+          }
+        },
+        {
+          "id": "3dd27a81-84d2-47b4-8eaf-0236cb2f0bee",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "c96cc6b6-0a68-4dec-be31-9ebc5b486a4a",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 7
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["emblem"],
+      "data": [
+        {
+          "id": "ac809599-5ffb-4ce4-92de-5218a52c7cc0",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 20
+          }
+        },
+        {
+          "id": "32433c23-8a81-4dc3-9ec0-a2c72ebc984b",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 20
+          }
+        },
+        {
+          "id": "4f5d2eca-2268-493f-84f8-b8d1b16977c2",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 100
+          }
+        },
+        {
+          "id": "203743a0-0154-4e3a-9045-7dc0e9ec2660",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 160
+          }
+        },
+        {
+          "id": "e71feb82-4a06-4bea-a899-d993f23a1309",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 2,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 100
+          }
+        },
+        {
+          "id": "3fe74cd9-92fd-4688-b1df-a787737780c0",
+          "weights": {
+            "restoreCube": 2,
+            "mirrorCube": 1,
+            "hexaCube": 2,
+            "equalCube": 2,
+            "combineCube": 130
+          }
+        },
+        {
+          "id": "3dd27a81-84d2-47b4-8eaf-0236cb2f0bee",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "c96cc6b6-0a68-4dec-be31-9ebc5b486a4a",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "2200faa5-a247-4136-95f9-b8d89a971967",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55",
+          "weights": {
+            "restoreCube": 4,
+            "mirrorCube": 4,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 7
+          }
+        },
+        {
+          "id": "5a2b9d2d-8513-478e-a036-97dcd844e190",
+          "weights": {
+            "restoreCube": 3,
+            "mirrorCube": 3,
+            "hexaCube": 3,
+            "equalCube": 3,
+            "combineCube": 7
+          }
+        }
+      ]
+    }
+  ]
+}

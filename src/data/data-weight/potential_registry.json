@@ -1,0 +1,8508 @@
+{
+  "可以使用<實用的時空門>技能": {
+    "main": [
+      {
+        "type": "帽子專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 70,
+            "x": 1
+          }
+        ],
+        "id": "64a3d7a4-92e2-4e18-9759-a8a13d8c03ba"
+      }
+    ],
+    "additional": [],
+    "template": "可以使用<實用的時空門>技能",
+    "limit": { "key": "實用技能", "max": 1 },
+    "field": null
+  },
+  "可以使用<實用的神聖之火>技能": {
+    "main": [
+      {
+        "type": "下衣專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 70,
+            "x": 1
+          }
+        ],
+        "id": "b7030867-5975-40c6-b64c-4369a43a15dd"
+      }
+    ],
+    "additional": [],
+    "template": "可以使用<實用的神聖之火>技能",
+    "limit": { "key": "實用技能", "max": 1 },
+    "field": null
+  },
+  "可以使用<實用的速度激發>技能": {
+    "main": [
+      {
+        "type": "鞋子專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 70,
+            "x": 1
+          }
+        ],
+        "id": "45af7319-a03f-4e43-bdbc-2678a9ff70f0"
+      }
+    ],
+    "additional": [],
+    "template": "可以使用<實用的速度激發>技能",
+    "limit": { "key": "實用技能", "max": 1 },
+    "field": null
+  },
+  "可以使用<實用的最終極速>技能": {
+    "main": [
+      {
+        "type": "手套專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 120,
+            "x": 1
+          }
+        ],
+        "id": "61662f0c-91f0-4d27-b6eb-2cf900ba667b"
+      }
+    ],
+    "additional": [],
+    "template": "可以使用<實用的最終極速>技能",
+    "limit": { "key": "實用技能", "max": 1 },
+    "field": null
+  },
+  "可以使用<實用的進階祝福>技能": {
+    "main": [
+      {
+        "type": "帽子專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 120,
+            "x": 1
+          }
+        ],
+        "id": "6265a455-28f4-4641-931c-9158e6c59c5a"
+      }
+    ],
+    "additional": [],
+    "template": "可以使用<實用的進階祝福>技能",
+    "limit": { "key": "實用技能", "max": 1 },
+    "field": null
+  },
+  "可以使用<實用的會心之眼>技能": {
+    "main": [
+      {
+        "type": "手套專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 120,
+            "x": 1
+          }
+        ],
+        "id": "26e11329-e2fe-46b4-b12a-634f36b68e6c"
+      }
+    ],
+    "additional": [],
+    "template": "可以使用<實用的會心之眼>技能",
+    "limit": { "key": "實用技能", "max": 1 },
+    "field": null
+  },
+  "可以使用<實用的戰鬥命令>技能": {
+    "main": [
+      {
+        "type": "鞋子專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 70,
+            "x": 1
+          }
+        ],
+        "id": "29e4d223-ea04-456e-bdc7-6d6da08f5f6e"
+      }
+    ],
+    "additional": [],
+    "template": "可以使用<實用的戰鬥命令>技能",
+    "limit": { "key": "實用技能", "max": 1 },
+    "field": null
+  },
+  "有一定機率反射所受到的傷害": {
+    "main": [
+      {
+        "type": "上衣專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10,
+            "y": 20
+          },
+          {
+            "minLevel": 31,
+            "x": 10,
+            "y": 35
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 35
+          },
+          {
+            "minLevel": 70,
+            "x": 20,
+            "y": 50
+          },
+          {
+            "minLevel": 101,
+            "x": 30,
+            "y": 50
+          }
+        ],
+        "id": "d0e99571-0943-4b48-aa03-1793f00929fb"
+      },
+      {
+        "type": "上衣專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10,
+            "y": 30
+          },
+          {
+            "minLevel": 31,
+            "x": 10,
+            "y": 50
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 50
+          },
+          {
+            "minLevel": 70,
+            "x": 20,
+            "y": 70
+          },
+          {
+            "minLevel": 101,
+            "x": 30,
+            "y": 70
+          }
+        ],
+        "id": "b286aba5-71d1-4e0e-912d-bb253bf76894"
+      },
+      {
+        "type": "下衣專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10,
+            "y": 20
+          },
+          {
+            "minLevel": 31,
+            "x": 10,
+            "y": 35
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 35
+          },
+          {
+            "minLevel": 70,
+            "x": 20,
+            "y": 50
+          },
+          {
+            "minLevel": 101,
+            "x": 30,
+            "y": 50
+          }
+        ],
+        "id": "6dab2f55-a29a-43fb-9514-5688fc31d2d1"
+      },
+      {
+        "type": "下衣專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10,
+            "y": 30
+          },
+          {
+            "minLevel": 31,
+            "x": 10,
+            "y": 50
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 50
+          },
+          {
+            "minLevel": 70,
+            "x": 20,
+            "y": 70
+          },
+          {
+            "minLevel": 101,
+            "x": 30,
+            "y": 70
+          }
+        ],
+        "id": "2f8fcb6e-2665-4dbb-a37d-eac39b60f475"
+      }
+    ],
+    "additional": [],
+    "template": "有{x}%機率反射所受到傷害的{y}%",
+    "field": null
+  },
+  "攻擊時有一定的機率恢復HP": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 20,
+            "y": 30
+          },
+          {
+            "minLevel": 11,
+            "x": 20,
+            "y": 60
+          },
+          {
+            "minLevel": 21,
+            "x": 20,
+            "y": 90
+          },
+          {
+            "minLevel": 31,
+            "x": 20,
+            "y": 120
+          },
+          {
+            "minLevel": 41,
+            "x": 20,
+            "y": 150
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 180
+          },
+          {
+            "minLevel": 61,
+            "x": 20,
+            "y": 210
+          },
+          {
+            "minLevel": 71,
+            "x": 20,
+            "y": 240
+          },
+          {
+            "minLevel": 81,
+            "x": 20,
+            "y": 270
+          },
+          {
+            "minLevel": 91,
+            "x": 20,
+            "y": 300
+          },
+          {
+            "minLevel": 101,
+            "x": 20,
+            "y": 330
+          },
+          {
+            "minLevel": 111,
+            "x": 20,
+            "y": 360
+          },
+          {
+            "minLevel": 151,
+            "x": 20,
+            "y": 375
+          }
+        ],
+        "id": "886948cf-1c32-420d-8c4e-0f181bcd2275"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3,
+            "y": 10
+          },
+          {
+            "minLevel": 11,
+            "x": 3,
+            "y": 12
+          },
+          {
+            "minLevel": 21,
+            "x": 3,
+            "y": 14
+          },
+          {
+            "minLevel": 31,
+            "x": 3,
+            "y": 16
+          },
+          {
+            "minLevel": 41,
+            "x": 3,
+            "y": 18
+          },
+          {
+            "minLevel": 51,
+            "x": 3,
+            "y": 20
+          },
+          {
+            "minLevel": 61,
+            "x": 3,
+            "y": 22
+          },
+          {
+            "minLevel": 71,
+            "x": 3,
+            "y": 24
+          },
+          {
+            "minLevel": 81,
+            "x": 3,
+            "y": 26
+          },
+          {
+            "minLevel": 91,
+            "x": 3,
+            "y": 28
+          },
+          {
+            "minLevel": 101,
+            "x": 3,
+            "y": 30
+          },
+          {
+            "minLevel": 111,
+            "x": 3,
+            "y": 32
+          },
+          {
+            "minLevel": 151,
+            "x": 3,
+            "y": 33
+          }
+        ],
+        "id": "8b36494a-eb2a-4523-a3c1-2453d3f0f5ee"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3,
+            "y": 20
+          },
+          {
+            "minLevel": 11,
+            "x": 3,
+            "y": 23
+          },
+          {
+            "minLevel": 21,
+            "x": 3,
+            "y": 26
+          },
+          {
+            "minLevel": 31,
+            "x": 3,
+            "y": 29
+          },
+          {
+            "minLevel": 41,
+            "x": 3,
+            "y": 32
+          },
+          {
+            "minLevel": 51,
+            "x": 3,
+            "y": 35
+          },
+          {
+            "minLevel": 61,
+            "x": 3,
+            "y": 38
+          },
+          {
+            "minLevel": 71,
+            "x": 3,
+            "y": 41
+          },
+          {
+            "minLevel": 81,
+            "x": 3,
+            "y": 44
+          },
+          {
+            "minLevel": 91,
+            "x": 3,
+            "y": 47
+          },
+          {
+            "minLevel": 101,
+            "x": 3,
+            "y": 50
+          },
+          {
+            "minLevel": 111,
+            "x": 3,
+            "y": 53
+          },
+          {
+            "minLevel": 151,
+            "x": 3,
+            "y": 54
+          }
+        ],
+        "id": "d2f9e7b9-dc9b-4380-a6fb-6f69bf1b5e28"
+      }
+    ],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3,
+            "y": 20
+          },
+          {
+            "minLevel": 11,
+            "x": 3,
+            "y": 23
+          },
+          {
+            "minLevel": 21,
+            "x": 3,
+            "y": 26
+          },
+          {
+            "minLevel": 31,
+            "x": 3,
+            "y": 29
+          },
+          {
+            "minLevel": 41,
+            "x": 3,
+            "y": 32
+          },
+          {
+            "minLevel": 51,
+            "x": 3,
+            "y": 35
+          },
+          {
+            "minLevel": 61,
+            "x": 3,
+            "y": 38
+          },
+          {
+            "minLevel": 71,
+            "x": 3,
+            "y": 41
+          },
+          {
+            "minLevel": 81,
+            "x": 3,
+            "y": 44
+          },
+          {
+            "minLevel": 91,
+            "x": 3,
+            "y": 47
+          },
+          {
+            "minLevel": 101,
+            "x": 3,
+            "y": 50
+          },
+          {
+            "minLevel": 111,
+            "x": 3,
+            "y": 53
+          },
+          {
+            "minLevel": 151,
+            "x": 3,
+            "y": 54
+          }
+        ],
+        "id": "60d504e7-d1dc-4b36-b01a-08821d94b2da"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 15,
+            "y": 40
+          },
+          {
+            "minLevel": 11,
+            "x": 15,
+            "y": 45
+          },
+          {
+            "minLevel": 21,
+            "x": 15,
+            "y": 50
+          },
+          {
+            "minLevel": 31,
+            "x": 15,
+            "y": 55
+          },
+          {
+            "minLevel": 41,
+            "x": 15,
+            "y": 60
+          },
+          {
+            "minLevel": 51,
+            "x": 15,
+            "y": 65
+          },
+          {
+            "minLevel": 61,
+            "x": 15,
+            "y": 70
+          },
+          {
+            "minLevel": 71,
+            "x": 15,
+            "y": 75
+          },
+          {
+            "minLevel": 81,
+            "x": 15,
+            "y": 80
+          },
+          {
+            "minLevel": 91,
+            "x": 15,
+            "y": 85
+          },
+          {
+            "minLevel": 101,
+            "x": 15,
+            "y": 90
+          },
+          {
+            "minLevel": 111,
+            "x": 15,
+            "y": 95
+          },
+          {
+            "minLevel": 151,
+            "x": 15,
+            "y": 97
+          }
+        ],
+        "id": "21aafe57-b721-45d6-b889-04c268ca8703"
+      }
+    ],
+    "template": "攻擊時有{x}%機率恢復{y}HP",
+    "field": null
+  },
+  "攻擊時有一定的機率恢復MP": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 20,
+            "y": 20
+          },
+          {
+            "minLevel": 11,
+            "x": 20,
+            "y": 30
+          },
+          {
+            "minLevel": 21,
+            "x": 20,
+            "y": 40
+          },
+          {
+            "minLevel": 31,
+            "x": 20,
+            "y": 50
+          },
+          {
+            "minLevel": 41,
+            "x": 20,
+            "y": 60
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 70
+          },
+          {
+            "minLevel": 61,
+            "x": 20,
+            "y": 80
+          },
+          {
+            "minLevel": 71,
+            "x": 20,
+            "y": 90
+          },
+          {
+            "minLevel": 81,
+            "x": 20,
+            "y": 100
+          },
+          {
+            "minLevel": 91,
+            "x": 20,
+            "y": 110
+          },
+          {
+            "minLevel": 101,
+            "x": 20,
+            "y": 120
+          },
+          {
+            "minLevel": 151,
+            "x": 20,
+            "y": 125
+          }
+        ],
+        "id": "946ec4d0-60b9-4f24-90e1-2b4f7f6ef929"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 20,
+            "y": 30
+          },
+          {
+            "minLevel": 11,
+            "x": 20,
+            "y": 45
+          },
+          {
+            "minLevel": 21,
+            "x": 20,
+            "y": 60
+          },
+          {
+            "minLevel": 31,
+            "x": 20,
+            "y": 75
+          },
+          {
+            "minLevel": 41,
+            "x": 20,
+            "y": 90
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 105
+          },
+          {
+            "minLevel": 61,
+            "x": 20,
+            "y": 120
+          },
+          {
+            "minLevel": 71,
+            "x": 20,
+            "y": 135
+          },
+          {
+            "minLevel": 81,
+            "x": 20,
+            "y": 150
+          },
+          {
+            "minLevel": 91,
+            "x": 20,
+            "y": 165
+          },
+          {
+            "minLevel": 101,
+            "x": 20,
+            "y": 180
+          },
+          {
+            "minLevel": 151,
+            "x": 20,
+            "y": 187
+          }
+        ],
+        "id": "fa436def-1b6a-467d-ac16-0fbb129c6798"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3,
+            "y": 10
+          },
+          {
+            "minLevel": 11,
+            "x": 3,
+            "y": 12
+          },
+          {
+            "minLevel": 21,
+            "x": 3,
+            "y": 14
+          },
+          {
+            "minLevel": 31,
+            "x": 3,
+            "y": 16
+          },
+          {
+            "minLevel": 41,
+            "x": 3,
+            "y": 18
+          },
+          {
+            "minLevel": 51,
+            "x": 3,
+            "y": 20
+          },
+          {
+            "minLevel": 61,
+            "x": 3,
+            "y": 22
+          },
+          {
+            "minLevel": 71,
+            "x": 3,
+            "y": 24
+          },
+          {
+            "minLevel": 81,
+            "x": 3,
+            "y": 26
+          },
+          {
+            "minLevel": 91,
+            "x": 3,
+            "y": 28
+          },
+          {
+            "minLevel": 101,
+            "x": 3,
+            "y": 30
+          },
+          {
+            "minLevel": 111,
+            "x": 3,
+            "y": 32
+          },
+          {
+            "minLevel": 151,
+            "x": 3,
+            "y": 33
+          }
+        ],
+        "id": "88a0e7bf-aa08-4c3a-ab38-565d66f17838"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3,
+            "y": 20
+          },
+          {
+            "minLevel": 11,
+            "x": 3,
+            "y": 23
+          },
+          {
+            "minLevel": 21,
+            "x": 3,
+            "y": 26
+          },
+          {
+            "minLevel": 31,
+            "x": 3,
+            "y": 29
+          },
+          {
+            "minLevel": 41,
+            "x": 3,
+            "y": 32
+          },
+          {
+            "minLevel": 51,
+            "x": 3,
+            "y": 35
+          },
+          {
+            "minLevel": 61,
+            "x": 3,
+            "y": 38
+          },
+          {
+            "minLevel": 71,
+            "x": 3,
+            "y": 41
+          },
+          {
+            "minLevel": 81,
+            "x": 3,
+            "y": 44
+          },
+          {
+            "minLevel": 91,
+            "x": 3,
+            "y": 47
+          },
+          {
+            "minLevel": 101,
+            "x": 3,
+            "y": 50
+          },
+          {
+            "minLevel": 111,
+            "x": 3,
+            "y": 53
+          },
+          {
+            "minLevel": 151,
+            "x": 3,
+            "y": 54
+          }
+        ],
+        "id": "eef67b4b-f974-4d17-9545-9d72eb854aaf"
+      }
+    ],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3,
+            "y": 20
+          },
+          {
+            "minLevel": 11,
+            "x": 3,
+            "y": 23
+          },
+          {
+            "minLevel": 21,
+            "x": 3,
+            "y": 26
+          },
+          {
+            "minLevel": 31,
+            "x": 3,
+            "y": 29
+          },
+          {
+            "minLevel": 41,
+            "x": 3,
+            "y": 32
+          },
+          {
+            "minLevel": 51,
+            "x": 3,
+            "y": 35
+          },
+          {
+            "minLevel": 61,
+            "x": 3,
+            "y": 38
+          },
+          {
+            "minLevel": 71,
+            "x": 3,
+            "y": 41
+          },
+          {
+            "minLevel": 81,
+            "x": 3,
+            "y": 44
+          },
+          {
+            "minLevel": 91,
+            "x": 3,
+            "y": 47
+          },
+          {
+            "minLevel": 101,
+            "x": 3,
+            "y": 50
+          },
+          {
+            "minLevel": 111,
+            "x": 3,
+            "y": 53
+          },
+          {
+            "minLevel": 151,
+            "x": 3,
+            "y": 54
+          }
+        ],
+        "id": "611c235c-0216-434f-b052-0f6852671335"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 15,
+            "y": 40
+          },
+          {
+            "minLevel": 11,
+            "x": 15,
+            "y": 45
+          },
+          {
+            "minLevel": 21,
+            "x": 15,
+            "y": 50
+          },
+          {
+            "minLevel": 31,
+            "x": 15,
+            "y": 55
+          },
+          {
+            "minLevel": 41,
+            "x": 15,
+            "y": 60
+          },
+          {
+            "minLevel": 51,
+            "x": 15,
+            "y": 65
+          },
+          {
+            "minLevel": 61,
+            "x": 15,
+            "y": 70
+          },
+          {
+            "minLevel": 71,
+            "x": 15,
+            "y": 75
+          },
+          {
+            "minLevel": 81,
+            "x": 15,
+            "y": 80
+          },
+          {
+            "minLevel": 91,
+            "x": 15,
+            "y": 85
+          },
+          {
+            "minLevel": 101,
+            "x": 15,
+            "y": 90
+          },
+          {
+            "minLevel": 111,
+            "x": 15,
+            "y": 95
+          },
+          {
+            "minLevel": 151,
+            "x": 15,
+            "y": 97
+          }
+        ],
+        "id": "5624a729-1190-4ce0-adca-7617dbc6547c"
+      }
+    ],
+    "template": "攻擊時有{x}%機率恢復{y}MP",
+    "field": null
+  },
+  "擊殺怪物有一定機率恢復HP": {
+    "main": [
+      {
+        "type": "手套專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 15,
+            "y": 40
+          },
+          {
+            "minLevel": 11,
+            "x": 15,
+            "y": 45
+          },
+          {
+            "minLevel": 21,
+            "x": 15,
+            "y": 50
+          },
+          {
+            "minLevel": 31,
+            "x": 15,
+            "y": 55
+          },
+          {
+            "minLevel": 41,
+            "x": 15,
+            "y": 60
+          },
+          {
+            "minLevel": 51,
+            "x": 15,
+            "y": 65
+          },
+          {
+            "minLevel": 61,
+            "x": 15,
+            "y": 70
+          },
+          {
+            "minLevel": 71,
+            "x": 15,
+            "y": 75
+          },
+          {
+            "minLevel": 81,
+            "x": 15,
+            "y": 80
+          },
+          {
+            "minLevel": 91,
+            "x": 15,
+            "y": 85
+          },
+          {
+            "minLevel": 101,
+            "x": 15,
+            "y": 90
+          },
+          {
+            "minLevel": 111,
+            "x": 15,
+            "y": 95
+          },
+          {
+            "minLevel": 151,
+            "x": 15,
+            "y": 97
+          }
+        ],
+        "id": "170f8211-0a34-4504-a5f6-1fc8046cf6c7"
+      }
+    ],
+    "additional": [],
+    "template": "擊殺怪物有{x}%機率恢復{y}HP",
+    "field": null
+  },
+  "擊殺怪物有一定機率恢復MP": {
+    "main": [
+      {
+        "type": "手套專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 15,
+            "y": 40
+          },
+          {
+            "minLevel": 11,
+            "x": 15,
+            "y": 45
+          },
+          {
+            "minLevel": 21,
+            "x": 15,
+            "y": 50
+          },
+          {
+            "minLevel": 31,
+            "x": 15,
+            "y": 55
+          },
+          {
+            "minLevel": 41,
+            "x": 15,
+            "y": 60
+          },
+          {
+            "minLevel": 51,
+            "x": 15,
+            "y": 65
+          },
+          {
+            "minLevel": 61,
+            "x": 15,
+            "y": 70
+          },
+          {
+            "minLevel": 71,
+            "x": 15,
+            "y": 75
+          },
+          {
+            "minLevel": 81,
+            "x": 15,
+            "y": 80
+          },
+          {
+            "minLevel": 91,
+            "x": 15,
+            "y": 85
+          },
+          {
+            "minLevel": 101,
+            "x": 15,
+            "y": 90
+          },
+          {
+            "minLevel": 111,
+            "x": 15,
+            "y": 95
+          },
+          {
+            "minLevel": 151,
+            "x": 15,
+            "y": 97
+          }
+        ],
+        "id": "93977924-0ec0-4c61-b2fc-a0bb40ee5b3b"
+      }
+    ],
+    "additional": [],
+    "template": "擊殺怪物有{x}%機率恢復{y}MP",
+    "field": null
+  },
+  "攻擊時有一定的機率發動中毒效果": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 10,
+            "x": 20,
+            "y": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 20,
+            "y": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 20,
+            "y": 3
+          },
+          {
+            "minLevel": 61,
+            "x": 20,
+            "y": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 20,
+            "y": 5
+          },
+          {
+            "minLevel": 101,
+            "x": 20,
+            "y": 6
+          }
+        ],
+        "id": "37b2a818-d05c-42fc-a32f-a3daf643eeab"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊時有{x}%機率發動{y}級中毒效果",
+    "field": null
+  },
+  "攻擊時有一定的機率發動冰結效果": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 10,
+            "x": 10,
+            "y": 1
+          },
+          {
+            "minLevel": 71,
+            "x": 10,
+            "y": 2
+          }
+        ],
+        "id": "cf9e763e-95a1-4a88-910e-eff2a5104257"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊時有{x}%機率發動{y}級冰結效果",
+    "field": null
+  },
+  "攻擊時有一定的機率發動昏迷效果": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 10,
+            "x": 10,
+            "y": 1
+          },
+          {
+            "minLevel": 71,
+            "x": 10,
+            "y": 2
+          }
+        ],
+        "id": "e606ad2d-1c78-4859-8471-19caea70a30b"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊時有{x}%機率發動{y}級昏迷效果",
+    "field": null
+  },
+  "攻擊時有一定的機率發動封印效果": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 10,
+            "x": 10,
+            "y": 1
+          },
+          {
+            "minLevel": 71,
+            "x": 10,
+            "y": 2
+          }
+        ],
+        "id": "698d546a-7749-4e57-8670-afd427f9099d"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊時有{x}%機率發動{y}級封印效果",
+    "field": null
+  },
+  "攻擊時有一定的機率發動緩慢效果": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 10,
+            "x": 20,
+            "y": 1
+          },
+          {
+            "minLevel": 71,
+            "x": 20,
+            "y": 2
+          }
+        ],
+        "id": "22ddddc4-98df-41f3-92a4-2ebf63f9bdc2"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊時有{x}%機率發動{y}級緩慢效果",
+    "field": null
+  },
+  "攻擊時有一定的機率發動闇黑效果": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 10,
+            "x": 20,
+            "y": 1
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 2
+          },
+          {
+            "minLevel": 101,
+            "x": 20,
+            "y": 3
+          }
+        ],
+        "id": "7904828e-bab4-43d3-8a2e-0e69c5d7a85f"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊時有{x}%機率發動{y}級闇黑效果",
+    "field": null
+  },
+  "攻擊時有一定機率發動自動竊取": {
+    "main": [
+      {
+        "type": "手套專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 20,
+            "x": 1
+          }
+        ],
+        "id": "3b983a6b-86f5-4631-b82f-33751530bb2c"
+      },
+      {
+        "type": "手套專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 40,
+            "x": 2
+          }
+        ],
+        "id": "8115c12e-1a68-4d9b-ad77-190631d75b82"
+      },
+      {
+        "type": "手套專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 20,
+            "x": 3
+          }
+        ],
+        "id": "157a1308-aa13-45ab-9bbe-118f193ce384"
+      },
+      {
+        "type": "手套專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 40,
+            "x": 5
+          }
+        ],
+        "id": "aba19c5e-45c9-405b-98ce-8ab2b0804063"
+      },
+      {
+        "type": "手套專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 60,
+            "x": 7
+          }
+        ],
+        "id": "10a373fe-53a2-46e2-80e6-fe10a167412d"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊時有{x}%機率發動自動竊取",
+    "field": null
+  },
+  "每4秒恢復一定的HP": {
+    "main": [
+      {
+        "type": "飾品專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 11,
+            "x": 4
+          },
+          {
+            "minLevel": 21,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 8
+          },
+          {
+            "minLevel": 41,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 12
+          },
+          {
+            "minLevel": 61,
+            "x": 14
+          },
+          {
+            "minLevel": 71,
+            "x": 16
+          },
+          {
+            "minLevel": 81,
+            "x": 18
+          },
+          {
+            "minLevel": 91,
+            "x": 20
+          },
+          {
+            "minLevel": 101,
+            "x": 22
+          },
+          {
+            "minLevel": 111,
+            "x": 24
+          },
+          {
+            "minLevel": 151,
+            "x": 25
+          }
+        ],
+        "id": "25a19ab4-6986-4f13-b501-74b9de8ccffc"
+      }
+    ],
+    "additional": [],
+    "template": "4秒內恢復{x}HP",
+    "field": null
+  },
+  "每4秒恢復一定的MP": {
+    "main": [
+      {
+        "type": "飾品專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 11,
+            "x": 4
+          },
+          {
+            "minLevel": 21,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 8
+          },
+          {
+            "minLevel": 41,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 12
+          },
+          {
+            "minLevel": 61,
+            "x": 14
+          },
+          {
+            "minLevel": 71,
+            "x": 16
+          },
+          {
+            "minLevel": 81,
+            "x": 18
+          },
+          {
+            "minLevel": 91,
+            "x": 20
+          },
+          {
+            "minLevel": 101,
+            "x": 22
+          },
+          {
+            "minLevel": 111,
+            "x": 24
+          },
+          {
+            "minLevel": 151,
+            "x": 25
+          }
+        ],
+        "id": "2f49a5f4-86cf-498b-99a8-c2a66d5008d4"
+      }
+    ],
+    "additional": [],
+    "template": "4秒內恢復{x}MP",
+    "field": null
+  },
+  "防禦力": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 5
+          },
+          {
+            "minLevel": 11,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 31,
+            "x": 20
+          },
+          {
+            "minLevel": 41,
+            "x": 25
+          },
+          {
+            "minLevel": 51,
+            "x": 30
+          },
+          {
+            "minLevel": 61,
+            "x": 35
+          },
+          {
+            "minLevel": 71,
+            "x": 40
+          },
+          {
+            "minLevel": 81,
+            "x": 45
+          },
+          {
+            "minLevel": 91,
+            "x": 50
+          },
+          {
+            "minLevel": 101,
+            "x": 55
+          },
+          {
+            "minLevel": 111,
+            "x": 60
+          }
+        ],
+        "id": "2fa850d8-b442-48a2-9d4c-a29fadbe1839"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 11,
+            "x": 20
+          },
+          {
+            "minLevel": 21,
+            "x": 30
+          },
+          {
+            "minLevel": 31,
+            "x": 40
+          },
+          {
+            "minLevel": 41,
+            "x": 50
+          },
+          {
+            "minLevel": 51,
+            "x": 60
+          },
+          {
+            "minLevel": 61,
+            "x": 70
+          },
+          {
+            "minLevel": 71,
+            "x": 80
+          },
+          {
+            "minLevel": 81,
+            "x": 90
+          },
+          {
+            "minLevel": 91,
+            "x": 100
+          },
+          {
+            "minLevel": 101,
+            "x": 110
+          },
+          {
+            "minLevel": 111,
+            "x": 120
+          },
+          {
+            "minLevel": 151,
+            "x": 125
+          }
+        ],
+        "id": "ab31a86b-9e36-4722-9665-9c68c3effe82"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 5
+          },
+          {
+            "minLevel": 11,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 31,
+            "x": 20
+          },
+          {
+            "minLevel": 41,
+            "x": 25
+          },
+          {
+            "minLevel": 51,
+            "x": 30
+          },
+          {
+            "minLevel": 61,
+            "x": 35
+          },
+          {
+            "minLevel": 71,
+            "x": 40
+          },
+          {
+            "minLevel": 81,
+            "x": 45
+          },
+          {
+            "minLevel": 91,
+            "x": 50
+          },
+          {
+            "minLevel": 101,
+            "x": 55
+          },
+          {
+            "minLevel": 111,
+            "x": 60
+          }
+        ],
+        "id": "8e8196fd-0a1a-4f3d-bcd6-983293f5d9bc"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 51,
+            "x": 50
+          },
+          {
+            "minLevel": 91,
+            "x": 100
+          },
+          {
+            "minLevel": 151,
+            "x": 125
+          }
+        ],
+        "id": "b0847276-9cb6-4e0b-90e8-c80c652994a2"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 15
+          },
+          {
+            "minLevel": 21,
+            "x": 20
+          },
+          {
+            "minLevel": 51,
+            "x": 60
+          },
+          {
+            "minLevel": 91,
+            "x": 120
+          },
+          {
+            "minLevel": 151,
+            "x": 150
+          }
+        ],
+        "id": "7ca00439-a5d7-4e53-8b86-fde31a987e41"
+      }
+    ],
+    "template": "防禦力 +{x}",
+    "field": null
+  },
+  "防禦力%": {
+    "main": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "3963915f-67d7-450b-8f9a-dc0b5e0c2aa3"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "750935f8-8474-4a85-9761-08fd58d70156"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 91,
+            "x": 2
+          },
+          {
+            "minLevel": 151,
+            "x": 3
+          }
+        ],
+        "id": "4968b289-8b7d-4665-a4f3-d3e86d6f621d"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 4
+          },
+          {
+            "minLevel": 151,
+            "x": 5
+          }
+        ],
+        "id": "bf84fc02-2a53-40e1-955c-3f03c9c9fa84"
+      }
+    ],
+    "template": "防禦力 +{x}%",
+    "field": null
+  },
+  "移動速度": {
+    "main": [
+      {
+        "type": "鞋子專用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 111,
+            "x": 4
+          }
+        ],
+        "id": "14512bcb-2f1c-48d4-9507-209a0bc60db1"
+      },
+      {
+        "type": "鞋子專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 111,
+            "x": 8
+          }
+        ],
+        "id": "37ca5d59-de88-4d50-aaa0-2e31a5f30ec0"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 111,
+            "x": 4
+          }
+        ],
+        "id": "345e0267-2b07-4a47-98c2-bd7147383223"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 5
+          },
+          {
+            "minLevel": 111,
+            "x": 6
+          }
+        ],
+        "id": "ee18ce7b-fc68-40b5-88f1-015f9d9f96a4"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 111,
+            "x": 8
+          }
+        ],
+        "id": "f866a62e-616b-483e-9db3-ba736ddce037"
+      }
+    ],
+    "template": "移動速度 +{x}",
+    "field": null
+  },
+  "跳躍力": {
+    "main": [
+      {
+        "type": "鞋子專用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 111,
+            "x": 4
+          }
+        ],
+        "id": "fbf13f79-f9e4-4cf4-a0c5-1007a58eb8f2"
+      },
+      {
+        "type": "鞋子專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 111,
+            "x": 8
+          }
+        ],
+        "id": "c89e8f64-1283-4fe0-9d41-9b808291a280"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 111,
+            "x": 4
+          }
+        ],
+        "id": "0972d233-3477-427e-a2dc-9f675f1730d4"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 5
+          },
+          {
+            "minLevel": 111,
+            "x": 6
+          }
+        ],
+        "id": "a719b325-f0fb-4f31-a17a-ecb0743ff41d"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 111,
+            "x": 8
+          }
+        ],
+        "id": "98686777-a6b0-406b-88d2-3fa6d9a86bf3"
+      }
+    ],
+    "template": "跳躍力 +{x}",
+    "field": null
+  },
+  "所有技能的MP消耗%": {
+    "main": [
+      {
+        "type": "飾品專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 5
+          },
+          {
+            "minLevel": 51,
+            "x": 10
+          },
+          {
+            "minLevel": 101,
+            "x": 15
+          },
+          {
+            "minLevel": 151,
+            "x": 17
+          }
+        ],
+        "id": "d45377eb-b187-4aba-a928-2f9771715a7f"
+      },
+      {
+        "type": "飾品專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 20
+          },
+          {
+            "minLevel": 101,
+            "x": 30
+          },
+          {
+            "minLevel": 151,
+            "x": 35
+          }
+        ],
+        "id": "bc5f52af-88d6-4474-8395-420fdbe6307f"
+      }
+    ],
+    "additional": [
+      {
+        "type": "飾品專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 21,
+            "x": 5
+          },
+          {
+            "minLevel": 51,
+            "x": 7
+          },
+          {
+            "minLevel": 91,
+            "x": 10
+          }
+        ],
+        "id": "70deb14a-bf92-4a25-ba22-cdc149dd0750"
+      }
+    ],
+    "template": "所有技能的MP消耗 -{x}%",
+    "field": null
+  },
+  "HP恢復道具及恢復技能效果增加": {
+    "main": [
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 31,
+            "x": 20
+          },
+          {
+            "minLevel": 71,
+            "x": 30
+          }
+        ],
+        "id": "2dc1b6bd-1fb7-4a40-9f2d-6f34b4213db4"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 20
+          },
+          {
+            "minLevel": 31,
+            "x": 30
+          },
+          {
+            "minLevel": 71,
+            "x": 40
+          }
+        ],
+        "id": "9aae09d3-fdec-421e-8bf9-e4bc7c1ad1a0"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 5
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 15
+          },
+          {
+            "minLevel": 91,
+            "x": 20
+          }
+        ],
+        "id": "8c1eddaf-07ad-4ad3-9f53-2f4b6b207449"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 51,
+            "x": 20
+          },
+          {
+            "minLevel": 91,
+            "x": 30
+          }
+        ],
+        "id": "8e049dc2-9dc1-4a4d-8b41-4fb1727a1742"
+      }
+    ],
+    "template": "HP恢復道具及恢復技能效果 +{x}%",
+    "field": null
+  },
+  "被擊中後無敵時間增加": {
+    "main": [
+      {
+        "type": "上衣專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          }
+        ],
+        "id": "0e23a00d-4876-4045-82ef-5cb4e2a0f329"
+      },
+      {
+        "type": "上衣專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          }
+        ],
+        "id": "8a37ec8a-8f9f-459a-b98b-74668daa4020"
+      },
+      {
+        "type": "上衣專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          }
+        ],
+        "id": "89f2fbdd-d3a6-4d04-b072-db55b2e1aea1"
+      }
+    ],
+    "additional": [],
+    "template": "被擊中後無敵時間 +{x}秒",
+    "limit": { "key": "被擊中後無敵時間增加", "max": 1 },
+    "field": null
+  },
+  "被擊中時有一定機率在時間內無敵": {
+    "main": [
+      {
+        "type": "上衣專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2,
+            "y": 5
+          },
+          {
+            "minLevel": 41,
+            "x": 2,
+            "y": 6
+          },
+          {
+            "minLevel": 81,
+            "x": 2,
+            "y": 7
+          }
+        ],
+        "id": "3421b6b7-fbd8-4751-b2e5-ec97ed4ee8e6"
+      },
+      {
+        "type": "上衣專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4,
+            "y": 5
+          },
+          {
+            "minLevel": 41,
+            "x": 4,
+            "y": 6
+          },
+          {
+            "minLevel": 81,
+            "x": 4,
+            "y": 7
+          }
+        ],
+        "id": "524e4111-539a-4532-9475-48c84b818fa9"
+      }
+    ],
+    "additional": [],
+    "template": "被擊中時有{x}%機率在{y}秒內無敵",
+    "limit": { "key": "被擊中後有機率無敵", "max": 2 },
+    "field": null
+  },
+  "被擊中時有一定機率無視傷害": {
+    "main": [
+      {
+        "type": "防具專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 20,
+            "y": 3
+          },
+          {
+            "minLevel": 11,
+            "x": 20,
+            "y": 5
+          },
+          {
+            "minLevel": 21,
+            "x": 20,
+            "y": 7
+          },
+          {
+            "minLevel": 31,
+            "x": 20,
+            "y": 9
+          },
+          {
+            "minLevel": 41,
+            "x": 20,
+            "y": 11
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 13
+          },
+          {
+            "minLevel": 61,
+            "x": 20,
+            "y": 15
+          },
+          {
+            "minLevel": 71,
+            "x": 20,
+            "y": 17
+          },
+          {
+            "minLevel": 81,
+            "x": 20,
+            "y": 19
+          },
+          {
+            "minLevel": 91,
+            "x": 20,
+            "y": 21
+          },
+          {
+            "minLevel": 101,
+            "x": 20,
+            "y": 23
+          },
+          {
+            "minLevel": 111,
+            "x": 20,
+            "y": 25
+          },
+          {
+            "minLevel": 151,
+            "x": 20,
+            "y": 26
+          }
+        ],
+        "id": "a4e82d8e-0905-44b8-a22c-f97d24df79b1"
+      },
+      {
+        "type": "防具專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 20,
+            "y": 5
+          },
+          {
+            "minLevel": 11,
+            "x": 20,
+            "y": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 20,
+            "y": 11
+          },
+          {
+            "minLevel": 31,
+            "x": 20,
+            "y": 14
+          },
+          {
+            "minLevel": 41,
+            "x": 20,
+            "y": 17
+          },
+          {
+            "minLevel": 51,
+            "x": 20,
+            "y": 20
+          },
+          {
+            "minLevel": 61,
+            "x": 20,
+            "y": 23
+          },
+          {
+            "minLevel": 71,
+            "x": 20,
+            "y": 26
+          },
+          {
+            "minLevel": 81,
+            "x": 20,
+            "y": 29
+          },
+          {
+            "minLevel": 91,
+            "x": 20,
+            "y": 32
+          },
+          {
+            "minLevel": 101,
+            "x": 20,
+            "y": 35
+          },
+          {
+            "minLevel": 111,
+            "x": 20,
+            "y": 38
+          },
+          {
+            "minLevel": 151,
+            "x": 20,
+            "y": 39
+          }
+        ],
+        "id": "cd32a0a4-262b-44e6-b7e1-ba777d5f63ca"
+      },
+      {
+        "type": "防具專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 30,
+            "y": 7
+          },
+          {
+            "minLevel": 11,
+            "x": 30,
+            "y": 11
+          },
+          {
+            "minLevel": 21,
+            "x": 30,
+            "y": 15
+          },
+          {
+            "minLevel": 31,
+            "x": 30,
+            "y": 19
+          },
+          {
+            "minLevel": 41,
+            "x": 30,
+            "y": 23
+          },
+          {
+            "minLevel": 51,
+            "x": 30,
+            "y": 27
+          },
+          {
+            "minLevel": 61,
+            "x": 30,
+            "y": 31
+          },
+          {
+            "minLevel": 71,
+            "x": 30,
+            "y": 35
+          },
+          {
+            "minLevel": 81,
+            "x": 30,
+            "y": 39
+          },
+          {
+            "minLevel": 91,
+            "x": 30,
+            "y": 43
+          },
+          {
+            "minLevel": 101,
+            "x": 30,
+            "y": 47
+          },
+          {
+            "minLevel": 111,
+            "x": 30,
+            "y": 51
+          },
+          {
+            "minLevel": 151,
+            "x": 30,
+            "y": 53
+          }
+        ],
+        "id": "cb0ec85c-cc80-488e-bf21-b9a7e7741e06"
+      }
+    ],
+    "additional": [],
+    "template": "被擊中時有{x}%機率無視{y}點傷害",
+    "field": null
+  },
+  "被擊中時有一定機率無視傷害%": {
+    "main": [
+      {
+        "type": "防具專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 20,
+            "x": 5,
+            "y": 20
+          }
+        ],
+        "id": "2526474e-7594-4684-a111-19e6f60e1005"
+      },
+      {
+        "type": "防具專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 40,
+            "x": 5,
+            "y": 40
+          }
+        ],
+        "id": "8a829e95-6bcb-444b-aaca-a4ee09330abb"
+      },
+      {
+        "type": "防具專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 20,
+            "x": 10,
+            "y": 20
+          }
+        ],
+        "id": "65dcb86e-36cb-47eb-b3e2-a5e8f07d1e0f"
+      },
+      {
+        "type": "防具專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 40,
+            "x": 10,
+            "y": 40
+          }
+        ],
+        "id": "108e7dc6-4165-4f64-9809-ace62a571505"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 20,
+            "x": 10,
+            "y": 20
+          }
+        ],
+        "id": "61bd6063-0d8b-4a45-a378-d3d1e14ef677"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 40,
+            "x": 10,
+            "y": 40
+          }
+        ],
+        "id": "7cdb12a2-fca9-4054-9bfa-eb107efba9d2"
+      }
+    ],
+    "additional": [],
+    "template": "被擊中時有{x}%機率無視{y}%傷害",
+    "limit": { "key": "被擊中後有機率無視傷害", "max": 2 },
+    "field": null
+  },
+  "攻擊BOSS怪物時傷害增加+12%": {
+    "main": [],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 12
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 14
+            }
+          ]
+        },
+        "id": "1ec34cc9-3b61-4755-bffd-629709b26b87"
+      }
+    ],
+    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
+    "field": "bdR"
+  },
+  "攻擊BOSS怪物時傷害增加+18%": {
+    "main": [],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 18
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 20
+            }
+          ]
+        },
+        "id": "9f8290a7-4be6-4fa0-a731-7a6fe5a2794c"
+      }
+    ],
+    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
+    "field": "bdR"
+  },
+  "攻擊BOSS怪物時傷害增加+30%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 100,
+            "x": 30
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 100,
+              "x": 35
+            }
+          ]
+        },
+        "id": "71e2576a-0a0e-4a65-92bd-9fe4da405579"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
+    "field": "bdR"
+  },
+  "攻擊BOSS怪物時傷害增加+35%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 100,
+            "x": 35
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 100,
+              "x": 40
+            }
+          ]
+        },
+        "id": "8dd776e2-e860-4d5e-b787-a91512c9f2b7"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
+    "field": "bdR"
+  },
+  "攻擊BOSS怪物時傷害增加+40%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 100,
+            "x": 40
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 100,
+              "x": 45
+            }
+          ]
+        },
+        "id": "5dfc6747-e67d-457a-9dd3-d198008abcd2"
+      }
+    ],
+    "additional": [],
+    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
+    "field": "bdR"
+  },
+  "物理攻擊力": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 61,
+            "x": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "b1b4e2d1-7a79-4cfc-9f20-86eb3f5b9a5b"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 61,
+            "x": 8
+          },
+          {
+            "minLevel": 81,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "f6b5ebe5-c448-46f8-889a-06663326aec1"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 32
+          }
+        ],
+        "id": "3dd27a81-84d2-47b4-8eaf-0236cb2f0bee"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 51,
+            "x": 2
+          },
+          {
+            "minLevel": 101,
+            "x": 3
+          }
+        ],
+        "id": "0243d25a-9b61-45d0-8050-0b8062c7ff06"
+      },
+      {
+        "type": "武器專用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 61,
+            "x": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "87cf384c-9aba-418e-8fe1-f998b394918a"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 4
+          },
+          {
+            "minLevel": 61,
+            "x": 6
+          },
+          {
+            "minLevel": 81,
+            "x": 8
+          },
+          {
+            "minLevel": 91,
+            "x": 10
+          },
+          {
+            "minLevel": 151,
+            "x": 11
+          }
+        ],
+        "id": "e144bae0-7909-4a90-bd08-79ff9e76309a"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 61,
+            "x": 8
+          },
+          {
+            "minLevel": 81,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "341364c2-a70c-4962-a75a-c79fc182e460"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          },
+          {
+            "minLevel": 21,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 91,
+            "x": 11
+          },
+          {
+            "minLevel": 151,
+            "x": 12
+          }
+        ],
+        "id": "f5cb3912-ab9c-4011-a0f0-8430b3f0fd36"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 21,
+            "x": 8
+          },
+          {
+            "minLevel": 51,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 14
+          },
+          {
+            "minLevel": 201,
+            "x": 15
+          }
+        ],
+        "id": "f630c3d9-e233-4894-8f1c-60dc48ab0c70"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 12
+          },
+          {
+            "minLevel": 91,
+            "x": 16
+          },
+          {
+            "minLevel": 201,
+            "x": 17
+          }
+        ],
+        "id": "89b61236-c377-4305-9669-024c1b6f8fab"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 32
+          }
+        ],
+        "id": "cc0b8417-ee5e-46dd-9ea0-803b6f5cf93d"
+      }
+    ],
+    "template": "物理攻擊力 +{x}",
+    "field": "pad"
+  },
+  "物理攻擊力%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "c3380d2a-a28e-486a-bc14-c25f0a15e58f"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "d9ad2bfa-151f-4600-864c-687792babbcb"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "0fbd8c9e-78f9-48b2-90e3-eb4749788214"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "ac809599-5ffb-4ce4-92de-5218a52c7cc0"
+      }
+    ],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "299d3c11-e474-4fb6-90e6-f5816db63947"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "a7731461-68e9-4e63-b03d-0fcb83919e5e"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "0a3c7800-4cc2-4bfc-ad31-67b3dbcc384e"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "31d6d10c-9461-4800-925c-abf2b5d5848d"
+      }
+    ],
+    "template": "物理攻擊力 +{x}%",
+    "field": "padR"
+  },
+  "減少所有技能冷卻時間(10秒以下會減少5%，不會減少到未滿5秒)": {
+    "main": [
+      {
+        "type": "帽子專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 70,
+            "x": 1
+          }
+        ],
+        "id": "b02bc25a-011c-4a5c-ad7e-9c81731de44e"
+      },
+      {
+        "type": "帽子專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 120,
+            "x": 2
+          }
+        ],
+        "id": "57cbb9b1-c21d-4f4d-b0c9-26f68eb6db4f"
+      }
+    ],
+    "additional": [
+      {
+        "type": "帽子專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 100,
+            "x": 1
+          }
+        ],
+        "id": "c5c5b8c1-1a1a-41e8-b0fb-2535f839e9b6"
+      }
+    ],
+    "template": "所有技能冷卻時間 -{x}秒",
+    "field": "cd"
+  },
+  "無視怪物防禦力+15%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 15
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 30,
+              "x": 20
+            }
+          ]
+        },
+        "id": "eb23b6e9-72b0-4128-adff-3a9793207f05"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 15
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 20
+            }
+          ]
+        },
+        "id": "254ca45a-cf07-4aae-a02c-72969fb78d83"
+      }
+    ],
+    "additional": [],
+    "template": "無視怪物防禦力 +{x}%",
+    "field": "imdR"
+  },
+  "無視怪物防禦力+3%": {
+    "main": [],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 3
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 5
+            }
+          ]
+        },
+        "id": "8e150196-a2f8-470c-8a88-94f292ab1ddf"
+      }
+    ],
+    "template": "無視怪物防禦力 +{x}%",
+    "field": "imdR"
+  },
+  "無視怪物防禦力+30%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 30
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 35
+            }
+          ]
+        },
+        "id": "e6865d87-e7b0-4a79-97f0-61c2d40a77b1"
+      }
+    ],
+    "additional": [],
+    "template": "無視怪物防禦力 +{x}%",
+    "field": "imdR"
+  },
+  "無視怪物防禦力+35%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 35
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 40
+            }
+          ]
+        },
+        "id": "203743a0-0154-4e3a-9045-7dc0e9ec2660"
+      }
+    ],
+    "additional": [],
+    "template": "無視怪物防禦力 +{x}%",
+    "field": "imdR"
+  },
+  "無視怪物防禦力+4%": {
+    "main": [],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 4
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 6
+            }
+          ]
+        },
+        "id": "182b4422-27fb-4b43-a902-9ef80b1bb320"
+      }
+    ],
+    "template": "無視怪物防禦力 +{x}%",
+    "field": "imdR"
+  },
+  "無視怪物防禦力+40%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 100,
+            "x": 40
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 100,
+              "x": 45
+            }
+          ]
+        },
+        "id": "e71feb82-4a06-4bea-a899-d993f23a1309"
+      }
+    ],
+    "additional": [],
+    "template": "無視怪物防禦力 +{x}%",
+    "field": "imdR"
+  },
+  "無視怪物防禦力+5%": {
+    "main": [],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 5
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 7
+            }
+          ]
+        },
+        "id": "e5955ca0-cd02-41b2-987f-0078bf9a65e7"
+      }
+    ],
+    "template": "無視怪物防禦力 +{x}%",
+    "field": "imdR"
+  },
+  "楓幣獲得量%": {
+    "main": [
+      {
+        "type": "飾品專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 31,
+            "x": 15
+          },
+          {
+            "minLevel": 71,
+            "x": 20
+          }
+        ],
+        "id": "0f00976a-8b12-4485-91b9-d338c3670bf0"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 91,
+            "x": 5
+          }
+        ],
+        "id": "dce475d3-5709-4109-bb95-6b92f9fc4dc9"
+      }
+    ],
+    "template": "楓幣獲得量 +{x}%",
+    "field": "coin"
+  },
+  "道具掉落率%": {
+    "main": [
+      {
+        "type": "飾品專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 31,
+            "x": 15
+          },
+          {
+            "minLevel": 71,
+            "x": 20
+          }
+        ],
+        "id": "21737bf9-7f75-45a9-9b70-f345b450324a"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 91,
+            "x": 5
+          }
+        ],
+        "id": "26a0c280-483d-4a2a-8de0-94fb2e1e1eef"
+      }
+    ],
+    "template": "道具掉落率 +{x}%",
+    "field": "drop"
+  },
+  "總傷害%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "9f8aca24-986e-4f89-b179-a39b9a37dced"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "bfaef135-5edb-467e-88f2-ddf62b3260e1"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "8e5952df-f342-4634-b7e2-170e79e514f4"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "4f5d2eca-2268-493f-84f8-b8d1b16977c2"
+      }
+    ],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "60abbecc-1ec4-4833-9d7d-afaf16c221d5"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "4da56c43-103e-4dd1-95a0-42139d2a62e7"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "c2d66ad5-6460-46ec-adb3-39424adfaaf8"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "d1798b61-8da4-442b-81e3-a1cfdbe4b908"
+      }
+    ],
+    "template": "總傷害 +{x}%",
+    "field": "damR"
+  },
+  "爆擊傷害%": {
+    "main": [
+      {
+        "type": "手套專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 5
+          },
+          {
+            "minLevel": 61,
+            "x": 6
+          },
+          {
+            "minLevel": 81,
+            "x": 8
+          }
+        ],
+        "id": "c9538ff1-cb6e-4131-826f-e92a87378172"
+      }
+    ],
+    "additional": [
+      {
+        "type": "防具專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          }
+        ],
+        "id": "c709b725-a6ad-466b-8d13-e6cc7efffeff"
+      },
+      {
+        "type": "手套專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 91,
+            "x": 3
+          }
+        ],
+        "id": "5f5def68-6426-4f34-a53a-a5dfc7f6dbca"
+      }
+    ],
+    "template": "爆擊傷害 +{x}%",
+    "field": "critDamR"
+  },
+  "爆擊機率%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 0,
+              "x": 5
+            }
+          ]
+        },
+        "id": "3b1cfd13-f4a7-4cc6-a8b1-dc8051d82d93"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 0,
+              "x": 9
+            }
+          ]
+        },
+        "id": "7c4556dd-f864-4946-b3fe-2e5f70f808b4"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "3f0d52d6-1229-421e-b859-ea60fc37f3d9"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 0,
+              "x": 6
+            },
+            {
+              "minLevel": 31,
+              "x": 9
+            },
+            {
+              "minLevel": 71,
+              "x": 13
+            }
+          ]
+        },
+        "id": "3fe74cd9-92fd-4688-b1df-a787737780c0"
+      }
+    ],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 0,
+              "x": 1
+            },
+            {
+              "minLevel": 31,
+              "x": 2
+            },
+            {
+              "minLevel": 71,
+              "x": 3
+            },
+            {
+              "minLevel": 151,
+              "x": 5
+            }
+          ]
+        },
+        "id": "122eac14-f1f0-4bea-92f1-34ad2fd0c2b2"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 0,
+              "x": 2
+            },
+            {
+              "minLevel": 31,
+              "x": 4
+            },
+            {
+              "minLevel": 71,
+              "x": 7
+            }
+          ]
+        },
+        "id": "cb4fd551-78f5-4aab-9e06-2f8413668d5e"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "a126f790-bf59-40c4-afb2-771d1d06f8b8"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "66866110-d46b-4d1b-9d4a-3b4e7d8eb976"
+      }
+    ],
+    "template": "爆擊機率 +{x}%",
+    "field": "crit"
+  },
+  "魔法攻擊力": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 61,
+            "x": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "a5a6110f-7a25-4c85-81f0-1520550fa88d"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 61,
+            "x": 8
+          },
+          {
+            "minLevel": 81,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "887129be-34e6-447a-bbda-d1d8d8fd88f2"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 32
+          }
+        ],
+        "id": "c96cc6b6-0a68-4dec-be31-9ebc5b486a4a"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 51,
+            "x": 2
+          },
+          {
+            "minLevel": 101,
+            "x": 3
+          }
+        ],
+        "id": "5e1fe4d6-81fc-4c09-ab2d-ac0c135c623b"
+      },
+      {
+        "type": "武器專用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 61,
+            "x": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "a26d0371-5197-41c7-ab7c-5a0a5d32f2f9"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 4
+          },
+          {
+            "minLevel": 61,
+            "x": 6
+          },
+          {
+            "minLevel": 81,
+            "x": 8
+          },
+          {
+            "minLevel": 91,
+            "x": 10
+          },
+          {
+            "minLevel": 151,
+            "x": 11
+          }
+        ],
+        "id": "b5d75a4c-0acf-4487-91fa-11ff23bdb280"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 61,
+            "x": 8
+          },
+          {
+            "minLevel": 81,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "71fd39cc-8041-4e0c-b642-9afd6e2b65f5"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          },
+          {
+            "minLevel": 21,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 91,
+            "x": 11
+          },
+          {
+            "minLevel": 151,
+            "x": 12
+          }
+        ],
+        "id": "c8130552-8301-43a6-b98c-884b76d0ddc4"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 21,
+            "x": 8
+          },
+          {
+            "minLevel": 51,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 14
+          },
+          {
+            "minLevel": 201,
+            "x": 15
+          }
+        ],
+        "id": "4a16fe0d-5e55-4dec-a15f-f15c34830522"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 12
+          },
+          {
+            "minLevel": 91,
+            "x": 16
+          },
+          {
+            "minLevel": 201,
+            "x": 17
+          }
+        ],
+        "id": "2f84606d-35b3-4c80-a603-39fbd3d38e58"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 32
+          }
+        ],
+        "id": "36a8ed5e-2fda-4d85-b1c5-8ed9b398ed03"
+      }
+    ],
+    "template": "魔法攻擊力 +{x}",
+    "field": "mad"
+  },
+  "魔法攻擊力%": {
+    "main": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "bd11a92a-3f41-407f-9dfe-ef7ad2875bcb"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "f16bcc4e-2478-43bb-a9d6-a22b2d72e9b2"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "5d0c5564-e8c6-4a23-bac9-12be8688c4d7"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "32433c23-8a81-4dc3-9ec0-a2c72ebc984b"
+      }
+    ],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "050db4ab-651a-45fb-a626-5c37ba2f1d67"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "6fa065fa-ad7f-4211-84c3-dfd3069b70af"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "e39be57e-f4b0-4b43-9a6d-42c009be1cff"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "e427c2c4-a88e-43fa-9580-c9a8a7591c8e"
+      }
+    ],
+    "template": "魔法攻擊力 +{x}%",
+    "field": "madR"
+  },
+  "全屬性": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 61,
+            "x": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 5
+          },
+          {
+            "minLevel": 151,
+            "x": 6
+          }
+        ],
+        "id": "0eee21c6-6ece-48e1-9577-e705ae9a6a24"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 51,
+            "x": 2
+          },
+          {
+            "minLevel": 91,
+            "x": 3
+          }
+        ],
+        "id": "1d898787-e00c-4748-a49b-1ae5a193ff87"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 61,
+            "x": 4
+          },
+          {
+            "minLevel": 81,
+            "x": 5
+          },
+          {
+            "minLevel": 151,
+            "x": 6
+          }
+        ],
+        "id": "12e59592-383b-40b1-9528-30557feae944"
+      }
+    ],
+    "template": "全屬性 +{x}",
+    "field": "allStat"
+  },
+  "全屬性%": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "e88319e4-ca08-4e5a-8731-570f8cb9ce8b"
+      },
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "064653c5-8004-4350-9fe5-f483398668c3"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "5a2b9d2d-8513-478e-a036-97dcd844e190"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 91,
+            "x": 2
+          },
+          {
+            "minLevel": 151,
+            "x": 3
+          }
+        ],
+        "id": "9d609188-df10-4c7a-aec1-24dc67d8f370"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "ddff2db5-7230-4fd0-93bd-005c3e8c5313"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 51,
+            "x": 3
+          },
+          {
+            "minLevel": 91,
+            "x": 4
+          },
+          {
+            "minLevel": 151,
+            "x": 5
+          }
+        ],
+        "id": "ee5b9d42-8ff3-403a-b0ce-403589f7d1e5"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "b71c1a1a-49c9-4615-a1e2-6d0ae08b2cbc"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          },
+          {
+            "minLevel": 201,
+            "x": 7
+          }
+        ],
+        "id": "d94dab4b-587c-41c3-912b-fc9f631eb2d3"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "c1042d8e-7623-4882-9a2d-becef34538e2"
+      }
+    ],
+    "template": "全屬性 +{x}%",
+    "field": "allStatR"
+  },
+  "DEX": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "17e47152-f59b-4e9e-8d89-64581b3377ef"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 71,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "9458ecaf-8a02-4a6e-8bc9-fdc058e6d408"
+      },
+      {
+        "type": "手套專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 32
+          }
+        ],
+        "id": "46fdf26e-dd1a-4075-a127-01c426f71a73"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "9885a8a5-39e3-4a85-aa53-11eb25de375c"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 51,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 8
+          },
+          {
+            "minLevel": 91,
+            "x": 10
+          },
+          {
+            "minLevel": 151,
+            "x": 11
+          }
+        ],
+        "id": "186c97ca-5021-4f47-b46c-d7ac639a03df"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 71,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "48939cc7-307b-4dd0-a53c-0151da21bec7"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          },
+          {
+            "minLevel": 21,
+            "x": 6
+          },
+          {
+            "minLevel": 41,
+            "x": 8
+          },
+          {
+            "minLevel": 51,
+            "x": 10
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 91,
+            "x": 14
+          },
+          {
+            "minLevel": 151,
+            "x": 15
+          }
+        ],
+        "id": "88aa73d8-3882-425a-828c-357fe05e5c66"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 12
+          },
+          {
+            "minLevel": 71,
+            "x": 14
+          },
+          {
+            "minLevel": 91,
+            "x": 18
+          },
+          {
+            "minLevel": 201,
+            "x": 19
+          }
+        ],
+        "id": "492fcaae-52bd-43b1-a3a4-66fb1cb43ec0"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 41,
+            "x": 12
+          },
+          {
+            "minLevel": 51,
+            "x": 14
+          },
+          {
+            "minLevel": 71,
+            "x": 16
+          },
+          {
+            "minLevel": 91,
+            "x": 20
+          },
+          {
+            "minLevel": 201,
+            "x": 21
+          }
+        ],
+        "id": "2170d25d-f4da-400a-8ba0-c1cb5706b23b"
+      }
+    ],
+    "template": "DEX +{x}",
+    "field": "dex"
+  },
+  "DEX%": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "669de453-54f5-42a6-83b7-10cb4da5c143"
+      },
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "91938ca7-0300-4f10-9add-90562282c82b"
+      },
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "edcdc212-ac0b-4f9c-8256-9c6b3ffec459"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "a7e87bf0-17bc-4529-94d1-46fd6bc9396f"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 91,
+            "x": 2
+          },
+          {
+            "minLevel": 151,
+            "x": 3
+          }
+        ],
+        "id": "98779b38-eda9-4f49-bdbd-96a0b9485046"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "61524f57-abd9-42be-8c92-832bf29129c6"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 51,
+            "x": 3
+          },
+          {
+            "minLevel": 91,
+            "x": 4
+          },
+          {
+            "minLevel": 151,
+            "x": 5
+          }
+        ],
+        "id": "660bec28-b980-4d1d-8355-461d5d997efb"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "c11ff31e-ffa9-4aa9-af1f-2c2afddfc29e"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          },
+          {
+            "minLevel": 201,
+            "x": 7
+          }
+        ],
+        "id": "bc082bb7-df73-4ce8-8d8e-642bd9a3b7ae"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "2d21ad25-4983-4352-9525-8b174ad7f143"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 51,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 8
+          },
+          {
+            "minLevel": 201,
+            "x": 9
+          }
+        ],
+        "id": "4219b6fb-11e4-4391-a747-895cfef1f506"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "80ea30c1-6fe5-49f4-a30d-9f9b03664d65"
+      }
+    ],
+    "template": "DEX +{x}%",
+    "field": "dexR"
+  },
+  "以角色等級為準每9級增加敏捷": {
+    "main": [],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 1
+          }
+        ],
+        "id": "f396acc0-881f-4bcf-80a7-2389b3adb7f2"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 2
+          }
+        ],
+        "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c"
+      }
+    ],
+    "template": "以角色等級為準每9級 DEX +{x}",
+    "field": "dexLevel"
+  },
+  "INT": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "5a9bdb55-0647-4f60-ac42-2a10e39b3d31"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 71,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "7684d530-da97-4b0e-8716-27725102b986"
+      },
+      {
+        "type": "手套專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 32
+          }
+        ],
+        "id": "2f5ef596-c8ed-4b5e-b2a3-e84a3f8a476c"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "d8125c1f-72da-4dad-a4a8-39cc7b0c1634"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 51,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 8
+          },
+          {
+            "minLevel": 91,
+            "x": 10
+          },
+          {
+            "minLevel": 151,
+            "x": 11
+          }
+        ],
+        "id": "d6f49aa3-aef6-4143-9e7b-bc1ba5fd649a"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 71,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "407c4822-c5f3-4d88-8d29-aaf12d3bff71"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          },
+          {
+            "minLevel": 21,
+            "x": 6
+          },
+          {
+            "minLevel": 41,
+            "x": 8
+          },
+          {
+            "minLevel": 51,
+            "x": 10
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 91,
+            "x": 14
+          },
+          {
+            "minLevel": 151,
+            "x": 15
+          }
+        ],
+        "id": "317b079d-8113-4997-90c2-d9ad50bef16a"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 12
+          },
+          {
+            "minLevel": 71,
+            "x": 14
+          },
+          {
+            "minLevel": 91,
+            "x": 18
+          },
+          {
+            "minLevel": 201,
+            "x": 19
+          }
+        ],
+        "id": "b02fcb6a-1b8f-42a6-8b56-50a4222e6ed2"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 41,
+            "x": 12
+          },
+          {
+            "minLevel": 51,
+            "x": 14
+          },
+          {
+            "minLevel": 71,
+            "x": 16
+          },
+          {
+            "minLevel": 91,
+            "x": 20
+          },
+          {
+            "minLevel": 201,
+            "x": 21
+          }
+        ],
+        "id": "86388df6-47e2-4c8b-ab86-5f3838b1617f"
+      }
+    ],
+    "template": "INT +{x}",
+    "field": "int"
+  },
+  "INT%": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "ff790b27-1fba-4c6a-b4cf-a6d14d3d5427"
+      },
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "0e6eb9be-7367-4563-94a9-e49d1e9f3c35"
+      },
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "0360b75f-4e00-4b21-bf54-209cb154178e"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "2200faa5-a247-4136-95f9-b8d89a971967"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 91,
+            "x": 2
+          },
+          {
+            "minLevel": 151,
+            "x": 3
+          }
+        ],
+        "id": "f5d1683e-c836-4b82-b446-f917035ed4dc"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "5c165aa0-d0f0-44af-88d3-a91b48f761a5"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 51,
+            "x": 3
+          },
+          {
+            "minLevel": 91,
+            "x": 4
+          },
+          {
+            "minLevel": 151,
+            "x": 5
+          }
+        ],
+        "id": "9066f0b7-bf50-4b77-8689-9cd96cd01013"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "16dfb48b-47f0-4c1b-9969-94e46a9f041f"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          },
+          {
+            "minLevel": 201,
+            "x": 7
+          }
+        ],
+        "id": "337fc361-ee48-4f9b-be2e-db08ecf95b7e"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "4461793e-842e-4df0-b150-d47f23cf8300"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 51,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 8
+          },
+          {
+            "minLevel": 201,
+            "x": 9
+          }
+        ],
+        "id": "9ca4df9a-0502-4561-93c4-f24f305b7cf9"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "92ca69d7-c0b3-4b91-a99c-4f1440e5627b"
+      }
+    ],
+    "template": "INT +{x}%",
+    "field": "intR"
+  },
+  "以角色等級為準每9級增加智力": {
+    "main": [],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 1
+          }
+        ],
+        "id": "61a9dc09-5524-4293-a365-4e9f203e195b"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 2
+          }
+        ],
+        "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82"
+      }
+    ],
+    "template": "以角色等級為準每9級 INT +{x}",
+    "field": "intLevel"
+  },
+  "LUK": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "c55dcb94-4485-433d-894b-3cabe1fc85fc"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 71,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "83e52753-8092-4e84-8428-000fdae6db89"
+      },
+      {
+        "type": "手套專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 32
+          }
+        ],
+        "id": "22756466-8e72-4a5c-ab13-6164394a248f"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "325a4ee5-2dba-4e35-b62e-8a669f419a08"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 51,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 8
+          },
+          {
+            "minLevel": 91,
+            "x": 10
+          },
+          {
+            "minLevel": 151,
+            "x": 11
+          }
+        ],
+        "id": "60ad0ddd-b7b0-4424-8557-6f264a2d695a"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 71,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "31b43944-d851-4c95-91d5-04b515704635"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          },
+          {
+            "minLevel": 21,
+            "x": 6
+          },
+          {
+            "minLevel": 41,
+            "x": 8
+          },
+          {
+            "minLevel": 51,
+            "x": 10
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 91,
+            "x": 14
+          },
+          {
+            "minLevel": 151,
+            "x": 15
+          }
+        ],
+        "id": "32db56e8-9ac7-4a26-b55a-872d1d7799a2"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 12
+          },
+          {
+            "minLevel": 71,
+            "x": 14
+          },
+          {
+            "minLevel": 91,
+            "x": 18
+          },
+          {
+            "minLevel": 201,
+            "x": 19
+          }
+        ],
+        "id": "a38f693d-5e3a-43ea-b8ea-513733419fea"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 41,
+            "x": 12
+          },
+          {
+            "minLevel": 51,
+            "x": 14
+          },
+          {
+            "minLevel": 71,
+            "x": 16
+          },
+          {
+            "minLevel": 91,
+            "x": 20
+          },
+          {
+            "minLevel": 201,
+            "x": 21
+          }
+        ],
+        "id": "955a054d-993b-4cc8-a7f2-3c37275eae18"
+      }
+    ],
+    "template": "LUK +{x}",
+    "field": "luk"
+  },
+  "LUK%": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "1297acbd-a87d-4a7a-8866-221d7b2f7f12"
+      },
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "cc6d555d-2254-4be7-8af7-e515a0e408fc"
+      },
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "1387a2e2-965f-4871-9d6e-87676278d397"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "b99e3587-f6e4-4788-8c84-6d92ade48e55"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 91,
+            "x": 2
+          },
+          {
+            "minLevel": 151,
+            "x": 3
+          }
+        ],
+        "id": "f644de2e-d03d-412f-aaa5-8d995a750004"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "e0b8dd98-7edc-4b6b-a375-145569b9f9dc"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 51,
+            "x": 3
+          },
+          {
+            "minLevel": 91,
+            "x": 4
+          },
+          {
+            "minLevel": 151,
+            "x": 5
+          }
+        ],
+        "id": "afff23e2-a69d-4c7c-9138-076f1123ea9c"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "75a2d61e-3962-411a-a1aa-0d8202565bb8"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          },
+          {
+            "minLevel": 201,
+            "x": 7
+          }
+        ],
+        "id": "aba7a984-bfd0-4cb4-ad2b-bf535b83498c"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "e7fc21b8-d970-411b-8d91-4e4ecec34400"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 51,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 8
+          },
+          {
+            "minLevel": 201,
+            "x": 9
+          }
+        ],
+        "id": "57dc7113-2864-49f7-a8b3-0399d83954c5"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "04719d8f-5dc8-4ccb-b58e-429df7297778"
+      }
+    ],
+    "template": "LUK +{x}%",
+    "field": "lukR"
+  },
+  "以角色等級為準每9級增加幸運": {
+    "main": [],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 1
+          }
+        ],
+        "id": "43766be4-4a06-4035-8f7c-523bb5b90756"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 2
+          }
+        ],
+        "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd"
+      }
+    ],
+    "template": "以角色等級為準每9級 LUK +{x}",
+    "field": "lukLevel"
+  },
+  "STR": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "caa9118b-6491-479a-8aa4-e7492178c58c"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 71,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "5dc25bf3-bc59-4df3-bd5a-a972733419eb"
+      },
+      {
+        "type": "手套專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 32
+          }
+        ],
+        "id": "d1725336-3ee2-42cf-ba73-e3f5cd5e27b9"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 41,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          }
+        ],
+        "id": "10d290e4-f747-4843-b253-0f5e80444cb3"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 51,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 8
+          },
+          {
+            "minLevel": 91,
+            "x": 10
+          },
+          {
+            "minLevel": 151,
+            "x": 11
+          }
+        ],
+        "id": "6a8afb73-9126-4408-86c6-5c449ce55baa"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 41,
+            "x": 6
+          },
+          {
+            "minLevel": 51,
+            "x": 8
+          },
+          {
+            "minLevel": 71,
+            "x": 10
+          },
+          {
+            "minLevel": 91,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "060e76a2-73ef-43e2-b38f-852f696eed1a"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 4
+          },
+          {
+            "minLevel": 21,
+            "x": 6
+          },
+          {
+            "minLevel": 41,
+            "x": 8
+          },
+          {
+            "minLevel": 51,
+            "x": 10
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 91,
+            "x": 14
+          },
+          {
+            "minLevel": 151,
+            "x": 15
+          }
+        ],
+        "id": "93f17199-f491-44ec-9e74-688eea4fa7d1"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 51,
+            "x": 12
+          },
+          {
+            "minLevel": 71,
+            "x": 14
+          },
+          {
+            "minLevel": 91,
+            "x": 18
+          },
+          {
+            "minLevel": 201,
+            "x": 19
+          }
+        ],
+        "id": "5cf8e871-3a4c-4ca4-8a9f-633ae8407a05"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 8
+          },
+          {
+            "minLevel": 21,
+            "x": 10
+          },
+          {
+            "minLevel": 41,
+            "x": 12
+          },
+          {
+            "minLevel": 51,
+            "x": 14
+          },
+          {
+            "minLevel": 71,
+            "x": 16
+          },
+          {
+            "minLevel": 91,
+            "x": 20
+          },
+          {
+            "minLevel": 201,
+            "x": 21
+          }
+        ],
+        "id": "43a8343b-2cb4-4b94-a2d0-83d96021aa76"
+      }
+    ],
+    "template": "STR +{x}",
+    "field": "str"
+  },
+  "STR%": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "6b264a79-c0dd-4b9a-9290-942dbc7d1af4"
+      },
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "01564c1a-683c-4420-8275-93c8de60722a"
+      },
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "927bf259-1f1b-41c1-8719-a73f0af7911c"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f"
+      }
+    ],
+    "additional": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 91,
+            "x": 2
+          },
+          {
+            "minLevel": 151,
+            "x": 3
+          }
+        ],
+        "id": "f17270df-e578-4a62-9400-4195cb2aef91"
+      },
+      {
+        "type": "武器專用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "48ce686e-2ce7-4514-826c-941008f0eaeb"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 51,
+            "x": 3
+          },
+          {
+            "minLevel": 91,
+            "x": 4
+          },
+          {
+            "minLevel": 151,
+            "x": 5
+          }
+        ],
+        "id": "82cc17df-87e3-4a09-b8a6-784e0693ab33"
+      },
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "2ec6a1bf-7ddc-455d-ba90-67c85971b9f3"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 4
+          },
+          {
+            "minLevel": 91,
+            "x": 6
+          },
+          {
+            "minLevel": 201,
+            "x": 7
+          }
+        ],
+        "id": "98a31de6-69d0-4eaf-b570-f86cedc92668"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "d0057cd1-9a24-4ba8-8743-1ad54579f933"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 21,
+            "x": 4
+          },
+          {
+            "minLevel": 51,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 8
+          },
+          {
+            "minLevel": 201,
+            "x": 9
+          }
+        ],
+        "id": "cca1a6cd-03de-43a8-abd7-55aa099a97c2"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "1294f290-0d0f-44fe-b199-ead67281b68e"
+      }
+    ],
+    "template": "STR +{x}%",
+    "field": "strR"
+  },
+  "以角色等級為準每9級增加力量": {
+    "main": [],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 1
+          }
+        ],
+        "id": "30aadcc3-62f2-4a93-9559-ca463d233384"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 30,
+            "x": 2
+          }
+        ],
+        "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368"
+      }
+    ],
+    "template": "以角色等級為準每9級 STR +{x}",
+    "field": "strLevel"
+  },
+  "MaxHP": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 5
+          },
+          {
+            "minLevel": 11,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 31,
+            "x": 20
+          },
+          {
+            "minLevel": 41,
+            "x": 25
+          },
+          {
+            "minLevel": 51,
+            "x": 30
+          },
+          {
+            "minLevel": 61,
+            "x": 35
+          },
+          {
+            "minLevel": 71,
+            "x": 40
+          },
+          {
+            "minLevel": 81,
+            "x": 45
+          },
+          {
+            "minLevel": 91,
+            "x": 50
+          },
+          {
+            "minLevel": 101,
+            "x": 55
+          },
+          {
+            "minLevel": 111,
+            "x": 60
+          }
+        ],
+        "id": "fd5aa4ff-dc7c-4731-8ed3-9ea9475405bf"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 11,
+            "x": 20
+          },
+          {
+            "minLevel": 21,
+            "x": 30
+          },
+          {
+            "minLevel": 31,
+            "x": 40
+          },
+          {
+            "minLevel": 41,
+            "x": 50
+          },
+          {
+            "minLevel": 51,
+            "x": 60
+          },
+          {
+            "minLevel": 61,
+            "x": 70
+          },
+          {
+            "minLevel": 71,
+            "x": 80
+          },
+          {
+            "minLevel": 81,
+            "x": 90
+          },
+          {
+            "minLevel": 91,
+            "x": 100
+          },
+          {
+            "minLevel": 101,
+            "x": 110
+          },
+          {
+            "minLevel": 111,
+            "x": 120
+          },
+          {
+            "minLevel": 151,
+            "x": 125
+          }
+        ],
+        "id": "f687d3f9-5079-4023-b035-6033db2aea01"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 5
+          },
+          {
+            "minLevel": 11,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 31,
+            "x": 20
+          },
+          {
+            "minLevel": 41,
+            "x": 25
+          },
+          {
+            "minLevel": 51,
+            "x": 30
+          },
+          {
+            "minLevel": 61,
+            "x": 35
+          },
+          {
+            "minLevel": 71,
+            "x": 40
+          },
+          {
+            "minLevel": 81,
+            "x": 45
+          },
+          {
+            "minLevel": 91,
+            "x": 50
+          },
+          {
+            "minLevel": 101,
+            "x": 55
+          },
+          {
+            "minLevel": 111,
+            "x": 60
+          }
+        ],
+        "id": "8060f113-ae78-4c3d-bafe-dcf3d4433d8b"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 51,
+            "x": 50
+          },
+          {
+            "minLevel": 91,
+            "x": 100
+          },
+          {
+            "minLevel": 151,
+            "x": 125
+          }
+        ],
+        "id": "9f13e4f8-6657-4b9a-a313-5027d8b3e121"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 15
+          },
+          {
+            "minLevel": 11,
+            "x": 30
+          },
+          {
+            "minLevel": 21,
+            "x": 45
+          },
+          {
+            "minLevel": 31,
+            "x": 60
+          },
+          {
+            "minLevel": 41,
+            "x": 75
+          },
+          {
+            "minLevel": 51,
+            "x": 90
+          },
+          {
+            "minLevel": 61,
+            "x": 105
+          },
+          {
+            "minLevel": 71,
+            "x": 120
+          },
+          {
+            "minLevel": 81,
+            "x": 135
+          },
+          {
+            "minLevel": 91,
+            "x": 150
+          },
+          {
+            "minLevel": 101,
+            "x": 165
+          },
+          {
+            "minLevel": 111,
+            "x": 180
+          },
+          {
+            "minLevel": 151,
+            "x": 185
+          }
+        ],
+        "id": "685cc245-119d-4119-a80e-3e600ad31122"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 20
+          },
+          {
+            "minLevel": 11,
+            "x": 40
+          },
+          {
+            "minLevel": 21,
+            "x": 60
+          },
+          {
+            "minLevel": 31,
+            "x": 80
+          },
+          {
+            "minLevel": 41,
+            "x": 100
+          },
+          {
+            "minLevel": 51,
+            "x": 120
+          },
+          {
+            "minLevel": 61,
+            "x": 140
+          },
+          {
+            "minLevel": 71,
+            "x": 160
+          },
+          {
+            "minLevel": 81,
+            "x": 180
+          },
+          {
+            "minLevel": 91,
+            "x": 300
+          },
+          {
+            "minLevel": 201,
+            "x": 315
+          }
+        ],
+        "id": "a2f28961-1da6-4081-9a52-99fb1b2bfdc2"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 25
+          },
+          {
+            "minLevel": 11,
+            "x": 50
+          },
+          {
+            "minLevel": 21,
+            "x": 75
+          },
+          {
+            "minLevel": 31,
+            "x": 100
+          },
+          {
+            "minLevel": 41,
+            "x": 125
+          },
+          {
+            "minLevel": 51,
+            "x": 150
+          },
+          {
+            "minLevel": 61,
+            "x": 175
+          },
+          {
+            "minLevel": 71,
+            "x": 200
+          },
+          {
+            "minLevel": 81,
+            "x": 225
+          },
+          {
+            "minLevel": 91,
+            "x": 360
+          },
+          {
+            "minLevel": 201,
+            "x": 375
+          }
+        ],
+        "id": "b99e296a-e26c-41b6-9527-a3f95d90fb81"
+      }
+    ],
+    "template": "最大HP +{x}",
+    "field": "mhp"
+  },
+  "MaxHP%": {
+    "main": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "78b4405f-a358-485f-8553-486e7f62f361"
+      },
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "2b452c72-81d2-4a0a-9e53-f8433ed26515"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "4a6108c4-63f4-4df1-9d8e-8842db748526"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "1f280351-4918-4a40-91e2-db176a1ca108"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 91,
+            "x": 2
+          },
+          {
+            "minLevel": 151,
+            "x": 3
+          }
+        ],
+        "id": "04291608-87f0-494d-b909-9e9a1592aaad"
+      },
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 51,
+            "x": 3
+          },
+          {
+            "minLevel": 91,
+            "x": 5
+          },
+          {
+            "minLevel": 151,
+            "x": 6
+          }
+        ],
+        "id": "bad6f7f6-1d9a-486f-a475-c13a18c216dd"
+      },
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 8
+          },
+          {
+            "minLevel": 201,
+            "x": 9
+          }
+        ],
+        "id": "829847af-e88f-4661-98f2-f45decf4f8e4"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 21,
+            "x": 5
+          },
+          {
+            "minLevel": 51,
+            "x": 7
+          },
+          {
+            "minLevel": 91,
+            "x": 11
+          },
+          {
+            "minLevel": 201,
+            "x": 12
+          }
+        ],
+        "id": "d4657558-9547-45ea-82c9-50055f152918"
+      }
+    ],
+    "template": "最大HP +{x}%",
+    "field": "mhpR"
+  },
+  "MaxMP": {
+    "main": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 5
+          },
+          {
+            "minLevel": 11,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 31,
+            "x": 20
+          },
+          {
+            "minLevel": 41,
+            "x": 25
+          },
+          {
+            "minLevel": 51,
+            "x": 30
+          },
+          {
+            "minLevel": 61,
+            "x": 35
+          },
+          {
+            "minLevel": 71,
+            "x": 40
+          },
+          {
+            "minLevel": 81,
+            "x": 45
+          },
+          {
+            "minLevel": 91,
+            "x": 50
+          },
+          {
+            "minLevel": 101,
+            "x": 55
+          },
+          {
+            "minLevel": 111,
+            "x": 60
+          }
+        ],
+        "id": "dbf4cf44-1e54-47e5-9d2e-a83bee7b538c"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 11,
+            "x": 20
+          },
+          {
+            "minLevel": 21,
+            "x": 30
+          },
+          {
+            "minLevel": 31,
+            "x": 40
+          },
+          {
+            "minLevel": 41,
+            "x": 50
+          },
+          {
+            "minLevel": 51,
+            "x": 60
+          },
+          {
+            "minLevel": 61,
+            "x": 70
+          },
+          {
+            "minLevel": 71,
+            "x": 80
+          },
+          {
+            "minLevel": 81,
+            "x": 90
+          },
+          {
+            "minLevel": 91,
+            "x": 100
+          },
+          {
+            "minLevel": 101,
+            "x": 110
+          },
+          {
+            "minLevel": 111,
+            "x": 120
+          },
+          {
+            "minLevel": 151,
+            "x": 125
+          }
+        ],
+        "id": "d514963f-02f2-4577-8aba-7d0fa3332346"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "normal",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 5
+          },
+          {
+            "minLevel": 11,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 31,
+            "x": 20
+          },
+          {
+            "minLevel": 41,
+            "x": 25
+          },
+          {
+            "minLevel": 51,
+            "x": 30
+          },
+          {
+            "minLevel": 61,
+            "x": 35
+          },
+          {
+            "minLevel": 71,
+            "x": 40
+          },
+          {
+            "minLevel": 81,
+            "x": 45
+          },
+          {
+            "minLevel": 91,
+            "x": 50
+          },
+          {
+            "minLevel": 101,
+            "x": 55
+          },
+          {
+            "minLevel": 111,
+            "x": 60
+          }
+        ],
+        "id": "d7c2917f-ae98-43df-84c1-b32642f3d896"
+      },
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 10
+          },
+          {
+            "minLevel": 21,
+            "x": 15
+          },
+          {
+            "minLevel": 51,
+            "x": 50
+          },
+          {
+            "minLevel": 91,
+            "x": 100
+          },
+          {
+            "minLevel": 151,
+            "x": 125
+          }
+        ],
+        "id": "3800490f-36e5-4398-8aef-3ae6b182eac6"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 15
+          },
+          {
+            "minLevel": 11,
+            "x": 30
+          },
+          {
+            "minLevel": 21,
+            "x": 45
+          },
+          {
+            "minLevel": 31,
+            "x": 60
+          },
+          {
+            "minLevel": 41,
+            "x": 75
+          },
+          {
+            "minLevel": 51,
+            "x": 90
+          },
+          {
+            "minLevel": 61,
+            "x": 105
+          },
+          {
+            "minLevel": 71,
+            "x": 120
+          },
+          {
+            "minLevel": 81,
+            "x": 135
+          },
+          {
+            "minLevel": 91,
+            "x": 150
+          },
+          {
+            "minLevel": 101,
+            "x": 165
+          },
+          {
+            "minLevel": 111,
+            "x": 180
+          },
+          {
+            "minLevel": 151,
+            "x": 185
+          }
+        ],
+        "id": "71ed2e60-3897-4fa8-bf3d-dd363d0f493a"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 20
+          },
+          {
+            "minLevel": 11,
+            "x": 40
+          },
+          {
+            "minLevel": 21,
+            "x": 60
+          },
+          {
+            "minLevel": 31,
+            "x": 80
+          },
+          {
+            "minLevel": 41,
+            "x": 100
+          },
+          {
+            "minLevel": 51,
+            "x": 120
+          },
+          {
+            "minLevel": 61,
+            "x": 140
+          },
+          {
+            "minLevel": 71,
+            "x": 160
+          },
+          {
+            "minLevel": 81,
+            "x": 180
+          },
+          {
+            "minLevel": 91,
+            "x": 300
+          },
+          {
+            "minLevel": 201,
+            "x": 315
+          }
+        ],
+        "id": "fe560180-1966-4d6b-82f4-95883fdce49e"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 25
+          },
+          {
+            "minLevel": 11,
+            "x": 50
+          },
+          {
+            "minLevel": 21,
+            "x": 75
+          },
+          {
+            "minLevel": 31,
+            "x": 100
+          },
+          {
+            "minLevel": 41,
+            "x": 125
+          },
+          {
+            "minLevel": 51,
+            "x": 150
+          },
+          {
+            "minLevel": 61,
+            "x": 175
+          },
+          {
+            "minLevel": 71,
+            "x": 200
+          },
+          {
+            "minLevel": 81,
+            "x": 225
+          },
+          {
+            "minLevel": 91,
+            "x": 360
+          },
+          {
+            "minLevel": 201,
+            "x": 375
+          }
+        ],
+        "id": "7a446386-100d-4765-8f97-48178b5b82fd"
+      }
+    ],
+    "template": "最大MP +{x}",
+    "field": "mmp"
+  },
+  "MaxMP%": {
+    "main": [
+      {
+        "type": "只有武器不可",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 31,
+            "x": 2
+          },
+          {
+            "minLevel": 71,
+            "x": 3
+          },
+          {
+            "minLevel": 151,
+            "x": 4
+          }
+        ],
+        "id": "51a9d404-304f-403e-8b90-018642d09158"
+      },
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 31,
+            "x": 4
+          },
+          {
+            "minLevel": 71,
+            "x": 6
+          },
+          {
+            "minLevel": 151,
+            "x": 7
+          }
+        ],
+        "id": "205087cb-6bc2-4fef-830b-5180406d6c3d"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 31,
+            "x": 6
+          },
+          {
+            "minLevel": 71,
+            "x": 9
+          },
+          {
+            "minLevel": 151,
+            "x": 10
+          }
+        ],
+        "id": "9c57339d-bc66-4b67-8724-c8fb1e1f7a2e"
+      },
+      {
+        "type": "只有武器不可",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 6
+          },
+          {
+            "minLevel": 31,
+            "x": 9
+          },
+          {
+            "minLevel": 71,
+            "x": 12
+          },
+          {
+            "minLevel": 151,
+            "x": 13
+          }
+        ],
+        "id": "ba77d4ea-6f46-4806-8a8e-3bae65a90d82"
+      }
+    ],
+    "additional": [
+      {
+        "type": "共用",
+        "rank": "rare",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 91,
+            "x": 2
+          },
+          {
+            "minLevel": 151,
+            "x": 3
+          }
+        ],
+        "id": "e534403c-fd73-49c2-bdaa-ca7b47d6aea6"
+      },
+      {
+        "type": "共用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 1
+          },
+          {
+            "minLevel": 21,
+            "x": 2
+          },
+          {
+            "minLevel": 51,
+            "x": 3
+          },
+          {
+            "minLevel": 91,
+            "x": 5
+          },
+          {
+            "minLevel": 151,
+            "x": 6
+          }
+        ],
+        "id": "87da9396-b372-4d1f-9f8e-946cf3e4f6be"
+      },
+      {
+        "type": "共用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 2
+          },
+          {
+            "minLevel": 21,
+            "x": 3
+          },
+          {
+            "minLevel": 51,
+            "x": 5
+          },
+          {
+            "minLevel": 91,
+            "x": 8
+          },
+          {
+            "minLevel": 201,
+            "x": 9
+          }
+        ],
+        "id": "108c75c5-0eed-43ec-95a9-be604b33d7aa"
+      },
+      {
+        "type": "共用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 0,
+            "x": 3
+          },
+          {
+            "minLevel": 21,
+            "x": 5
+          },
+          {
+            "minLevel": 51,
+            "x": 7
+          },
+          {
+            "minLevel": 91,
+            "x": 11
+          },
+          {
+            "minLevel": 201,
+            "x": 12
+          }
+        ],
+        "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8"
+      }
+    ],
+    "template": "最大MP +{x}%",
+    "field": "mmpR"
+  }
+}

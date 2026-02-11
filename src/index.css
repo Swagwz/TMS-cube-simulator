@@ -1,68 +1,186 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&: is(.dark *));
+
+@theme {
+  /** Primary */
+  --color-primary-lightest: #feefec;
+  --color-primary-main: #f8d7d0;
+  --color-primary-dark: #fac0b2;
+  --color-primary-deep: #d4a398;
+  --color-primary-darker: #a67c73;
+
+  --color-primary-lightest-foreground: #6b5450;
+  --color-primary-main-foreground: #5a4643;
+  --color-primary-dark-foreground: #4d3a37;
+  --color-primary-deep-foreground: #ffffff;
+  --color-primary-darker-foreground: #feefec;
+
+  /** Secondary - Warm Cream & Wood (與粉褐色 Primary 完美匹配) */
+  --color-secondary-lightest: #fcfaf7; /* 極淺奶油：用於背景，比純白更柔和 */
+  --color-secondary-main: #f3ece2; /* 奶油米色：主要的卡片底色或非選中態 */
+  --color-secondary-dark: #e2d5c3; /* 淺木色：用於邊框或分界線 */
+  --color-secondary-deep: #b5a48b; /* 灰褐色：用於次要標題，不搶 Primary 的戲 */
+  --color-secondary-darker: #7a6d5a; /* 深木咖：用於主要內文字或極深背景 */
+
+  /* Foreground - 文字顏色對齊 */
+  --color-secondary-lightest-foreground: #5a5145; /* 深灰咖字 */
+  --color-secondary-main-foreground: #4e463c; /* 深木色字 */
+  --color-secondary-dark-foreground: #433b32; /* 接近黑褐色 */
+  --color-secondary-deep-foreground: #ffffff; /* 反白字 */
+  --color-secondary-darker-foreground: #f3ece2; /* 深底配奶油字 */
+
+  /* Accent - Golden Theme */
+  --color-accent-light: #f6e9b2; /* 淺香檳金：用於 Hover 或高亮點綴 */
+  --color-accent-main: #d4ad60; /* 主色金：經典標誌金色 */
+  --color-accent-dark: #a67c37; /* 暗金：用於按鈕深色狀態或邊框 */
+  --color-accent-deep: #443721; /* 深古銅金：用於標題底色或重壓色 */
+
+  /* Foreground - 金色背景上的文字顏色 */
+  --color-accent-light-foreground: #443721; /* 淺金配深色字 (讀取較清晰) */
+  --color-accent-main-foreground: #ffffff; /* 主金配白字 (增加現代感) */
+  --color-accent-dark-foreground: #fff8e1; /* 暗金配極淺黃 */
+  --color-accent-deep-foreground: #d4ad60; /* 深古銅配主金字 (高質感對比) */
+
+  /* Rank */
+  --color-rank-normal: #999999;
+  --color-rank-rare: #0066ff;
+  --color-rank-epic: #9933ff;
+  --color-rank-unique: #ffcc00;
+  --color-rank-legendary: #77ff00;
+
+  --color-rank-normal-fg: #ffffff;
+  --color-rank-rare-fg: #ffffff;
+  --color-rank-epic-fg: #ffffff;
+  --color-rank-unique-fg: #453200;
+  --color-rank-legendary-fg: #1a3300;
+
+  /* Glass */
+  --color-glass-lighter: rgba(255, 255, 255, 0.3);
+  --color-glass-light: rgba(255, 255, 255, 0.3);
+  --color-glass: rgba(0, 0, 0, 0.5);
+  --color-glass-foreground: theme("colors.gray.200");
+}
+
+@utility mini-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary-dark) var(--color-primary-dark);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* https://ui.shadcn.com/docs/theming#zinc */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.21 0.006 285.885);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.705 0.015 286.067);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(0.21 0.006 285.885);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.705 0.015 286.067);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(98.511% 0.00011 271.152);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.92 0.004 286.32);
+  --primary-foreground: oklch(0.21 0.006 285.885);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.552 0.016 285.938);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  body {
+    @apply bg-background text-foreground;
   }
 }

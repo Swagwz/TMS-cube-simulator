@@ -1,0 +1,277 @@
+[
+  {
+    "weight": 1,
+    "name": "全屬性%",
+    "template": "全屬性 +{x}%",
+    "field": "allStatR",
+    "values": [
+      { "minLevel": 0, "x": 3 },
+      { "minLevel": 151, "x": 4 }
+    ],
+    "id": "475e46b0-84ca-4f28-8be8-3bff9c1dc72b"
+  },
+  {
+    "weight": 1,
+    "name": "全屬性%",
+    "template": "全屬性 +{x}%",
+    "field": "allStatR",
+    "values": [
+      { "minLevel": 0, "x": 6 },
+      { "minLevel": 151, "x": 7 }
+    ],
+    "id": "d414bea1-efca-4828-9902-9e30ffa4f005"
+  },
+  {
+    "weight": 1,
+    "name": "攻擊BOSS怪物攻擊時傷害增加%",
+    "template": "攻擊BOSS怪物時傷害增加 +20%",
+    "field": "bdR",
+    "values": [{ "minLevel": 0, "x": 20 }],
+    "id": "5eb0d9ef-1612-4388-ad35-332a7fccc700"
+  },
+  {
+    "weight": 1,
+    "name": "所有技能等級+1(5轉及部分技能除外，只增加到技能的最高等級)",
+    "template": "所有技能等級+1(5轉及部分技能除外，只增加到技能的最高等級)",
+    "field": null,
+    "values": [{ "minLevel": 0, "x": 0 }],
+    "id": "ee5933f1-b51c-4cb0-8d00-2f3e9a4a2655"
+  },
+  {
+    "weight": 1,
+    "name": "物理攻擊力%",
+    "template": "物理攻擊力 +{x}%",
+    "field": "padR",
+    "values": [
+      { "minLevel": 0, "x": 6 },
+      { "minLevel": 151, "x": 7 }
+    ],
+    "id": "1037cf9f-f8dc-47f2-8871-53925f73ac88"
+  },
+  {
+    "weight": 1,
+    "name": "物理攻擊力%",
+    "template": "物理攻擊力 +{x}%",
+    "field": "padR",
+    "values": [
+      { "minLevel": 0, "x": 9 },
+      { "minLevel": 151, "x": 10 }
+    ],
+    "id": "361add65-5d48-4c0d-8fdf-580a424e367c"
+  },
+  {
+    "weight": 1,
+    "name": "被擊中時有一定的機率無視傷害",
+    "template": "被擊中時有5%機率無視20%傷害",
+    "field": null,
+    "values": [{ "minLevel": 0, "x": 0 }],
+    "id": "e19c478d-58f5-4228-8c66-83ca9066a853"
+  },
+  {
+    "weight": 1,
+    "name": "被擊中時有一定機率在時間內無敵",
+    "template": "被擊中時有2%機率在7秒內無敵",
+    "field": null,
+    "values": [{ "minLevel": 0, "x": 0 }],
+    "id": "d9ad2cd4-8c9c-40e1-829a-f3651127c188"
+  },
+  {
+    "weight": 1,
+    "name": "最大HP%",
+    "template": "最大HP +{x}%",
+    "field": "mhpR",
+    "values": [{ "minLevel": 0, "x": 6 }],
+    "id": "8a94e327-18b3-4de5-9657-8273ad264464"
+  },
+  {
+    "weight": 1,
+    "name": "最大MP%",
+    "template": "最大MP +{x}%",
+    "field": "mmpR",
+    "values": [{ "minLevel": 0, "x": 6 }],
+    "id": "730446a1-4198-4f23-92da-725c54163a62"
+  },
+  {
+    "weight": 1,
+    "name": "無視怪物防禦力%",
+    "template": "無視怪物防禦力 +30%",
+    "field": "imdR",
+    "values": [{ "minLevel": 0, "x": 30 }],
+    "id": "3775a179-c20a-4d25-8475-a14275e30706"
+  },
+  {
+    "weight": 1,
+    "name": "無視怪物防禦力%",
+    "template": "無視怪物防禦力 +15%",
+    "field": "imdR",
+    "values": [{ "minLevel": 0, "x": 15 }],
+    "id": "d00d79ab-e6b7-4f95-a218-24fb7158ced6"
+  },
+  {
+    "weight": 1,
+    "name": "總傷害%",
+    "template": "總傷害 +{x}%",
+    "field": "damR",
+    "values": [
+      { "minLevel": 0, "x": 6 },
+      { "minLevel": 151, "x": 7 }
+    ],
+    "id": "9de5d012-efb1-40c1-8dbf-14a8172ab065"
+  },
+  {
+    "weight": 1,
+    "name": "總傷害%",
+    "template": "總傷害 +{x}%",
+    "field": "damR",
+    "values": [
+      { "minLevel": 0, "x": 9 },
+      { "minLevel": 151, "x": 10 }
+    ],
+    "id": "2596e24b-5d03-4017-8cf3-d6f5a5fd8850"
+  },
+  {
+    "weight": 1,
+    "name": "爆擊機率%",
+    "template": "爆擊機率 +{x}%",
+    "field": "crit",
+    "values": [{ "minLevel": 0, "x": 8 }],
+    "id": "fa198827-8db0-4cf9-8895-2f7a683ce8fd"
+  },
+  {
+    "weight": 1,
+    "name": "爆擊機率%",
+    "template": "爆擊機率 +{x}%",
+    "field": "crit",
+    "values": [
+      { "minLevel": 0, "x": 9 },
+      { "minLevel": 151, "x": 10 }
+    ],
+    "id": "8e8ffe2e-1365-47cf-83bc-34480f64b203"
+  },
+  {
+    "weight": 1,
+    "name": "魔法攻擊力%",
+    "template": "魔法攻擊力 +{x}%",
+    "field": "madR",
+    "values": [
+      { "minLevel": 0, "x": 6 },
+      { "minLevel": 151, "x": 7 }
+    ],
+    "id": "b35e7414-ecad-462e-8537-95f471bbc5aa"
+  },
+  {
+    "weight": 1,
+    "name": "魔法攻擊力%",
+    "template": "魔法攻擊力 +{x}%",
+    "field": "madR",
+    "values": [
+      { "minLevel": 0, "x": 9 },
+      { "minLevel": 151, "x": 10 }
+    ],
+    "id": "a05f6e7a-45ee-4e4c-b56a-a44d04a86397"
+  },
+  {
+    "weight": 1,
+    "name": "DEX%",
+    "template": "DEX +{x}%",
+    "field": "dexR",
+    "values": [
+      { "minLevel": 0, "x": 6 },
+      { "minLevel": 151, "x": 7 }
+    ],
+    "id": "a53cefa4-5365-48f6-acdb-bfcecd7263dc"
+  },
+  {
+    "weight": 1,
+    "name": "DEX%",
+    "template": "DEX +{x}%",
+    "field": "dexR",
+    "values": [
+      { "minLevel": 0, "x": 9 },
+      { "minLevel": 151, "x": 10 }
+    ],
+    "id": "98fb0401-73e9-44e6-99b9-1a1c73f8d392"
+  },
+  {
+    "weight": 1,
+    "name": "INT%",
+    "template": "INT +{x}%",
+    "field": "intR",
+    "values": [
+      { "minLevel": 0, "x": 6 },
+      { "minLevel": 151, "x": 7 }
+    ],
+    "id": "f920f3d2-6646-42b3-831c-7aee67d5ee6b"
+  },
+  {
+    "weight": 1,
+    "name": "INT%",
+    "template": "INT +{x}%",
+    "field": "intR",
+    "values": [{ "minLevel": 0, "x": 9 }],
+    "id": "ca9942b6-1fb9-4935-9881-999d92d474c7"
+  },
+  {
+    "weight": 1,
+    "name": "INT%",
+    "template": "INT +{x}%",
+    "field": "intR",
+    "values": [
+      { "minLevel": 0, "x": 9 },
+      { "minLevel": 151, "x": 10 }
+    ],
+    "id": "d8de3ba4-36bb-4588-9956-1d5a5918ee65"
+  },
+  {
+    "weight": 1,
+    "name": "LUK%",
+    "template": "LUK +{x}%",
+    "field": "lukR",
+    "values": [
+      { "minLevel": 0, "x": 6 },
+      { "minLevel": 151, "x": 7 }
+    ],
+    "id": "fed68d1c-ae6e-46a0-821c-fa6d8aaadde9"
+  },
+  {
+    "weight": 1,
+    "name": "LUK%",
+    "template": "LUK +{x}%",
+    "field": "lukR",
+    "values": [
+      { "minLevel": 0, "x": 9 },
+      { "minLevel": 151, "x": 10 }
+    ],
+    "id": "a99fb681-b3ce-4d1c-b157-a30c443d057a"
+  },
+  {
+    "weight": 1,
+    "name": "STR%",
+    "template": "STR +{x}%",
+    "field": "strR",
+    "values": [
+      { "minLevel": 0, "x": 6 },
+      { "minLevel": 151, "x": 7 }
+    ],
+    "id": "9c8830da-94dd-45eb-a4cf-1777473bc499"
+  },
+  {
+    "weight": 1,
+    "name": "STR%",
+    "template": "STR +{x}%",
+    "field": "strR",
+    "values": [{ "minLevel": 0, "x": 9 }],
+    "id": "fea57f70-3319-4481-ade5-b51365c1a7aa"
+  },
+  {
+    "weight": 1,
+    "name": "STR%",
+    "template": "STR +{x}%",
+    "field": "strR",
+    "values": [
+      { "minLevel": 0, "x": 9 },
+      { "minLevel": 151, "x": 10 }
+    ],
+    "id": "d71fbeda-133d-47d0-97bf-a75511d91f68"
+  }
+]

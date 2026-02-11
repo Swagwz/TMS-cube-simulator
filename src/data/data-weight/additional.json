@@ -1,0 +1,4071 @@
+{
+  "normal": [
+    {
+      "apply": [
+        "hat",
+        "top",
+        "bottom",
+        "overall",
+        "gloves",
+        "shoes",
+        "cape",
+        "belt",
+        "shoulder",
+        "heart",
+        "badge",
+        "earrings",
+        "pendant",
+        "ring",
+        "face",
+        "eye"
+      ],
+      "data": [
+        {
+          "id": "10d290e4-f747-4843-b253-0f5e80444cb3",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "9885a8a5-39e3-4a85-aa53-11eb25de375c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "d8125c1f-72da-4dad-a4a8-39cc7b0c1634",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "325a4ee5-2dba-4e35-b62e-8a669f419a08",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "8060f113-ae78-4c3d-bafe-dcf3d4433d8b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "d7c2917f-ae98-43df-84c1-b32642f3d896",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "345e0267-2b07-4a47-98c2-bd7147383223",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "0972d233-3477-427e-a2dc-9f675f1730d4",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "0243d25a-9b61-45d0-8050-0b8062c7ff06",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "5e1fe4d6-81fc-4c09-ab2d-ac0c135c623b",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "8e8196fd-0a1a-4f3d-bcd6-983293f5d9bc",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "secondary-weapon",
+        "secondary-weapon-other",
+        "emblem"
+      ],
+      "data": [
+        {
+          "id": "87cf384c-9aba-418e-8fe1-f998b394918a",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "a26d0371-5197-41c7-ab7c-5a0a5d32f2f9",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "10d290e4-f747-4843-b253-0f5e80444cb3",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "9885a8a5-39e3-4a85-aa53-11eb25de375c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "d8125c1f-72da-4dad-a4a8-39cc7b0c1634",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "325a4ee5-2dba-4e35-b62e-8a669f419a08",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "8060f113-ae78-4c3d-bafe-dcf3d4433d8b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "d7c2917f-ae98-43df-84c1-b32642f3d896",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "345e0267-2b07-4a47-98c2-bd7147383223",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "0972d233-3477-427e-a2dc-9f675f1730d4",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "8e8196fd-0a1a-4f3d-bcd6-983293f5d9bc",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        }
+      ]
+    }
+  ],
+  "rare": [
+    {
+      "apply": [
+        "hat",
+        "top",
+        "bottom",
+        "overall",
+        "gloves",
+        "shoes",
+        "cape",
+        "belt",
+        "shoulder",
+        "heart",
+        "badge",
+        "earrings",
+        "eye",
+        "ring",
+        "face",
+        "pendant"
+      ],
+      "data": [
+        {
+          "id": "6a8afb73-9126-4408-86c6-5c449ce55baa",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "186c97ca-5021-4f47-b46c-d7ac639a03df",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "d6f49aa3-aef6-4143-9e7b-bc1ba5fd649a",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "60ad0ddd-b7b0-4424-8557-6f264a2d695a",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "9f13e4f8-6657-4b9a-a313-5027d8b3e121",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "3800490f-36e5-4398-8aef-3ae6b182eac6",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "ee18ce7b-fc68-40b5-88f1-015f9d9f96a4",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "a719b325-f0fb-4f31-a17a-ecb0743ff41d",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "e144bae0-7909-4a90-bd08-79ff9e76309a",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "b5d75a4c-0acf-4487-91fa-11ff23bdb280",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "b0847276-9cb6-4e0b-90e8-c80c652994a2",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "f17270df-e578-4a62-9400-4195cb2aef91",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "98779b38-eda9-4f49-bdbd-96a0b9485046",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "f5d1683e-c836-4b82-b446-f917035ed4dc",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "f644de2e-d03d-412f-aaa5-8d995a750004",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "04291608-87f0-494d-b909-9e9a1592aaad",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "e534403c-fd73-49c2-bdaa-ca7b47d6aea6",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "4968b289-8b7d-4665-a4f3-d3e86d6f621d",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "1d898787-e00c-4748-a49b-1ae5a193ff87",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "secondary-weapon",
+        "secondary-weapon-other",
+        "emblem"
+      ],
+      "data": [
+        {
+          "id": "9f13e4f8-6657-4b9a-a313-5027d8b3e121",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "3800490f-36e5-4398-8aef-3ae6b182eac6",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "ee18ce7b-fc68-40b5-88f1-015f9d9f96a4",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "a719b325-f0fb-4f31-a17a-ecb0743ff41d",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "b0847276-9cb6-4e0b-90e8-c80c652994a2",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "060e76a2-73ef-43e2-b38f-852f696eed1a",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "48939cc7-307b-4dd0-a53c-0151da21bec7",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "407c4822-c5f3-4d88-8d29-aaf12d3bff71",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "31b43944-d851-4c95-91d5-04b515704635",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "341364c2-a70c-4962-a75a-c79fc182e460",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "71fd39cc-8041-4e0c-b642-9afd6e2b65f5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "04291608-87f0-494d-b909-9e9a1592aaad",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "e534403c-fd73-49c2-bdaa-ca7b47d6aea6",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "48ce686e-2ce7-4514-826c-941008f0eaeb",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "61524f57-abd9-42be-8c92-832bf29129c6",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "5c165aa0-d0f0-44af-88d3-a91b48f761a5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "e0b8dd98-7edc-4b6b-a375-145569b9f9dc",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "299d3c11-e474-4fb6-90e6-f5816db63947",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 1
+          }
+        },
+        {
+          "id": "050db4ab-651a-45fb-a626-5c37ba2f1d67",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 1
+          }
+        },
+        {
+          "id": "122eac14-f1f0-4bea-92f1-34ad2fd0c2b2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "60abbecc-1ec4-4833-9d7d-afaf16c221d5",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 1
+          }
+        },
+        {
+          "id": "12e59592-383b-40b1-9528-30557feae944",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        }
+      ]
+    }
+  ],
+  "epic": [
+    {
+      "apply": [
+        "hat",
+        "top",
+        "bottom",
+        "overall",
+        "gloves",
+        "shoes",
+        "cape",
+        "belt",
+        "shoulder",
+        "heart",
+        "badge"
+      ],
+      "data": [
+        {
+          "id": "93f17199-f491-44ec-9e74-688eea4fa7d1",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "88aa73d8-3882-425a-828c-357fe05e5c66",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "317b079d-8113-4997-90c2-d9ad50bef16a",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "32db56e8-9ac7-4a26-b55a-872d1d7799a2",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "685cc245-119d-4119-a80e-3e600ad31122",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "71ed2e60-3897-4fa8-bf3d-dd363d0f493a",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "f866a62e-616b-483e-9db3-ba736ddce037",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "98686777-a6b0-406b-88d2-3fa6d9a86bf3",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "f5cb3912-ab9c-4011-a0f0-8430b3f0fd36",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "c8130552-8301-43a6-b98c-884b76d0ddc4",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "7ca00439-a5d7-4e53-8b86-fde31a987e41",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "82cc17df-87e3-4a09-b8a6-784e0693ab33",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "660bec28-b980-4d1d-8355-461d5d997efb",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "9066f0b7-bf50-4b77-8689-9cd96cd01013",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "afff23e2-a69d-4c7c-9138-076f1123ea9c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "bad6f7f6-1d9a-486f-a475-c13a18c216dd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "87da9396-b372-4d1f-9f8e-946cf3e4f6be",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "bf84fc02-2a53-40e1-955c-3f03c9c9fa84",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "9d609188-df10-4c7a-aec1-24dc67d8f370",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["earrings", "eye", "ring", "face", "pendant"],
+      "data": [
+        {
+          "id": "93f17199-f491-44ec-9e74-688eea4fa7d1",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "88aa73d8-3882-425a-828c-357fe05e5c66",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "317b079d-8113-4997-90c2-d9ad50bef16a",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "32db56e8-9ac7-4a26-b55a-872d1d7799a2",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "685cc245-119d-4119-a80e-3e600ad31122",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "71ed2e60-3897-4fa8-bf3d-dd363d0f493a",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "f866a62e-616b-483e-9db3-ba736ddce037",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "98686777-a6b0-406b-88d2-3fa6d9a86bf3",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "f5cb3912-ab9c-4011-a0f0-8430b3f0fd36",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "c8130552-8301-43a6-b98c-884b76d0ddc4",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "7ca00439-a5d7-4e53-8b86-fde31a987e41",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "82cc17df-87e3-4a09-b8a6-784e0693ab33",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "660bec28-b980-4d1d-8355-461d5d997efb",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "9066f0b7-bf50-4b77-8689-9cd96cd01013",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "afff23e2-a69d-4c7c-9138-076f1123ea9c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "bad6f7f6-1d9a-486f-a475-c13a18c216dd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "87da9396-b372-4d1f-9f8e-946cf3e4f6be",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "bf84fc02-2a53-40e1-955c-3f03c9c9fa84",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "9d609188-df10-4c7a-aec1-24dc67d8f370",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "secondary-weapon",
+        "secondary-weapon-other",
+        "emblem"
+      ],
+      "data": [
+        {
+          "id": "bad6f7f6-1d9a-486f-a475-c13a18c216dd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "87da9396-b372-4d1f-9f8e-946cf3e4f6be",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "a7731461-68e9-4e63-b03d-0fcb83919e5e",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "6fa065fa-ad7f-4211-84c3-dfd3069b70af",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "cb4fd551-78f5-4aab-9e06-2f8413668d5e",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 1
+          }
+        },
+        {
+          "id": "2ec6a1bf-7ddc-455d-ba90-67c85971b9f3",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "c11ff31e-ffa9-4aa9-af1f-2c2afddfc29e",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "16dfb48b-47f0-4c1b-9969-94e46a9f041f",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "75a2d61e-3962-411a-a1aa-0d8202565bb8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "4da56c43-103e-4dd1-95a0-42139d2a62e7",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 1
+          }
+        },
+        {
+          "id": "ddff2db5-7230-4fd0-93bd-005c3e8c5313",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "60d504e7-d1dc-4b36-b01a-08821d94b2da",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "611c235c-0216-434f-b052-0f6852671335",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 9,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "8e150196-a2f8-470c-8a88-94f292ab1ddf",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": null,
+            "combineAdditionalCube": 2
+          }
+        }
+      ]
+    }
+  ],
+  "unique": [
+    {
+      "apply": [
+        "hat",
+        "top",
+        "bottom",
+        "overall",
+        "gloves",
+        "shoes",
+        "cape",
+        "belt",
+        "shoulder",
+        "heart",
+        "badge"
+      ],
+      "data": [
+        {
+          "id": "5cf8e871-3a4c-4ca4-8a9f-633ae8407a05",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "492fcaae-52bd-43b1-a3a4-66fb1cb43ec0",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "b02fcb6a-1b8f-42a6-8b56-50a4222e6ed2",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "a38f693d-5e3a-43ea-b8ea-513733419fea",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "a2f28961-1da6-4081-9a52-99fb1b2bfdc2",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 150,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "fe560180-1966-4d6b-82f4-95883fdce49e",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 800,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "f630c3d9-e233-4894-8f1c-60dc48ab0c70",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "4a16fe0d-5e55-4dec-a15f-f15c34830522",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "98a31de6-69d0-4eaf-b570-f86cedc92668",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "bc082bb7-df73-4ce8-8d8e-642bd9a3b7ae",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "337fc361-ee48-4f9b-be2e-db08ecf95b7e",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "aba7a984-bfd0-4cb4-ad2b-bf535b83498c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "829847af-e88f-4661-98f2-f45decf4f8e4",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 10,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "108c75c5-0eed-43ec-95a9-be604b33d7aa",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 900,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "ee5b9d42-8ff3-403a-b0ce-403589f7d1e5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "8c1eddaf-07ad-4ad3-9f53-2f4b6b207449",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 900,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "30aadcc3-62f2-4a93-9559-ca463d233384",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "f396acc0-881f-4bcf-80a7-2389b3adb7f2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "61a9dc09-5524-4293-a365-4e9f203e195b",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "43766be4-4a06-4035-8f7c-523bb5b90756",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["earrings", "eye", "ring", "face", "pendant"],
+      "data": [
+        {
+          "id": "5cf8e871-3a4c-4ca4-8a9f-633ae8407a05",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "492fcaae-52bd-43b1-a3a4-66fb1cb43ec0",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "b02fcb6a-1b8f-42a6-8b56-50a4222e6ed2",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "a38f693d-5e3a-43ea-b8ea-513733419fea",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "a2f28961-1da6-4081-9a52-99fb1b2bfdc2",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 150,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "fe560180-1966-4d6b-82f4-95883fdce49e",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 800,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "f630c3d9-e233-4894-8f1c-60dc48ab0c70",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "4a16fe0d-5e55-4dec-a15f-f15c34830522",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "98a31de6-69d0-4eaf-b570-f86cedc92668",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "bc082bb7-df73-4ce8-8d8e-642bd9a3b7ae",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "337fc361-ee48-4f9b-be2e-db08ecf95b7e",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "aba7a984-bfd0-4cb4-ad2b-bf535b83498c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "829847af-e88f-4661-98f2-f45decf4f8e4",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 10,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "108c75c5-0eed-43ec-95a9-be604b33d7aa",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 5,
+            "absAdditionalCube": 900,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "ee5b9d42-8ff3-403a-b0ce-403589f7d1e5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "8c1eddaf-07ad-4ad3-9f53-2f4b6b207449",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 900,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "30aadcc3-62f2-4a93-9559-ca463d233384",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "f396acc0-881f-4bcf-80a7-2389b3adb7f2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "61a9dc09-5524-4293-a365-4e9f203e195b",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "43766be4-4a06-4035-8f7c-523bb5b90756",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "destiny-weapon",
+        "primary-weapon",
+        "secondary-weapon",
+        "secondary-weapon-other"
+      ],
+      "data": [
+        {
+          "id": "829847af-e88f-4661-98f2-f45decf4f8e4",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 10,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "108c75c5-0eed-43ec-95a9-be604b33d7aa",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 900,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "0a3c7800-4cc2-4bfc-ad31-67b3dbcc384e",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "e39be57e-f4b0-4b43-9a6d-42c009be1cff",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "a126f790-bf59-40c4-afb2-771d1d06f8b8",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "d0057cd1-9a24-4ba8-8743-1ad54579f933",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "2d21ad25-4983-4352-9525-8b174ad7f143",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "4461793e-842e-4df0-b150-d47f23cf8300",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "e7fc21b8-d970-411b-8d91-4e4ecec34400",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "c2d66ad5-6460-46ec-adb3-39424adfaaf8",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 5,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "b71c1a1a-49c9-4615-a1e2-6d0ae08b2cbc",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "182b4422-27fb-4b43-a902-9ef80b1bb320",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 150,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "1ec34cc9-3b61-4755-bffd-629709b26b87",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 5,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "21aafe57-b721-45d6-b889-04c268ca8703",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 800,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "5624a729-1190-4ce0-adca-7617dbc6547c",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 800,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "30aadcc3-62f2-4a93-9559-ca463d233384",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "f396acc0-881f-4bcf-80a7-2389b3adb7f2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "61a9dc09-5524-4293-a365-4e9f203e195b",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "43766be4-4a06-4035-8f7c-523bb5b90756",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 20
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["emblem"],
+      "data": [
+        {
+          "id": "829847af-e88f-4661-98f2-f45decf4f8e4",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 10,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "108c75c5-0eed-43ec-95a9-be604b33d7aa",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 900,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "0a3c7800-4cc2-4bfc-ad31-67b3dbcc384e",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 1
+          }
+        },
+        {
+          "id": "e39be57e-f4b0-4b43-9a6d-42c009be1cff",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 1,
+            "combineAdditionalCube": 1
+          }
+        },
+        {
+          "id": "a126f790-bf59-40c4-afb2-771d1d06f8b8",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 100,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "d0057cd1-9a24-4ba8-8743-1ad54579f933",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "2d21ad25-4983-4352-9525-8b174ad7f143",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "4461793e-842e-4df0-b150-d47f23cf8300",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "e7fc21b8-d970-411b-8d91-4e4ecec34400",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "c2d66ad5-6460-46ec-adb3-39424adfaaf8",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 5,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "b71c1a1a-49c9-4615-a1e2-6d0ae08b2cbc",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 2
+          }
+        },
+        {
+          "id": "182b4422-27fb-4b43-a902-9ef80b1bb320",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 150,
+            "combineAdditionalCube": 8
+          }
+        },
+        {
+          "id": "21aafe57-b721-45d6-b889-04c268ca8703",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 800,
+            "combineAdditionalCube": 8
+          }
+        },
+        {
+          "id": "5624a729-1190-4ce0-adca-7617dbc6547c",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 800,
+            "combineAdditionalCube": 8
+          }
+        },
+        {
+          "id": "30aadcc3-62f2-4a93-9559-ca463d233384",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 8
+          }
+        },
+        {
+          "id": "f396acc0-881f-4bcf-80a7-2389b3adb7f2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 8
+          }
+        },
+        {
+          "id": "61a9dc09-5524-4293-a365-4e9f203e195b",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 8
+          }
+        },
+        {
+          "id": "43766be4-4a06-4035-8f7c-523bb5b90756",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 2,
+            "combineAdditionalCube": 8
+          }
+        }
+      ]
+    }
+  ],
+  "legendary": [
+    {
+      "apply": ["hat"],
+      "data": [
+        {
+          "id": "43a8343b-2cb4-4b94-a2d0-83d96021aa76",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "2170d25d-f4da-400a-8ba0-c1cb5706b23b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "86388df6-47e2-4c8b-ab86-5f3838b1617f",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "955a054d-993b-4cc8-a7f2-3c37275eae18",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "b99e296a-e26c-41b6-9527-a3f95d90fb81",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "7a446386-100d-4765-8f97-48178b5b82fd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "89b61236-c377-4305-9669-024c1b6f8fab",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "2f84606d-35b3-4c80-a603-39fbd3d38e58",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "cca1a6cd-03de-43a8-abd7-55aa099a97c2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "4219b6fb-11e4-4391-a747-895cfef1f506",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "9ca4df9a-0502-4561-93c4-f24f305b7cf9",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "57dc7113-2864-49f7-a8b3-0399d83954c5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 34,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "c709b725-a6ad-466b-8d13-e6cc7efffeff",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 20,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "d94dab4b-587c-41c3-912b-fc9f631eb2d3",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "8e049dc2-9dc1-4a4d-8b41-4fb1727a1742",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 64,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "c5c5b8c1-1a1a-41e8-b0fb-2535f839e9b6",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 16,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "dce475d3-5709-4109-bb95-6b92f9fc4dc9",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "26a0c280-483d-4a2a-8de0-94fb2e1e1eef",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["gloves"],
+      "data": [
+        {
+          "id": "43a8343b-2cb4-4b94-a2d0-83d96021aa76",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "2170d25d-f4da-400a-8ba0-c1cb5706b23b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "86388df6-47e2-4c8b-ab86-5f3838b1617f",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "955a054d-993b-4cc8-a7f2-3c37275eae18",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "b99e296a-e26c-41b6-9527-a3f95d90fb81",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "7a446386-100d-4765-8f97-48178b5b82fd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "89b61236-c377-4305-9669-024c1b6f8fab",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "2f84606d-35b3-4c80-a603-39fbd3d38e58",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "cca1a6cd-03de-43a8-abd7-55aa099a97c2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "4219b6fb-11e4-4391-a747-895cfef1f506",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "9ca4df9a-0502-4561-93c4-f24f305b7cf9",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "57dc7113-2864-49f7-a8b3-0399d83954c5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 34,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "5f5def68-6426-4f34-a53a-a5dfc7f6dbca",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 20,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "c709b725-a6ad-466b-8d13-e6cc7efffeff",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 20,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "d94dab4b-587c-41c3-912b-fc9f631eb2d3",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "8e049dc2-9dc1-4a4d-8b41-4fb1727a1742",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 64,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "dce475d3-5709-4109-bb95-6b92f9fc4dc9",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "26a0c280-483d-4a2a-8de0-94fb2e1e1eef",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        }
+      ]
+    },
+    {
+      "apply": [
+        "top",
+        "bottom",
+        "overall",
+        "cape",
+        "belt",
+        "shoes",
+        "shoulder"
+      ],
+      "data": [
+        {
+          "id": "43a8343b-2cb4-4b94-a2d0-83d96021aa76",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "2170d25d-f4da-400a-8ba0-c1cb5706b23b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "86388df6-47e2-4c8b-ab86-5f3838b1617f",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "955a054d-993b-4cc8-a7f2-3c37275eae18",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "b99e296a-e26c-41b6-9527-a3f95d90fb81",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "7a446386-100d-4765-8f97-48178b5b82fd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "89b61236-c377-4305-9669-024c1b6f8fab",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "2f84606d-35b3-4c80-a603-39fbd3d38e58",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "cca1a6cd-03de-43a8-abd7-55aa099a97c2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "4219b6fb-11e4-4391-a747-895cfef1f506",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "9ca4df9a-0502-4561-93c4-f24f305b7cf9",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "57dc7113-2864-49f7-a8b3-0399d83954c5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 34,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "c709b725-a6ad-466b-8d13-e6cc7efffeff",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 20,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "d94dab4b-587c-41c3-912b-fc9f631eb2d3",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "8e049dc2-9dc1-4a4d-8b41-4fb1727a1742",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 64,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "dce475d3-5709-4109-bb95-6b92f9fc4dc9",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "26a0c280-483d-4a2a-8de0-94fb2e1e1eef",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["pendant", "ring", "face", "eye", "earrings"],
+      "data": [
+        {
+          "id": "43a8343b-2cb4-4b94-a2d0-83d96021aa76",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "2170d25d-f4da-400a-8ba0-c1cb5706b23b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "86388df6-47e2-4c8b-ab86-5f3838b1617f",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "955a054d-993b-4cc8-a7f2-3c37275eae18",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "b99e296a-e26c-41b6-9527-a3f95d90fb81",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "7a446386-100d-4765-8f97-48178b5b82fd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "89b61236-c377-4305-9669-024c1b6f8fab",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "2f84606d-35b3-4c80-a603-39fbd3d38e58",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "cca1a6cd-03de-43a8-abd7-55aa099a97c2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "4219b6fb-11e4-4391-a747-895cfef1f506",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "9ca4df9a-0502-4561-93c4-f24f305b7cf9",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "57dc7113-2864-49f7-a8b3-0399d83954c5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 34,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "d94dab4b-587c-41c3-912b-fc9f631eb2d3",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "70deb14a-bf92-4a25-ba22-cdc149dd0750",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 64,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "8e049dc2-9dc1-4a4d-8b41-4fb1727a1742",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 64,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "dce475d3-5709-4109-bb95-6b92f9fc4dc9",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "26a0c280-483d-4a2a-8de0-94fb2e1e1eef",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["destiny-weapon", "primary-weapon"],
+      "data": [
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 85,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 150,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "31d6d10c-9461-4800-925c-abf2b5d5848d",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "e427c2c4-a88e-43fa-9580-c9a8a7591c8e",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "66866110-d46b-4d1b-9d4a-3b4e7d8eb976",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "1294f290-0d0f-44fe-b199-ead67281b68e",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "80ea30c1-6fe5-49f4-a30d-9f9b03664d65",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "92ca69d7-c0b3-4b91-a99c-4f1440e5627b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "04719d8f-5dc8-4ccb-b58e-429df7297778",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "d1798b61-8da4-442b-81e3-a1cfdbe4b908",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 55,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "c1042d8e-7623-4882-9a2d-becef34538e2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "e5955ca0-cd02-41b2-987f-0078bf9a65e7",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 65,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "9f8290a7-4be6-4fa0-a731-7a6fe5a2794c",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 35,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "cc0b8417-ee5e-46dd-9ea0-803b6f5cf93d",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 15
+          }
+        },
+        {
+          "id": "36a8ed5e-2fda-4d85-b1c5-8ed9b398ed03",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 15
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["secondary-weapon", "secondary-weapon-other"],
+      "data": [
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 85,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 150,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "31d6d10c-9461-4800-925c-abf2b5d5848d",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "e427c2c4-a88e-43fa-9580-c9a8a7591c8e",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "66866110-d46b-4d1b-9d4a-3b4e7d8eb976",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "c709b725-a6ad-466b-8d13-e6cc7efffeff",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 50,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "1294f290-0d0f-44fe-b199-ead67281b68e",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "80ea30c1-6fe5-49f4-a30d-9f9b03664d65",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "92ca69d7-c0b3-4b91-a99c-4f1440e5627b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "04719d8f-5dc8-4ccb-b58e-429df7297778",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "d1798b61-8da4-442b-81e3-a1cfdbe4b908",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 55,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "c1042d8e-7623-4882-9a2d-becef34538e2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "e5955ca0-cd02-41b2-987f-0078bf9a65e7",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 65,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "9f8290a7-4be6-4fa0-a731-7a6fe5a2794c",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 35,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "cc0b8417-ee5e-46dd-9ea0-803b6f5cf93d",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 15
+          }
+        },
+        {
+          "id": "36a8ed5e-2fda-4d85-b1c5-8ed9b398ed03",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 15
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["emblem"],
+      "data": [
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 85,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 150,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "31d6d10c-9461-4800-925c-abf2b5d5848d",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "e427c2c4-a88e-43fa-9580-c9a8a7591c8e",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 3
+          }
+        },
+        {
+          "id": "66866110-d46b-4d1b-9d4a-3b4e7d8eb976",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "1294f290-0d0f-44fe-b199-ead67281b68e",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "80ea30c1-6fe5-49f4-a30d-9f9b03664d65",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "92ca69d7-c0b3-4b91-a99c-4f1440e5627b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "04719d8f-5dc8-4ccb-b58e-429df7297778",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "d1798b61-8da4-442b-81e3-a1cfdbe4b908",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 55,
+            "combineAdditionalCube": 4
+          }
+        },
+        {
+          "id": "c1042d8e-7623-4882-9a2d-becef34538e2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 56,
+            "combineAdditionalCube": 5
+          }
+        },
+        {
+          "id": "e5955ca0-cd02-41b2-987f-0078bf9a65e7",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 65,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 80,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "cc0b8417-ee5e-46dd-9ea0-803b6f5cf93d",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 15
+          }
+        },
+        {
+          "id": "36a8ed5e-2fda-4d85-b1c5-8ed9b398ed03",
+          "weights": {
+            "additionalCube": 1,
+            "restoreAdditionalCube": 1,
+            "shinyAdditionalCube": 1,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 15
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["heart"],
+      "data": [
+        {
+          "id": "43a8343b-2cb4-4b94-a2d0-83d96021aa76",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "2170d25d-f4da-400a-8ba0-c1cb5706b23b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "86388df6-47e2-4c8b-ab86-5f3838b1617f",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "955a054d-993b-4cc8-a7f2-3c37275eae18",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "b99e296a-e26c-41b6-9527-a3f95d90fb81",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "7a446386-100d-4765-8f97-48178b5b82fd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "89b61236-c377-4305-9669-024c1b6f8fab",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "2f84606d-35b3-4c80-a603-39fbd3d38e58",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "cca1a6cd-03de-43a8-abd7-55aa099a97c2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "4219b6fb-11e4-4391-a747-895cfef1f506",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "9ca4df9a-0502-4561-93c4-f24f305b7cf9",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "57dc7113-2864-49f7-a8b3-0399d83954c5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 34,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 15,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "d94dab4b-587c-41c3-912b-fc9f631eb2d3",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "8e049dc2-9dc1-4a4d-8b41-4fb1727a1742",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 64,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "dce475d3-5709-4109-bb95-6b92f9fc4dc9",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "26a0c280-483d-4a2a-8de0-94fb2e1e1eef",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        }
+      ]
+    },
+    {
+      "apply": ["badge"],
+      "data": [
+        {
+          "id": "43a8343b-2cb4-4b94-a2d0-83d96021aa76",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "2170d25d-f4da-400a-8ba0-c1cb5706b23b",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "86388df6-47e2-4c8b-ab86-5f3838b1617f",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "955a054d-993b-4cc8-a7f2-3c37275eae18",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "b99e296a-e26c-41b6-9527-a3f95d90fb81",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 40,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "7a446386-100d-4765-8f97-48178b5b82fd",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "89b61236-c377-4305-9669-024c1b6f8fab",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "2f84606d-35b3-4c80-a603-39fbd3d38e58",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "cca1a6cd-03de-43a8-abd7-55aa099a97c2",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "4219b6fb-11e4-4391-a747-895cfef1f506",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "9ca4df9a-0502-4561-93c4-f24f305b7cf9",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "57dc7113-2864-49f7-a8b3-0399d83954c5",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "d4657558-9547-45ea-82c9-50055f152918",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 34,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "e7ad2b06-2732-4b78-9036-97a177cff6a8",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 10,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 10
+          }
+        },
+        {
+          "id": "d94dab4b-587c-41c3-912b-fc9f631eb2d3",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 31,
+            "combineAdditionalCube": 6
+          }
+        },
+        {
+          "id": "8ab1ebe3-2309-4b28-b40c-ae3d03841368",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "676ceef8-778f-43a1-9ba9-bc6c7d55418c",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "b1224e35-abfb-43e4-aab4-7d08e0679b82",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "988bef05-1b71-48cb-a53c-9a75eedc68fd",
+          "weights": {
+            "additionalCube": 2,
+            "restoreAdditionalCube": 2,
+            "shinyAdditionalCube": 2,
+            "absAdditionalCube": 32,
+            "combineAdditionalCube": 20
+          }
+        },
+        {
+          "id": "8e049dc2-9dc1-4a4d-8b41-4fb1727a1742",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 3,
+            "absAdditionalCube": 64,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "dce475d3-5709-4109-bb95-6b92f9fc4dc9",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 0.06,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        },
+        {
+          "id": "26a0c280-483d-4a2a-8de0-94fb2e1e1eef",
+          "weights": {
+            "additionalCube": 3,
+            "restoreAdditionalCube": 3,
+            "shinyAdditionalCube": 0.06,
+            "absAdditionalCube": 60,
+            "combineAdditionalCube": 25
+          }
+        }
+      ]
+    }
+  ]
+}
