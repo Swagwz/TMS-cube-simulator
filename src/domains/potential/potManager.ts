@@ -69,10 +69,13 @@ export const PotManager = {
 
     // 如果有針對特定子分類的覆蓋值，則使用它
     if (overrides?.[subcategory]) {
-      // 假設 overrides 也是一個 value 陣列，取第一個
-      const overrideValue = overrides[subcategory]?.[0];
-      if (overrideValue) {
-        finalValues = { x: overrideValue.x, y: overrideValue.y ?? 0 };
+      const overrideValue = overrides[subcategory];
+      for (let i = overrideValue.length - 1; i >= 0; i--) {
+        const { minLevel, x, y } = overrideValue[i];
+        if (level >= minLevel) {
+          finalValues = { x, y: y ?? 0 };
+          break;
+        }
       }
     }
 
