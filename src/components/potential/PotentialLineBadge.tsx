@@ -17,7 +17,7 @@ export default function PotentialLineBadge({
   return (
     <div
       className={cn(
-        "flex flex-row items-center gap-2 overflow-hidden",
+        "flex flex-row items-center gap-2 overflow-hidden px-1",
         className,
       )}
       {...props}
