@@ -36,7 +36,6 @@ export default function MoeCubeEnhancer() {
   const { isAutoRolling, setIsAutoRolling, targets, setTargets } =
     useMoeAutoRoll({
       onRoll: handleRoll,
-      batchSize: 1,
     });
 
   const handleStartAutoRoll = () => {
