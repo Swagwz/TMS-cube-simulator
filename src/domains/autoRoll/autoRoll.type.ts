@@ -1,4 +1,5 @@
 import type { EquipmentRank, StatusField } from "../potential/potential.type";
+import type { EquipmentSubcategory } from "../equipment/equipment.type";
 
 // 基礎統計目標
 export type StatTarget = {
@@ -19,6 +20,14 @@ export type EquipmentAutoRollTarget = {
 
 export type StatSummary = Map<StatusField, number[]>;
 
-export interface StatParser {
-  parse(ids: string[], level?: number): StatSummary;
+export interface MoeStatParser {
+  parse(ids: string[]): StatSummary;
+}
+
+export interface EquipmentStatParser {
+  parse(
+    ids: string[],
+    level: number,
+    subcategory: EquipmentSubcategory,
+  ): StatSummary;
 }

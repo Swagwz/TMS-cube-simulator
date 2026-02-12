@@ -6,7 +6,7 @@ import type {
 import { PotManager } from "@/domains/potential/potManager";
 import type {
   EquipmentAutoRollTarget,
-  StatParser,
+  EquipmentStatParser,
   StatSummary,
 } from "./autoRoll.type";
 import type {
@@ -71,14 +71,18 @@ export class EquipmentAutoRollMatcher {
   }
 }
 
-export const PotentialStatParser: StatParser = {
-  parse(ids: string[], level: number = 0): StatSummary {
+export const StatParser: EquipmentStatParser = {
+  parse(
+    ids: string[],
+    level: number,
+    subcategory: EquipmentSubcategory,
+  ): StatSummary {
     const summary: StatSummary = new Map();
 
     ids.forEach((id) => {
       const meta = PotManager.getPotentialMetadata(id);
       if (!meta.field) return;
-      const val = PotManager.getMatchedValues(id, level).x;
+      const val = PotManager.resolvePotential(id, level, subcategory).values.x;
 
       const arr = summary.get(meta.field) || [];
       arr.push(val);
@@ -163,7 +167,8 @@ export const PotentialAutoRoll = {
         })
         .map((data) => ({
           field: data.field,
-          val: PotManager.getMatchedValues(data.id, level).x,
+          val: PotManager.resolvePotential(data.id, level, subcategory).values
+            .x,
           prob: data.prob,
           limit: data.limit,
         }));

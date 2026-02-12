@@ -2,7 +2,7 @@ import { STATUS_FIELD_MAP } from "@/domains/potential/potential.config";
 import type { StatusField } from "@/domains/potential/potential.type";
 import type {
   MoeAutoRollTarget,
-  StatParser,
+  MoeStatParser,
   StatSummary,
 } from "./autoRoll.type";
 import { MoeManager } from "../enhancement/moe/moeManager";
@@ -50,7 +50,7 @@ export class MoeAutoRollMatcher {
   }
 }
 
-export const MoeStatParser: StatParser = {
+export const StatParser: MoeStatParser = {
   parse(ids: string[]): StatSummary {
     const summary: StatSummary = new Map();
 

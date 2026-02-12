@@ -36,12 +36,15 @@ export default function RestoreCubeEnhancer() {
   // 抽離計算邏輯：傳入 "當前潛能" (Base)，回傳 "洗完的結果"
   const performRoll = (basePot: { tier: EquipmentRank; potIds: string[] }) => {
     const nextRank = CubeManager.rollRankUp("restoreCube", basePot.tier);
-    const rolledPots = CubeManager.rollPots("restoreCube", nextRank, pools);
 
-    if (lockIndex !== -1) {
-      // 使用傳入的 basePot 來鎖定潛能，而不是依賴外部 state
-      rolledPots.splice(lockIndex, 1, basePot.potIds[lockIndex]);
-    }
+    let rolledPots: string[];
+    do {
+      rolledPots = CubeManager.rollPots("restoreCube", nextRank, pools);
+      if (lockIndex !== -1) {
+        // 使用傳入的 basePot 來鎖定潛能，而不是依賴外部 state
+        rolledPots.splice(lockIndex, 1, basePot.potIds[lockIndex]);
+      }
+    } while (!PotManager.validateLineRules(rolledPots));
 
     return { tier: nextRank, potIds: rolledPots };
   };

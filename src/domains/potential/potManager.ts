@@ -49,8 +49,9 @@ export const PotManager = {
     for (const meta of potentialMetas) {
       const { limit } = meta;
       if (limit) {
-        counts.set(limit.key, (counts.get(limit.key) ?? 0) + 1);
-        if (counts.get(limit.key)! > limit.max) return false;
+        const cnt = (counts.get(limit.key) ?? 0) + 1;
+        counts.set(limit.key, cnt);
+        if (cnt > limit.max) return false;
       }
     }
 
@@ -64,8 +65,16 @@ export const PotManager = {
   ) {
     const meta = this.getPotentialMetadata(id);
 
-    const { template, overrides, rank, field } = meta;
-    let finalValues = this.getMatchedValues(id, level);
+    const { template, overrides, rank, field, values } = meta;
+    let finalValues = { x: 0, y: 0 };
+
+    for (let i = values.length - 1; i >= 0; i--) {
+      const { minLevel, x, y } = values[i];
+      if (level >= minLevel) {
+        finalValues = { x, y: y ?? 0 };
+        break;
+      }
+    }
 
     // 如果有針對特定子分類的覆蓋值，則使用它
     if (overrides?.[subcategory]) {
@@ -86,22 +95,5 @@ export const PotManager = {
       values: finalValues,
       display: formatTemplate(template, finalValues),
     };
-  },
-  getMatchedValues(id: string, level: number) {
-    const meta = this.getPotentialMetadata(id);
-
-    let matchedValues = { x: 0, y: 0 };
-
-    let { values } = meta;
-
-    for (let i = values.length - 1; i >= 0; i--) {
-      const { minLevel, x, y } = values[i];
-      if (level >= minLevel) {
-        matchedValues = { x, y: y ?? 0 };
-        break;
-      }
-    }
-
-    return matchedValues;
   },
 };

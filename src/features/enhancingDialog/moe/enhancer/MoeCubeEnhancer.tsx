@@ -10,7 +10,7 @@ import CloseBtn from "@/components/CloseBtn";
 import DisplayContainer from "../../DisplayContainer";
 import MoeFooter from "../MoeFooter";
 import { useMoeEnhancingContext } from "@/contexts/useMoeEnhancingContext";
-import { MoeStatParser } from "@/domains/autoRoll/moeAutoRollManager";
+import { StatParser } from "@/domains/autoRoll/moeAutoRollManager";
 import Mask from "@/components/Mask";
 import MoeAutoRoll from "@/features/autoRoll/moe/MoeAutoRoll";
 
@@ -20,7 +20,7 @@ export default function MoeCubeEnhancer() {
 
   const handleRoll = useCallback(() => {
     const newPots = MoeManager.rollPots("moeCube", localData.subcategory);
-    const stats = MoeStatParser.parse(newPots);
+    const stats = StatParser.parse(newPots);
     setLocalData(
       produce((draft) => {
         if (draft) {

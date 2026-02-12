@@ -4,7 +4,7 @@ import { produce } from "immer";
 
 import { MoeManager } from "@/domains/enhancement/moe/moeManager";
 import { useMoeAutoRoll } from "@/hooks/useMoeAutoRoll";
-import { MoeStatParser } from "@/domains/autoRoll/moeAutoRollManager";
+import { StatParser } from "@/domains/autoRoll/moeAutoRollManager";
 import { useMoeEnhancingContext } from "@/contexts/useMoeEnhancingContext";
 
 import { Button } from "@/components/ui/button";
@@ -24,7 +24,7 @@ export default function MoeRestoreEnhancer() {
 
   const handleRoll = useCallback(() => {
     const newPots = MoeManager.rollPots("moeRestore", localData.subcategory);
-    const stats = MoeStatParser.parse(newPots);
+    const stats = StatParser.parse(newPots);
 
     setAfter(newPots);
     setLocalData(
