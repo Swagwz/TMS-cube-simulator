@@ -57,7 +57,6 @@ export default function EquipEnhancingDialog({
           }),
         };
       case "soul":
-        // TODO: SoulManager implementation
         return {
           feature: "soul" as const,
           pools: SoulManager.getPotPool(),

@@ -23,7 +23,16 @@ export const SoulManager = {
     return template;
   },
   getPotPool() {
-    return SOUL_POTENTIAL_SOURCE.map(({ id, weight }) => ({ id, weight }));
+    const pool = SOUL_POTENTIAL_SOURCE.map(({ id, weight }) => ({
+      id,
+      weight,
+    }));
+    const totalWeight = pool.reduce((acc, curr) => acc + curr.weight, 0);
+    return pool.map(({ id, weight }) => ({
+      id,
+      weight: weight,
+      prob: (weight / totalWeight) * 100,
+    }));
   },
   rollPot(pool: { id: string; weight: number }[]) {
     const rstIndex = rollWeightedIndex(pool.map(({ weight }) => weight));
