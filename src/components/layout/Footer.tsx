@@ -16,19 +16,18 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary-dark text-primary-dark-foreground border-t">
-      <div className="container mx-auto flex w-full max-w-4xl items-center justify-between gap-8 p-4 text-sm">
-        <div>
-          <DisclaimerDialog />
-        </div>
-        <div className="flex flex-col items-end gap-1">
+      <div className="container mx-auto flex w-full max-w-4xl flex-wrap items-center justify-between gap-8 p-4 text-sm">
+        <DisclaimerDialog />
+        <div className="flex flex-col gap-1">
           <p
             className="flex cursor-pointer items-center gap-1 font-bold"
             onClick={handleCopy}
           >
             聯絡資料
-            <Mail className="h-4 w-4" />:<span>{EMAIL_ADDRESS}</span>
-            {isCopied && <CopyCheck className="h-4 w-4" />}
+            <Mail className="h-4 w-4" />:
           </p>
+          <span>{EMAIL_ADDRESS}</span>
+          {isCopied && <CopyCheck className="h-4 w-4" />}
         </div>
       </div>
     </footer>
