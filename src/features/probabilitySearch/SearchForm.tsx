@@ -7,10 +7,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import FormField from "@/components/FormField";
-import EquipmentSearchForm from "./EquipmentSearchForm";
-import MoeSearchForm from "./MoeSearchForm";
+import EquipmentSearchForm from "./equipment/EquipmentSearchForm";
+import MoeSearchForm from "./moe/MoeSearchForm";
+import SoulSearchForm from "./soul/SoulSearchForm";
 import CommonQuestions from "./CommonQuestions";
-import SoulSearchForm from "./SoulSearchForm";
 
 export default function SearchForm() {
   const [system, setSystem] = useState<"moe" | "equipment" | "soul">(

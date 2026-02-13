@@ -31,7 +31,7 @@ export default function RankUpProb({ cube, rank }: Props) {
   if (cube === "shinyAdditionalCube") {
     const { ceiling, probIncr, baseProb } = CubeManager.getShinyCeiling(rank);
     return (
-      <details className="mt-4" open>
+      <details className="mt-4">
         <summary className="text-muted-foreground cursor-pointer text-center text-sm">
           跳框機制
         </summary>

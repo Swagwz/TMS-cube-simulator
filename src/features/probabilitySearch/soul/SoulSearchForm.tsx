@@ -89,7 +89,7 @@ export default function SoulSearchForm() {
   );
 
   return (
-    <div>
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       <FormField label="寶珠種類">
         <SoulTypeSelect value={soulType} onValueChange={handleSoulTypeSelect} />
       </FormField>
@@ -104,7 +104,7 @@ export default function SoulSearchForm() {
         />
       </FormField>
 
-      <details className="col-span-1 mt-4 md:col-span-2" open>
+      <details className="col-span-1 mt-4 md:col-span-2">
         <summary className="text-muted-foreground cursor-pointer text-center text-sm">
           各潛能出現機率
         </summary>

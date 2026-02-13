@@ -189,7 +189,7 @@ export default function PotentialProbResult({
   }
 
   return (
-    <details className="mt-4" open>
+    <details className="mt-4">
       <summary className="text-muted-foreground cursor-pointer text-center text-sm">
         各潛能出現機率 (選擇該排)
       </summary>

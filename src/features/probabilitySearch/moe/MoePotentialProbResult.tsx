@@ -92,7 +92,7 @@ export default function MoePotentialProbResult({ subcategory, cube }: Props) {
   if (sortedList.length === 0) return null;
 
   return (
-    <details className="col-span-1 mt-4 md:col-span-2" open>
+    <details className="col-span-1 mt-4 md:col-span-2">
       <summary className="text-muted-foreground cursor-pointer text-center text-sm">
         各潛能出現機率
       </summary>

@@ -18,9 +18,9 @@ import EquipTypeSelect from "@/components/form/EquipTypeSelect";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
+import RankUpProb from "../RankUpProb";
 import RankProbabilityTable from "./RankProbabilityTable";
 import PotentialProbResult from "./PotentialProbResult";
-import RankUpProb from "./RankUpProb";
 
 const EQUIP_CUBES = CUBE_LIST.map((item) => ({
   label: item.name,

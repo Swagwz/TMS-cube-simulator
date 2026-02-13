@@ -32,7 +32,7 @@ export default function RankProbabilityTable({
     );
 
   return (
-    <details className="mt-4" open>
+    <details className="mt-4">
       <summary className="text-muted-foreground cursor-pointer text-center text-sm">
         各排潛能階級機率
       </summary>
