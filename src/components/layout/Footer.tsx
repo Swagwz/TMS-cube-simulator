@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary-dark text-primary-dark-foreground border-t">
-      <div className="container mx-auto flex w-full max-w-4xl flex-wrap items-center justify-between gap-8 p-4 text-sm">
+      <div className="container mx-auto flex w-full flex-wrap items-center justify-center gap-8 p-4 text-sm">
         <DisclaimerDialog />
         <div
           className="flex cursor-pointer flex-col gap-1"
