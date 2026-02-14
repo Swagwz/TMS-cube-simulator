@@ -125,18 +125,26 @@ export const MoeAutoRoll = {
         prob: data.weights[cube] / totalWeight,
       }));
 
+    optimizedPool.push({
+      field: null,
+      val: 0,
+      prob: 1 - optimizedPool.reduce((acc, curr) => acc + curr.prob, 0),
+    });
+
     let finalProb = 0;
     const TOTAL_SLOTS = 3;
-
+    const TOTAL_PATH: { field: StatusField; value: number }[][] = [];
     function dfs(
       slotIndex: number,
       currArrays: Map<StatusField, number[]>,
       currProb: number,
+      path: { field: StatusField; value: number }[],
     ) {
       const isSuccess = matchcer.isMatch(currArrays as StatSummary);
 
       if (isSuccess) {
         finalProb += currProb;
+        TOTAL_PATH.push(path);
         return;
       }
       if (slotIndex === TOTAL_SLOTS) return;
@@ -163,11 +171,15 @@ export const MoeAutoRoll = {
           }
         });
 
-        dfs(slotIndex + 1, nextArrays, currProb * prob);
+        dfs(slotIndex + 1, nextArrays, currProb * prob, [
+          ...path,
+          { field, value: val },
+        ]);
       });
     }
 
-    dfs(0, new Map<StatusField, number[]>(), 1);
+    dfs(0, new Map<StatusField, number[]>(), 1, []);
+    console.log(TOTAL_PATH);
     return finalProb;
   },
 };
