@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
 import GlobalDeleteDialog from "./components/GlobalDeleteDialog";
@@ -9,7 +9,7 @@ import Footer from "./components/layout/Footer";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,6 +17,6 @@ export default function App() {
       </Routes>
       <GlobalDeleteDialog />
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }

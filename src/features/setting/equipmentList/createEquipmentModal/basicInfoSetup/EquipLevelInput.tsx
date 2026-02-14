@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
 import { useCreateEquipmentContext } from "@/contexts/useCreateEquipmentContext";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import NumberInput from "@/components/form/NumberInput";
