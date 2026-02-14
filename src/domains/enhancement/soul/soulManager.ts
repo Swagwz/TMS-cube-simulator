@@ -8,16 +8,22 @@ export const SoulManager = {
   getItem(id: string) {
     const meta = SOUL_METADATA_MAP.get(id as SoulId);
     if (!meta) throw new Error("Invalid soul id");
-    return meta; // Returns undefined if not found, which is fine for the aggregator
+    return meta;
   },
-  getLine(id: string, level: number) {
+  getPotentialMetadata(id: string) {
     const data = SOUL_POTENTIAL_ID_MAP.get(id);
     if (!data) throw new Error("Invalid soul pot id");
+    return data;
+  },
+  getLine(id: string, level: number) {
+    const data = this.getPotentialMetadata(id);
 
     const { template, values } = data;
+
     for (let i = values.length - 1; i >= 0; i--) {
       const { minLevel, x, y } = values[i];
       if (level < minLevel) continue;
+
       return formatTemplate(template, { x, y });
     }
     return template;

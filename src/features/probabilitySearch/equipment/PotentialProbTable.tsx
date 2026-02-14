@@ -47,7 +47,7 @@ type Props = {
 
 type SortKey = "display" | "rankName" | "minLevel" | "weight" | "prob";
 
-export default function PotentialProbResult({
+export default function PotentialProbTable({
   cube,
   rank,
   level,

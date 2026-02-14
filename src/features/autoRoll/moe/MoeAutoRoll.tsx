@@ -4,10 +4,15 @@ import type { MoeAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
 import { Button } from "@/components/ui/button";
 import { produce } from "immer";
 import { Plus } from "lucide-react";
+import type { MoeCardSubcategory } from "@/domains/moeCard/moeCard.type";
+import type { MoeCubeId } from "@/domains/enhancement/moe/moe.type";
 
 type Props = {
   targets: MoeAutoRollTarget[];
   setTargets: React.Dispatch<React.SetStateAction<MoeAutoRollTarget[]>>;
+  variant?: React.ComponentProps<typeof MoeTargetSetting>["variant"];
+  subcategory: MoeCardSubcategory;
+  cubeId: MoeCubeId;
 };
 
 const NEW_TARGET_ITEM: MoeAutoRollTarget = {
@@ -18,10 +23,22 @@ const NEW_TARGET_ITEM: MoeAutoRollTarget = {
   ],
 };
 
-export default function MoeAutoRoll({ targets, setTargets }: Props) {
+export default function MoeAutoRoll({
+  targets,
+  setTargets,
+  variant = "glass",
+  subcategory,
+  cubeId,
+}: Props) {
   return (
     <div className="flex flex-col gap-2">
-      <MoeTargetSetting targets={targets} setTargets={setTargets} />
+      <MoeTargetSetting
+        targets={targets}
+        setTargets={setTargets}
+        variant={variant}
+        subcategory={subcategory}
+        cubeId={cubeId}
+      />
       <Button
         variant="secondary"
         size="sm"

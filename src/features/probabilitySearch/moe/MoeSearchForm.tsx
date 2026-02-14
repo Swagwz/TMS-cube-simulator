@@ -6,6 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MOE_CARD_LIST } from "@/domains/moeCard/moeCard.config";
 import { MOE_CUBE_LIST } from "@/domains/enhancement/moe/moe.config";
 import FormField from "@/components/FormField";
@@ -13,34 +14,45 @@ import MoeCardTypeSelect from "@/components/form/MoeCardTypeSelect";
 import type { MoeCardSubcategory } from "@/domains/moeCard/moeCard.type";
 import type { MoeCubeId } from "@/domains/enhancement/moe/moe.type";
 import MoePotentialProbResult from "./MoePotentialProbResult";
+import MoeProbCalc from "./MoeProbCalc";
+import type { MoeAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
 
 const MOE_CUBES = MOE_CUBE_LIST.map((item) => ({
   label: item.name,
   value: item.id,
 }));
 
+type FormData = {
+  subcategory: MoeCardSubcategory;
+  cube: MoeCubeId;
+};
+
 export default function MoeSearchForm() {
-  const [moeSub, setMoeSub] = useState<MoeCardSubcategory>(
-    MOE_CARD_LIST[0].subcategory,
-  );
-  const [moeCube, setMoeCube] = useState<MoeCubeId>(MOE_CUBES[0].value);
+  const [formData, setFormData] = useState<FormData>({
+    subcategory: MOE_CARD_LIST[0].subcategory,
+    cube: MOE_CUBES[0].value,
+  });
+  const [targets, setTargets] = useState<MoeAutoRollTarget[]>([]);
 
   const handleCardSelect = (val: string) => {
-    setMoeSub(val as MoeCardSubcategory);
+    setFormData({ ...formData, subcategory: val as MoeCardSubcategory });
   };
 
   const handleCubeSelect = (val: string) => {
-    setMoeCube(val as MoeCubeId);
+    setFormData({ ...formData, cube: val as MoeCubeId });
   };
 
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       <FormField label="萌獸種類">
-        <MoeCardTypeSelect value={moeSub} onValueChange={handleCardSelect} />
+        <MoeCardTypeSelect
+          value={formData.subcategory}
+          onValueChange={handleCardSelect}
+        />
       </FormField>
 
       <FormField label="方塊">
-        <Select value={moeCube} onValueChange={handleCubeSelect}>
+        <Select value={formData.cube} onValueChange={handleCubeSelect}>
           <SelectTrigger>
             <SelectValue />
           </SelectTrigger>
@@ -53,7 +65,28 @@ export default function MoeSearchForm() {
           </SelectContent>
         </Select>
       </FormField>
-      <MoePotentialProbResult subcategory={moeSub} cube={moeCube} />
+      <div className="col-span-1 md:col-span-2">
+        <Tabs defaultValue="table">
+          <TabsList>
+            <TabsTrigger value="table">機率表</TabsTrigger>
+            <TabsTrigger value="calc">機率計算</TabsTrigger>
+          </TabsList>
+          <TabsContent value="table">
+            <MoePotentialProbResult
+              subcategory={formData.subcategory}
+              cube={formData.cube}
+            />
+          </TabsContent>
+          <TabsContent value="calc">
+            <MoeProbCalc
+              subcategory={formData.subcategory}
+              cube={formData.cube}
+              targets={targets}
+              setTargets={setTargets}
+            />
+          </TabsContent>
+        </Tabs>
+      </div>
     </div>
   );
 }

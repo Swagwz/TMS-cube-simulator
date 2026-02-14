@@ -1,35 +1,33 @@
 import React from "react";
-import EquipTargetSetting from "./EquipTargetSetting";
-import { Button } from "@/components/ui/button";
 import { produce } from "immer";
-import type { EquipmentAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
 import { Plus } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import type { SoulAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
+import SoulTargetSetting from "./SoulTargetSetting";
 
 type Props = {
-  targets: EquipmentAutoRollTarget[];
-  setTargets: React.Dispatch<React.SetStateAction<EquipmentAutoRollTarget[]>>;
-  variant?: React.ComponentProps<typeof EquipTargetSetting>["variant"];
+  targets: SoulAutoRollTarget[];
+  setTargets: React.Dispatch<React.SetStateAction<SoulAutoRollTarget[]>>;
+  level: number;
+  variant?: React.ComponentProps<typeof SoulTargetSetting>["variant"];
 };
 
-const NEW_TARGET_ITEM: EquipmentAutoRollTarget = {
-  rank: null,
-  stats: [
-    { field: null, value: 0 },
-    { field: null, value: 0 },
-    { field: null, value: 0 },
-  ],
+const NEW_TARGET_ITEM: SoulAutoRollTarget = {
+  stats: [{ field: null, value: 0 }],
 };
 
-export default function EquipAutoRoll({
+export default function SoulAutoRoll({
   targets,
   setTargets,
+  level,
   variant = "glass",
 }: Props) {
   return (
     <div className="flex flex-col gap-2">
-      <EquipTargetSetting
+      <SoulTargetSetting
         targets={targets}
         setTargets={setTargets}
+        level={level}
         variant={variant}
       />
       <Button

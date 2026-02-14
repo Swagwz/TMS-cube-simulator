@@ -70,7 +70,12 @@ export default function MoeCubeEnhancer() {
         )}
       </MoeFooter>
       <Mask disabled={isAutoRolling}>
-        <MoeAutoRoll targets={targets} setTargets={setTargets} />
+        <MoeAutoRoll
+          targets={targets}
+          setTargets={setTargets}
+          subcategory={localData.subcategory}
+          cubeId="moeCube"
+        />
       </Mask>
     </>
   );

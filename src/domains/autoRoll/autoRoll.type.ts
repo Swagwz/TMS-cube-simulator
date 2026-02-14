@@ -18,6 +18,11 @@ export type EquipmentAutoRollTarget = {
   rank: EquipmentRank | null;
 };
 
+// Soul 自動洗潛
+export type SoulAutoRollTarget = {
+  stats: StatTarget[];
+};
+
 export type StatSummary = Map<StatusField, number[]>;
 
 export interface MoeStatParser {
@@ -30,4 +35,8 @@ export interface EquipmentStatParser {
     level: number,
     subcategory: EquipmentSubcategory,
   ): StatSummary;
+}
+
+export interface SoulStatParser {
+  parse(ids: string[], level: number): StatSummary;
 }

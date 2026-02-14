@@ -6,7 +6,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
 
 import EQUIPMENT_LIST from "@/domains/equipment/equipment.config";
 import { POTENTIAL_RANK_LIST } from "@/domains/potential/potential.config";
@@ -20,7 +19,8 @@ import type { EquipmentRank } from "@/domains/potential/potential.type";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import RankUpProb from "../RankUpProb";
 import RankProbabilityTable from "./RankProbabilityTable";
-import PotentialProbResult from "./PotentialProbResult";
+import PotentialProbTable from "./PotentialProbTable";
+import NumberInput from "@/components/form/NumberInput";
 
 const EQUIP_CUBES = CUBE_LIST.map((item) => ({
   label: item.name,
@@ -78,11 +78,11 @@ export default function EquipmentSearchForm() {
         </FormField>
 
         <FormField label="裝備等級">
-          <Input
-            type="number"
+          <NumberInput
             value={level}
             onChange={(e) => setLevel(Number(e.target.value))}
             disabled={isFixedLevel}
+            required
           />
         </FormField>
 
@@ -126,7 +126,7 @@ export default function EquipmentSearchForm() {
         onLineSelect={setSelectedLine}
       />
       {selectedLineProbs && (
-        <PotentialProbResult
+        <PotentialProbTable
           {...{ cube: equipCube, rank, level, subcategory: equipSub }}
           lineProbabilities={selectedLineProbs}
         />

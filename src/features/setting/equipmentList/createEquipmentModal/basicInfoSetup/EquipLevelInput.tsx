@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { useCreateEquipmentContext } from "@/contexts/useCreateEquipmentContext";
 import { EquipManager } from "@/domains/equipment/equipManager";
+import NumberInput from "@/components/form/NumberInput";
 
 export default function EquipLevelInput() {
   const { equipmentData, updateLevel } = useCreateEquipmentContext();
@@ -21,14 +22,11 @@ export default function EquipLevelInput() {
 
   return (
     <div className="flex flex-col gap-2">
-      <Input
-        type="number"
-        inputMode="numeric"
-        className="text-center"
+      <NumberInput
         value={equipmentData.level}
-        onFocus={(e) => e.target.select()}
         onChange={handleChange}
         disabled={levelConfig.isFixed}
+        required
       />
       <div className="flex flex-row justify-center gap-2">
         {!levelConfig.isFixed &&
