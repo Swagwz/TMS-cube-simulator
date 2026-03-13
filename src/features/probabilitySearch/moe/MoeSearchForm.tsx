@@ -13,9 +13,10 @@ import FormField from "@/components/FormField";
 import MoeCardTypeSelect from "@/components/form/MoeCardTypeSelect";
 import type { MoeCardSubcategory } from "@/domains/moeCard/moeCard.type";
 import type { MoeCubeId } from "@/domains/enhancement/moe/moe.type";
-import MoePotentialProbResult from "./MoePotentialProbResult";
+import MoePotentialProbTable from "./MoePotentialProbTable";
 import MoeProbCalc from "./MoeProbCalc";
 import type { MoeAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
+import { CollapsibleDetail } from "@/components/CollapsibleDetail";
 
 const MOE_CUBES = MOE_CUBE_LIST.map((item) => ({
   label: item.name,
@@ -72,10 +73,12 @@ export default function MoeSearchForm() {
             <TabsTrigger value="calc">機率計算</TabsTrigger>
           </TabsList>
           <TabsContent value="table">
-            <MoePotentialProbResult
-              subcategory={formData.subcategory}
-              cube={formData.cube}
-            />
+            <CollapsibleDetail title="各潛能出現機率">
+              <MoePotentialProbTable
+                subcategory={formData.subcategory}
+                cube={formData.cube}
+              />
+            </CollapsibleDetail>
           </TabsContent>
           <TabsContent value="calc">
             <MoeProbCalc

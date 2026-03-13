@@ -76,53 +76,48 @@ export default function SoulProbTable({ level }: FormData) {
   );
 
   return (
-    <details className="col-span-1 mt-4 md:col-span-2">
-      <summary className="text-muted-foreground cursor-pointer text-center text-sm">
-        各潛能出現機率
-      </summary>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <ControllableTableHead
-              sortKey="display"
-              sortConfig={sortConfig}
-              onSort={handleSort}
-            >
-              潛能
-            </ControllableTableHead>
-            <ControllableTableHead
-              sortKey="weight"
-              sortConfig={sortConfig}
-              onSort={handleSort}
-            >
-              權重
-            </ControllableTableHead>
-            <ControllableTableHead
-              sortKey="prob"
-              sortConfig={sortConfig}
-              onSort={handleSort}
-            >
-              機率
-            </ControllableTableHead>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <ControllableTableHead
+            sortKey="display"
+            sortConfig={sortConfig}
+            onSort={handleSort}
+          >
+            潛能
+          </ControllableTableHead>
+          <ControllableTableHead
+            sortKey="weight"
+            sortConfig={sortConfig}
+            onSort={handleSort}
+          >
+            權重
+          </ControllableTableHead>
+          <ControllableTableHead
+            sortKey="prob"
+            sortConfig={sortConfig}
+            onSort={handleSort}
+          >
+            機率
+          </ControllableTableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {sortedList.map((item) => (
+          <TableRow key={item.id}>
+            <TableCell>{item.display}</TableCell>
+            <TableCell>{item.weight}</TableCell>
+            <TableCell>{item.prob.toFixed(4)}%</TableCell>
           </TableRow>
-        </TableHeader>
-        <TableBody>
-          {sortedList.map((item) => (
-            <TableRow key={item.id}>
-              <TableCell>{item.display}</TableCell>
-              <TableCell>{item.weight}</TableCell>
-              <TableCell>{item.prob.toFixed(4)}%</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell>總計</TableCell>
-            <TableCell>{totalWeight}</TableCell>
-            <TableCell>{totalProb.toFixed(4)}%</TableCell>
-          </TableRow>
-        </TableFooter>
-      </Table>
-    </details>
+        ))}
+      </TableBody>
+      <TableFooter>
+        <TableRow>
+          <TableCell>總計</TableCell>
+          <TableCell>{totalWeight}</TableCell>
+          <TableCell>{totalProb.toFixed(4)}%</TableCell>
+        </TableRow>
+      </TableFooter>
+    </Table>
   );
 }

@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SoulProbCalc from "./SoulProbCalc";
 import type { SoulAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
 import NumberInput from "@/components/form/NumberInput";
+import { CollapsibleDetail } from "@/components/CollapsibleDetail";
 
 type FormData = {
   type: SoulId;
@@ -55,7 +56,9 @@ export default function SoulSearchForm() {
             <TabsTrigger value="calc">機率計算</TabsTrigger>
           </TabsList>
           <TabsContent value="table">
-            <SoulProbTable level={formData.level} />
+            <CollapsibleDetail title="各潛能出現機率">
+              <SoulProbTable level={formData.level} />
+            </CollapsibleDetail>
           </TabsContent>
           <TabsContent value="calc">
             <SoulProbCalc
