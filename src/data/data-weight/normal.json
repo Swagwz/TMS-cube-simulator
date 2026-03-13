@@ -3721,11 +3721,11 @@
         {
           "id": "4b9a9be7-6913-4a39-8b43-27e7db13759f",
           "weights": {
-            "restoreCube": null,
-            "mirrorCube": null,
-            "hexaCube": null,
-            "equalCube": null,
-            "combineCube": null
+            "restoreCube": 4,
+            "mirrorCube": 1,
+            "hexaCube": 4,
+            "equalCube": 4,
+            "combineCube": 4
           }
         },
         {
