@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { cn } from "@/lib/utils";
 import { weightsToProbabilities } from "@/utils/weightsToProbabilities";
 
 import { useEnhancingContext } from "@/contexts/useEnhancingContext";
@@ -8,11 +7,8 @@ import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import { PotManager } from "@/domains/potential/potManager";
 import { useAccountStore } from "@/store/useAccountStore";
 import FormField from "@/components/FormField";
-import { Button } from "@/components/ui/button";
-import { ButtonGroup } from "@/components/ui/button-group";
 import { Checkbox } from "@/components/ui/checkbox";
-
-const BUTTON_OPTIONS = [1, 2, 3];
+import MultiplierSelector from "@/components/MultiplierSelector";
 
 export default function RankUpMultiplier() {
   const {
@@ -50,21 +46,10 @@ export default function RankUpMultiplier() {
           </div>
         }
       >
-        <ButtonGroup>
-          {BUTTON_OPTIONS.map((val) => (
-            <Button
-              variant="primary"
-              className={cn(
-                val === rankUpMultiplier &&
-                  "bg-accent-main hover:bg-accent-dark text-accent-main-foreground hover:text-accent-main-foreground",
-              )}
-              onClick={() => setRankUpMultiplier(val)}
-              key={val}
-            >
-              x{val}
-            </Button>
-          ))}
-        </ButtonGroup>
+        <MultiplierSelector
+          value={rankUpMultiplier}
+          onChange={(val: number) => setRankUpMultiplier(val)}
+        />
       </FormField>
       <AnimatePresence>
         {userConfig.showRankUpProb && (

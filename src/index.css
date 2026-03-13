@@ -3,6 +3,10 @@
 
 @custom-variant dark (&: is(.dark *));
 
+.title-error {
+  @apply text-destructive text-center font-bold;
+}
+
 @theme {
   /** Primary */
   --color-primary-lightest: #feefec;

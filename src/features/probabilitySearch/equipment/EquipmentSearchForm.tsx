@@ -21,6 +21,7 @@ import RankUpProb from "../RankUpProb";
 import RankProbabilityTable from "./RankProbabilityTable";
 import PotentialProbTable from "./PotentialProbTable";
 import NumberInput from "@/components/form/NumberInput";
+import { CollapsibleDetail } from "@/components/CollapsibleDetail";
 
 const EQUIP_CUBES = CUBE_LIST.map((item) => ({
   label: item.name,
@@ -118,19 +119,23 @@ export default function EquipmentSearchForm() {
           </Select>
         </FormField>
       </div>
-      <RankUpProb cube={equipCube} rank={rank} />
-      <RankProbabilityTable
-        cube={equipCube}
-        rank={rank}
-        selectedLine={selectedLine}
-        onLineSelect={setSelectedLine}
-      />
-      {selectedLineProbs && (
-        <PotentialProbTable
-          {...{ cube: equipCube, rank, level, subcategory: equipSub }}
-          lineProbabilities={selectedLineProbs}
+      <div className="flex flex-col gap-4">
+        <CollapsibleDetail title="跳框機率">
+          <RankUpProb cube={equipCube} rank={rank} />
+        </CollapsibleDetail>
+        <RankProbabilityTable
+          cube={equipCube}
+          rank={rank}
+          selectedLine={selectedLine}
+          onLineSelect={setSelectedLine}
         />
-      )}
+        {selectedLineProbs && (
+          <PotentialProbTable
+            {...{ cube: equipCube, rank, level, subcategory: equipSub }}
+            lineProbabilities={selectedLineProbs}
+          />
+        )}
+      </div>
     </>
   );
 }

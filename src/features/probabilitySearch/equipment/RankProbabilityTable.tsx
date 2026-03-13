@@ -27,9 +27,7 @@ export default function RankProbabilityTable({
   const lineRankArr = CubeManager.getItem(cube).lineRank[rank] || [];
 
   if (!lineRankArr.length)
-    return (
-      <div className="text-destructive font-bold">此方塊不能套用該潛能階級</div>
-    );
+    return <div className="title-error">此方塊不能套用該潛能階級</div>;
 
   return (
     <details className="mt-4">
