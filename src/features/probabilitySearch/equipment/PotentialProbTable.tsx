@@ -189,71 +189,66 @@ export default function PotentialProbTable({
   }
 
   return (
-    <details className="mt-4">
-      <summary className="text-muted-foreground cursor-pointer text-center text-sm">
-        各潛能出現機率 (選擇該排)
-      </summary>
-      <Table className="w-full table-auto">
-        <TableHeader>
-          <TableRow>
-            <ControllableTableHead
-              sortKey="display"
-              sortConfig={sortConfig}
-              onSort={handleSort}
-            >
-              潛能
-            </ControllableTableHead>
-            <ControllableTableHead
-              sortKey="rankName"
-              sortConfig={sortConfig}
-              onSort={handleSort}
-            >
-              階級
-            </ControllableTableHead>
-            <ControllableTableHead
-              sortKey="minLevel"
-              sortConfig={sortConfig}
-              onSort={handleSort}
-            >
-              需求等級
-            </ControllableTableHead>
-            <ControllableTableHead
-              sortKey="weight"
-              sortConfig={sortConfig}
-              onSort={handleSort}
-            >
-              權重
-            </ControllableTableHead>
-            <ControllableTableHead
-              sortKey="prob"
-              sortConfig={sortConfig}
-              onSort={handleSort}
-            >
-              機率
-            </ControllableTableHead>
+    <Table className="w-full table-auto">
+      <TableHeader>
+        <TableRow>
+          <ControllableTableHead
+            sortKey="display"
+            sortConfig={sortConfig}
+            onSort={handleSort}
+          >
+            潛能
+          </ControllableTableHead>
+          <ControllableTableHead
+            sortKey="rankName"
+            sortConfig={sortConfig}
+            onSort={handleSort}
+          >
+            階級
+          </ControllableTableHead>
+          <ControllableTableHead
+            sortKey="minLevel"
+            sortConfig={sortConfig}
+            onSort={handleSort}
+          >
+            需求等級
+          </ControllableTableHead>
+          <ControllableTableHead
+            sortKey="weight"
+            sortConfig={sortConfig}
+            onSort={handleSort}
+          >
+            權重
+          </ControllableTableHead>
+          <ControllableTableHead
+            sortKey="prob"
+            sortConfig={sortConfig}
+            onSort={handleSort}
+          >
+            機率
+          </ControllableTableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {sortedList.map((item) => (
+          <TableRow key={`${item.id}-${item.rankName}`}>
+            <TableCell>{item.display}</TableCell>
+            <TableCell>{item.rankName}</TableCell>
+            <TableCell>{item.minLevel}</TableCell>
+            <TableCell>
+              {item.weight}*{item.lineProb}%
+            </TableCell>
+            <TableCell>{item.prob.toFixed(4)}%</TableCell>
           </TableRow>
-        </TableHeader>
-        <TableBody>
-          {sortedList.map((item) => (
-            <TableRow key={`${item.id}-${item.rankName}`}>
-              <TableCell>{item.display}</TableCell>
-              <TableCell>{item.rankName}</TableCell>
-              <TableCell>{item.minLevel}</TableCell>
-              <TableCell>
-                {item.weight}*{item.lineProb}%
-              </TableCell>
-              <TableCell>{item.prob.toFixed(4)}%</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell colSpan={3}>總計</TableCell>
-            <TableCell>{totalScaledWeight.toFixed(4)}</TableCell>
-            <TableCell>{totalProb.toFixed(4)}%</TableCell>
-          </TableRow>
-        </TableFooter>
-      </Table>
-    </details>
+        ))}
+      </TableBody>
+      <TableFooter>
+        <TableRow>
+          <TableCell colSpan={3}>總計</TableCell>
+          <TableCell>{totalScaledWeight.toFixed(4)}</TableCell>
+          <TableCell>{totalProb.toFixed(4)}%</TableCell>
+        </TableRow>
+      </TableFooter>
+    </Table>
   );
 }

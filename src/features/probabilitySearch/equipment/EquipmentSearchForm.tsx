@@ -18,7 +18,7 @@ import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import RankUpProb from "../RankUpProb";
-import RankProbabilityTable from "./RankProbabilityTable";
+import PotentialLineRankTable from "./PotentialLineRankTable";
 import PotentialProbTable from "./PotentialProbTable";
 import NumberInput from "@/components/form/NumberInput";
 import { CollapsibleDetail } from "@/components/CollapsibleDetail";
@@ -123,17 +123,21 @@ export default function EquipmentSearchForm() {
         <CollapsibleDetail title="跳框機率">
           <RankUpProb cube={equipCube} rank={rank} />
         </CollapsibleDetail>
-        <RankProbabilityTable
-          cube={equipCube}
-          rank={rank}
-          selectedLine={selectedLine}
-          onLineSelect={setSelectedLine}
-        />
-        {selectedLineProbs && (
-          <PotentialProbTable
-            {...{ cube: equipCube, rank, level, subcategory: equipSub }}
-            lineProbabilities={selectedLineProbs}
+        <CollapsibleDetail title="各排潛能階級機率">
+          <PotentialLineRankTable
+            cube={equipCube}
+            rank={rank}
+            selectedLine={selectedLine}
+            onLineSelect={setSelectedLine}
           />
+        </CollapsibleDetail>
+        {selectedLineProbs && (
+          <CollapsibleDetail title="各潛能出現機率 (選擇該排)">
+            <PotentialProbTable
+              {...{ cube: equipCube, rank, level, subcategory: equipSub }}
+              lineProbabilities={selectedLineProbs}
+            />
+          </CollapsibleDetail>
         )}
       </div>
     </>
