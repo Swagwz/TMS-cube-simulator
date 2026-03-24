@@ -1,11 +1,12 @@
-export function capitailize(str: string) {
-  let rst = "";
-  for (let i = 0; i < str.length; i++) {
-    if (i === 0) {
-      rst += str[i].toUpperCase();
-    } else {
-      rst += str[i];
-    }
-  }
-  return rst;
+/**
+ * trim whitespace and capitalize only the first character
+ * @param str string
+ * @returns string
+ */
+export function capitalize(str: string) {
+  const trimmed = str.trim().toLowerCase();
+
+  if (!trimmed) return "";
+
+  return trimmed[0].toUpperCase() + trimmed.slice(1);
 }
