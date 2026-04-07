@@ -6,6 +6,7 @@ import GlobalDeleteDialog from "./components/GlobalDeleteDialog";
 import Home from "./routes/Home";
 import ProbabilitySearch from "./routes/ProbabilitySearch";
 import Footer from "./components/layout/Footer";
+import NotFound from "./routes/NotFound";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/probability-search" element={<ProbabilitySearch />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <GlobalDeleteDialog />
       <Footer />
