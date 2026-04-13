@@ -14,8 +14,8 @@ import shinyAdditionalCube from "@/assets/enhancementItem/閃亮附加方塊.png
 import type {
   CubeId,
   CubeItem,
-  RelationItem,
-  RelationItemId,
+  CompanionItem,
+  CompanionItemId,
 } from "./cube.type";
 
 export const CUBE_LIST: CubeItem[] = [
@@ -452,7 +452,7 @@ export const CUBE_METADATA_MAP = new Map<CubeId, CubeItem>(
   CUBE_LIST.map((data) => [data.id, data]),
 );
 
-const RELATION_LIST: RelationItem[] = [
+const COMPANION_LIST: CompanionItem[] = [
   {
     id: "fixPotential",
     name: "固定潛能",
@@ -464,11 +464,11 @@ const RELATION_LIST: RelationItem[] = [
   },
 ];
 
-export const RELATION_METADATA_MAP = new Map<RelationItemId, RelationItem>(
-  RELATION_LIST.map((data) => [data.id, data]),
+export const COMPANION_METADATA_MAP = new Map<CompanionItemId, CompanionItem>(
+  COMPANION_LIST.map((data) => [data.id, data]),
 );
 
 /** 定義方塊與其他道具的關聯 */
-export const CUBE_RELATIONS: Record<string, RelationItemId[]> = {
+export const CUBE_COMPANIONS: Record<string, CompanionItemId[]> = {
   restoreCube: ["fixPotential"],
 };
