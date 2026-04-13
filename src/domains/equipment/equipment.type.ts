@@ -1,4 +1,4 @@
-import type { CubeId } from "../enhancement/cube/cube.type";
+import type { CubeId } from "../cube/type";
 import type { SoulId } from "../enhancement/soul/soul.type";
 
 export type EquipmentMetadata = {
