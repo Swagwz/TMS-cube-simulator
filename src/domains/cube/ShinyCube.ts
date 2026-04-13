@@ -1,13 +1,17 @@
-import shiningImg from "@/assets/enhancementItem/閃亮附加方塊.png";
-import { proxy } from "valtio";
+import shinyImg from "@/assets/enhancementItem/閃亮附加方塊.png";
 import { BaseCube } from "./BaseCube";
 import { PotManager } from "../potential/potManager";
 import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
-import type { CubePools, PotentialResult } from "@/domains/shared/types";
+import type {
+  CubePools,
+  PotentialResult,
+  RankUpOptions,
+  ShinyPity,
+} from "@/domains/shared/types";
 import type { EquipmentRank } from "../potential/potential.type";
 import type { BaseCompanionItem } from "../companion/BaseCompanionItem";
 
-class ShiningCube extends BaseCube {
+class ShinyCube extends BaseCube {
   readonly uiType = "accumulate";
   readonly cubeId = "shinyAdditionalCube";
   readonly name = "閃亮附加方塊";
@@ -15,7 +19,7 @@ class ShiningCube extends BaseCube {
     "重設附加潛能。階級提升機率隨使用次數提高，並具備必定升階的保底機制。";
   readonly apply = "additionalPot";
   readonly price = 60;
-  readonly imageUrl = shiningImg;
+  readonly imageUrl = shinyImg;
   readonly companions: BaseCompanionItem[] = [];
 
   readonly rankUp = {
@@ -49,26 +53,12 @@ class ShiningCube extends BaseCube {
   readonly rankUpIncr = { rare: 0.05, epic: 0.01, unique: 0.005 };
   readonly ceiling = { rare: 44, epic: 109, unique: 307 };
 
-  accumulatedCount: Record<Exclude<EquipmentRank, "legendary">, number> = {
-    rare: 0,
-    epic: 0,
-    unique: 0,
-  };
-
-  roll(equip: EnhancementItem, pools: CubePools): PotentialResult {
-    const nextTier = this.rollRankUp(equip);
-    const currentTier = equip.additionalPot.tier;
-
-    if (nextTier !== currentTier) {
-      // 升階
-      this.accumulatedCount[
-        currentTier as Exclude<EquipmentRank, "legendary">
-      ] = 0;
-    } else if (currentTier !== "legendary") {
-      this.accumulatedCount[
-        currentTier as Exclude<EquipmentRank, "legendary">
-      ]++;
-    }
+  roll(
+    equip: EnhancementItem,
+    pools: CubePools,
+    pity: ShinyPity,
+  ): PotentialResult {
+    const nextTier = this.rollRankUp(equip, pity);
 
     let potIds: string[] = [];
     do {
@@ -80,12 +70,16 @@ class ShiningCube extends BaseCube {
     return { tier: nextTier, lines: potIds };
   }
 
-  override rollRankUp(equip: EnhancementItem): EquipmentRank {
+  override rollRankUp(
+    equip: EnhancementItem,
+    options: RankUpOptions,
+  ): EquipmentRank {
+    const pity = options as ShinyPity;
     const currentTier = equip.additionalPot.tier;
     if (currentTier === "legendary") return currentTier;
 
     const tierKey = currentTier as Exclude<EquipmentRank, "legendary">;
-    const count = this.accumulatedCount[tierKey];
+    const count = pity[tierKey];
     const ceiling = this.ceiling[tierKey];
 
     // 觸發保底
@@ -103,4 +97,4 @@ class ShiningCube extends BaseCube {
   }
 }
 
-export const shiningCube = proxy(new ShiningCube());
+export const shinyCube = new ShinyCube();

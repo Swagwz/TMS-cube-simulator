@@ -6,7 +6,7 @@ import { equalCube } from "./EqualCube";
 import { mirrorCube } from "./MirrorCube";
 import { restoreCube } from "./RestoreCube";
 import { restoreAdditionalCube } from "./RestoreAdditionalCube";
-import { shiningCube } from "./ShiningCube";
+import { shinyCube } from "./ShinyCube";
 import { hexaCube } from "./HexaCube";
 import { combineCube } from "./CombineCube";
 import { combineAdditionalCube } from "./CombineAdditionalCube";
@@ -23,7 +23,7 @@ const registry: BaseCube[] = [
   mirrorCube,
   restoreCube,
   restoreAdditionalCube,
-  shiningCube,
+  shinyCube,
   hexaCube,
   combineCube,
   combineAdditionalCube,
