@@ -1,4 +1,4 @@
-import type { CubeId, RelationItemId } from "./cube/cube.type";
+import type { CubeId, CompanionItemId } from "./cube/cube.type";
 import type { MoeCubeId } from "./moe/moe.type";
 import type { SoulId } from "./soul/soul.type";
 import type { PotentialFeature } from "@/domains/equipment/equipment.type";
@@ -13,7 +13,7 @@ type CommonMeta = {
 
 type FeatureMeta =
   | {
-      id: CubeId | RelationItemId;
+      id: CubeId | CompanionItemId;
       apply: PotentialFeature;
     }
   | {
@@ -27,6 +27,6 @@ type FeatureMeta =
 
 export type EhmMetadata = CommonMeta & FeatureMeta;
 
-export type EhmId = CubeId | SoulId | MoeCubeId | RelationItemId;
+export type EhmId = CubeId | SoulId | MoeCubeId | CompanionItemId;
 
 export type EhmSystemType = "equipment" | "moe";
