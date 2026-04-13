@@ -1,6 +1,6 @@
 import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
 import type { CubePools, CubeUIType } from "@/domains/shared/types";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import type { CubeId } from "@/domains/cube/type";
 import type { PotentialFeature } from "../equipment/equipment.type";
 import type { EquipmentRank, PotentialRank } from "../potential/potential.type";
 import { PotManager } from "../potential/potManager";
