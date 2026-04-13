@@ -1,5 +1,9 @@
 import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
-import type { CubePools, CubeUIType } from "@/domains/shared/types";
+import type {
+  CubePools,
+  CubeUIType,
+  RankUpOptions,
+} from "@/domains/shared/types";
 import type { CubeId } from "@/domains/cube/type";
 import type { PotentialFeature } from "../equipment/equipment.type";
 import type { EquipmentRank, PotentialRank } from "../potential/potential.type";
@@ -30,12 +34,22 @@ export abstract class BaseCube {
   /**
    * 執行升階邏輯
    */
-  rollRankUp(equip: EnhancementItem, multiplier: number = 1): EquipmentRank {
+  rollRankUp(
+    equip: EnhancementItem,
+    options: RankUpOptions = 1,
+  ): EquipmentRank {
+    // 嚴格檢查 options 型別，確保呼叫端傳入正確參數。
+    // 在此階段我們不支援除 number 以外的 options，以防止靜默錯誤或邏輯偏移。
+    if (typeof options !== "number") {
+      throw new Error(`Invalid options: expected number, got ${typeof options}`);
+    }
+
     const currentTier =
       this.apply === "mainPot" ? equip.mainPot.tier : equip.additionalPot.tier;
 
     if (!this.rankUp) return currentTier;
 
+    const multiplier = options;
     const weights = this.getScaledRankUpWeights(currentTier, multiplier);
     if (weights.length === 0) return currentTier;
 
