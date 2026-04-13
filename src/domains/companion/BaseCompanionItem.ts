@@ -1,5 +1,5 @@
-import type { CompanionItemId } from "../enhancement/cube/cube.type";
 import type { EnhancementItem } from "../equipment/EnhancementItem";
+import type { CompanionItemId } from "./type";
 
 export abstract class BaseCompanionItem {
   abstract readonly itemId: CompanionItemId;

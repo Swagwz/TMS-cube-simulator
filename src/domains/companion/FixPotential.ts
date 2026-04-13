@@ -1,6 +1,5 @@
 import fixPotentialImg from "@/assets/enhancementItem/固定潛能.png";
 import { BaseCompanionItem } from "./BaseCompanionItem";
-import { proxy } from "valtio";
 
 class FixPotential extends BaseCompanionItem {
   readonly imageUrl = fixPotentialImg;
@@ -9,4 +8,4 @@ class FixPotential extends BaseCompanionItem {
   readonly price = 0;
 }
 
-export const fixPotential = proxy(new FixPotential());
+export const fixPotential = new FixPotential();
