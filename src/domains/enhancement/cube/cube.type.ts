@@ -48,9 +48,9 @@ export type AdditionalCubeId =
   | "absAdditionalCube"
   | "combineAdditionalCube";
 
-export type RelationItemId = "fixPotential";
+export type CompanionItemId = "fixPotential";
 
-export type RelationItem = EhmMetadata & {
-  id: RelationItemId;
+export type CompanionItem = EhmMetadata & {
+  id: CompanionItemId;
   apply: PotentialFeature;
 };
