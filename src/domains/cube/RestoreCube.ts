@@ -8,7 +8,7 @@ import type {
   PotentialResult,
 } from "@/domains/shared/types";
 import type { BaseCompanionItem } from "../companion/BaseCompanionItem";
-import { fixPotential } from "../companion/fixPotential";
+import { fixPotential } from "../companion/FixPotential";
 
 class RestoreCube extends BaseCube {
   readonly cubeId = "restoreCube";
