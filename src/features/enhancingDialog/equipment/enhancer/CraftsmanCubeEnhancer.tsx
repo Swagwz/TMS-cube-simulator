@@ -1,8 +1,6 @@
-import { produce } from "immer";
 import { cn } from "@/lib/utils";
 
 import { PotManager } from "@/domains/potential/potManager";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 
 import RankBanner from "@/components/potential/RankBanner";
 import PotentialLineBadge from "@/components/potential/PotentialLineBadge";
@@ -12,23 +10,15 @@ import DisplayContainer from "../../DisplayContainer";
 import CloseBtn from "@/components/CloseBtn";
 import EquipFooter from "../EquipFooter";
 import { useEquipEnhancer } from "@/hooks/useEquipEnhancer";
+import { useAccountStore } from "@/store/useAccountStore";
 
 export default function CraftsmanCubeEnhancer() {
-  const { localData, setLocalData, pools, handleClose } =
-    useEquipEnhancer("mainPot");
-  const { level, mainPot, subcategory } = localData;
+  const { item, equip, snap, handleClose } = useEquipEnhancer("mainPot");
+  const { level, subcategory } = snap;
+  const { mainPot } = snap;
 
   const handleRoll = () => {
-    const nextRank = CubeManager.rollRankUp("craftsmanCube", mainPot.tier);
-    const pots = CubeManager.rollPots("craftsmanCube", nextRank, pools);
-    setLocalData(
-      produce((draft) => {
-        draft!.mainPot.potIds = pots;
-        draft!.mainPot.tier = nextRank;
-        draft!.statistics.counts.craftsmanCube =
-          (draft?.statistics.counts.craftsmanCube || 0) + 1;
-      }),
-    );
+    item.roll(equip, { multiplier: useAccountStore.getState().rankUpMultiplier });
   };
 
   // 最高套用至罕見潛能

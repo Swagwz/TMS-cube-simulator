@@ -1,7 +1,7 @@
 import restoreAdditionalImg from "@/assets/enhancementItem/恢復附加方塊.png";
 import { BaseCube } from "./BaseCube";
 import { PotManager } from "../potential/potManager";
-import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
+import type { BaseEquipment } from "@/domains/equipment/BaseEquipment";
 import type { CubePools, PotentialResult } from "@/domains/shared/types";
 import type { BaseCompanionItem } from "../companion/BaseCompanionItem";
 
@@ -46,7 +46,7 @@ class RestoreAdditionalCube extends BaseCube {
   };
 
   roll(
-    equip: EnhancementItem,
+    equip: BaseEquipment,
     multiplier: number,
     pools: CubePools,
   ): PotentialResult {

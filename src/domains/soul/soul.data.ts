@@ -1,5 +1,5 @@
 import soulPot from "@/data/soul.json";
-import type { SoulEntry } from "./soul.type";
+import type { SoulEntry } from "@/domains/soul/soul.type";
 
 export const SOUL_POTENTIAL_SOURCE = soulPot as SoulEntry[];
 

@@ -1,4 +1,4 @@
-import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
+import type { BaseEquipment } from "@/domains/equipment/BaseEquipment";
 import type {
   CubePools,
   CubeUIType,
@@ -34,14 +34,13 @@ export abstract class BaseCube {
   /**
    * 執行升階邏輯
    */
-  rollRankUp(
-    equip: EnhancementItem,
-    options: RankUpOptions = 1,
-  ): EquipmentRank {
+  rollRankUp(equip: BaseEquipment, options: RankUpOptions = 1): EquipmentRank {
     // 嚴格檢查 options 型別，確保呼叫端傳入正確參數。
     // 在此階段我們不支援除 number 以外的 options，以防止靜默錯誤或邏輯偏移。
     if (typeof options !== "number") {
-      throw new Error(`Invalid options: expected number, got ${typeof options}`);
+      throw new Error(
+        `Invalid options: expected number, got ${typeof options}`,
+      );
     }
 
     const currentTier =
@@ -62,7 +61,7 @@ export abstract class BaseCube {
   /**
    * 輔助方法：增加裝備的強化次數 (支援方塊本身與相關聯的道具)
    */
-  protected incrementCount(equip: EnhancementItem) {
+  protected incrementCount(equip: BaseEquipment) {
     equip.incrementCount(this.cubeId);
   }
 
@@ -86,7 +85,7 @@ export abstract class BaseCube {
   /**
    * 檢查當前裝備階級是否適用此方塊
    */
-  canApply(equip: EnhancementItem): boolean {
+  canApply(equip: BaseEquipment): boolean {
     const currentTier =
       this.apply === "mainPot" ? equip.mainPot.tier : equip.additionalPot.tier;
 
@@ -126,7 +125,7 @@ export abstract class BaseCube {
   /**
    * 根據裝備回傳對應的該方塊潛能池
    */
-  protected generateCubePools(equip: EnhancementItem): CubePools {
+  protected generateCubePools(equip: BaseEquipment): CubePools {
     const { subcategory, level } = equip;
     const feature = this.apply;
 

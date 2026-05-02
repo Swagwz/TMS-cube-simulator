@@ -11,21 +11,20 @@ import EQUIPMENT_LIST from "@/domains/equipment/equipment.config";
 import { POTENTIAL_RANK_LIST } from "@/domains/potential/potential.config";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import type { EquipmentSubcategory } from "@/domains/equipment/equipment.type";
-import { CUBE_LIST } from "@/domains/enhancement/cube/cube.config";
 import FormField from "@/components/FormField";
 import EquipTypeSelect from "@/components/form/EquipTypeSelect";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import type { CubeId } from "@/domains/cube/type";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import RankUpProb from "../RankUpProb";
 import PotentialLineRankTable from "./PotentialLineRankTable";
 import PotentialProbTable from "./PotentialProbTable";
 import NumberInput from "@/components/form/NumberInput";
 import { CollapsibleDetail } from "@/components/CollapsibleDetail";
+import { CubeRegistry } from "@/domains/cube";
 
-const EQUIP_CUBES = CUBE_LIST.map((item) => ({
+const CUBES = CubeRegistry.getAll().map((item) => ({
   label: item.name,
-  value: item.id,
+  value: item.cubeId,
 }));
 
 export default function EquipmentSearchForm() {
@@ -41,7 +40,7 @@ export default function EquipmentSearchForm() {
     return sub ? !!EquipManager.getLevelConfig(sub).isFixed : false;
   });
   const [rank, setRank] = useState<EquipmentRank>("legendary");
-  const [equipCube, setEquipCube] = useState<CubeId>(EQUIP_CUBES[0].value);
+  const [equipCube, setEquipCube] = useState<CubeId>(CUBES[0].value);
   const [selectedLine, setSelectedLine] = useState<number>(0);
 
   const handleSubcategorySelect = (val: string) => {
@@ -66,7 +65,7 @@ export default function EquipmentSearchForm() {
     setSelectedLine(0);
   };
 
-  const lineRankArr = CubeManager.getItem(equipCube).lineRank[rank] || [];
+  const lineRankArr = CubeRegistry.getById(equipCube).lineRank[rank] || [];
   const selectedLineProbs = lineRankArr[selectedLine];
   return (
     <>
@@ -110,7 +109,7 @@ export default function EquipmentSearchForm() {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              {EQUIP_CUBES.map((c) => (
+              {CUBES.map((c) => (
                 <SelectItem key={c.value} value={c.value}>
                   {c.label}
                 </SelectItem>

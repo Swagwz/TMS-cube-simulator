@@ -1,6 +1,6 @@
 import absAdditionalImg from "@/assets/enhancementItem/絕對附加方塊.png";
 import { BaseCube } from "./BaseCube";
-import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
+import type { BaseEquipment } from "@/domains/equipment/BaseEquipment";
 import type { CubePools, PotentialResult } from "@/domains/shared/types";
 import { PotManager } from "../potential/potManager";
 import type { BaseCompanionItem } from "../companion/BaseCompanionItem";
@@ -27,7 +27,7 @@ class AbsAdditionalCube extends BaseCube {
   };
 
   roll(
-    equip: EnhancementItem,
+    equip: BaseEquipment,
     _multiplier: number,
     pools: CubePools,
   ): PotentialResult {

@@ -15,9 +15,9 @@ import type { MoeInstance } from "@/store/useMoeStore";
 import type { EquipmentInstance } from "@/store/useEquipmentStore";
 import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
 import { typedEntries } from "@/lib/utils";
-import { CUBE_LIST } from "@/domains/enhancement/cube/cube.config";
 import { MOE_CUBE_LIST } from "@/domains/enhancement/moe/moe.config";
 import { SOUL_LIST } from "@/domains/enhancement/soul/soul.config";
+import { CubeRegistry } from "@/domains/cube";
 
 const formattedCost = new Intl.NumberFormat("zh-tw", {
   style: "currency",
@@ -55,7 +55,7 @@ function Statistics({ statistics }: Props) {
     });
 
     const referenceOrder = [
-      ...CUBE_LIST.map(({ id }) => id),
+      ...CubeRegistry.getAll().map(({ cubeId }) => cubeId),
       ...MOE_CUBE_LIST.map(({ id }) => id),
       ...SOUL_LIST.map(({ id }) => id),
     ];

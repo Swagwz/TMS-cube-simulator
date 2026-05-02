@@ -1,6 +1,7 @@
-import type { CubeId, CompanionItemId } from "./cube/cube.type";
+import type { CompanionItemId } from "../companion/type";
+import type { CubeId } from "../cube/type";
 import type { MoeCubeId } from "./moe/moe.type";
-import type { SoulId } from "./soul/soul.type";
+import type { SoulId } from "../soul/soul.type";
 import type { PotentialFeature } from "@/domains/equipment/equipment.type";
 
 type CommonMeta = {

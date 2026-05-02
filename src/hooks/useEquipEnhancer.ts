@@ -8,25 +8,20 @@ type Pools<F> = F extends "soul"
   : Record<PotentialRank, { id: string; weight: number }[]>;
 
 export function useEquipEnhancer<F extends PotentialFeature | "soul">(
-  feature: F,
+  _feature: F,
 ) {
-  const { localData, setLocalData, poolData, closeModal } =
+  const { item, localData: equip, snap, pools, closeModal } =
     useEnhancingContext();
 
-  // 檢查當前 poolData 是否符合預期的 feature
-  const isValid = poolData.feature === feature;
-  const pools = isValid ? (poolData.pools as Pools<F>) : null;
-
-  if (!pools) throw new Error("Invalid pool data");
-
   const handleClose = () => {
-    useEquipmentStore.getState().syncInstance(localData);
+    useEquipmentStore.getState().syncInstance(equip);
     closeModal();
   };
 
   return {
-    localData,
-    setLocalData,
+    item,
+    equip,
+    snap,
     pools,
     handleClose,
   };

@@ -1,8 +1,6 @@
-import { produce } from "immer";
 import { cn } from "@/lib/utils";
 
 import { PotManager } from "@/domains/potential/potManager";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 
 import RankBanner from "@/components/potential/RankBanner";
 import PotentialLineBadge from "@/components/potential/PotentialLineBadge";
@@ -12,27 +10,15 @@ import CloseBtn from "@/components/CloseBtn";
 import DisplayContainer from "../../DisplayContainer";
 import EquipFooter from "../EquipFooter";
 import { useEquipEnhancer } from "@/hooks/useEquipEnhancer";
+import { useAccountStore } from "@/store/useAccountStore";
 
 export default function AdditionalCubeEnhancer() {
-  const { localData, setLocalData, pools, handleClose } =
-    useEquipEnhancer("additionalPot");
-  const { level, additionalPot, subcategory } = localData;
+  const { item, equip, snap, handleClose } = useEquipEnhancer("additionalPot");
+  const { level, subcategory } = snap;
+  const { additionalPot } = snap;
 
   const handleRoll = () => {
-    const currentTier = additionalPot.tier;
-    const nextRank = CubeManager.rollRankUp("additionalCube", currentTier);
-    const newPots = CubeManager.rollPots("additionalCube", nextRank, pools);
-
-    setLocalData(
-      produce((draft) => {
-        if (draft) {
-          draft.additionalPot.potIds = newPots;
-          draft.additionalPot.tier = nextRank;
-          draft.statistics.counts.additionalCube =
-            (draft?.statistics.counts.additionalCube || 0) + 1;
-        }
-      }),
-    );
+    item.roll(equip, { multiplier: useAccountStore.getState().rankUpMultiplier });
   };
 
   return (

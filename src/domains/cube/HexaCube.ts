@@ -1,6 +1,6 @@
 import hexaImg from "@/assets/enhancementItem/閃炫方塊.png";
 import { BaseCube } from "./BaseCube";
-import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
+import type { BaseEquipment } from "@/domains/equipment/BaseEquipment";
 import type { CubePools, PotentialResult } from "../shared/types";
 import { PotManager } from "../potential/potManager";
 import type { BaseCompanionItem } from "../companion/BaseCompanionItem";
@@ -58,7 +58,7 @@ class HexaCube extends BaseCube {
   };
 
   roll(
-    equip: EnhancementItem,
+    equip: BaseEquipment,
     multiplier: number,
     pools: CubePools,
   ): PotentialResult {

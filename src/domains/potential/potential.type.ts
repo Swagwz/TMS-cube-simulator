@@ -1,4 +1,4 @@
-import type { CubeId } from "../enhancement/cube/cube.type";
+import type { CubeId } from "../cube/type";
 import type { EquipmentSubcategory } from "../equipment/equipment.type";
 import { STATUS_FIELDS } from "./potential.config";
 

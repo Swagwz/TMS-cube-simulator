@@ -1,7 +1,7 @@
 import mirrorImg from "@/assets/enhancementItem/閃耀鏡射方塊.png";
 import { BaseCube } from "./BaseCube";
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
-import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
+import type { BaseEquipment } from "@/domains/equipment/BaseEquipment";
 import type {
   CubePools,
   CubeUIType,
@@ -51,7 +51,7 @@ class MirrorCube extends BaseCube {
   };
 
   roll(
-    equip: EnhancementItem,
+    equip: BaseEquipment,
     multiplier: number,
     pools: CubePools,
   ): PotentialResult {

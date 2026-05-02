@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import type { CubeId } from "@/domains/cube/type";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import type { EquipmentSubcategory } from "@/domains/equipment/equipment.type";
 import { PotManager } from "@/domains/potential/potManager";

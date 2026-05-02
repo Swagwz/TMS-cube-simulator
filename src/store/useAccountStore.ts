@@ -2,15 +2,17 @@ import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
 
+type ShinyPity = Record<Exclude<EquipmentRank, "legendary">, number>;
+
 type State = {
-  shinyPity: Record<EquipmentRank, number>;
+  shinyPity: ShinyPity;
   rankUpMultiplier: number;
   userConfig: Record<string, any>;
 };
 
 type Actions = {
-  incrementShinyPity: (rank: EquipmentRank) => void;
-  resetShinyPity: (rank: EquipmentRank) => void;
+  incrementShinyPity: (rank: Exclude<EquipmentRank, "legendary">) => void;
+  resetShinyPity: (rank: Exclude<EquipmentRank, "legendary">) => void;
   setRankUpMultiplier: (rate: number) => void;
   setShowRankUpProb: (value: boolean) => void;
 };
@@ -21,7 +23,6 @@ export const useAccountStore = create<State & Actions>()(
       rare: 0,
       epic: 0,
       unique: 0,
-      legendary: 0,
     },
     userConfig: {
       showRankUpProb: true,
@@ -29,12 +30,10 @@ export const useAccountStore = create<State & Actions>()(
     rankUpMultiplier: 1,
     incrementShinyPity: (rank) =>
       set((state) => {
-        if (rank === "legendary") return;
         state.shinyPity[rank] = (state.shinyPity[rank] || 0) + 1;
       }),
     resetShinyPity: (rank) =>
       set((state) => {
-        if (rank === "legendary") return;
         state.shinyPity[rank] = 0;
       }),
     setRankUpMultiplier: (rate) =>

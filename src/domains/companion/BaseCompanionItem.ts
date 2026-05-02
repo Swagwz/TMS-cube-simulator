@@ -1,4 +1,4 @@
-import type { EnhancementItem } from "../equipment/EnhancementItem";
+import type { BaseEquipment } from "../equipment/BaseEquipment";
 import type { CompanionItemId } from "./type";
 
 export abstract class BaseCompanionItem {
@@ -7,7 +7,7 @@ export abstract class BaseCompanionItem {
   abstract readonly imageUrl: string;
   abstract readonly price: number;
 
-  incrementCount(equip: EnhancementItem) {
+  incrementCount(equip: BaseEquipment) {
     equip.incrementCount(this.itemId);
   }
 }

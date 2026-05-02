@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import SoulTypeSelect from "@/components/form/SoulTypeSelect";
 import FormField from "@/components/FormField";
-import type { SoulId } from "@/domains/enhancement/soul/soul.type";
+import type { SoulId } from "@/domains/soul/soul.type";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import SoulProbTable from "./SoulProbTable";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

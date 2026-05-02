@@ -1,7 +1,7 @@
 import shinyImg from "@/assets/enhancementItem/閃亮附加方塊.png";
 import { BaseCube } from "./BaseCube";
 import { PotManager } from "../potential/potManager";
-import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
+import type { BaseEquipment } from "@/domains/equipment/BaseEquipment";
 import type {
   CubePools,
   PotentialResult,
@@ -54,7 +54,7 @@ class ShinyCube extends BaseCube {
   readonly ceiling = { rare: 44, epic: 109, unique: 307 };
 
   roll(
-    equip: EnhancementItem,
+    equip: BaseEquipment,
     pools: CubePools,
     pity: ShinyPity,
   ): PotentialResult {
@@ -71,7 +71,7 @@ class ShinyCube extends BaseCube {
   }
 
   override rollRankUp(
-    equip: EnhancementItem,
+    equip: BaseEquipment,
     options: RankUpOptions,
   ): EquipmentRank {
     const pity = options as ShinyPity;

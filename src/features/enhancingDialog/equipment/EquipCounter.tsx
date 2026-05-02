@@ -13,12 +13,10 @@ export default function EquipCounter() {
     <Counter
       itemId={selectedEhmId}
       count={localData.statistics.counts[selectedEhmId] || 0}
-      relatedItems={CubeManager.getRelatedItems(selectedEhmId).map(
-        ({ id }) => ({
-          itemId: id,
-          count: localData.statistics.counts[id] || 0,
-        }),
-      )}
+      companions={CubeManager.getRelatedItems(selectedEhmId).map(({ id }) => ({
+        itemId: id,
+        count: localData.statistics.counts[id] || 0,
+      }))}
     />
   );
 }

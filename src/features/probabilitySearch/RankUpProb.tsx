@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import type { CubeId } from "@/domains/cube/type";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import { PotManager } from "@/domains/potential/potManager";
 import type { EquipmentRank } from "@/domains/potential/potential.type";

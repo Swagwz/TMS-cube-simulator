@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { cn } from "@/lib/utils";
 import EhmGrid from "./EhmGrid";
-import EhmCell from "./EhmCell";
+import MonoCounter from "./MonoCounter";
 import type { EhmMetadata } from "@/domains/enhancement/enhancement.type";
 import useActiveItem from "@/hooks/useActiveItem";
 import type {
@@ -50,7 +50,7 @@ export default function EquipAvailableEhmList({
   return (
     <EhmGrid>
       {availableList.map((Ehm) => (
-        <EhmCell
+        <MonoCounter
           key={Ehm.id}
           item={Ehm}
           count={countMap[Ehm.id] || 0}

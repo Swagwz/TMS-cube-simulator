@@ -1,7 +1,7 @@
 import combineImg from "@/assets/enhancementItem/結合方塊.png";
 import { BaseCube } from "./BaseCube";
 import { PotManager } from "../potential/potManager";
-import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
+import type { BaseEquipment } from "@/domains/equipment/BaseEquipment";
 import type { CubePools, PotentialResult } from "@/domains/shared/types";
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
 import type { BaseCompanionItem } from "../companion/BaseCompanionItem";
@@ -43,7 +43,7 @@ class CombineCube extends BaseCube {
   /**
    * 第一階段：抽籤並消耗方塊
    */
-  pickLine(equip: EnhancementItem): number {
+  pickLine(equip: BaseEquipment): number {
     this.incrementCount(equip);
     return rollWeightedIndex([1, 1, 1]);
   }
@@ -52,7 +52,7 @@ class CombineCube extends BaseCube {
    * 第二階段：確認執行洗練 (不消耗方塊)
    */
   roll(
-    equip: EnhancementItem,
+    equip: BaseEquipment,
     pools: CubePools,
     lineIndex: number,
   ): PotentialResult {

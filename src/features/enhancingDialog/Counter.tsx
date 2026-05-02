@@ -1,25 +1,28 @@
-import type { EhmId } from "@/domains/enhancement/enhancement.type";
-import EhmCell from "../workbench/enhancement/availableEhmList/EhmCell";
+import type { CompanionItemId } from "@/domains/cube/type";
+import MonoCounter from "../workbench/enhancement/availableEhmList/MonoCounter";
 import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
+import type { EnhancementItemId } from "@/domains/shared/types";
 
 type Props = {
-  itemId: EhmId;
+  itemId: Exclude<EnhancementItemId, CompanionItemId>;
   count: number;
-  relatedItems?: { itemId: EhmId; count: number }[];
+  companions: {
+    itemId: CompanionItemId;
+    count: number;
+  }[];
 };
 
-export default function Counter({ itemId, count, relatedItems }: Props) {
+export default function Counter({ itemId, count, companions }: Props) {
   return (
     <div className="bg-glass-lighter flex flex-row gap-2 rounded-lg p-2">
-      <EhmCell item={EnhancementManager.getItem(itemId)} count={count} />
-      {relatedItems &&
-        relatedItems.map((related) => (
-          <EhmCell
-            key={related.itemId}
-            item={EnhancementManager.getItem(related.itemId)}
-            count={related.count}
-          />
-        ))}
+      <MonoCounter item={EnhancementManager.getItem(itemId)} count={count} />
+      {companions.map((related) => (
+        <MonoCounter
+          key={related.itemId}
+          item={EnhancementManager.getItem(related.itemId)}
+          count={related.count}
+        />
+      ))}
     </div>
   );
 }

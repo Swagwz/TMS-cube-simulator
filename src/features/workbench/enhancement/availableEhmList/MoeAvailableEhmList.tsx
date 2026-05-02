@@ -1,6 +1,6 @@
 import useActiveItem from "@/hooks/useActiveItem";
 import EhmGrid from "./EhmGrid";
-import EhmCell from "./EhmCell";
+import MonoCounter from "./MonoCounter";
 import { MOE_CUBE_LIST } from "@/domains/enhancement/moe/moe.config";
 import type { MoeCubeId } from "@/domains/enhancement/moe/moe.type";
 import { cn } from "@/lib/utils";
@@ -22,7 +22,7 @@ export default function MoeAvailableEhmList({ selectedId, onSelect }: Props) {
   return (
     <EhmGrid>
       {MOE_CUBE_LIST.map((Ehm) => (
-        <EhmCell
+        <MonoCounter
           key={Ehm.id}
           item={Ehm}
           count={countMap[Ehm.id] || 0}

@@ -1,15 +1,8 @@
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
 import { SOUL_POTENTIAL_ID_MAP, SOUL_POTENTIAL_SOURCE } from "./soul.data";
-import { SOUL_METADATA_MAP } from "./soul.config";
 import formatTemplate from "@/utils/formatTemplate";
-import type { SoulId } from "./soul.type";
 
 export const SoulManager = {
-  getItem(id: string) {
-    const meta = SOUL_METADATA_MAP.get(id as SoulId);
-    if (!meta) throw new Error("Invalid soul id");
-    return meta;
-  },
   getPotentialMetadata(id: string) {
     const data = SOUL_POTENTIAL_ID_MAP.get(id);
     if (!data) throw new Error("Invalid soul pot id");

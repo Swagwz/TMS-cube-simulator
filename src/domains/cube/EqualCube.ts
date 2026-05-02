@@ -1,7 +1,7 @@
 import equalImg from "@/assets/enhancementItem/新對等方塊.png";
 import { BaseCube } from "./BaseCube";
 import { PotManager } from "../potential/potManager";
-import type { EnhancementItem } from "@/domains/equipment/EnhancementItem";
+import type { BaseEquipment } from "@/domains/equipment/BaseEquipment";
 import type {
   CubePools,
   CubeUIType,
@@ -49,7 +49,7 @@ class EqualCube extends BaseCube {
   };
 
   roll(
-    equip: EnhancementItem,
+    equip: BaseEquipment,
     multiplier: number,
     pools: CubePools,
   ): PotentialResult {

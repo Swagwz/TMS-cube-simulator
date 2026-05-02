@@ -11,7 +11,7 @@ import { hexaCube } from "./HexaCube";
 import { combineCube } from "./CombineCube";
 import { combineAdditionalCube } from "./CombineAdditionalCube";
 import { absAdditionalCube } from "./AbsAdditionalCube";
-import type { EnhancementItem } from "../equipment/EnhancementItem";
+import type { BaseEquipment } from "../equipment/BaseEquipment";
 import type { CubeId } from "./type";
 import type { PotentialFeature } from "../equipment/equipment.type";
 
@@ -39,7 +39,7 @@ export const CubeRegistry = {
   /**
    * 提供 UI 層篩選服務：取得該裝備與部位可用的方塊
    */
-  getApplicable: (apply: PotentialFeature, equip: EnhancementItem) =>
+  getApplicable: (apply: PotentialFeature, equip: BaseEquipment) =>
     registry.filter((c) => c.apply === apply && c.canApply(equip)),
 
   getAll: () => registry,

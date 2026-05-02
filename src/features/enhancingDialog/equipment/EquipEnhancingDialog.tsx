@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
+import { proxy, useSnapshot } from "valtio";
 
 import {
   Dialog,
@@ -12,19 +13,21 @@ import {
   type EquipmentInstance,
 } from "@/store/useEquipmentStore";
 import { EnhancingContext } from "@/contexts/useEnhancingContext";
-import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
 import { useActiveStore } from "@/store/useActiveStore";
 import Enhancer from "./Enhancer";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
+import EquipCounter from "./EquipCounter";
 import type { EquipmentApplicableEhmId } from "@/domains/equipment/equipment.type";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
-import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import RankUpMultiplier from "./RankUpMultiplier";
+
+import { BaseEquipment } from "@/domains/equipment/BaseEquipment";
+import { EnhancementFactory } from "@/domains/enhancement/EnhancementFactory";
 
 type Props = {
   selectedEhmId: EquipmentApplicableEhmId | null;
   closeModal: () => void;
 };
+
+const EMPTY_PROXY = proxy({});
 
 export default function EquipEnhancingDialog({
   selectedEhmId,
@@ -32,51 +35,40 @@ export default function EquipEnhancingDialog({
 }: Props) {
   const [localData, setLocalData] = useState<EquipmentInstance | null>(null);
 
+  // 建立唯讀且響應式的快照，用於 UI 渲染
+  const snap = useSnapshot(
+    localData || (EMPTY_PROXY as any),
+  ) as EquipmentInstance;
+
   const equipId = useActiveStore((s) =>
     s.activeState.activeType === "equipment" ? s.activeState.id : null,
   );
 
-  const title = selectedEhmId
-    ? EnhancementManager.getItem(selectedEhmId).name
-    : "";
+  // 1. 透過工廠建立領域物件 (BaseCube 或 SoulOrb)
+  const item = useMemo(() => {
+    if (!selectedEhmId) return null;
+    return EnhancementFactory.create(selectedEhmId);
+  }, [selectedEhmId]);
 
-  const poolData = useMemo(() => {
-    if (!selectedEhmId || !localData) return undefined;
+  // 2. 獲取潛能池 (由領域物件決定)
+  const pools = useMemo(() => {
+    if (!item || !localData) return null;
+    return item.getPools(localData);
+  }, [item, localData]);
 
-    const meta = EnhancementManager.getItem(selectedEhmId);
-    const { subcategory, level } = localData;
-
-    switch (meta.apply) {
-      case "mainPot":
-      case "additionalPot":
-        return {
-          feature: meta.apply,
-          pools: CubeManager.getCubePotentialPools(selectedEhmId as CubeId, {
-            subcategory,
-            level,
-          }),
-        };
-      case "soul":
-        return {
-          feature: "soul" as const,
-          pools: SoulManager.getPotPool(),
-        };
-      default:
-        return undefined;
-    }
-  }, [selectedEhmId, localData?.level, localData?.subcategory]);
-
-  // 開啟時,複製一份data
+  // 初始化裝備實例 (沙盒模式)
   useEffect(() => {
-    // 有選取強化道具以及裝備的情況下 才有localData
     if (selectedEhmId && equipId) {
-      setLocalData(
-        structuredClone(useEquipmentStore.getState().instanceMap[equipId]),
-      );
+      const storeItem = useEquipmentStore.getState().instanceMap[equipId];
+      if (storeItem) {
+        // 從 Store 中「克隆」出一份新的 Proxy，達成沙盒效果
+        const sandboxItem = BaseEquipment.createProxy(storeItem);
+        setLocalData(sandboxItem);
+      }
     }
   }, [selectedEhmId, equipId]);
 
-  const open = !!(selectedEhmId && equipId && localData && poolData);
+  const open = !!(selectedEhmId && equipId && localData && item && pools);
 
   if (!open) return null;
 
@@ -88,25 +80,25 @@ export default function EquipEnhancingDialog({
           "text-glass-foreground border-none bg-transparent shadow-none sm:max-w-md",
           "bg-secondary-darker/70",
         )}
-        onPointerDownOutside={(e) => {
-          e.preventDefault();
-        }}
+        onPointerDownOutside={(e) => e.preventDefault()}
         onEscapeKeyDown={(e) => e.preventDefault()}
         showCloseButton={false}
       >
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle>{item.name}</DialogTitle>
         </DialogHeader>
 
         <EnhancingContext.Provider
           value={{
+            item,
             localData,
-            setLocalData,
-            selectedEhmId,
+            snap,
+            pools,
             closeModal,
-            poolData,
+            selectedEhmId,
           }}
         >
+          <EquipCounter />
           <RankUpMultiplier />
           <Enhancer />
         </EnhancingContext.Provider>
