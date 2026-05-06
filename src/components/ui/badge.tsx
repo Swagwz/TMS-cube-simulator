@@ -19,14 +19,6 @@ const badgeVariants = cva(
           "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
           "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
-        normal:
-          "border-transparent bg-rank-normal text-rank-normal-fg outline-1 outline-white/50",
-        rare: "border-transparent bg-rank-rare text-rank-rare-fg outline-1 outline-white/50",
-        epic: "border-transparent bg-rank-epic text-rank-epic-fg outline-1 outline-white/50",
-        unique:
-          "border-transparent bg-rank-unique text-rank-unique-fg outline-1 outline-white/50",
-        legendary:
-          "border-transparent bg-rank-legendary text-rank-legendary-fg outline-1 outline-white/50",
       },
     },
     defaultVariants: {
