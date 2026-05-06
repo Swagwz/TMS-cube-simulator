@@ -98,7 +98,7 @@ type EquipmentData = {
   item_part: string;
   level: number;
 
-  potentials: PotentialLine[];
+  potentials: string[];
 
   features: {
     cube: "active" | "locked";
@@ -167,7 +167,7 @@ function rollCube(
   eq: EquipmentData,
   rng: RNG,
 ): {
-  newPotentials: PotentialLine[];
+  newPotentials: string[];
   rankUp?: boolean;
 } {
   const r = rng.next();
