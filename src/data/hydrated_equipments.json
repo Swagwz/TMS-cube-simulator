@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.0.0",
-    "last_updated": "2026-05-02T17:43:09.887Z",
+    "version": "1.0.1",
+    "last_updated": "2026-05-05T20:37:29.555Z",
     "total_count": 370
   },
   "items": [
@@ -32,6 +32,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -69,6 +70,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "face",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -106,6 +108,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "eye",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -143,6 +146,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "earrings",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -180,6 +184,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "top",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -217,6 +222,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "bottom",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -254,6 +260,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -291,6 +298,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -328,6 +336,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -365,6 +374,7 @@
       "job_req": [
         "dualBlade"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -403,6 +413,7 @@
         "shadower",
         "dualBlade"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -440,6 +451,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -477,6 +489,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -514,6 +527,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -551,6 +565,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -588,6 +603,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "pendant",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -625,6 +641,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "belt",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -662,6 +679,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -699,6 +717,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -736,6 +755,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "heart",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -773,6 +793,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "badge",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -810,6 +831,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "emblem",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -847,6 +869,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "pendant",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -884,6 +907,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -921,6 +945,7 @@
       "job_req": [
         "cadena"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -958,6 +983,7 @@
       "job_req": [
         "cadena"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -995,6 +1021,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -1032,6 +1059,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "face",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1069,6 +1097,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "earrings",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1106,6 +1135,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "pendant",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1143,6 +1173,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1180,6 +1211,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "top",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1217,6 +1249,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "bottom",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1254,6 +1287,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1291,6 +1325,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1328,6 +1363,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1365,6 +1401,7 @@
       "job_req": [
         "mercedes"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1402,6 +1439,7 @@
       "job_req": [
         "mercedes"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1439,6 +1477,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -1476,6 +1515,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1513,6 +1553,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -1550,6 +1591,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "emblem",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1587,6 +1629,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1624,6 +1667,7 @@
       "job_req": [
         "nightlord"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1662,6 +1706,7 @@
         "nightlord",
         "nightWalker"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1699,6 +1744,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "belt",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1736,6 +1782,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "badge",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -1773,6 +1820,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "earrings",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1810,6 +1858,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1847,6 +1896,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "top",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1884,6 +1934,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "bottom",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1921,6 +1972,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1958,6 +2010,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -1995,6 +2048,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2032,6 +2086,7 @@
       "job_req": [
         "kanna"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2069,6 +2124,7 @@
       "job_req": [
         "kanna"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2106,6 +2162,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -2143,6 +2200,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2180,6 +2238,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -2217,6 +2276,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "emblem",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2254,6 +2314,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2291,6 +2352,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "pendant",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2328,6 +2390,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2365,6 +2428,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "top",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2402,6 +2466,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "bottom",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2439,6 +2504,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2476,6 +2542,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2513,6 +2580,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2550,6 +2618,7 @@
       "job_req": [
         "ren"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2587,6 +2656,7 @@
       "job_req": [
         "ren"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2624,6 +2694,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2661,6 +2732,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "emblem",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2698,6 +2770,7 @@
       "job_req": [
         "adele"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2735,6 +2808,7 @@
       "job_req": [
         "adele"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2772,6 +2846,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -2809,6 +2884,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "badge",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2846,6 +2922,7 @@
       "job_req": [
         "adele"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2883,6 +2960,7 @@
       "job_req": [
         "hayato"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2920,6 +2998,7 @@
       "job_req": [
         "hayato"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2957,6 +3036,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -2994,6 +3074,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "top",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3031,6 +3112,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "bottom",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3068,6 +3150,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3105,6 +3188,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3142,6 +3226,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3179,6 +3264,7 @@
       "job_req": [
         "buccaneer"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3219,6 +3305,7 @@
         "ark",
         "shade"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3256,6 +3343,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3293,6 +3381,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "emblem",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3330,6 +3419,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3367,6 +3457,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3404,6 +3495,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3445,6 +3537,7 @@
         "nightWalker",
         "thunderBreaker"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3483,6 +3576,7 @@
         "bowmaster",
         "windArcher"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3526,6 +3620,7 @@
         "battleMage",
         "lynn"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3568,6 +3663,7 @@
         "evan",
         "battleMage"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3605,6 +3701,7 @@
       "job_req": [
         "xenon"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3642,6 +3739,7 @@
       "job_req": [
         "xenon"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3679,6 +3777,7 @@
       "job_req": [
         "corsair"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3717,6 +3816,7 @@
         "corsair",
         "mechanic"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3759,6 +3859,7 @@
         "evan",
         "lara"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3796,6 +3897,7 @@
       "job_req": [
         "bowmaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3833,6 +3935,7 @@
       "job_req": [
         "xenon"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3870,6 +3973,7 @@
       "job_req": [
         "pathfinder"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3907,6 +4011,7 @@
       "job_req": [
         "pathfinder"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3944,6 +4049,7 @@
       "job_req": [
         "shadower"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -3981,6 +4087,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "heart",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4022,6 +4129,7 @@
         "nightWalker",
         "thunderBreaker"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4059,6 +4167,7 @@
       "job_req": [
         "darkKnight"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4096,6 +4205,7 @@
       "job_req": [
         "darkKnight"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4133,6 +4243,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4170,6 +4281,7 @@
       "job_req": [
         "luminous"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4207,6 +4319,7 @@
       "job_req": [
         "luminous"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4244,6 +4357,7 @@
       "job_req": [
         "angelicBuster"
       ],
+      "potentialTag": "secondary-weapon-other",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4281,6 +4395,7 @@
       "job_req": [
         "angelicBuster"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4319,6 +4434,7 @@
         "demonAvenger",
         "demonSlayer"
       ],
+      "potentialTag": "secondary-weapon-other",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4356,6 +4472,7 @@
       "job_req": [
         "demonAvenger"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4393,6 +4510,7 @@
       "job_req": [
         "shade"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4430,6 +4548,7 @@
       "job_req": [
         "phantom"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4467,6 +4586,7 @@
       "job_req": [
         "phantom"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4504,6 +4624,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4541,6 +4662,7 @@
       "job_req": [
         "zero"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4578,6 +4700,7 @@
       "job_req": [
         "zero"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4615,6 +4738,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4652,6 +4776,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4689,6 +4814,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4726,6 +4852,7 @@
       "job_req": [
         "cadena"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4763,6 +4890,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4800,6 +4928,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4837,6 +4966,7 @@
       "job_req": [
         "aran"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4875,6 +5005,7 @@
         "darkKnight",
         "aran"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4912,6 +5043,7 @@
       "job_req": [
         "hero"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4949,6 +5081,7 @@
       "job_req": [
         "hero"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -4986,6 +5119,7 @@
       "job_req": [
         "dualBlade"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5023,6 +5157,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5060,6 +5195,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5097,6 +5233,7 @@
       "job_req": [
         "kanna"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5134,6 +5271,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5171,6 +5309,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5208,6 +5347,7 @@
       "job_req": [
         "shadower"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5245,6 +5385,7 @@
       "job_req": [
         "paladin"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5282,6 +5423,7 @@
       "job_req": [
         "hoyoung"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5319,6 +5461,7 @@
       "job_req": [
         "hoyoung"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5356,6 +5499,7 @@
       "job_req": [
         "kinesis"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5393,6 +5537,7 @@
       "job_req": [
         "kinesis"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5430,6 +5575,7 @@
       "job_req": [
         "illium"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5467,6 +5613,7 @@
       "job_req": [
         "illium"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5504,6 +5651,7 @@
       "job_req": [
         "aran"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5541,6 +5689,7 @@
       "job_req": [
         "kaiser"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5581,6 +5730,7 @@
         "paladin",
         "soulMaster"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5618,6 +5768,7 @@
       "job_req": [
         "paladin"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5655,6 +5806,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5692,6 +5844,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5729,6 +5882,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5766,6 +5920,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5803,6 +5958,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5840,6 +5996,7 @@
       "job_req": [
         "moXuan"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5877,6 +6034,7 @@
       "job_req": [
         "moXuan"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5914,6 +6072,7 @@
       "job_req": [
         "angelicBuster"
       ],
+      "potentialTag": "secondary-weapon-other",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5951,6 +6110,7 @@
       "job_req": [
         "kinesis"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -5988,6 +6148,7 @@
       "job_req": [
         "kinesis"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6025,6 +6186,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6062,6 +6224,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6100,6 +6263,7 @@
         "demonSlayer",
         "paladin"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6137,6 +6301,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6174,6 +6339,7 @@
       "job_req": [
         "lara"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6211,6 +6377,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -6248,6 +6415,7 @@
       "job_req": [
         "nightlord"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6290,6 +6458,7 @@
         "evan",
         "battleMage"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6327,6 +6496,7 @@
       "job_req": [
         "pathfinder"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6364,6 +6534,7 @@
       "job_req": [
         "khali"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6401,6 +6572,7 @@
       "job_req": [
         "khali"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6438,6 +6610,7 @@
       "job_req": [
         "ark"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6475,6 +6648,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6512,6 +6686,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6549,6 +6724,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6586,6 +6762,7 @@
       "job_req": [
         "moXuan"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6623,6 +6800,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "heart",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6660,6 +6838,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6697,6 +6876,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6734,6 +6914,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6771,6 +6952,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6808,6 +6990,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "ring",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -6845,6 +7028,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6882,6 +7066,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6919,6 +7104,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6956,6 +7142,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -6993,6 +7180,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7030,6 +7218,7 @@
       "job_req": [
         "moXuan"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7067,6 +7256,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7104,6 +7294,7 @@
       "job_req": [
         "zero"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7141,6 +7332,7 @@
       "job_req": [
         "zero"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7178,6 +7370,7 @@
       "job_req": [
         "wildHunter"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7216,6 +7409,7 @@
         "marksman",
         "wildHunter"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7253,6 +7447,7 @@
       "job_req": [
         "kain"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7290,6 +7485,7 @@
       "job_req": [
         "kain"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7327,6 +7523,7 @@
       "job_req": [
         "illium"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7364,6 +7561,7 @@
       "job_req": [
         "khali"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7401,6 +7599,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7438,6 +7637,7 @@
       "job_req": [
         "hayato"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7475,6 +7675,7 @@
       "job_req": [
         "phantom"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7513,6 +7714,7 @@
         "shadower",
         "dualBlade"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7550,6 +7752,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7587,6 +7790,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7624,6 +7828,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7661,6 +7866,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7698,6 +7904,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "gloves",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7735,6 +7942,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7772,6 +7980,7 @@
       "job_req": [
         "wizard"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7809,6 +8018,7 @@
       "job_req": [
         "demonAvenger"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7846,6 +8056,7 @@
       "job_req": [
         "ren"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7883,6 +8094,7 @@
       "job_req": [
         "mechanic"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7920,6 +8132,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "shoes",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7957,6 +8170,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "cape",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -7994,6 +8208,7 @@
       "job_req": [
         "bowmaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8031,6 +8246,7 @@
       "job_req": [
         "mechanic"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8068,6 +8284,7 @@
       "job_req": [
         "lynn"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8105,6 +8322,7 @@
       "job_req": [
         "darkKnight"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8142,6 +8360,7 @@
       "job_req": [
         "kanna"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8179,6 +8398,7 @@
       "job_req": [
         "hoyoung"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8216,6 +8436,7 @@
       "job_req": [
         "kaiser"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8253,6 +8474,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8290,6 +8512,7 @@
       "job_req": [
         "thief"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8328,6 +8551,7 @@
         "nightlord",
         "nightWalker"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8365,6 +8589,7 @@
       "job_req": [
         "ren"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8402,6 +8627,7 @@
       "job_req": [
         "hero"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8439,6 +8665,7 @@
       "job_req": [
         "archer"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8476,6 +8703,7 @@
       "job_req": [
         "cadena"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8513,6 +8741,7 @@
       "job_req": [
         "xenon"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8550,6 +8779,7 @@
       "job_req": [
         "adele"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8587,6 +8817,7 @@
       "job_req": [
         "khali"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8624,6 +8855,7 @@
       "job_req": [
         "pirate"
       ],
+      "potentialTag": "shoulder",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8661,6 +8893,7 @@
       "job_req": [
         "cannoneer"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8698,6 +8931,7 @@
       "job_req": [
         "cannoneer"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8735,6 +8969,7 @@
       "job_req": [
         "shade"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8772,6 +9007,7 @@
       "job_req": [
         "marksman"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8809,6 +9045,7 @@
       "job_req": [
         "hero"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8847,6 +9084,7 @@
         "hero",
         "demonSlayer"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8884,6 +9122,7 @@
       "job_req": [
         "luminous"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8921,6 +9160,7 @@
       "job_req": [
         "hayato"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8958,6 +9198,7 @@
       "job_req": [
         "darkKnight"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -8995,6 +9236,7 @@
       "job_req": [
         "hoyoung"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9032,6 +9274,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "top",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9069,6 +9312,7 @@
       "job_req": [
         "kain"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9106,6 +9350,7 @@
       "job_req": [
         "fighter"
       ],
+      "potentialTag": "hat",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9143,6 +9388,7 @@
       "job_req": [
         "luminous"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9180,6 +9426,7 @@
       "job_req": [
         "marksman"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9217,6 +9464,7 @@
       "job_req": [
         "ren"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9255,6 +9503,7 @@
         "bowmaster",
         "windArcher"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9292,6 +9541,7 @@
       "job_req": [
         "paladin"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9334,6 +9584,7 @@
         "evan",
         "lara"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9371,6 +9622,7 @@
       "job_req": [
         "mercedes"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9408,6 +9660,7 @@
       "job_req": [
         "mikhail"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9448,6 +9701,7 @@
         "soulMaster",
         "mikhail"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9490,6 +9744,7 @@
         "evan",
         "lara"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9527,6 +9782,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "",
       "enhancements": {
         "mainPot": "hidden",
         "additionalPot": "hidden",
@@ -9564,6 +9820,7 @@
       "job_req": [
         "pathfinder"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9601,6 +9858,7 @@
       "job_req": [
         "angelicBuster"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9638,6 +9896,7 @@
       "job_req": [
         "lara"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9675,6 +9934,7 @@
       "job_req": [
         "hayato"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9712,6 +9972,7 @@
       "job_req": [
         "mercedes"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9749,6 +10010,7 @@
       "job_req": [
         "phantom"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9786,6 +10048,7 @@
       "job_req": [
         "lynn"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9824,6 +10087,7 @@
         "bowmaster",
         "windArcher"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9864,6 +10128,7 @@
         "ark",
         "shade"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9902,6 +10167,7 @@
         "demonAvenger",
         "demonSlayer"
       ],
+      "potentialTag": "secondary-weapon-other",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9940,6 +10206,7 @@
         "nightlord",
         "nightWalker"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -9977,6 +10244,7 @@
       "job_req": [
         "ark"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10017,6 +10285,7 @@
         "ark",
         "shade"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10055,6 +10324,7 @@
         "marksman",
         "wildHunter"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10092,6 +10362,7 @@
       "job_req": [
         "mercedes"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10129,6 +10400,7 @@
       "job_req": [
         "blaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10166,6 +10438,7 @@
       "job_req": [
         "blaster"
       ],
+      "potentialTag": "destiny-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10203,6 +10476,7 @@
       "job_req": [
         "angelicBuster"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10240,6 +10514,7 @@
       "job_req": [
         "demonAvenger"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10278,6 +10553,7 @@
         "hero",
         "demonSlayer"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10315,6 +10591,7 @@
       "job_req": [
         "wildHunter"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10352,6 +10629,7 @@
       "job_req": [
         "adele"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10390,6 +10668,7 @@
         "darkKnight",
         "aran"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10428,6 +10707,7 @@
         "shadower",
         "dualBlade"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10468,6 +10748,7 @@
         "soulMaster",
         "mikhail"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10505,6 +10786,7 @@
       "job_req": [
         "pathfinder"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10542,6 +10824,7 @@
       "job_req": [
         "hoyoung"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10579,6 +10862,7 @@
       "job_req": [
         "lynn"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10616,6 +10900,7 @@
       "job_req": [
         "buccaneer"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10656,6 +10941,7 @@
         "paladin",
         "soulMaster"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10696,6 +10982,7 @@
         "paladin",
         "soulMaster"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10733,6 +11020,7 @@
       "job_req": [
         "all"
       ],
+      "potentialTag": "heart",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10770,6 +11058,7 @@
       "job_req": [
         "paladin"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10809,6 +11098,7 @@
         "hero",
         "soulMaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10847,6 +11137,7 @@
         "demonSlayer",
         "paladin"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10884,6 +11175,7 @@
       "job_req": [
         "paladin"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10921,6 +11213,7 @@
       "job_req": [
         "hero"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10961,6 +11254,7 @@
         "soulMaster",
         "mikhail"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -10998,6 +11292,7 @@
       "job_req": [
         "mikhail"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11036,6 +11331,7 @@
         "hero",
         "demonSlayer"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11074,6 +11370,7 @@
         "demonSlayer",
         "paladin"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11112,6 +11409,7 @@
         "marksman",
         "wildHunter"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11149,6 +11447,7 @@
       "job_req": [
         "darkKnight"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11187,6 +11486,7 @@
         "darkKnight",
         "aran"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11224,6 +11524,7 @@
       "job_req": [
         "blaster"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11261,6 +11562,7 @@
       "job_req": [
         "blaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11298,6 +11600,7 @@
       "job_req": [
         "blaster"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11340,6 +11643,7 @@
         "evan",
         "battleMage"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11377,6 +11681,7 @@
       "job_req": [
         "luminous"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11414,6 +11719,7 @@
       "job_req": [
         "kinesis"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11451,6 +11757,7 @@
       "job_req": [
         "kinesis"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11488,6 +11795,7 @@
       "job_req": [
         "illium"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11525,6 +11833,7 @@
       "job_req": [
         "illium"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11562,6 +11871,7 @@
       "job_req": [
         "kain"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11599,6 +11909,7 @@
       "job_req": [
         "kain"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11636,6 +11947,7 @@
       "job_req": [
         "phantom"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11673,6 +11985,7 @@
       "job_req": [
         "khali"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11710,6 +12023,7 @@
       "job_req": [
         "xenon"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11748,6 +12062,7 @@
         "corsair",
         "mechanic"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11786,6 +12101,7 @@
         "corsair",
         "mechanic"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11823,6 +12139,7 @@
       "job_req": [
         "corsair"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11860,6 +12177,7 @@
       "job_req": [
         "cannoneer"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11897,6 +12215,7 @@
       "job_req": [
         "cannoneer"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11934,6 +12253,7 @@
       "job_req": [
         "cannoneer"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -11971,6 +12291,7 @@
       "job_req": [
         "moXuan"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12008,6 +12329,7 @@
       "job_req": [
         "hero"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12046,6 +12368,7 @@
         "hero",
         "paladin"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12083,6 +12406,7 @@
       "job_req": [
         "paladin"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12120,6 +12444,7 @@
       "job_req": [
         "darkKnight"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12159,6 +12484,7 @@
         "archMageIL",
         "bishop"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12196,6 +12522,7 @@
       "job_req": [
         "bowmaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12233,6 +12560,7 @@
       "job_req": [
         "marksman"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12270,6 +12598,7 @@
       "job_req": [
         "pathfinder"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12307,6 +12636,7 @@
       "job_req": [
         "nightlord"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12344,6 +12674,7 @@
       "job_req": [
         "shadower"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12381,6 +12712,7 @@
       "job_req": [
         "dualBlade"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12418,6 +12750,7 @@
       "job_req": [
         "buccaneer"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12455,6 +12788,7 @@
       "job_req": [
         "corsair"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12492,6 +12826,7 @@
       "job_req": [
         "cannoneer"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12529,6 +12864,7 @@
       "job_req": [
         "soulMaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12566,6 +12902,7 @@
       "job_req": [
         "soulMaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12603,6 +12940,7 @@
       "job_req": [
         "blazeWizard"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12640,6 +12978,7 @@
       "job_req": [
         "windArcher"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12677,6 +13016,7 @@
       "job_req": [
         "nightWalker"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12714,6 +13054,7 @@
       "job_req": [
         "thunderBreaker"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12751,6 +13092,7 @@
       "job_req": [
         "mikhail"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12788,6 +13130,7 @@
       "job_req": [
         "aran"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12825,6 +13168,7 @@
       "job_req": [
         "evan"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12862,6 +13206,7 @@
       "job_req": [
         "mercedes"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12899,6 +13244,7 @@
       "job_req": [
         "phantom"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12936,6 +13282,7 @@
       "job_req": [
         "shade"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -12973,6 +13320,7 @@
       "job_req": [
         "luminous"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13010,6 +13358,7 @@
       "job_req": [
         "blaster"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13047,6 +13396,7 @@
       "job_req": [
         "battleMage"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13084,6 +13434,7 @@
       "job_req": [
         "wildHunter"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13121,6 +13472,7 @@
       "job_req": [
         "mechanic"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13159,6 +13511,7 @@
         "demonAvenger",
         "demonSlayer"
       ],
+      "potentialTag": "secondary-weapon-other",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13196,6 +13549,7 @@
       "job_req": [
         "xenon"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13233,6 +13587,7 @@
       "job_req": [
         "kaiser"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13270,6 +13625,7 @@
       "job_req": [
         "kain"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13307,6 +13663,7 @@
       "job_req": [
         "cadena"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13344,6 +13701,7 @@
       "job_req": [
         "angelicBuster"
       ],
+      "potentialTag": "secondary-weapon-other",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13381,6 +13739,7 @@
       "job_req": [
         "zero"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13418,6 +13777,7 @@
       "job_req": [
         "kinesis"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13455,6 +13815,7 @@
       "job_req": [
         "adele"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13492,6 +13853,7 @@
       "job_req": [
         "illium"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13529,6 +13891,7 @@
       "job_req": [
         "khali"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13566,6 +13929,7 @@
       "job_req": [
         "ark"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13603,6 +13967,7 @@
       "job_req": [
         "ren"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13640,6 +14005,7 @@
       "job_req": [
         "lara"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13677,6 +14043,7 @@
       "job_req": [
         "hoyoung"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13714,6 +14081,7 @@
       "job_req": [
         "zero"
       ],
+      "potentialTag": "secondary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13751,6 +14119,7 @@
       "job_req": [
         "zero"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",
@@ -13788,6 +14157,7 @@
       "job_req": [
         "cadena"
       ],
+      "potentialTag": "primary-weapon",
       "enhancements": {
         "mainPot": "active",
         "additionalPot": "active",

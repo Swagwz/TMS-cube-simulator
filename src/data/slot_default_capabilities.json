@@ -1,0 +1,191 @@
+{
+  "帽子": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "臉飾": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "眼飾": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "耳環": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "上衣": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "褲/裙": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "鞋子": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "手套": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "披風": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "輔助武器": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "hidden",
+    "starflame": "hidden",
+    "scroll": "hidden",
+    "exceptional": "hidden"
+  },
+  "武器": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "active",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "戒指": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "hidden",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "墜飾": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "勳章": {
+    "mainPot": "hidden",
+    "additionalPot": "hidden",
+    "soul": "hidden",
+    "starforce": "hidden",
+    "starflame": "hidden",
+    "scroll": "hidden",
+    "exceptional": "hidden"
+  },
+  "腰帶": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "active",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "肩膀裝飾": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "hidden",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "口袋道具": {
+    "mainPot": "hidden",
+    "additionalPot": "hidden",
+    "soul": "hidden",
+    "starforce": "hidden",
+    "starflame": "active",
+    "scroll": "hidden",
+    "exceptional": "hidden"
+  },
+  "機器心臟": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "active",
+    "starflame": "hidden",
+    "scroll": "active",
+    "exceptional": "hidden"
+  },
+  "胸章": {
+    "mainPot": "hidden",
+    "additionalPot": "hidden",
+    "soul": "hidden",
+    "starforce": "hidden",
+    "starflame": "hidden",
+    "scroll": "hidden",
+    "exceptional": "hidden"
+  },
+  "徽章": {
+    "mainPot": "active",
+    "additionalPot": "active",
+    "soul": "hidden",
+    "starforce": "hidden",
+    "starflame": "hidden",
+    "scroll": "hidden",
+    "exceptional": "hidden"
+  },
+  "機器人": {
+    "mainPot": "hidden",
+    "additionalPot": "hidden",
+    "soul": "hidden",
+    "starforce": "hidden",
+    "starflame": "hidden",
+    "scroll": "hidden",
+    "exceptional": "hidden"
+  }
+}
