@@ -69,7 +69,9 @@ export const CubeManager = {
 
     if (!rankUpData || rankUpData.length === 0) return [];
 
-    const scaledUpWeights = rankUpData.map((p) => p * finalMultiplier);
+    const scaledUpWeights = rankUpData.map((p, index) =>
+      index === 0 ? p * finalMultiplier : p,
+    );
     const totalUpWeight = scaledUpWeights.reduce((a, b) => a + b, 0);
     const stayWeight = Math.max(100 - totalUpWeight, 0);
 
