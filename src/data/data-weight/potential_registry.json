@@ -15,7 +15,10 @@
     ],
     "additional": [],
     "template": "可以使用<實用的時空門>技能",
-    "limit": { "key": "實用技能", "max": 1 },
+    "limit": {
+      "key": "實用技能",
+      "max": 1
+    },
     "field": null
   },
   "可以使用<實用的神聖之火>技能": {
@@ -34,7 +37,10 @@
     ],
     "additional": [],
     "template": "可以使用<實用的神聖之火>技能",
-    "limit": { "key": "實用技能", "max": 1 },
+    "limit": {
+      "key": "實用技能",
+      "max": 1
+    },
     "field": null
   },
   "可以使用<實用的速度激發>技能": {
@@ -53,7 +59,10 @@
     ],
     "additional": [],
     "template": "可以使用<實用的速度激發>技能",
-    "limit": { "key": "實用技能", "max": 1 },
+    "limit": {
+      "key": "實用技能",
+      "max": 1
+    },
     "field": null
   },
   "可以使用<實用的最終極速>技能": {
@@ -72,7 +81,10 @@
     ],
     "additional": [],
     "template": "可以使用<實用的最終極速>技能",
-    "limit": { "key": "實用技能", "max": 1 },
+    "limit": {
+      "key": "實用技能",
+      "max": 1
+    },
     "field": null
   },
   "可以使用<實用的進階祝福>技能": {
@@ -91,7 +103,10 @@
     ],
     "additional": [],
     "template": "可以使用<實用的進階祝福>技能",
-    "limit": { "key": "實用技能", "max": 1 },
+    "limit": {
+      "key": "實用技能",
+      "max": 1
+    },
     "field": null
   },
   "可以使用<實用的會心之眼>技能": {
@@ -110,7 +125,10 @@
     ],
     "additional": [],
     "template": "可以使用<實用的會心之眼>技能",
-    "limit": { "key": "實用技能", "max": 1 },
+    "limit": {
+      "key": "實用技能",
+      "max": 1
+    },
     "field": null
   },
   "可以使用<實用的戰鬥命令>技能": {
@@ -129,7 +147,10 @@
     ],
     "additional": [],
     "template": "可以使用<實用的戰鬥命令>技能",
-    "limit": { "key": "實用技能", "max": 1 },
+    "limit": {
+      "key": "實用技能",
+      "max": 1
+    },
     "field": null
   },
   "有一定機率反射所受到的傷害": {
@@ -2366,7 +2387,10 @@
     ],
     "additional": [],
     "template": "被擊中後無敵時間 +{x}秒",
-    "limit": { "key": "被擊中後無敵時間增加", "max": 1 },
+    "limit": {
+      "key": "被擊中後無敵時間增加",
+      "max": 1
+    },
     "field": null
   },
   "被擊中時有一定機率在時間內無敵": {
@@ -2418,7 +2442,10 @@
     ],
     "additional": [],
     "template": "被擊中時有{x}%機率在{y}秒內無敵",
-    "limit": { "key": "被擊中後有機率無敵", "max": 2 },
+    "limit": {
+      "key": "被擊中後有機率無敵",
+      "max": 2
+    },
     "field": null
   },
   "被擊中時有一定機率無視傷害": {
@@ -2721,62 +2748,13 @@
     ],
     "additional": [],
     "template": "被擊中時有{x}%機率無視{y}%傷害",
-    "limit": { "key": "被擊中後有機率無視傷害", "max": 2 },
+    "limit": {
+      "key": "被擊中後有機率無視傷害",
+      "max": 2
+    },
     "field": null
   },
-  "攻擊BOSS怪物時傷害增加+12%": {
-    "main": [],
-    "additional": [
-      {
-        "type": "武器專用",
-        "rank": "unique",
-        "values": [
-          {
-            "minLevel": 50,
-            "x": 12
-          }
-        ],
-        "overrides": {
-          "destiny-weapon": [
-            {
-              "minLevel": 50,
-              "x": 14
-            }
-          ]
-        },
-        "id": "1ec34cc9-3b61-4755-bffd-629709b26b87"
-      }
-    ],
-    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
-    "field": "bdR"
-  },
-  "攻擊BOSS怪物時傷害增加+18%": {
-    "main": [],
-    "additional": [
-      {
-        "type": "武器專用",
-        "rank": "legendary",
-        "values": [
-          {
-            "minLevel": 50,
-            "x": 18
-          }
-        ],
-        "overrides": {
-          "destiny-weapon": [
-            {
-              "minLevel": 50,
-              "x": 20
-            }
-          ]
-        },
-        "id": "9f8290a7-4be6-4fa0-a731-7a6fe5a2794c"
-      }
-    ],
-    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
-    "field": "bdR"
-  },
-  "攻擊BOSS怪物時傷害增加+30%": {
+  "攻擊BOSS怪物時傷害增加": {
     "main": [
       {
         "type": "武器專用",
@@ -2796,14 +2774,7 @@
           ]
         },
         "id": "71e2576a-0a0e-4a65-92bd-9fe4da405579"
-      }
-    ],
-    "additional": [],
-    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
-    "field": "bdR"
-  },
-  "攻擊BOSS怪物時傷害增加+35%": {
-    "main": [
+      },
       {
         "type": "武器專用",
         "rank": "legendary",
@@ -2822,14 +2793,7 @@
           ]
         },
         "id": "8dd776e2-e860-4d5e-b787-a91512c9f2b7"
-      }
-    ],
-    "additional": [],
-    "template": "攻擊BOSS怪物時傷害增加 +{x}%",
-    "field": "bdR"
-  },
-  "攻擊BOSS怪物時傷害增加+40%": {
-    "main": [
+      },
       {
         "type": "武器專用",
         "rank": "legendary",
@@ -2850,7 +2814,46 @@
         "id": "5dfc6747-e67d-457a-9dd3-d198008abcd2"
       }
     ],
-    "additional": [],
+    "additional": [
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 12
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 14
+            }
+          ]
+        },
+        "id": "1ec34cc9-3b61-4755-bffd-629709b26b87"
+      },
+      {
+        "type": "武器專用",
+        "rank": "legendary",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 18
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 20
+            }
+          ]
+        },
+        "id": "9f8290a7-4be6-4fa0-a731-7a6fe5a2794c"
+      }
+    ],
     "template": "攻擊BOSS怪物時傷害增加 +{x}%",
     "field": "bdR"
   },
@@ -3384,7 +3387,7 @@
     "template": "所有技能冷卻時間 -{x}秒",
     "field": "cd"
   },
-  "無視怪物防禦力+15%": {
+  "無視怪物防禦力": {
     "main": [
       {
         "type": "武器專用",
@@ -3423,40 +3426,7 @@
           ]
         },
         "id": "254ca45a-cf07-4aae-a02c-72969fb78d83"
-      }
-    ],
-    "additional": [],
-    "template": "無視怪物防禦力 +{x}%",
-    "field": "imdR"
-  },
-  "無視怪物防禦力+3%": {
-    "main": [],
-    "additional": [
-      {
-        "type": "武器專用",
-        "rank": "epic",
-        "values": [
-          {
-            "minLevel": 50,
-            "x": 3
-          }
-        ],
-        "overrides": {
-          "destiny-weapon": [
-            {
-              "minLevel": 50,
-              "x": 5
-            }
-          ]
-        },
-        "id": "8e150196-a2f8-470c-8a88-94f292ab1ddf"
-      }
-    ],
-    "template": "無視怪物防禦力 +{x}%",
-    "field": "imdR"
-  },
-  "無視怪物防禦力+30%": {
-    "main": [
+      },
       {
         "type": "武器專用",
         "rank": "unique",
@@ -3475,14 +3445,7 @@
           ]
         },
         "id": "e6865d87-e7b0-4a79-97f0-61c2d40a77b1"
-      }
-    ],
-    "additional": [],
-    "template": "無視怪物防禦力 +{x}%",
-    "field": "imdR"
-  },
-  "無視怪物防禦力+35%": {
-    "main": [
+      },
       {
         "type": "武器專用",
         "rank": "legendary",
@@ -3501,40 +3464,7 @@
           ]
         },
         "id": "203743a0-0154-4e3a-9045-7dc0e9ec2660"
-      }
-    ],
-    "additional": [],
-    "template": "無視怪物防禦力 +{x}%",
-    "field": "imdR"
-  },
-  "無視怪物防禦力+4%": {
-    "main": [],
-    "additional": [
-      {
-        "type": "武器專用",
-        "rank": "unique",
-        "values": [
-          {
-            "minLevel": 50,
-            "x": 4
-          }
-        ],
-        "overrides": {
-          "destiny-weapon": [
-            {
-              "minLevel": 50,
-              "x": 6
-            }
-          ]
-        },
-        "id": "182b4422-27fb-4b43-a902-9ef80b1bb320"
-      }
-    ],
-    "template": "無視怪物防禦力 +{x}%",
-    "field": "imdR"
-  },
-  "無視怪物防禦力+40%": {
-    "main": [
+      },
       {
         "type": "武器專用",
         "rank": "legendary",
@@ -3555,13 +3485,45 @@
         "id": "e71feb82-4a06-4bea-a899-d993f23a1309"
       }
     ],
-    "additional": [],
-    "template": "無視怪物防禦力 +{x}%",
-    "field": "imdR"
-  },
-  "無視怪物防禦力+5%": {
-    "main": [],
     "additional": [
+      {
+        "type": "武器專用",
+        "rank": "epic",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 3
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 5
+            }
+          ]
+        },
+        "id": "8e150196-a2f8-470c-8a88-94f292ab1ddf"
+      },
+      {
+        "type": "武器專用",
+        "rank": "unique",
+        "values": [
+          {
+            "minLevel": 50,
+            "x": 4
+          }
+        ],
+        "overrides": {
+          "destiny-weapon": [
+            {
+              "minLevel": 50,
+              "x": 6
+            }
+          ]
+        },
+        "id": "182b4422-27fb-4b43-a902-9ef80b1bb320"
+      },
       {
         "type": "武器專用",
         "rank": "legendary",

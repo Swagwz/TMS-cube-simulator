@@ -17,14 +17,13 @@ export const ADDITIONAL_JSON = rawAdditional as PotentialWeightRegistry;
 export const POTENTIAL_METADATA_MAP = new Map<string, PotentialMetadata>();
 
 function registerPotential(registry: PotentialRegistry) {
-  for (const [name, entry] of Object.entries(registry)) {
+  for (const [_name, entry] of Object.entries(registry)) {
     const { main, additional, template, field, limit } = entry;
     const items = [...main, ...additional];
 
     items.forEach((item) => {
       POTENTIAL_METADATA_MAP.set(item.id, {
         ...item,
-        name,
         template,
         field,
         limit,

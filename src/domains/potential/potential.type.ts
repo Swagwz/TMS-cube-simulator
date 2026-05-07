@@ -15,7 +15,7 @@ export type PotentialValue = {
 };
 
 export type PotentialMetadata = PotentialItemConfig &
-  Omit<PotentialRegistry[string], "main" | "additional"> & { name: string };
+  Omit<PotentialRegistry[string], "main" | "additional">;
 
 export type PotentialItemConfig = {
   id: string;
