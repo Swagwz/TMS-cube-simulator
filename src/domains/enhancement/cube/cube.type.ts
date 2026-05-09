@@ -5,13 +5,17 @@ import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type"
 type CubeCommon = EnhancementItemBase & {
   id: CubeId;
   apply: EquipmentPotentialSlot;
+  workflow: CubeWorkflow;
+  rankUpType: CubeRankUpType;
+  validationType: CubeValidationType;
+  lineEffect: CubeLineEffect;
 
   rankUp: Partial<Record<EquipmentRank, number[]>> | null;
   lineRank: Partial<Record<EquipmentRank, number[][]>>;
 };
 
 type RegularCube = CubeCommon & {
-  id: Exclude<CubeId, "shinyAdditionalCube" | "mirrorCube">;
+  id: Exclude<CubeId, "shinyAdditionalCube">;
 };
 
 type ShinyCube = CubeCommon & {
@@ -20,14 +24,22 @@ type ShinyCube = CubeCommon & {
   ceiling: Record<Exclude<EquipmentRank, "legendary">, number>;
 };
 
-type MirrorCube = CubeCommon & {
-  id: "mirrorCube";
-  mirrorProb: number;
-};
-
-export type CubeDefinition = RegularCube | ShinyCube | MirrorCube;
+export type CubeDefinition = RegularCube | ShinyCube;
 
 export type CubeApplicationType = EquipmentPotentialSlot;
+export type CubeWorkflow = "direct" | "restore" | "hexa" | "combine";
+export type CubeRankUpType = "standard" | "accumulate" | "none";
+export type CubeValidationType = "standard" | "none";
+export type CubeLineEffect =
+  | {
+      type: "none";
+    }
+  | {
+      type: "mirror";
+      probability: number;
+      fromIndex: 0;
+      toIndex: 1;
+    };
 
 export type CubeId = MainCubeId | AdditionalCubeId;
 

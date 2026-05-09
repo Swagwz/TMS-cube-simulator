@@ -4,7 +4,7 @@ import type {
 } from "@/domains/equipment/equipment.type";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
 import type { RNG } from "@/domains/random/rng.type";
-import type { CubeId } from "./cube.type";
+import type { CubeId, CubeCompanionItemId } from "./cube.type";
 
 export type PotentialLines = {
   tier: EquipmentRank;
@@ -19,6 +19,11 @@ export type CubeSessionPotentialGroup = {
 export type CubeSessionEquipment = {
   subcategory: EquipmentSubcategory;
   level: number;
+  statistics: {
+    counts: Record<EquipmentPotentialSlot, Partial<Record<string, number>>> & {
+      mainPot: Partial<Record<CubeCompanionItemId, number>>;
+    };
+  };
 } & Record<EquipmentPotentialSlot, CubeSessionPotentialGroup>;
 
 export type BaseEquipmentSession<TEquipment> = {
@@ -47,7 +52,9 @@ export type DirectCubeRollOutput = {
 
 export type RestoreCubeRollOutput = {
   flow: "restore";
-  rolled: PotentialLines;
+  before: PotentialLines;
+  after: PotentialLines;
+  fixedIndex: number;
 };
 
 export type HexaCubeRollOutput = {
@@ -55,34 +62,31 @@ export type HexaCubeRollOutput = {
   candidates: PotentialLines;
 };
 
-export type CombineCubeRollOutput =
-  | {
-      flow: "combine";
-      step: "selectedLine";
-      selectedIndex: number;
-    }
-  | {
-      flow: "combine";
-      step: "rolledLine";
-      selectedIndex: number;
-      rolledPotentialId: string;
-    };
+export type CombineCubeRollOutput = {
+  flow: "combine";
+  step: "rolledLine";
+  selectedIndex: number;
+  rolledPotentialId: string;
+};
 
 export type CubeRollInput =
   | {
       flow: "direct";
       rankUpMultiplier?: number;
+      accumulateCount?: number;
     }
   | {
       flow: "restore";
-      fixedIndices?: number[];
+      rankUpMultiplier?: number;
+      fixedIndex?: number;
     }
   | {
       flow: "hexa";
+      rankUpMultiplier?: number;
     }
   | {
       flow: "combine";
-      targetIndex?: number;
+      targetIndex: number;
     };
 
 export type CubeApplyDecision =

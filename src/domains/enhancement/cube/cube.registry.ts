@@ -23,9 +23,7 @@ export function getCubeDefinition<T extends CubeId>(cubeId: T) {
   if (!definition) throw new Error("Invalid cubeId");
   return definition as T extends "shinyAdditionalCube"
     ? Extract<CubeDefinition, { id: "shinyAdditionalCube" }>
-    : T extends "mirrorCube"
-      ? Extract<CubeDefinition, { id: "mirrorCube" }>
-      : CubeDefinition;
+    : CubeDefinition;
 }
 
 export function canApplyCubeAtTier(
