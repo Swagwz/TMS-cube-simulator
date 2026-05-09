@@ -20,6 +20,8 @@ import {
   rollShinyRankUp,
 } from "./cubeRoll.feature";
 
+// TODO: keep this facade only while legacy enhancer components still call CubeManager directly;
+// migrate UI workflows to cube sessions so RNG and rank-up options are injected by the session layer.
 export const CubeManager = {
   getItem<T extends CubeId>(cubeId: T) {
     return getCubeDefinition(cubeId);

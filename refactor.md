@@ -841,6 +841,44 @@ type EquipmentFeatureRule = {
 
 ---
 
+## 分段 Refactor 的 TODO 註記規則
+
+重構會一段一段落地，因此允許同一個模組中同時存在「已遷移」與「尚未遷移」的流程。遇到只完成部分 refactor、其他分支尚未更新時，必須在實際缺口附近留下可搜尋的 `TODO:` 註解。
+
+需要加 `TODO:` 的情境：
+
+- 某個 function 只支援部分 flow，其他 flow 暫時 `throw NotImplementedError` 或類似錯誤。
+- reducer / action / manager 先接上 direct workflow，但 restore / combine / hexa / accumulate 尚未接線。
+- 新 pure feature 已完成，但舊 UI component、store action 或統計更新尚未改用新路徑。
+- 為了控制 PR scope 暫時保留 fallback、adapter 或 legacy 呼叫。
+
+`TODO:` 註解要放在最接近未完成分支的位置，不要只寫在 PR 描述或文件中。註解需說明缺的是什麼、之後要接到哪個方向。
+
+範例：
+
+```ts
+function apply(session: CubeSession, decision?: CubeApplyDecision) {
+  if (decision && decision.flow !== "direct") {
+    // TODO: implement non-direct cube apply flows after restore/combine/hexa sessions are migrated.
+    throw createNotImplementedError(decision.flow);
+  }
+
+  if (pendingRoll.flow !== "direct") {
+    // TODO: route non-direct pending rolls through their workflow-specific apply handlers.
+    throw createNotImplementedError(pendingRoll.flow);
+  }
+}
+```
+
+原則：
+
+- 用固定字串 `TODO:`，方便 `rg "TODO:" src` 查找。
+- 不要只寫「TODO」；要描述未完成的 flow 或責任邊界。
+- 如果某功能是刻意不支援，不要用 TODO，應改用明確錯誤訊息或 validation。
+- 每次補完 TODO 對應功能時，同一個 PR 內移除該 TODO。
+
+---
+
 ## 目前最小可行重構路線
 
 如果只做最有價值的最小版本，順序如下：

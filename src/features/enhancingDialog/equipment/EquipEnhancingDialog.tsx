@@ -29,6 +29,7 @@ export default function EquipEnhancingDialog({
   selectedItemId,
   closeModal,
 }: Props) {
+  // TODO: replace localData/context working copy with EquipmentEnhancementSession after cube workflows move to reducers.
   const [localData, setLocalData] = useState<EquipmentInstance | null>(null);
 
   const equipId = useActiveStore((s) =>
