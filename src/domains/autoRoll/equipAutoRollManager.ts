@@ -1,4 +1,4 @@
-import { STATUS_FIELD_MAP } from "@/domains/potential/potential.config";
+﻿import { STATUS_FIELD_MAP } from "@/domains/potential/potential.config";
 import type {
   EquipmentRank,
   StatusField,
@@ -11,7 +11,7 @@ import type {
 } from "./autoRoll.type";
 import type {
   EquipmentSubcategory,
-  PotentialFeature,
+  EquipmentPotentialSlot,
 } from "@/domains/equipment/equipment.type";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import type { CubeId } from "../enhancement/cube/cube.type";
@@ -110,7 +110,7 @@ export const PotentialAutoRoll = {
   getOptions(
     subcategory: EquipmentSubcategory,
     level: number,
-    feature: PotentialFeature,
+    feature: EquipmentPotentialSlot,
     tier: EquipmentRank,
   ) {
     const potList = EquipManager.getPotentialOptions({

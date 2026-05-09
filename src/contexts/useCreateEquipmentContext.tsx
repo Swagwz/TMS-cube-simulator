@@ -1,4 +1,4 @@
-import {
+﻿import {
   createContext,
   useContext,
   useMemo,
@@ -12,7 +12,7 @@ import { EquipManager } from "@/domains/equipment/equipManager";
 import { PotManager } from "@/domains/potential/potManager";
 import type {
   EquipmentSubcategory,
-  PotentialFeature,
+  EquipmentPotentialSlot,
 } from "@/domains/equipment/equipment.type";
 import EQUIPMENT_LIST from "@/domains/equipment/equipment.config";
 import { rollValidPotIds } from "@/domains/equipment/equipmentPotentialRoll";
@@ -21,12 +21,12 @@ type ContextState = { equipmentData: EquipData };
 
 type ContextActions = {
   resetData: () => void;
-  randomPotIds: (feature: PotentialFeature) => void;
+  randomPotIds: (feature: EquipmentPotentialSlot) => void;
 
   updateLevel: (value: number) => void;
-  updateRank: (feature: PotentialFeature, value: string) => void;
+  updateRank: (feature: EquipmentPotentialSlot, value: string) => void;
   updateType: (value: string) => void;
-  updatePot: (feature: PotentialFeature, index: number, id: string) => void;
+  updatePot: (feature: EquipmentPotentialSlot, index: number, id: string) => void;
   updateSoul: (value: string | null) => void;
 };
 
@@ -51,7 +51,8 @@ export function CreateEquipmentProvider({
         setEquipmentData(generateDefaultEquipData());
       },
 
-      randomPotIds: (feature: PotentialFeature) => {
+      /** 隨機產生可能的potential lines */
+      randomPotIds: (feature: EquipmentPotentialSlot) => {
         setEquipmentData(
           produce((draft) => {
             const {
@@ -81,7 +82,7 @@ export function CreateEquipmentProvider({
         setEquipmentData((prev) => ({ ...prev, level: value }));
       },
 
-      updateRank: (feature: PotentialFeature, value: string) => {
+      updateRank: (feature: EquipmentPotentialSlot, value: string) => {
         setEquipmentData(
           produce((draft) => {
             draft[feature].tier = value as EquipmentRank;
@@ -99,7 +100,7 @@ export function CreateEquipmentProvider({
         );
       },
 
-      updatePot: (feature: PotentialFeature, index: number, id: string) => {
+      updatePot: (feature: EquipmentPotentialSlot, index: number, id: string) => {
         setEquipmentData(
           produce((draft) => {
             draft[feature].potIds[index] = id;
@@ -140,7 +141,7 @@ function generateDefaultEquipData(): EquipData {
   const defaultLevel = EquipManager.getLevelConfig(subcategory).defaultLevel;
   const defaultTier: EquipmentRank = "legendary";
 
-  const createDefaultPot = (feature: PotentialFeature) => {
+  const createDefaultPot = (feature: EquipmentPotentialSlot) => {
     const params = { subcategory, feature, level: defaultLevel };
 
     const prime = EquipManager.getPotentialOptions({

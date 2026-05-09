@@ -1,8 +1,8 @@
-import { EQUIPMENT_METADATA_MAP } from "./equipment.config";
+﻿import { EQUIPMENT_METADATA_MAP } from "./equipment.config";
 import type {
   EquipmentFeature,
   EquipmentSubcategory,
-  PotentialFeature,
+  EquipmentPotentialSlot,
 } from "./equipment.type";
 import type {
   PotentialRank,
@@ -54,7 +54,7 @@ export const EquipManager = {
     subcategory: EquipmentSubcategory;
     level: number;
     rank: PotentialRank;
-    feature: PotentialFeature;
+    feature: EquipmentPotentialSlot;
   }) {
     const pool = this.getRawPotentialList(subcategory, rank, feature);
 
@@ -71,7 +71,7 @@ export const EquipManager = {
   getRawPotentialList(
     subcategory: EquipmentSubcategory,
     rank: PotentialRank,
-    feature: PotentialFeature,
+    feature: EquipmentPotentialSlot,
   ): PotentialWeightData[] {
     const getGroup = (registry: typeof NORMAL_JSON) =>
       registry[rank]?.find((g) => g.apply.includes(subcategory));

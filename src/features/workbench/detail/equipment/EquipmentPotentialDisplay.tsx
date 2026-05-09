@@ -3,12 +3,12 @@ import PotentialLineMarker from "@/components/potential/PotentialLineMarker";
 import RankBadge from "@/components/potential/RankBadge";
 import DisplayField from "@/components/ui/DisplayField";
 import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
-import type { PotentialFeature } from "@/domains/equipment/equipment.type";
+import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 import { PotManager } from "@/domains/potential/potManager";
 import useActiveItem from "@/hooks/useActiveItem";
 
 type Props = {
-  feature: PotentialFeature;
+  feature: EquipmentPotentialSlot;
 };
 
 export default function EquipmentPotentialDisplay({ feature }: Props) {

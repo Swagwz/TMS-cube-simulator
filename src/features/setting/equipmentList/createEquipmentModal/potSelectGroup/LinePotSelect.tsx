@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+﻿import { useMemo } from "react";
 import {
   Select,
   SelectContent,
@@ -10,13 +10,13 @@ import {
 } from "@/components/ui/select";
 import { useCreateEquipmentContext } from "@/contexts/useCreateEquipmentContext";
 import { PotManager } from "@/domains/potential/potManager";
-import type { PotentialFeature } from "@/domains/equipment/equipment.type";
+import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import type { PotentialRank } from "@/domains/potential/potential.type";
 
 type Props = {
   index: number;
-  feature: PotentialFeature;
+  feature: EquipmentPotentialSlot;
 };
 
 export default function LinePotSelect({ index, feature }: Props) {

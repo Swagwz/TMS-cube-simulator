@@ -1,4 +1,4 @@
-import { RefreshCw } from "lucide-react";
+﻿import { RefreshCw } from "lucide-react";
 import { FieldGroup } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import FormField from "@/components/FormField";
@@ -6,12 +6,12 @@ import FormField from "@/components/FormField";
 import LinePotSelect from "./LinePotSelect";
 import { useCreateEquipmentContext } from "@/contexts/useCreateEquipmentContext";
 import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
-import type { PotentialFeature } from "@/domains/equipment/equipment.type";
+import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 
 const CN_NUMBERS = ["一", "二", "三"];
 
 type PotSelectGroupProps = {
-  feature: PotentialFeature;
+  feature: EquipmentPotentialSlot;
 };
 
 export default function PotSelectGroup({ feature }: PotSelectGroupProps) {

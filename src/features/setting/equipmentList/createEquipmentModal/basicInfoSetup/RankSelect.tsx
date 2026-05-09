@@ -1,4 +1,4 @@
-import {
+﻿import {
   Select,
   SelectContent,
   SelectItem,
@@ -6,11 +6,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useCreateEquipmentContext } from "@/contexts/useCreateEquipmentContext";
-import type { PotentialFeature } from "@/domains/equipment/equipment.type";
+import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 import { POTENTIAL_RANK_LIST } from "@/domains/potential/potential.config";
 
 type Props = {
-  feature: PotentialFeature;
+  feature: EquipmentPotentialSlot;
 };
 
 export default function RankSelect({ feature }: Props) {

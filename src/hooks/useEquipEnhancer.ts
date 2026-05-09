@@ -1,13 +1,13 @@
-import { useEnhancingContext } from "@/contexts/useEnhancingContext";
+﻿import { useEnhancingContext } from "@/contexts/useEnhancingContext";
 import { useEquipmentStore } from "@/store/useEquipmentStore";
-import type { PotentialFeature } from "@/domains/equipment/equipment.type";
+import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 import type { PotentialRank } from "@/domains/potential/potential.type";
 
 type Pools<F> = F extends "soul"
   ? { id: string; weight: number }[]
   : Record<PotentialRank, { id: string; weight: number }[]>;
 
-export function useEquipEnhancer<F extends PotentialFeature | "soul">(
+export function useEquipEnhancer<F extends EquipmentPotentialSlot | "soul">(
   feature: F,
 ) {
   const { localData, setLocalData, poolData, closeModal } =
