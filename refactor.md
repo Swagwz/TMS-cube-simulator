@@ -899,3 +899,93 @@ function apply(session: CubeSession, decision?: CubeApplyDecision) {
 - 把所有 feature 抽成同一個 generic engine。
 - 建立裝備 class hierarchy。
 - 把 cube metadata 拆成每個 cube 一個 class。
+
+---
+
+## 2026-05-10 目前重構進度
+
+本節覆蓋上方已過期的 cube / RNG / session TODO；若上方內容與本節衝突，
+以本節為準。
+
+### 已完成
+
+- 新增可注入的 RNG domain：
+  - `RNG`
+  - `CryptoRNG`
+  - `FixedRNG`
+  - `SeededRNG`
+  - `productionRng`
+- `rollWeightedIndex(weights, rng)` 已改成必須明確傳入 RNG。
+- cube domain 已拆分職責：
+  - `cube.config.ts` 只放靜態 cube 與 companion item metadata。
+  - `cube.registry.ts` 負責 cube 查詢、map、適用性與 companion 查詢。
+  - `cubeRoll.feature.ts` 負責 pure roll 行為與 workflow policy。
+  - `cubeSession.type.ts` 負責 cube session command / output 型別。
+  - `cubeSession.reducer.ts` 負責 session 狀態轉移。
+  - `cubeManager.ts` 暫時保留為舊 UI callsite 的相容 facade。
+- equipment potential slot 型別已 rename：
+  - `PotentialFeature` -> `EquipmentPotentialSlot`
+- cube metadata policy 已更新：
+  - `workflow: "direct" | "restore" | "hexa" | "combine"`
+  - `rankUpType: "standard" | "accumulate" | "none"`
+  - `validationType: "standard" | "none"`
+  - `lineEffect: { type: "none" } | { type: "mirror"; ... }`
+- cube session reducer 已支援 workflow：
+  - `direct`
+  - `restore`
+  - `hexa`
+  - `combine`
+- 已實作 workflow 專用 pure roll function：
+  - `rollDirectCube`
+  - `rollRestoreCube`
+  - `rollHexaCube`
+  - `rollCombineCube`
+- statistics count 目前在 cube session `roll` 成功時更新，不在 `apply` 更新。
+- restore fixed companion 只有在允許並實際使用固定 line 時才增加 count。
+- combine 採用 completed-result model：
+  - `roll` 會先選中 line，並同時 roll 出隱藏的 replacement line。
+  - `apply` 只負責寫入或丟棄隱藏結果。
+  - `targetIndex: -1` 代表沒有指定 target。
+  - `targetIndex: 0..2` 代表 target mode，會 loop 到選中指定 line，並計算 attempts。
+
+### 目前 Cube Session Shape
+
+```ts
+type CubeSession<TEquipment> = {
+  system: "cube";
+  cubeId: CubeId;
+  base: TEquipment;
+  working: TEquipment;
+  rng: RNG;
+  pendingRoll: CubeRollOutput | null;
+};
+
+type CubeRollOutput =
+  | { flow: "direct"; rolled: PotentialLines }
+  | { flow: "restore"; before: PotentialLines; after: PotentialLines; fixedIndex: number }
+  | { flow: "hexa"; candidates: PotentialLines }
+  | {
+      flow: "combine";
+      step: "rolledLine";
+      selectedIndex: number;
+      rolledPotentialId: string;
+    };
+```
+
+### 已驗證
+
+- `tsc -b` 通過。
+- cube roll feature、cube session reducer、cube manager 的 targeted Vitest 通過。
+- `npm run build` 仍略過，因為目前本機 npm CLI path 壞掉。
+
+### 下一步建議
+
+1. 在開始 UI migration 前，先 commit 目前 cube domain / session refactor。
+2. 新增 equipment cube session 的 action / hook 邊界。
+3. 逐步把 cube UI 遷移到 session reducer：
+   - direct cube 優先
+   - restore
+   - hexa
+   - combine
+4. 舊 UI callsite 全部遷移前，保留 `CubeManager`。
+5. auto-roll 暫緩到手動 cube workflow 完整接上 session model 後再做。
