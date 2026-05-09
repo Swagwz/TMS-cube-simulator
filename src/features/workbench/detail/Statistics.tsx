@@ -43,13 +43,13 @@ function Statistics({ rows }: Props) {
 
   return (
     <Table>
-      <TableCaption className="text-glass-foreground">�ϥβέp</TableCaption>
+      <TableCaption className="text-glass-foreground">使用統計</TableCaption>
       <TableHeader className="bg-secondary-dark text-secondary-dark-foreground">
         <TableRow>
-          <TableHead className="w-[30%] text-inherit">�D��</TableHead>
-          <TableHead className="w-[35%] text-inherit">����</TableHead>
+          <TableHead className="w-[30%] text-inherit">項目</TableHead>
+          <TableHead className="w-[35%] text-inherit">單價</TableHead>
           <TableHead className="w-[35%] text-right text-inherit">
-            �ϥΦ���
+            使用次數
           </TableHead>
         </TableRow>
       </TableHeader>
@@ -70,8 +70,8 @@ function Statistics({ rows }: Props) {
         <TableRow>
           <TableCell colSpan={2}>
             <div className="flex flex-row items-center">
-              �`��O
-              <InfoPopover>����w�M�Χ馩�C</InfoPopover>
+              總花費
+              <InfoPopover>已套用道具折扣。</InfoPopover>
             </div>
           </TableCell>
           <TableCell className="text-right">

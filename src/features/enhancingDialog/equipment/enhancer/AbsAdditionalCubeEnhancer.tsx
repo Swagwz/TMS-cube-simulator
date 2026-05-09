@@ -18,7 +18,7 @@ export default function AbsAdditionalCubeEnhancer() {
   const { level, additionalPot, subcategory } = localData;
 
   const handleRoll = () => {
-    // ?�能套用???�說"潛能
+    // Absolute cube always rolls legendary potential.
     const newPots = CubeManager.rollPots(
       "absAdditionalCube",
       "legendary",
@@ -36,7 +36,7 @@ export default function AbsAdditionalCubeEnhancer() {
     );
   };
 
-  // ?�能套用???�說"潛能
+  // Absolute cube is only available for legendary potential.
   if (additionalPot.tier !== "legendary") return null;
 
   return (
@@ -55,7 +55,7 @@ export default function AbsAdditionalCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          ?��?
+          使用
         </Button>
       </EquipFooter>
     </>

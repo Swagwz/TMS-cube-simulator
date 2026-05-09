@@ -55,8 +55,8 @@ export default function ShinyAdditionalCubeEnhancer() {
           <p>
             使用次數: {pityCount} / {ceiling}
           </p>
-          <p>跳�?機�?: {`${currentProb}%`}</p>
-          <p>每次使用增�?: {`${probIncr}%`}</p>
+          <p>跳階機率: {`${currentProb}%`}</p>
+          <p>每次使用增加: {`${probIncr}%`}</p>
         </div>
       )}
       <DisplayContainer>
@@ -73,7 +73,7 @@ export default function ShinyAdditionalCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          ?��?
+          使用
         </Button>
       </EquipFooter>
     </>

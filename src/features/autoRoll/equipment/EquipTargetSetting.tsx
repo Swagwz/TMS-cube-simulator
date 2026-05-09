@@ -72,7 +72,7 @@ export default function EquipTargetSetting({
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className="text-glass-foreground w-16 shrink-0 text-xs font-medium">
-                ?��??��?
+                目標階級
               </span>
               <Select
                 value={targetSet.rank ?? "any"}
@@ -86,10 +86,10 @@ export default function EquipTargetSetting({
                 }
               >
                 <SelectTrigger className="h-8 w-full text-xs">
-                  <SelectValue placeholder="不�??��?" />
+                  <SelectValue placeholder="不指定" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="any">不�??��?</SelectItem>
+                  <SelectItem value="any">不指定</SelectItem>
                   {POTENTIAL_RANK_LIST.filter((r) => r.rank !== "normal").map(
                     (r) => (
                       <SelectItem key={r.rank} value={r.rank}>
@@ -118,10 +118,10 @@ export default function EquipTargetSetting({
                   }
                 >
                   <SelectTrigger className="h-8 w-full text-xs">
-                    <SelectValue placeholder="任�?潛能" />
+                    <SelectValue placeholder="任意潛能" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="any">Any</SelectItem>
+                    <SelectItem value="any">任意</SelectItem>
                     {options.map((opt) => (
                       <SelectItem key={opt.field} value={opt.field}>
                         {opt.label}

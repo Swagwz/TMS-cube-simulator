@@ -39,12 +39,12 @@ export default function HexaCubeEnhancer() {
   const toggleSelect = (id: string, i: number) => {
     setSelectedPots(
       produce((draft) => {
-        // ?��??�中->?�除
+        // Selecting an existing line removes it.
         if (draft.some((selected) => selected.index === i)) {
           draft = draft.filter((selected) => selected.index !== i);
           return draft;
         }
-        // 已滿3??
+        // Keep at most three selected lines.
         if (draft.length === 3) return draft;
         else draft.push({ id, index: i });
       }),
@@ -96,7 +96,7 @@ export default function HexaCubeEnhancer() {
         <CloseBtn disabled={!!hexaPots.length} onClose={handleClose} />
         {selectedPots.length === 3 ? (
           <Button variant="primary" onClick={handleConfirm}>
-            確�?
+            確認
           </Button>
         ) : (
           <Button variant="primary" onClick={handleRoll}>

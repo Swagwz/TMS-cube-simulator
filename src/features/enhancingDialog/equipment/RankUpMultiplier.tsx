@@ -28,7 +28,7 @@ export default function RankUpMultiplier() {
       <FormField
         label={
           <div className="flex items-center gap-2">
-            跳�?機�??��?
+            跳階機率倍率
             <div className="flex items-center gap-1">
               <Checkbox
                 id="show-prob"
@@ -40,7 +40,7 @@ export default function RankUpMultiplier() {
                 htmlFor="show-prob"
                 className="text-glass-foreground cursor-pointer text-xs font-normal"
               >
-                顯示機�?
+                顯示機率
               </label>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function RankUpMultiplier() {
                 {rankUpProbs.map((prob, i) => {
                   const label =
                     i === 0
-                      ? "?��?"
+                      ? "維持"
                       : `${PotManager.rankToZh(PotManager.indexToRank(currTierIndex + i))}`;
                   return (
                     <tr key={i}>

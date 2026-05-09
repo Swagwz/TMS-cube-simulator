@@ -47,7 +47,7 @@ export default function EqualCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          ?��?
+          使用
         </Button>
       </EquipFooter>
     </>

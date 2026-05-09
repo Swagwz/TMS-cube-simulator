@@ -50,7 +50,7 @@ export default function MasterCraftsmanCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          ?��?
+          使用
         </Button>
       </EquipFooter>
     </>

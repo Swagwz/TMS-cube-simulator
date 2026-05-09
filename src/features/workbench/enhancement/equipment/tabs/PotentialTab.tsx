@@ -54,7 +54,7 @@ export default function PotentialTab({ feature }: Props) {
               </InfoPopover>
             </p>
           ) : (
-            <p>尚未?��?</p>
+            <p>尚未選擇</p>
           )}
         </div>
 

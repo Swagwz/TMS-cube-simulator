@@ -26,7 +26,7 @@ export default function RestoreAdditionalCubeEnhancer() {
 
   const isRankUp = Boolean(after && after.tier !== additionalPot.tier);
 
-  // ?�離計�??�輯：傳??"?��?潛能" (Base)，�???"洗�??��???
+  // Roll against the provided base potential so before/after state stays stable.
   const performRoll = (basePot: { tier: EquipmentRank; potIds: string[] }) => {
     const nextRank = CubeManager.rollRankUp(
       "restoreAdditionalCube",
@@ -42,11 +42,10 @@ export default function RestoreAdditionalCubeEnhancer() {
   };
 
   const handleRoll = () => {
-    // 第�?次�?，Base ?�目?��? additionalPot
     const result = performRoll(additionalPot);
     setAfter(result);
 
-    // 增�??��???
+    // Count cube usage.
     setLocalData(
       produce((draft) => {
         draft!.statistics.counts.additionalPot.restoreAdditionalCube =

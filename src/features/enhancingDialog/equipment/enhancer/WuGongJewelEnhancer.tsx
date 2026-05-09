@@ -36,13 +36,13 @@ export default function WuGongJewelEnhancer() {
             text={SoulManager.getLine(soul, level)}
           />
         ) : (
-          <p className="text-center">尚未設�?</p>
+          <p className="text-center">尚未設定</p>
         )}
       </DisplayContainer>
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          ?��?
+          使用
         </Button>
       </EquipFooter>
     </>

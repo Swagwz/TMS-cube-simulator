@@ -37,7 +37,7 @@ export default function MoeEnhancingDialog({
     closeModal();
   }, [localData, closeModal]);
 
-  // ?��???複製一份data
+  // Open dialog with a working copy of the selected card.
   useEffect(() => {
     if (selectedItemId && moeCardId) {
       const instance = structuredClone(

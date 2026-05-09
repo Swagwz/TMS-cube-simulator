@@ -70,9 +70,8 @@ export default function EquipEnhancingDialog({
     }
   }, [selectedItemId, localData?.level, localData?.subcategory]);
 
-  // ?��???複製一份data
+  // Open dialog with a working copy of the selected equipment.
   useEffect(() => {
-    // ?�選?�強?��??�以?��??��??��?�??��?localData
     if (selectedItemId && equipId) {
       setLocalData(
         structuredClone(useEquipmentStore.getState().instanceMap[equipId]),

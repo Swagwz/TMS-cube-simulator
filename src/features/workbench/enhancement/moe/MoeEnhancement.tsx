@@ -43,7 +43,7 @@ export default function MoeEnhancement() {
               </InfoPopover>
             </p>
           ) : (
-            <p>尚未?��?</p>
+            <p>尚未選擇</p>
           )}
         </div>
 

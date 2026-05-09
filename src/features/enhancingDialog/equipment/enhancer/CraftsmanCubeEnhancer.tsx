@@ -31,7 +31,7 @@ export default function CraftsmanCubeEnhancer() {
     );
   };
 
-  // ?�高�??�至罕�?潛能
+  // Craftsman cube cannot be used after reaching legendary tier.
   if (mainPot.tier === "legendary") return null;
 
   return (
@@ -51,7 +51,7 @@ export default function CraftsmanCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          ?��?
+          使用
         </Button>
       </EquipFooter>
     </>

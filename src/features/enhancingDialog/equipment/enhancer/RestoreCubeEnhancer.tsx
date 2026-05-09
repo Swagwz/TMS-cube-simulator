@@ -28,12 +28,12 @@ export default function RestoreCubeEnhancer() {
   const isRankUp = Boolean(after && after.tier !== mainPot.tier);
 
   const toggleLock = (index: number) => {
-    // ?�在?��?潛能??不能?��??��?潛能
+    // Do not change locked lines while comparing before/after results.
     if (after) return;
     setLockIndex((prev) => (prev === index ? -1 : index));
   };
 
-  // ?�離計�??�輯：傳??"?��?潛能" (Base)，�???"洗�??��???
+  // Roll against the provided base potential so before/after state stays stable.
   const performRoll = (basePot: { tier: EquipmentRank; potIds: string[] }) => {
     const nextRank = CubeManager.rollRankUp("restoreCube", basePot.tier);
 
@@ -41,7 +41,7 @@ export default function RestoreCubeEnhancer() {
     do {
       rolledPots = CubeManager.rollPots("restoreCube", nextRank, pools);
       if (lockIndex !== -1) {
-        // 使用?�入??basePot 來�?定�??��??��??��?賴�???state
+        // Preserve the locked line from the base potential.
         rolledPots.splice(lockIndex, 1, basePot.potIds[lockIndex]);
       }
     } while (!PotManager.validateLineRules(rolledPots));
@@ -50,11 +50,10 @@ export default function RestoreCubeEnhancer() {
   };
 
   const handleRoll = () => {
-    // 第�?次�?，Base ?�目?��? mainPot
     const result = performRoll(mainPot);
     setAfter(result);
 
-    // 增�??��???
+    // Count cube and companion item usage.
     setLocalData(
       produce((draft) => {
         draft!.statistics.counts.mainPot.restoreCube =
@@ -94,7 +93,7 @@ export default function RestoreCubeEnhancer() {
         >
           <RankBanner rank={mainPot.tier} />
           {mainPot.potIds.map((id, i) => {
-            const isLocked = lockIndex === i; // 計�??��??�??
+            const isLocked = lockIndex === i;
             return (
               <div
                 key={`${id}-${i}`}
@@ -102,7 +101,7 @@ export default function RestoreCubeEnhancer() {
                   "flex cursor-pointer flex-row items-center justify-between rounded p-1",
                   isLocked && "bg-accent-main",
                 )}
-                onClick={() => toggleLock(i)} // 保�??��???onClick ?�輯
+                onClick={() => toggleLock(i)}
               >
                 <PotentialLineBadge
                   text={
