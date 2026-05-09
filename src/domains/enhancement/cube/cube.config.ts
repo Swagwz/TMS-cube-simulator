@@ -12,13 +12,12 @@ import restoreAdditionalCube from "@/assets/enhancementItem/恢復附加方塊.p
 import restoreCube from "@/assets/enhancementItem/恢復方塊.png";
 import shinyAdditionalCube from "@/assets/enhancementItem/閃亮附加方塊.png";
 import type {
-  CubeId,
-  CubeItem,
-  RelationItem,
-  RelationItemId,
+  CubeCompanionItem,
+  CubeCompanionItemId,
+  CubeDefinition,
 } from "./cube.type";
 
-export const CUBE_LIST: CubeItem[] = [
+export const CUBE_LIST: CubeDefinition[] = [
   {
     id: "restoreCube",
     name: "恢復方塊",
@@ -216,7 +215,6 @@ export const CUBE_LIST: CubeItem[] = [
     discount: 0,
     apply: "mainPot",
     imagePath: craftsmanCube,
-    maxApplyTier: "unique",
     rankUp: {
       rare: [4.76],
       epic: [1.19],
@@ -404,7 +402,6 @@ export const CUBE_LIST: CubeItem[] = [
     discount: 10,
     apply: "additionalPot",
     imagePath: absAdditionalCube,
-    minApplyTier: "legendary",
     rankUp: null,
     lineRank: {
       legendary: [
@@ -448,11 +445,7 @@ export const CUBE_LIST: CubeItem[] = [
   },
 ];
 
-export const CUBE_METADATA_MAP = new Map<CubeId, CubeItem>(
-  CUBE_LIST.map((data) => [data.id, data]),
-);
-
-const RELATION_LIST: RelationItem[] = [
+export const CUBE_COMPANION_ITEMS: CubeCompanionItem[] = [
   {
     id: "fixPotential",
     name: "固定潛能",
@@ -460,15 +453,10 @@ const RELATION_LIST: RelationItem[] = [
     imagePath: fixPotential,
     price: 0,
     discount: 0,
-    apply: "mainPot",
   },
 ];
 
-export const RELATION_METADATA_MAP = new Map<RelationItemId, RelationItem>(
-  RELATION_LIST.map((data) => [data.id, data]),
-);
-
-/** 定義方塊與其他道具的關聯 */
-export const CUBE_RELATIONS: Record<string, RelationItemId[]> = {
+/** 定義方塊與 companion item 的關聯 */
+export const CUBE_COMPANIONS: Record<string, CubeCompanionItemId[]> = {
   restoreCube: ["fixPotential"],
 };
