@@ -20,9 +20,9 @@ export default function MoeTableRow({ index, id }: Props) {
 
   if (!item) return null;
 
-  const { subcategory, potIds } = item;
+  const { subcategory, potentialIds } = item;
   const cardType = MoeManager.getCardMetadata(subcategory).name;
-  const summaryText = MoeManager.getSummary(potIds);
+  const summaryText = MoeManager.getSummary(potentialIds);
 
   return (
     <TableRow

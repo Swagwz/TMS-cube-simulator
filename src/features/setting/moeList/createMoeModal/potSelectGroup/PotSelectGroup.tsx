@@ -21,7 +21,7 @@ export default function PotSelectGroup() {
   const handleRandomPot = () => {
     setMoeData(
       produce((draft) => {
-        draft.potIds = MoeManager.createRandomPotentials(subcategory);
+        draft.potentialIds = MoeManager.createRandomPotentials(subcategory);
       }),
     );
   };

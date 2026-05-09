@@ -38,7 +38,7 @@ export default function ShinyAdditionalCubeEnhancer() {
     const pots = CubeManager.rollPots("shinyAdditionalCube", nextRank, pools);
     setLocalData(
       produce((draft) => {
-        draft!.additionalPot.potIds = pots;
+        draft!.additionalPot.potentialIds = pots;
         draft!.additionalPot.tier = nextRank;
         draft!.statistics.counts.additionalPot.shinyAdditionalCube =
           (draft?.statistics.counts.additionalPot.shinyAdditionalCube || 0) + 1;
@@ -61,7 +61,7 @@ export default function ShinyAdditionalCubeEnhancer() {
       )}
       <DisplayContainer>
         {<RankBanner rank={additionalPot.tier} />}
-        {additionalPot.potIds.map((id, i) => (
+        {additionalPot.potentialIds.map((id, i) => (
           <PotentialLineBadge
             key={`${id}-${i}`}
             text={PotManager.resolvePotential(id, level, subcategory).display}

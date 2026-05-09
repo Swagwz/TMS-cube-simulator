@@ -28,7 +28,7 @@ export default function AbsAdditionalCubeEnhancer() {
     setLocalData(
       produce((draft) => {
         if (draft) {
-          draft!.additionalPot.potIds = newPots;
+          draft!.additionalPot.potentialIds = newPots;
           draft!.statistics.counts.additionalPot.absAdditionalCube =
             (draft?.statistics.counts.additionalPot.absAdditionalCube || 0) + 1;
         }
@@ -43,7 +43,7 @@ export default function AbsAdditionalCubeEnhancer() {
     <>
       <DisplayContainer>
         {<RankBanner rank={additionalPot.tier} />}
-        {additionalPot.potIds.map((id, i) => (
+        {additionalPot.potentialIds.map((id, i) => (
           <PotentialLineBadge
             key={`${id}-${i}`}
             text={PotManager.resolvePotential(id, level, subcategory).display}

@@ -34,7 +34,7 @@ export default function PotentialArea({ feature }: Props) {
   const potContent = useMemo(() => {
     switch (feature) {
       case "mainPot":
-        return activeItem.mainPot.potIds.map((id, i) => (
+        return activeItem.mainPot.potentialIds.map((id, i) => (
           <PotentialLineBadge
             key={`${id}-${i}`}
             rank={PotManager.getPotentialMetadata(id).rank}
@@ -42,7 +42,7 @@ export default function PotentialArea({ feature }: Props) {
           />
         ));
       case "additionalPot":
-        return activeItem.additionalPot.potIds.map((id, i) => (
+        return activeItem.additionalPot.potentialIds.map((id, i) => (
           <PotentialLineBadge
             key={`${id}-${i}`}
             rank={PotManager.getPotentialMetadata(id).rank}

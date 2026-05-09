@@ -41,7 +41,7 @@ export default function CombineAdditionalCubeEnhancer() {
   };
 
   const rollPots = (index: number) => {
-    const nextPotIds = [...additionalPot.potIds];
+    const nextPotIds = [...additionalPot.potentialIds];
     let isValid = false;
     while (!isValid) {
       const pots = CubeManager.rollPots(
@@ -66,7 +66,7 @@ export default function CombineAdditionalCubeEnhancer() {
 
     setLocalData(
       produce((draft) => {
-        draft!.additionalPot.potIds = nextPotIds;
+        draft!.additionalPot.potentialIds = nextPotIds;
       }),
     );
     setSelectedIndex(-1);
@@ -87,7 +87,7 @@ export default function CombineAdditionalCubeEnhancer() {
 
     setLocalData(
       produce((draft) => {
-        draft!.additionalPot.potIds = nextPotIds;
+        draft!.additionalPot.potentialIds = nextPotIds;
       }),
     );
   };
@@ -96,7 +96,7 @@ export default function CombineAdditionalCubeEnhancer() {
     <>
       <DisplayContainer>
         {<RankBanner rank={additionalPot.tier} />}
-        {additionalPot.potIds.map((id, i) => {
+        {additionalPot.potentialIds.map((id, i) => {
           const isTarget = targetIndex === i;
           const isSelected = selectedIndex === i;
           return (

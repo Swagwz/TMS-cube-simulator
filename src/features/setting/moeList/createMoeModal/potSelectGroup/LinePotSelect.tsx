@@ -21,14 +21,14 @@ export default function LinePotSelect({ index, subcategory }: Props) {
   const selectPot = (id: string) => {
     setMoeData(
       produce((draft) => {
-        draft.potIds[index] = id;
+        draft.potentialIds[index] = id;
       }),
     );
   };
 
   return (
     <div className="flex min-w-0 gap-2">
-      <Select required onValueChange={selectPot} value={moeData.potIds[index]}>
+      <Select required onValueChange={selectPot} value={moeData.potentialIds[index]}>
         <SelectTrigger className="w-full min-w-0 shrink grow [&>span]:truncate">
           <SelectValue />
         </SelectTrigger>

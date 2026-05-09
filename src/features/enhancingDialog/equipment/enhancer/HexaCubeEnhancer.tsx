@@ -54,7 +54,7 @@ export default function HexaCubeEnhancer() {
   const handleConfirm = () => {
     setLocalData(
       produce((draft) => {
-        draft!.mainPot.potIds = selectedPots.map(({ id }) => id);
+        draft!.mainPot.potentialIds = selectedPots.map(({ id }) => id);
       }),
     );
     setHexaPots([]);
@@ -66,7 +66,7 @@ export default function HexaCubeEnhancer() {
       <DisplayContainer className="min-h-76">
         {<RankBanner rank={mainPot.tier} />}
         {hexaPots.length === 0
-          ? mainPot.potIds.map((id, i) => (
+          ? mainPot.potentialIds.map((id, i) => (
               <PotentialLineBadge
                 key={`${id}-${i}`}
                 text={

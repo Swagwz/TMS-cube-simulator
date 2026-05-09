@@ -21,18 +21,18 @@ export default function EquipmentPotentialDisplay({ feature }: Props) {
   const title = getEquipmentFeatureLabel(feature);
 
   const {
-    [feature]: { tier, potIds },
+    [feature]: { tier, potentialIds },
     level,
     subcategory,
   } = instanceData;
 
   const lines = useMemo(() => {
-    return potIds.map((id) => ({
+    return potentialIds.map((id) => ({
       id,
       text: PotManager.resolvePotential(id, level, subcategory).display,
       rank: PotManager.getPotentialMetadata(id).rank,
     }));
-  }, [potIds]);
+  }, [potentialIds]);
 
   return (
     <div className="flex flex-col gap-2">

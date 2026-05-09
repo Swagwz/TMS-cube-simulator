@@ -16,7 +16,7 @@ import MoeAutoRoll from "@/features/autoRoll/moe/MoeAutoRoll";
 
 export default function MoeCubeEnhancer() {
   const { localData, setLocalData, handleClose } = useMoeEnhancingContext();
-  const { potIds } = localData;
+  const { potentialIds } = localData;
 
   const handleRoll = useCallback(() => {
     const newPots = MoeManager.rollPots("moeCube", localData.subcategory);
@@ -24,7 +24,7 @@ export default function MoeCubeEnhancer() {
     setLocalData(
       produce((draft) => {
         if (draft) {
-          draft.potIds = newPots;
+          draft.potentialIds = newPots;
           draft.statistics.counts.moeCube =
             (draft.statistics.counts.moeCube || 0) + 1;
         }
@@ -49,7 +49,7 @@ export default function MoeCubeEnhancer() {
   return (
     <>
       <DisplayContainer>
-        {potIds.map((id, i) => (
+        {potentialIds.map((id, i) => (
           <PotentialLineBadge
             key={`${id}-${i}`}
             text={MoeManager.getLine(id)}

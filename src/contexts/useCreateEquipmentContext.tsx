@@ -1,4 +1,4 @@
-﻿import {
+import {
   createContext,
   useContext,
   useMemo,
@@ -73,7 +73,7 @@ export function CreateEquipmentProvider({
               rank: prevTier,
             });
 
-            draft[feature].potIds = rollValidPotIds({ prime, nonPrime });
+            draft[feature].potentialIds = rollValidPotIds({ prime, nonPrime });
           }),
         );
       },
@@ -103,7 +103,7 @@ export function CreateEquipmentProvider({
       updatePot: (feature: EquipmentPotentialSlot, index: number, id: string) => {
         setEquipmentData(
           produce((draft) => {
-            draft[feature].potIds[index] = id;
+            draft[feature].potentialIds[index] = id;
           }),
         );
       },
@@ -155,7 +155,7 @@ function generateDefaultEquipData(): EquipData {
 
     return {
       tier: defaultTier,
-      potIds: rollValidPotIds({ prime, nonPrime }),
+      potentialIds: rollValidPotIds({ prime, nonPrime }),
     };
   };
 

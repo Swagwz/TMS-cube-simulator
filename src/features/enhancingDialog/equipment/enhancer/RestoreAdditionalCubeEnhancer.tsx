@@ -21,13 +21,13 @@ export default function RestoreAdditionalCubeEnhancer() {
   const { level, additionalPot, subcategory } = localData;
   const [after, setAfter] = useState<{
     tier: EquipmentRank;
-    potIds: string[];
+    potentialIds: string[];
   } | null>(null);
 
   const isRankUp = Boolean(after && after.tier !== additionalPot.tier);
 
   // Roll against the provided base potential so before/after state stays stable.
-  const performRoll = (basePot: { tier: EquipmentRank; potIds: string[] }) => {
+  const performRoll = (basePot: { tier: EquipmentRank; potentialIds: string[] }) => {
     const nextRank = CubeManager.rollRankUp(
       "restoreAdditionalCube",
       basePot.tier,
@@ -38,7 +38,7 @@ export default function RestoreAdditionalCubeEnhancer() {
       pools,
     );
 
-    return { tier: nextRank, potIds: rolledPots };
+    return { tier: nextRank, potentialIds: rolledPots };
   };
 
   const handleRoll = () => {
@@ -81,7 +81,7 @@ export default function RestoreAdditionalCubeEnhancer() {
           )}
         >
           <RankBanner rank={additionalPot.tier} />
-          {additionalPot.potIds.map((id, i) => {
+          {additionalPot.potentialIds.map((id, i) => {
             return (
               <PotentialLineBadge
                 key={`${id}-${i}`}
@@ -105,7 +105,7 @@ export default function RestoreAdditionalCubeEnhancer() {
         >
           {after && <RankBanner rank={after.tier} />}
           {after &&
-            after.potIds.map((id, i) => (
+            after.potentialIds.map((id, i) => (
               <PotentialLineBadge
                 key={`${id}-${i}`}
                 text={
@@ -121,7 +121,7 @@ export default function RestoreAdditionalCubeEnhancer() {
       <EquipFooter>
         <CloseBtn disabled={!!after} onClose={handleClose} />
         <Button variant="primary" disabled={isRankUp} onClick={handleRoll}>
-          {!after || after.potIds.length === 0 ? "Roll" : "Reroll"}
+          {!after || after.potentialIds.length === 0 ? "Roll" : "Reroll"}
         </Button>
       </EquipFooter>
     </>

@@ -4,7 +4,7 @@ import { useActiveStore } from "./useActiveStore";
 import type { MoeCubeId } from "@/domains/enhancement/moe/moe.type";
 import type { MoeCardSubcategory } from "@/domains/moeCard/moeCard.type";
 
-type MoeStatus = { potIds: string[] };
+type MoeStatus = { potentialIds: string[] };
 
 export type MoeInstance = MoeStatus & {
   id: string;
@@ -47,10 +47,10 @@ export const useMoeStore = create<State & Actions>()(
     instanceIds: [],
     instanceMap: {},
     newInstance: (moeData) => {
-      const { potIds } = moeData;
+      const { potentialIds } = moeData;
       return {
         ...moeData,
-        _origin: { potIds: structuredClone(potIds) }, // Clone array to prevent reference sharing
+        _origin: { potentialIds: structuredClone(potentialIds) }, // Clone array to prevent reference sharing
         statistics: {
           counts: {},
         },
@@ -88,7 +88,7 @@ export const useMoeStore = create<State & Actions>()(
       set((state) => {
         const target = state.instanceMap[id];
         if (target) {
-          target.potIds = structuredClone(target._origin.potIds); // Clone back from origin
+          target.potentialIds = structuredClone(target._origin.potentialIds); // Clone back from origin
           target.statistics.counts = {};
         }
       });
@@ -103,7 +103,7 @@ export const useMoeStore = create<State & Actions>()(
       set((state) => {
         const target = state.instanceMap[id];
         if (target) {
-          target.potIds[index] = newPotId;
+          target.potentialIds[index] = newPotId;
         }
       });
     },

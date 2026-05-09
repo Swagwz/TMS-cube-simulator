@@ -195,7 +195,7 @@ function apply<TEquipment extends CubeSessionEquipment>(
         break;
       }
 
-      const potentialIds = [...session.working[cube.apply].potIds];
+      const potentialIds = [...session.working[cube.apply].potentialIds];
       potentialIds[pendingRoll.selectedIndex] = pendingRoll.rolledPotentialId;
       working = writePotentialLines(session.working, cube.apply, {
         tier: session.working[cube.apply].tier,
@@ -265,7 +265,7 @@ function getCurrentPotentialLines<TEquipment extends CubeSessionEquipment>(
 ) {
   return {
     tier: working[slot].tier,
-    potentialIds: [...working[slot].potIds],
+    potentialIds: [...working[slot].potentialIds],
   };
 }
 
@@ -279,7 +279,7 @@ function writePotentialLines<TEquipment extends CubeSessionEquipment>(
     [slot]: {
       ...working[slot],
       tier: lines.tier,
-      potIds: [...lines.potentialIds],
+      potentialIds: [...lines.potentialIds],
     },
   } as TEquipment;
 }

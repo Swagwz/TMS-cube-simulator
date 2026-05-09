@@ -26,7 +26,7 @@ export default function AdditionalCubeEnhancer() {
     setLocalData(
       produce((draft) => {
         if (draft) {
-          draft.additionalPot.potIds = newPots;
+          draft.additionalPot.potentialIds = newPots;
           draft.additionalPot.tier = nextRank;
           draft.statistics.counts.additionalPot.additionalCube =
             (draft?.statistics.counts.additionalPot.additionalCube || 0) + 1;
@@ -39,7 +39,7 @@ export default function AdditionalCubeEnhancer() {
     <>
       <DisplayContainer>
         {<RankBanner rank={additionalPot.tier} />}
-        {additionalPot.potIds.map((id, i) => (
+        {additionalPot.potentialIds.map((id, i) => (
           <PotentialLineBadge
             key={`${id}-${i}`}
             text={PotManager.resolvePotential(id, level, subcategory).display}

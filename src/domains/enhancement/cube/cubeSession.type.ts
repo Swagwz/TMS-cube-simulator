@@ -13,7 +13,7 @@ export type PotentialLines = {
 
 export type CubeSessionPotentialGroup = {
   tier: EquipmentRank;
-  potIds: string[];
+  potentialIds: string[];
 };
 
 export type CubeSessionEquipment = {

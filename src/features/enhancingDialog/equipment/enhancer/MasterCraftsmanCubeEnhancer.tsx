@@ -26,7 +26,7 @@ export default function MasterCraftsmanCubeEnhancer() {
     const pots = CubeManager.rollPots("masterCraftsmanCube", nextRank, pools);
     setLocalData(
       produce((draft) => {
-        draft!.mainPot.potIds = pots;
+        draft!.mainPot.potentialIds = pots;
         draft!.mainPot.tier = nextRank;
         draft!.statistics.counts.mainPot.masterCraftsmanCube =
           (draft?.statistics.counts.mainPot.masterCraftsmanCube || 0) + 1;
@@ -38,7 +38,7 @@ export default function MasterCraftsmanCubeEnhancer() {
     <>
       <DisplayContainer>
         {<RankBanner rank={mainPot.tier} />}
-        {mainPot.potIds.map((id, i) => (
+        {mainPot.potentialIds.map((id, i) => (
           <PotentialLineBadge
             key={`${id}-${i}`}
             text={PotManager.resolvePotential(id, level, subcategory).display}

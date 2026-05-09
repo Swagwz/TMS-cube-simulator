@@ -21,7 +21,7 @@ export default function RestoreCubeEnhancer() {
   const { level, mainPot, subcategory } = localData;
   const [after, setAfter] = useState<{
     tier: EquipmentRank;
-    potIds: string[];
+    potentialIds: string[];
   } | null>(null);
   const [lockIndex, setLockIndex] = useState(-1);
 
@@ -34,7 +34,7 @@ export default function RestoreCubeEnhancer() {
   };
 
   // Roll against the provided base potential so before/after state stays stable.
-  const performRoll = (basePot: { tier: EquipmentRank; potIds: string[] }) => {
+  const performRoll = (basePot: { tier: EquipmentRank; potentialIds: string[] }) => {
     const nextRank = CubeManager.rollRankUp("restoreCube", basePot.tier);
 
     let rolledPots: string[];
@@ -42,11 +42,11 @@ export default function RestoreCubeEnhancer() {
       rolledPots = CubeManager.rollPots("restoreCube", nextRank, pools);
       if (lockIndex !== -1) {
         // Preserve the locked line from the base potential.
-        rolledPots.splice(lockIndex, 1, basePot.potIds[lockIndex]);
+        rolledPots.splice(lockIndex, 1, basePot.potentialIds[lockIndex]);
       }
     } while (!PotManager.validateLineRules(rolledPots));
 
-    return { tier: nextRank, potIds: rolledPots };
+    return { tier: nextRank, potentialIds: rolledPots };
   };
 
   const handleRoll = () => {
@@ -92,7 +92,7 @@ export default function RestoreCubeEnhancer() {
           )}
         >
           <RankBanner rank={mainPot.tier} />
-          {mainPot.potIds.map((id, i) => {
+          {mainPot.potentialIds.map((id, i) => {
             const isLocked = lockIndex === i;
             return (
               <div
@@ -135,7 +135,7 @@ export default function RestoreCubeEnhancer() {
         >
           {after && <RankBanner rank={after.tier} />}
           {after &&
-            after.potIds.map((id, i) => (
+            after.potentialIds.map((id, i) => (
               <PotentialLineBadge
                 key={`${id}-${i}`}
                 text={
@@ -150,7 +150,7 @@ export default function RestoreCubeEnhancer() {
       <EquipFooter>
         <CloseBtn disabled={!!after} onClose={handleClose} />
         <Button variant="primary" disabled={isRankUp} onClick={handleRoll}>
-          {!after || after.potIds.length === 0 ? "Roll" : "Reroll"}
+          {!after || after.potentialIds.length === 0 ? "Roll" : "Reroll"}
         </Button>
       </EquipFooter>
     </>

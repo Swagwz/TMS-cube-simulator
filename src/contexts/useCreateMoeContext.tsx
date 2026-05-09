@@ -76,6 +76,6 @@ function createMoeData(moeType: MoeCardSubcategory): MoeData {
   const lines = MoeManager.createRandomPotentials(moeType);
   return {
     subcategory: moeType,
-    potIds: lines,
+    potentialIds: lines,
   };
 }

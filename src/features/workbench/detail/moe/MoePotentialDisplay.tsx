@@ -12,14 +12,14 @@ export default function MoePotentialDisplay() {
     return null;
   }
 
-  const { potIds } = instanceData;
+  const { potentialIds } = instanceData;
 
   const lines = useMemo(() => {
-    return potIds.map((id) => ({
+    return potentialIds.map((id) => ({
       id,
       text: MoeManager.getLine(id),
     }));
-  }, [potIds]);
+  }, [potentialIds]);
 
   return (
     <div className="flex flex-col gap-2">

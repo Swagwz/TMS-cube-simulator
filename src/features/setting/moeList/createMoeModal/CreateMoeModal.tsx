@@ -38,11 +38,11 @@ export default function CreateMoeModal() {
   const handleTypeChange = (value: string) => {
     setMoeData(
       produce((draft) => {
-        const { subcategory, potIds } = createMoeData(
+        const { subcategory, potentialIds } = createMoeData(
           value as MoeCardSubcategory,
         );
         draft.subcategory = subcategory;
-        draft.potIds = potIds;
+        draft.potentialIds = potentialIds;
       }),
     );
   };

@@ -21,11 +21,11 @@ function createEquipment(): TestEquipment {
     level: 200,
     mainPot: {
       tier: "rare",
-      potIds: ["main-before-1", "main-before-2", "main-before-3"],
+      potentialIds: ["main-before-1", "main-before-2", "main-before-3"],
     },
     additionalPot: {
       tier: "rare",
-      potIds: ["add-before-1", "add-before-2", "add-before-3"],
+      potentialIds: ["add-before-1", "add-before-2", "add-before-3"],
     },
     statistics: {
       counts: {
@@ -94,7 +94,7 @@ describe("reduceCubeSession", () => {
 
     expect(result.session.working.mainPot).toEqual({
       tier: "epic",
-      potIds: ["main-after-1", "main-after-2", "main-after-3"],
+      potentialIds: ["main-after-1", "main-after-2", "main-after-3"],
     });
     expect(result.session.working.additionalPot).toEqual(
       session.working.additionalPot,
@@ -125,7 +125,7 @@ describe("reduceCubeSession", () => {
 
     expect(result.session.working.additionalPot).toEqual({
       tier: "unique",
-      potIds: ["add-after-1", "add-after-2", "add-after-3"],
+      potentialIds: ["add-after-1", "add-after-2", "add-after-3"],
     });
     expect(result.session.working.mainPot).toEqual(session.working.mainPot);
     expect(result.session.pendingRoll).toBeNull();
@@ -196,7 +196,7 @@ describe("reduceCubeSession", () => {
 
     expect(result.session.working.mainPot).toEqual({
       tier: "epic",
-      potIds: ["after-1", "after-2", "after-3"],
+      potentialIds: ["after-1", "after-2", "after-3"],
     });
     expect(result.session.pendingRoll).toBeNull();
   });
@@ -274,7 +274,7 @@ describe("reduceCubeSession", () => {
 
     expect(result.session.working.mainPot).toEqual({
       tier: "unique",
-      potIds: ["candidate-4", "candidate-0", "candidate-2"],
+      potentialIds: ["candidate-4", "candidate-0", "candidate-2"],
     });
     expect(result.session.pendingRoll).toBeNull();
   });
@@ -416,7 +416,7 @@ describe("reduceCubeSession", () => {
 
     expect(result.session.working.mainPot).toEqual({
       tier: "rare",
-      potIds: ["main-before-1", "combined-line", "main-before-3"],
+      potentialIds: ["main-before-1", "combined-line", "main-before-3"],
     });
     expect(result.session.pendingRoll).toBeNull();
   });

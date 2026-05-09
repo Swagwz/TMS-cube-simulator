@@ -1,4 +1,4 @@
-﻿import { useMemo } from "react";
+import { useMemo } from "react";
 import {
   Select,
   SelectContent,
@@ -9,9 +9,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useCreateEquipmentContext } from "@/contexts/useCreateEquipmentContext";
-import { PotManager } from "@/domains/potential/potManager";
-import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 import { EquipManager } from "@/domains/equipment/equipManager";
+import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
+import { PotManager } from "@/domains/potential/potManager";
 import type { PotentialRank } from "@/domains/potential/potential.type";
 
 type Props = {
@@ -22,7 +22,7 @@ type Props = {
 export default function LinePotSelect({ index, feature }: Props) {
   const { equipmentData, updatePot } = useCreateEquipmentContext();
 
-  const currPotId = equipmentData[feature].potIds[index];
+  const currPotId = equipmentData[feature].potentialIds[index];
   const {
     level,
     subcategory,
@@ -37,7 +37,7 @@ export default function LinePotSelect({ index, feature }: Props) {
     const generateListItem = (rank: PotentialRank) => ({
       rank,
       name: PotManager.rankToZh(rank),
-      potIds: EquipManager.getPotentialOptions({ ...params, rank }),
+      potentialIds: EquipManager.getPotentialOptions({ ...params, rank }),
     });
 
     return [generateListItem(tier), generateListItem(prevTier)];
@@ -52,10 +52,10 @@ export default function LinePotSelect({ index, feature }: Props) {
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          {groupPotList.map(({ rank, name, potIds }) => (
+          {groupPotList.map(({ rank, name, potentialIds }) => (
             <SelectGroup key={rank}>
               <SelectLabel variant={rank}>{name}</SelectLabel>
-              {potIds.map((id) => {
+              {potentialIds.map((id) => {
                 const resolved = PotManager.resolvePotential(
                   id,
                   level,

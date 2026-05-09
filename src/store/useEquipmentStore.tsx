@@ -1,4 +1,4 @@
-﻿import { create } from "zustand";
+import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
 import { useActiveStore } from "./useActiveStore";
@@ -16,7 +16,7 @@ import type { SoulId } from "@/domains/enhancement/soul/soul.type";
 
 type PotentialGroup = {
   tier: EquipmentRank;
-  potIds: string[];
+  potentialIds: string[];
 };
 
 type EquipmentStatus = {
@@ -154,7 +154,7 @@ export const useEquipmentStore = create<State & Actions>()(
       set((state) => {
         const target = state.instanceMap[id];
         if (target) {
-          target[potType].potIds[index] = newPotId;
+          target[potType].potentialIds[index] = newPotId;
         }
       });
     },

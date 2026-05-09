@@ -10,14 +10,14 @@ export default function PotentialArea() {
     return null;
   }
 
-  const { potIds } = activeItem;
+  const { potentialIds } = activeItem;
 
   const lines = useMemo(() => {
-    return potIds.map((id) => ({
+    return potentialIds.map((id) => ({
       id,
       text: MoeManager.getLine(id),
     }));
-  }, [potIds]);
+  }, [potentialIds]);
 
   return (
     <div className="bg-glass/50 grid justify-center gap-2 rounded-xl p-4">

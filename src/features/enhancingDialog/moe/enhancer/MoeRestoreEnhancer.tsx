@@ -20,7 +20,7 @@ export default function MoeRestoreEnhancer() {
   const { localData, setLocalData, handleClose } = useMoeEnhancingContext();
   const [after, setAfter] = useState<string[] | null>(null);
 
-  const { potIds } = localData;
+  const { potentialIds } = localData;
 
   const handleRoll = useCallback(() => {
     const newPots = MoeManager.rollPots("moeRestore", localData.subcategory);
@@ -58,7 +58,7 @@ export default function MoeRestoreEnhancer() {
       setLocalData(
         produce((draft) => {
           if (draft) {
-            draft.potIds = after;
+            draft.potentialIds = after;
           }
         }),
       );
@@ -76,7 +76,7 @@ export default function MoeRestoreEnhancer() {
             !!after && "hover:bg-glass/50 cursor-pointer transition-all",
           )}
         >
-          {potIds.map((id, i) => (
+          {potentialIds.map((id, i) => (
             <PotentialLineBadge
               key={`${id}-${i}`}
               text={MoeManager.getLine(id)}

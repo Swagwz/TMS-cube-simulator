@@ -29,7 +29,7 @@ export default function MirrorCubeEnhancer() {
     }
     setLocalData(
       produce((draft) => {
-        draft!.mainPot.potIds = pots;
+        draft!.mainPot.potentialIds = pots;
         draft!.mainPot.tier = nextRank;
         draft!.statistics.counts.mainPot.mirrorCube =
           (draft?.statistics.counts.mainPot.mirrorCube || 0) + 1;
@@ -41,7 +41,7 @@ export default function MirrorCubeEnhancer() {
     <>
       <DisplayContainer>
         {<RankBanner rank={mainPot.tier} />}
-        {mainPot.potIds.map((id, i) => (
+        {mainPot.potentialIds.map((id, i) => (
           <PotentialLineBadge
             key={`${id}-${i}`}
             text={PotManager.resolvePotential(id, level, subcategory).display}
