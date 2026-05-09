@@ -5,6 +5,7 @@ import type {
   EquipmentRank,
   PotentialRank,
 } from "@/domains/potential/potential.type";
+import type { RNG } from "@/domains/random/rng.type";
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
 import type { CubeDefinition, CubeId } from "./cube.type";
 import { getCubeDefinition } from "./cube.registry";
@@ -33,13 +34,14 @@ export function rollRankUp(params: {
   cube: CubeDefinition;
   currentTier: EquipmentRank;
   rankUpMultiplier: number;
+  rng: RNG;
 }) {
   const currentTierIndex = PotManager.getIndex(params.currentTier);
   const finalWeights = getScaledRankUpWeights(params);
 
   if (finalWeights.length === 0) return params.currentTier;
 
-  const selectedIndex = rollWeightedIndex(finalWeights);
+  const selectedIndex = rollWeightedIndex(finalWeights, params.rng);
 
   return PotManager.indexToRank(
     currentTierIndex + selectedIndex,
@@ -61,6 +63,7 @@ export function getShinyCeiling(tier: EquipmentRank) {
 export function rollShinyRankUp(
   currentTier: EquipmentRank,
   currentCount: number,
+  rng: RNG,
 ) {
   const cube = getCubeDefinition("shinyAdditionalCube");
 
@@ -80,7 +83,7 @@ export function rollShinyRankUp(
 
   const baseProb = rankUpData[0];
   const currentProb = baseProb + currentCount * incr;
-  const isSuccess = Math.random() * 100 < currentProb;
+  const isSuccess = rng.next() * 100 < currentProb;
 
   if (isSuccess) {
     const currentIndex = PotManager.getIndex(currentTier);
@@ -131,22 +134,23 @@ export function rollPotentialLines(params: {
   cube: CubeDefinition;
   tier: EquipmentRank;
   pools: PotentialPoolMap;
+  rng: RNG;
 }) {
   const lineRank = params.cube.lineRank[params.tier];
   if (!lineRank) throw new Error("Invalid tier");
 
   const lineRankArr = lineRank.map((probArr) => {
-    const isPrime = rollWeightedIndex(probArr) === 0;
+    const isPrime = rollWeightedIndex(probArr, params.rng) === 0;
     return isPrime ? params.tier : PotManager.getPrev(params.tier);
   });
 
-  let potentialIds = rollPotentialIds(lineRankArr, params.pools);
+  let potentialIds = rollPotentialIds(lineRankArr, params.pools, params.rng);
 
   while (
     !PotManager.validateLineRules(potentialIds) &&
     params.cube.id !== "mirrorCube"
   ) {
-    potentialIds = rollPotentialIds(lineRankArr, params.pools);
+    potentialIds = rollPotentialIds(lineRankArr, params.pools, params.rng);
   }
 
   return potentialIds;
@@ -155,10 +159,14 @@ export function rollPotentialLines(params: {
 function rollPotentialIds(
   lineRanks: PotentialRank[],
   pools: PotentialPoolMap,
+  rng: RNG,
 ) {
   return lineRanks.map((rank) => {
     const pool = pools[rank];
-    const rolledIndex = rollWeightedIndex(pool.map((p) => p.weight));
+    const rolledIndex = rollWeightedIndex(
+      pool.map((p) => p.weight),
+      rng,
+    );
     return pool[rolledIndex].id;
   });
 }

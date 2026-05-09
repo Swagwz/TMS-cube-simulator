@@ -1,14 +1,25 @@
+import type {
+  EquipmentPotentialSlot,
+  EquipmentSubcategory,
+} from "@/domains/equipment/equipment.type";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
+import type { RNG } from "@/domains/random/rng.type";
 import type { CubeId } from "./cube.type";
-
-export type RNG = {
-  next: () => number;
-};
 
 export type PotentialLines = {
   tier: EquipmentRank;
   potentialIds: string[];
 };
+
+export type CubeSessionPotentialGroup = {
+  tier: EquipmentRank;
+  potIds: string[];
+};
+
+export type CubeSessionEquipment = {
+  subcategory: EquipmentSubcategory;
+  level: number;
+} & Record<EquipmentPotentialSlot, CubeSessionPotentialGroup>;
 
 export type BaseEquipmentSession<TEquipment> = {
   base: TEquipment;
@@ -60,6 +71,7 @@ export type CombineCubeRollOutput =
 export type CubeRollInput =
   | {
       flow: "direct";
+      rankUpMultiplier?: number;
     }
   | {
       flow: "restore";
@@ -90,7 +102,7 @@ export type CubeApplyDecision =
       applyRolledLine: boolean;
     };
 
-export type CubeSessionCommand<TEquipment = unknown> =
+export type CubeSessionCommand =
   | {
       type: "roll";
       input?: CubeRollInput;
@@ -101,10 +113,6 @@ export type CubeSessionCommand<TEquipment = unknown> =
     }
   | {
       type: "discardPendingRoll";
-    }
-  | {
-      type: "replaceWorking";
-      working: TEquipment;
     };
 
 export type CubeSessionEvent<TEquipment = unknown> =

@@ -5,6 +5,7 @@ import { MOE_CUBE_METADATA_MAP } from "./moe.config";
 import type { MoeCubeId } from "./moe.type";
 import formatTemplate from "@/utils/formatTemplate";
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
+import { productionRng } from "@/domains/random/productionRng";
 import type { StatusField } from "@/domains/potential/potential.type";
 import { STATUS_FIELD_MAP } from "@/domains/potential/potential.config";
 
@@ -101,7 +102,7 @@ export const MoeManager = {
 
     const rst = [];
     for (let i = 0; i < 3; i++) {
-      const rolledIndex = rollWeightedIndex(weights);
+      const rolledIndex = rollWeightedIndex(weights, productionRng);
       rst.push(potPool[rolledIndex].id);
     }
     return rst;

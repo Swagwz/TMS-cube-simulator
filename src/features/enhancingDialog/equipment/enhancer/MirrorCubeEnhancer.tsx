@@ -2,6 +2,7 @@ import { produce } from "immer";
 import { cn } from "@/lib/utils";
 
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
+import { productionRng } from "@/domains/random/productionRng";
 import { PotManager } from "@/domains/potential/potManager";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 
@@ -22,7 +23,7 @@ export default function MirrorCubeEnhancer() {
   const handleRoll = () => {
     const nextRank = CubeManager.rollRankUp("mirrorCube", mainPot.tier);
     const pots = CubeManager.rollPots("mirrorCube", nextRank, pools);
-    const hasMirror = rollWeightedIndex([20, 80]) === 0;
+    const hasMirror = rollWeightedIndex([20, 80], productionRng) === 0;
     if (hasMirror) {
       pots[1] = pots[0];
     }

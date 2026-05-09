@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 import { PotManager } from "@/domains/potential/potManager";
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
+import { productionRng } from "@/domains/random/productionRng";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 
 import RankBanner from "@/components/potential/RankBanner";
@@ -31,7 +32,7 @@ export default function CombineAdditionalCubeEnhancer() {
           1;
       }),
     );
-    return rollWeightedIndex([1, 1, 1]);
+    return rollWeightedIndex([1, 1, 1], productionRng);
   };
 
   const handleRollSlot = () => {

@@ -1,4 +1,5 @@
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
+import { productionRng } from "@/domains/random/productionRng";
 import { SOUL_POTENTIAL_ID_MAP, SOUL_POTENTIAL_SOURCE } from "./soul.data";
 import { SOUL_METADATA_MAP } from "./soul.config";
 import formatTemplate from "@/utils/formatTemplate";
@@ -41,7 +42,10 @@ export const SoulManager = {
     }));
   },
   rollPot(pool: { id: string; weight: number }[]) {
-    const rstIndex = rollWeightedIndex(pool.map(({ weight }) => weight));
+    const rstIndex = rollWeightedIndex(
+      pool.map(({ weight }) => weight),
+      productionRng,
+    );
     return pool[rstIndex].id;
   },
 };

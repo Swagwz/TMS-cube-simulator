@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { produce } from "immer";
 
 import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
+import { productionRng } from "@/domains/random/productionRng";
 import { PotManager } from "@/domains/potential/potManager";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 
@@ -30,7 +31,7 @@ export default function CombineCubeEnhancer() {
           (draft?.statistics.counts.mainPot.combineCube || 0) + 1;
       }),
     );
-    return rollWeightedIndex([1, 1, 1]);
+    return rollWeightedIndex([1, 1, 1], productionRng);
   };
 
   const handleRollSlot = () => {

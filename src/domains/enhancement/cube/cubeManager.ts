@@ -4,6 +4,7 @@ import type {
   EquipmentRank,
   PotentialRank,
 } from "@/domains/potential/potential.type";
+import { productionRng } from "@/domains/random/productionRng";
 import { useAccountStore } from "@/store/useAccountStore";
 import {
   getApplicableCubeDefinitions,
@@ -63,13 +64,14 @@ export const CubeManager = {
       cube: this.getItem(cubeId),
       currentTier: currTier,
       rankUpMultiplier: useAccountStore.getState().rankUpMultiplier,
+      rng: productionRng,
     });
   },
   getShinyCeiling(tier: EquipmentRank) {
     return getShinyCeiling(tier);
   },
   rollShinyRankUp(currTier: EquipmentRank, currentCount: number) {
-    return rollShinyRankUp(currTier, currentCount);
+    return rollShinyRankUp(currTier, currentCount, productionRng);
   },
   /**
    * 取得指定方塊與裝備狀態下的潛能池 (所有階級)
@@ -104,6 +106,7 @@ export const CubeManager = {
       cube: this.getItem(cubeId),
       tier,
       pools,
+      rng: productionRng,
     });
   },
 };
