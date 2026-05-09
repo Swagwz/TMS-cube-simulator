@@ -1,34 +1,42 @@
 import { useState } from "react";
 import type {
-  EquipmentApplicableEhmId,
+  EquipmentEnhancementItemId,
   EquipmentFeature,
 } from "@/domains/equipment/equipment.type";
-import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
 import useActiveItem from "@/hooks/useActiveItem";
 import PotentialArea from "../PotentialArea";
 import EquipAvailableEhmList from "../../availableEhmList/EquipAvailableEhmList";
 import InfoPopover from "@/components/InfoPopover";
 import EquipEnhancingDialog from "@/features/enhancingDialog/equipment/EquipEnhancingDialog";
+import { SoulManager } from "@/domains/enhancement/soul/soulManager";
+import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
+import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 
 type Props = {
   feature: EquipmentFeature;
 };
 
 export default function PotentialTab({ feature }: Props) {
-  const [selected, setSelected] = useState<EquipmentApplicableEhmId | null>(
+  const [selected, setSelected] = useState<EquipmentEnhancementItemId | null>(
     null,
   );
   const instanceData = useActiveItem();
 
   const closeModal = () => setSelected(null);
 
-  const toggleSelected = (id: EquipmentApplicableEhmId) => {
+  const toggleSelected = (id: EquipmentEnhancementItemId) => {
     setSelected(id === selected ? null : id);
   };
 
   if (!instanceData || instanceData.entity !== "equipment") {
     return null;
   }
+
+  const selectedItem = selected
+    ? selected === "wuGongJewel"
+      ? SoulManager.getItem(selected)
+      : CubeManager.getCubeItem(selected as CubeId)
+    : null;
 
   return (
     <>
@@ -38,15 +46,15 @@ export default function PotentialTab({ feature }: Props) {
 
         {/* selected name display */}
         <div className="bg-glass-light rounded-xl p-2 text-center">
-          {selected ? (
+          {selectedItem ? (
             <p className="flex items-center justify-center">
-              {EnhancementManager.getItem(selected).name}
+              {selectedItem.name}
               <InfoPopover>
-                <p>{EnhancementManager.getItem(selected).description}</p>
+                <p>{selectedItem.description}</p>
               </InfoPopover>
             </p>
           ) : (
-            <p>尚未選取</p>
+            <p>尚未?��?</p>
           )}
         </div>
 
@@ -57,7 +65,7 @@ export default function PotentialTab({ feature }: Props) {
           onSelect={toggleSelected}
         />
       </div>
-      <EquipEnhancingDialog selectedEhmId={selected} closeModal={closeModal} />
+      <EquipEnhancingDialog selectedItemId={selected} closeModal={closeModal} />
     </>
   );
 }

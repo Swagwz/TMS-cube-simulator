@@ -24,7 +24,8 @@ export default function MoeAvailableEhmList({ selectedId, onSelect }: Props) {
       {MOE_CUBE_LIST.map((Ehm) => (
         <EhmCell
           key={Ehm.id}
-          item={Ehm}
+          name={Ehm.name}
+          imagePath={Ehm.imagePath}
           count={countMap[Ehm.id] || 0}
           onClick={() => onSelect(Ehm.id)}
           className={cn(

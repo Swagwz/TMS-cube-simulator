@@ -1,13 +1,13 @@
-import type { EhmSystemType } from "@/domains/enhancement/enhancement.type";
+import type { WorkbenchEntityType } from "@/domains/enhancement/enhancement.type";
 import { create } from "zustand";
 
 type State = {
   targetId: string | null;
-  targetType: EhmSystemType | null;
+  targetType: WorkbenchEntityType | null;
 };
 
 type Actions = {
-  openDeleteDialog: (id: string, type: EhmSystemType) => void;
+  openDeleteDialog: (id: string, type: WorkbenchEntityType) => void;
   closeDeleteDialog: () => void;
 };
 

@@ -28,8 +28,8 @@ export default function HexaCubeEnhancer() {
     setLocalData(
       produce((draft) => {
         draft!.mainPot.tier = nextRank;
-        draft!.statistics.counts.hexaCube =
-          (draft?.statistics.counts.hexaCube || 0) + 1;
+        draft!.statistics.counts.mainPot.hexaCube =
+          (draft?.statistics.counts.mainPot.hexaCube || 0) + 1;
       }),
     );
     setHexaPots(rolledPots);
@@ -39,12 +39,12 @@ export default function HexaCubeEnhancer() {
   const toggleSelect = (id: string, i: number) => {
     setSelectedPots(
       produce((draft) => {
-        // 重複選中->刪除
+        // ?��??�中->?�除
         if (draft.some((selected) => selected.index === i)) {
           draft = draft.filter((selected) => selected.index !== i);
           return draft;
         }
-        // 已滿3個
+        // 已滿3??
         if (draft.length === 3) return draft;
         else draft.push({ id, index: i });
       }),
@@ -96,11 +96,11 @@ export default function HexaCubeEnhancer() {
         <CloseBtn disabled={!!hexaPots.length} onClose={handleClose} />
         {selectedPots.length === 3 ? (
           <Button variant="primary" onClick={handleConfirm}>
-            確定
+            確�?
           </Button>
         ) : (
           <Button variant="primary" onClick={handleRoll}>
-            {hexaPots.length === 0 ? "開始" : "再一次"}
+            {hexaPots.length === 0 ? "Roll" : "Reroll"}
           </Button>
         )}
       </EquipFooter>

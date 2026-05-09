@@ -2,19 +2,24 @@ import { useMemo } from "react";
 import { cn } from "@/lib/utils";
 import EhmGrid from "./EhmGrid";
 import EhmCell from "./EhmCell";
-import type { EhmMetadata } from "@/domains/enhancement/enhancement.type";
 import useActiveItem from "@/hooks/useActiveItem";
 import type {
-  EquipmentApplicableEhmId,
+  EquipmentEnhancementItemId,
   EquipmentFeature,
 } from "@/domains/equipment/equipment.type";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import { SOUL_LIST } from "@/domains/enhancement/soul/soul.config";
+import type {
+  AdditionalCubeId,
+  CubeDefinition,
+  MainCubeId,
+} from "@/domains/enhancement/cube/cube.type";
+import type { SoulItem } from "@/domains/enhancement/soul/soul.type";
 
 type AvailableCubesListProps = {
   feature: EquipmentFeature;
-  selectedId: EquipmentApplicableEhmId | null;
-  onSelect: (id: EquipmentApplicableEhmId) => void;
+  selectedId: EquipmentEnhancementItemId | null;
+  onSelect: (id: EquipmentEnhancementItemId) => void;
 };
 
 export default function EquipAvailableEhmList({
@@ -24,11 +29,11 @@ export default function EquipAvailableEhmList({
 }: AvailableCubesListProps) {
   const activeItem = useActiveItem();
 
-  if (!activeItem || activeItem.entity !== "equipment") {
-    return null;
-  }
+  const availableList: (CubeDefinition | SoulItem)[] = useMemo(() => {
+    if (!activeItem || activeItem.entity !== "equipment") {
+      return [];
+    }
 
-  const availableList: EhmMetadata[] = useMemo(() => {
     switch (feature) {
       case "mainPot":
         return CubeManager.getApplicableCubes(
@@ -45,16 +50,34 @@ export default function EquipAvailableEhmList({
     }
   }, [feature, activeItem]);
 
-  const countMap = activeItem.statistics.counts as Record<string, number>;
+  if (!activeItem || activeItem.entity !== "equipment") {
+    return null;
+  }
+
+  const getCount = (item: CubeDefinition | SoulItem) => {
+    switch (item.apply) {
+      case "mainPot":
+        return activeItem.statistics.counts.mainPot[item.id as MainCubeId] || 0;
+      case "additionalPot":
+        return (
+          activeItem.statistics.counts.additionalPot[
+            item.id as AdditionalCubeId
+          ] || 0
+        );
+      case "soul":
+        return activeItem.statistics.counts.soul[item.id] || 0;
+    }
+  };
 
   return (
     <EhmGrid>
       {availableList.map((Ehm) => (
         <EhmCell
           key={Ehm.id}
-          item={Ehm}
-          count={countMap[Ehm.id] || 0}
-          onClick={() => onSelect(Ehm.id as EquipmentApplicableEhmId)}
+          name={Ehm.name}
+          imagePath={Ehm.imagePath}
+          count={getCount(Ehm)}
+          onClick={() => onSelect(Ehm.id)}
           className={cn(
             "cursor-pointer rounded-md border-2 border-transparent p-1 transition-all",
           )}

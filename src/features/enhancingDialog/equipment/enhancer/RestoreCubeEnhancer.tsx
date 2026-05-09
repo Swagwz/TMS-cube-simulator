@@ -28,12 +28,12 @@ export default function RestoreCubeEnhancer() {
   const isRankUp = Boolean(after && after.tier !== mainPot.tier);
 
   const toggleLock = (index: number) => {
-    // 還在選擇潛能時,不能改變固定潛能
+    // ?�在?��?潛能??不能?��??��?潛能
     if (after) return;
     setLockIndex((prev) => (prev === index ? -1 : index));
   };
 
-  // 抽離計算邏輯：傳入 "當前潛能" (Base)，回傳 "洗完的結果"
+  // ?�離計�??�輯：傳??"?��?潛能" (Base)，�???"洗�??��???
   const performRoll = (basePot: { tier: EquipmentRank; potIds: string[] }) => {
     const nextRank = CubeManager.rollRankUp("restoreCube", basePot.tier);
 
@@ -41,7 +41,7 @@ export default function RestoreCubeEnhancer() {
     do {
       rolledPots = CubeManager.rollPots("restoreCube", nextRank, pools);
       if (lockIndex !== -1) {
-        // 使用傳入的 basePot 來鎖定潛能，而不是依賴外部 state
+        // 使用?�入??basePot 來�?定�??��??��??��?賴�???state
         rolledPots.splice(lockIndex, 1, basePot.potIds[lockIndex]);
       }
     } while (!PotManager.validateLineRules(rolledPots));
@@ -50,18 +50,18 @@ export default function RestoreCubeEnhancer() {
   };
 
   const handleRoll = () => {
-    // 第一次洗，Base 是目前的 mainPot
+    // 第�?次�?，Base ?�目?��? mainPot
     const result = performRoll(mainPot);
     setAfter(result);
 
-    // 增加方塊數
+    // 增�??��???
     setLocalData(
       produce((draft) => {
-        draft!.statistics.counts.restoreCube =
-          (draft?.statistics.counts.restoreCube || 0) + 1;
+        draft!.statistics.counts.mainPot.restoreCube =
+          (draft?.statistics.counts.mainPot.restoreCube || 0) + 1;
         if (lockIndex !== -1) {
-          draft!.statistics.counts.fixPotential =
-            (draft?.statistics.counts.fixPotential || 0) + 1;
+          draft!.statistics.counts.mainPot.fixPotential =
+            (draft?.statistics.counts.mainPot.fixPotential || 0) + 1;
         }
       }),
     );
@@ -94,7 +94,7 @@ export default function RestoreCubeEnhancer() {
         >
           <RankBanner rank={mainPot.tier} />
           {mainPot.potIds.map((id, i) => {
-            const isLocked = lockIndex === i; // 計算鎖定狀態
+            const isLocked = lockIndex === i; // 計�??��??�??
             return (
               <div
                 key={`${id}-${i}`}
@@ -102,7 +102,7 @@ export default function RestoreCubeEnhancer() {
                   "flex cursor-pointer flex-row items-center justify-between rounded p-1",
                   isLocked && "bg-accent-main",
                 )}
-                onClick={() => toggleLock(i)} // 保持原有的 onClick 邏輯
+                onClick={() => toggleLock(i)} // 保�??��???onClick ?�輯
               >
                 <PotentialLineBadge
                   text={
@@ -151,7 +151,7 @@ export default function RestoreCubeEnhancer() {
       <EquipFooter>
         <CloseBtn disabled={!!after} onClose={handleClose} />
         <Button variant="primary" disabled={isRankUp} onClick={handleRoll}>
-          {!after || after.potIds.length === 0 ? "開始" : "再一次"}
+          {!after || after.potIds.length === 0 ? "Roll" : "Reroll"}
         </Button>
       </EquipFooter>
     </>

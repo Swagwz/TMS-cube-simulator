@@ -28,8 +28,8 @@ export default function AdditionalCubeEnhancer() {
         if (draft) {
           draft.additionalPot.potIds = newPots;
           draft.additionalPot.tier = nextRank;
-          draft.statistics.counts.additionalCube =
-            (draft?.statistics.counts.additionalCube || 0) + 1;
+          draft.statistics.counts.additionalPot.additionalCube =
+            (draft?.statistics.counts.additionalPot.additionalCube || 0) + 1;
         }
       }),
     );
@@ -51,7 +51,7 @@ export default function AdditionalCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          開始
+          ?��?
         </Button>
       </EquipFooter>
     </>

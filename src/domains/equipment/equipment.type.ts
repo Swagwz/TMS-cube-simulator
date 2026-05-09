@@ -1,4 +1,4 @@
-import type { CubeId } from "../enhancement/cube/cube.type";
+﻿import type { CubeId } from "../enhancement/cube/cube.type";
 import type { SoulId } from "../enhancement/soul/soul.type";
 
 export type EquipmentMetadata = {
@@ -38,9 +38,9 @@ export type EquipmentCategory = "weapon" | "armor" | "accessory" | "other";
 
 export type EquipmentFeature = "mainPot" | "additionalPot" | "soul";
 
-export type PotentialFeature = Extract<
+export type EquipmentPotentialSlot = Extract<
   EquipmentFeature,
   "mainPot" | "additionalPot"
 >;
 
-export type EquipmentApplicableEhmId = CubeId | SoulId;
+export type EquipmentEnhancementItemId = CubeId | SoulId;

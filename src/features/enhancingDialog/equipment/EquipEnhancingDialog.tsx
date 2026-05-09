@@ -12,22 +12,21 @@ import {
   type EquipmentInstance,
 } from "@/store/useEquipmentStore";
 import { EnhancingContext } from "@/contexts/useEnhancingContext";
-import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
 import { useActiveStore } from "@/store/useActiveStore";
 import Enhancer from "./Enhancer";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
-import type { EquipmentApplicableEhmId } from "@/domains/equipment/equipment.type";
+import type { EquipmentEnhancementItemId } from "@/domains/equipment/equipment.type";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import RankUpMultiplier from "./RankUpMultiplier";
 
 type Props = {
-  selectedEhmId: EquipmentApplicableEhmId | null;
+  selectedItemId: EquipmentEnhancementItemId | null;
   closeModal: () => void;
 };
 
 export default function EquipEnhancingDialog({
-  selectedEhmId,
+  selectedItemId,
   closeModal,
 }: Props) {
   const [localData, setLocalData] = useState<EquipmentInstance | null>(null);
@@ -36,47 +35,52 @@ export default function EquipEnhancingDialog({
     s.activeState.activeType === "equipment" ? s.activeState.id : null,
   );
 
-  const title = selectedEhmId
-    ? EnhancementManager.getItem(selectedEhmId).name
+  const title = selectedItemId
+    ? selectedItemId === "wuGongJewel"
+      ? SoulManager.getItem(selectedItemId).name
+      : CubeManager.getCubeItem(selectedItemId as CubeId).name
     : "";
 
   const poolData = useMemo(() => {
-    if (!selectedEhmId || !localData) return undefined;
+    if (!selectedItemId || !localData) return undefined;
 
-    const meta = EnhancementManager.getItem(selectedEhmId);
     const { subcategory, level } = localData;
 
-    switch (meta.apply) {
+    if (selectedItemId === "wuGongJewel") {
+      return {
+        feature: "soul" as const,
+        pools: SoulManager.getPotPool(),
+      };
+    }
+
+    const cube = CubeManager.getCubeItem(selectedItemId as CubeId);
+
+    switch (cube.apply) {
       case "mainPot":
       case "additionalPot":
         return {
-          feature: meta.apply,
-          pools: CubeManager.getCubePotentialPools(selectedEhmId as CubeId, {
+          feature: cube.apply,
+          pools: CubeManager.getCubePotentialPools(selectedItemId as CubeId, {
             subcategory,
             level,
           }),
         };
-      case "soul":
-        return {
-          feature: "soul" as const,
-          pools: SoulManager.getPotPool(),
-        };
       default:
         return undefined;
     }
-  }, [selectedEhmId, localData?.level, localData?.subcategory]);
+  }, [selectedItemId, localData?.level, localData?.subcategory]);
 
-  // 開啟時,複製一份data
+  // ?��???複製一份data
   useEffect(() => {
-    // 有選取強化道具以及裝備的情況下 才有localData
-    if (selectedEhmId && equipId) {
+    // ?�選?�強?��??�以?��??��??��?�??��?localData
+    if (selectedItemId && equipId) {
       setLocalData(
         structuredClone(useEquipmentStore.getState().instanceMap[equipId]),
       );
     }
-  }, [selectedEhmId, equipId]);
+  }, [selectedItemId, equipId]);
 
-  const open = !!(selectedEhmId && equipId && localData && poolData);
+  const open = !!(selectedItemId && equipId && localData && poolData);
 
   if (!open) return null;
 
@@ -102,7 +106,7 @@ export default function EquipEnhancingDialog({
           value={{
             localData,
             setLocalData,
-            selectedEhmId,
+            selectedItemId,
             closeModal,
             poolData,
           }}

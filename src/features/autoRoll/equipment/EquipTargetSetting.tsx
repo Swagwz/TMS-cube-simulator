@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { produce } from "immer";
 import type { EquipmentAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
 
@@ -16,11 +16,12 @@ import type {
 import { POTENTIAL_RANK_LIST } from "@/domains/potential/potential.config";
 import { PotentialAutoRoll } from "@/domains/autoRoll/equipAutoRollManager";
 import { useEnhancingContext } from "@/contexts/useEnhancingContext";
-import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
-import type { PotentialFeature } from "@/domains/equipment/equipment.type";
+import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 import { PotManager } from "@/domains/potential/potManager";
 import NumberInput from "@/components/form/NumberInput";
 import TargetAccordion from "../TargetAccordion";
+import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
+import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 
 type Props = {
   targets: EquipmentAutoRollTarget[];
@@ -33,10 +34,10 @@ export default function EquipTargetSetting({
   setTargets,
   variant = "glass",
 }: Props) {
-  const { localData, selectedEhmId } = useEnhancingContext();
+  const { localData, selectedItemId } = useEnhancingContext();
   const { subcategory, level } = localData;
-  const feature = EnhancementManager.getItem(selectedEhmId)
-    .apply as PotentialFeature;
+  const feature = CubeManager.getCubeItem(selectedItemId as CubeId)
+    .apply as EquipmentPotentialSlot;
   const tier = localData[feature].tier;
 
   const handleDelete = (index: number) => {
@@ -71,7 +72,7 @@ export default function EquipTargetSetting({
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className="text-glass-foreground w-16 shrink-0 text-xs font-medium">
-                目標階級
+                ?��??��?
               </span>
               <Select
                 value={targetSet.rank ?? "any"}
@@ -85,10 +86,10 @@ export default function EquipTargetSetting({
                 }
               >
                 <SelectTrigger className="h-8 w-full text-xs">
-                  <SelectValue placeholder="不限階級" />
+                  <SelectValue placeholder="不�??��?" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="any">不限階級</SelectItem>
+                  <SelectItem value="any">不�??��?</SelectItem>
                   {POTENTIAL_RANK_LIST.filter((r) => r.rank !== "normal").map(
                     (r) => (
                       <SelectItem key={r.rank} value={r.rank}>
@@ -117,10 +118,10 @@ export default function EquipTargetSetting({
                   }
                 >
                   <SelectTrigger className="h-8 w-full text-xs">
-                    <SelectValue placeholder="任意潛能" />
+                    <SelectValue placeholder="任�?潛能" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="any">未設定</SelectItem>
+                    <SelectItem value="any">Any</SelectItem>
                     {options.map((opt) => (
                       <SelectItem key={opt.field} value={opt.field}>
                         {opt.label}

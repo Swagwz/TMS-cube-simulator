@@ -1,4 +1,4 @@
-import type { EhmSystemType } from "@/domains/enhancement/enhancement.type";
+import type { WorkbenchEntityType } from "@/domains/enhancement/enhancement.type";
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
@@ -12,7 +12,7 @@ type State = {
 };
 
 type Actions = {
-  toggleActive: (id: string, activeType: EhmSystemType) => void;
+  toggleActive: (id: string, activeType: WorkbenchEntityType) => void;
   clear: () => void;
   clearIfMatches: (id: string) => void;
 };

@@ -21,8 +21,8 @@ export default function WuGongJewelEnhancer() {
     setLocalData(
       produce((draft) => {
         draft!.soul = rolledPot;
-        draft!.statistics.counts.wuGongJewel =
-          (draft?.statistics.counts.wuGongJewel || 0) + 1;
+        draft!.statistics.counts.soul.wuGongJewel =
+          (draft?.statistics.counts.soul.wuGongJewel || 0) + 1;
       }),
     );
   };
@@ -36,13 +36,13 @@ export default function WuGongJewelEnhancer() {
             text={SoulManager.getLine(soul, level)}
           />
         ) : (
-          <p className="text-center">尚未設定</p>
+          <p className="text-center">尚未設�?</p>
         )}
       </DisplayContainer>
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          開始
+          ?��?
         </Button>
       </EquipFooter>
     </>

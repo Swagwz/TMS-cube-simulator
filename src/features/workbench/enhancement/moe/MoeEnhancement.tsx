@@ -2,10 +2,10 @@ import { useCallback, useState } from "react";
 import useActiveItem from "@/hooks/useActiveItem";
 import PotentialArea from "./PotentialArea";
 import type { MoeCubeId } from "@/domains/enhancement/moe/moe.type";
-import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
 import InfoPopover from "@/components/InfoPopover";
 import MoeAvailableEhmList from "../availableEhmList/MoeAvailableEhmList";
 import MoeEnhancingDialog from "@/features/enhancingDialog/moe/MoeEnhancingDialog";
+import { MoeManager } from "@/domains/enhancement/moe/moeManager";
 
 export default function MoeEnhancement() {
   const [selected, setSelected] = useState<MoeCubeId | null>(null);
@@ -23,6 +23,10 @@ export default function MoeEnhancement() {
     return null;
   }
 
+  const selectedItem = selected
+    ? MoeManager.getMoeCubeMetadata(selected)
+    : null;
+
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -31,15 +35,15 @@ export default function MoeEnhancement() {
 
         {/* selected name display */}
         <div className="bg-glass-light rounded-xl p-2 text-center">
-          {selected ? (
+          {selectedItem ? (
             <p className="flex items-center justify-center">
-              {EnhancementManager.getItem(selected).name}
+              {selectedItem.name}
               <InfoPopover>
-                <p>{EnhancementManager.getItem(selected).description}</p>
+                <p>{selectedItem.description}</p>
               </InfoPopover>
             </p>
           ) : (
-            <p>尚未選取</p>
+            <p>尚未?��?</p>
           )}
         </div>
 

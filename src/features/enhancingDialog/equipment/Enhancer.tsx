@@ -15,10 +15,10 @@ import WuGongJewelEnhancer from "./enhancer/WuGongJewelEnhancer";
 import { useEnhancingContext } from "@/contexts/useEnhancingContext";
 
 export default function Enhancer() {
-  const { selectedEhmId } = useEnhancingContext();
+  const { selectedItemId } = useEnhancingContext();
 
   return useMemo(() => {
-    switch (selectedEhmId) {
+    switch (selectedItemId) {
       case "restoreCube":
         return <RestoreCubeEnhancer />;
       case "hexaCube":
@@ -46,5 +46,5 @@ export default function Enhancer() {
       case "wuGongJewel":
         return <WuGongJewelEnhancer />;
     }
-  }, [selectedEhmId]);
+  }, [selectedItemId]);
 }

@@ -28,8 +28,8 @@ export default function MasterCraftsmanCubeEnhancer() {
       produce((draft) => {
         draft!.mainPot.potIds = pots;
         draft!.mainPot.tier = nextRank;
-        draft!.statistics.counts.masterCraftsmanCube =
-          (draft?.statistics.counts.masterCraftsmanCube || 0) + 1;
+        draft!.statistics.counts.mainPot.masterCraftsmanCube =
+          (draft?.statistics.counts.mainPot.masterCraftsmanCube || 0) + 1;
       }),
     );
   };
@@ -50,7 +50,7 @@ export default function MasterCraftsmanCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          開始
+          ?��?
         </Button>
       </EquipFooter>
     </>

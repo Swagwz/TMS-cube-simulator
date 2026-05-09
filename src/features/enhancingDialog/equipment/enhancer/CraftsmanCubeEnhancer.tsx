@@ -25,13 +25,13 @@ export default function CraftsmanCubeEnhancer() {
       produce((draft) => {
         draft!.mainPot.potIds = pots;
         draft!.mainPot.tier = nextRank;
-        draft!.statistics.counts.craftsmanCube =
-          (draft?.statistics.counts.craftsmanCube || 0) + 1;
+        draft!.statistics.counts.mainPot.craftsmanCube =
+          (draft?.statistics.counts.mainPot.craftsmanCube || 0) + 1;
       }),
     );
   };
 
-  // 最高套用至罕見潛能
+  // ?�高�??�至罕�?潛能
   if (mainPot.tier === "legendary") return null;
 
   return (
@@ -51,7 +51,7 @@ export default function CraftsmanCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          開始
+          ?��?
         </Button>
       </EquipFooter>
     </>

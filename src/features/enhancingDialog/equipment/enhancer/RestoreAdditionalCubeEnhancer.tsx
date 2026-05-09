@@ -26,7 +26,7 @@ export default function RestoreAdditionalCubeEnhancer() {
 
   const isRankUp = Boolean(after && after.tier !== additionalPot.tier);
 
-  // 抽離計算邏輯：傳入 "當前潛能" (Base)，回傳 "洗完的結果"
+  // ?�離計�??�輯：傳??"?��?潛能" (Base)，�???"洗�??��???
   const performRoll = (basePot: { tier: EquipmentRank; potIds: string[] }) => {
     const nextRank = CubeManager.rollRankUp(
       "restoreAdditionalCube",
@@ -42,15 +42,16 @@ export default function RestoreAdditionalCubeEnhancer() {
   };
 
   const handleRoll = () => {
-    // 第一次洗，Base 是目前的 additionalPot
+    // 第�?次�?，Base ?�目?��? additionalPot
     const result = performRoll(additionalPot);
     setAfter(result);
 
-    // 增加方塊數
+    // 增�??��???
     setLocalData(
       produce((draft) => {
-        draft!.statistics.counts.restoreAdditionalCube =
-          (draft?.statistics.counts.restoreAdditionalCube || 0) + 1;
+        draft!.statistics.counts.additionalPot.restoreAdditionalCube =
+          (draft?.statistics.counts.additionalPot.restoreAdditionalCube || 0) +
+          1;
       }),
     );
   };
@@ -121,7 +122,7 @@ export default function RestoreAdditionalCubeEnhancer() {
       <EquipFooter>
         <CloseBtn disabled={!!after} onClose={handleClose} />
         <Button variant="primary" disabled={isRankUp} onClick={handleRoll}>
-          {!after || after.potIds.length === 0 ? "開始" : "再一次"}
+          {!after || after.potIds.length === 0 ? "Roll" : "Reroll"}
         </Button>
       </EquipFooter>
     </>

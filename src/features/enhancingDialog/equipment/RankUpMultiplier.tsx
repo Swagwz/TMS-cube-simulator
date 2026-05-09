@@ -28,7 +28,7 @@ export default function RankUpMultiplier() {
       <FormField
         label={
           <div className="flex items-center gap-2">
-            跳框機率倍率
+            跳�?機�??��?
             <div className="flex items-center gap-1">
               <Checkbox
                 id="show-prob"
@@ -40,7 +40,7 @@ export default function RankUpMultiplier() {
                 htmlFor="show-prob"
                 className="text-glass-foreground cursor-pointer text-xs font-normal"
               >
-                顯示機率
+                顯示機�?
               </label>
             </div>
           </div>
@@ -64,8 +64,8 @@ export default function RankUpMultiplier() {
                 {rankUpProbs.map((prob, i) => {
                   const label =
                     i === 0
-                      ? "同階"
-                      : `升${PotManager.rankToZh(PotManager.indexToRank(currTierIndex + i))}`;
+                      ? "?��?"
+                      : `${PotManager.rankToZh(PotManager.indexToRank(currTierIndex + i))}`;
                   return (
                     <tr key={i}>
                       <td>{label}</td>
@@ -83,7 +83,7 @@ export default function RankUpMultiplier() {
 }
 
 function useRankUpMultiplier() {
-  const { selectedEhmId, localData } = useEnhancingContext();
+  const { selectedItemId, localData } = useEnhancingContext();
   const {
     rankUpMultiplier,
     setRankUpMultiplier,
@@ -93,14 +93,14 @@ function useRankUpMultiplier() {
 
   const data = useMemo(() => {
     if (
-      !selectedEhmId ||
-      selectedEhmId === "wuGongJewel" ||
-      selectedEhmId === "shinyAdditionalCube"
+      !selectedItemId ||
+      selectedItemId === "wuGongJewel" ||
+      selectedItemId === "shinyAdditionalCube"
     ) {
       return null;
     }
 
-    const meta = CubeManager.getItem(selectedEhmId);
+    const meta = CubeManager.getItem(selectedItemId);
     const tier = localData[meta.apply].tier;
 
     if (tier === "legendary") {
@@ -108,8 +108,9 @@ function useRankUpMultiplier() {
     }
 
     const rankUpWeights = CubeManager.getScaledRankUpWeights(
-      selectedEhmId,
+      selectedItemId,
       tier,
+      rankUpMultiplier,
     );
 
     if (rankUpWeights.length === 0) {
@@ -123,7 +124,7 @@ function useRankUpMultiplier() {
       rankUpProbs,
       currTierIndex,
     };
-  }, [selectedEhmId, localData, rankUpMultiplier]);
+  }, [selectedItemId, localData, rankUpMultiplier]);
 
   return {
     shouldRender: !!data,

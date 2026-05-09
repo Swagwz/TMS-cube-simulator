@@ -2,10 +2,10 @@ import { useDeleteDialogStore } from "@/store/useDeleteDialogStore";
 import { useEquipmentStore } from "@/store/useEquipmentStore";
 import { useMoeStore } from "@/store/useMoeStore";
 import ConfirmModal from "@/components/ConfirmModal";
-import type { EhmSystemType } from "@/domains/enhancement/enhancement.type";
+import type { WorkbenchEntityType } from "@/domains/enhancement/enhancement.type";
 
 const DIALOG_CONFIG: Record<
-  EhmSystemType,
+  WorkbenchEntityType,
   { title: string; description: string; deleteFn: (id: string) => void }
 > = {
   equipment: {

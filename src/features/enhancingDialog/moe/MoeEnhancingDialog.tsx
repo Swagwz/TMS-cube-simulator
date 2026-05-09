@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/dialog";
 import { useMoeStore, type MoeInstance } from "@/store/useMoeStore";
 
-import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
 import { useActiveStore } from "@/store/useActiveStore";
 import { MoeEnhancingContext } from "@/contexts/useMoeEnhancingContext";
 import MoeEnhancer from "./MoeEnhancer";
 import type { MoeCubeId } from "@/domains/enhancement/moe/moe.type";
+import { MoeManager } from "@/domains/enhancement/moe/moeManager";
 
 type Props = {
   selectedItemId: MoeCubeId | null;
@@ -37,7 +37,7 @@ export default function MoeEnhancingDialog({
     closeModal();
   }, [localData, closeModal]);
 
-  // 開啟時,複製一份data
+  // ?��???複製一份data
   useEffect(() => {
     if (selectedItemId && moeCardId) {
       const instance = structuredClone(
@@ -65,7 +65,7 @@ export default function MoeEnhancingDialog({
       >
         <DialogHeader>
           <DialogTitle>
-            {EnhancementManager.getItem(selectedItemId).name}
+            {MoeManager.getMoeCubeMetadata(selectedItemId).name}
           </DialogTitle>
         </DialogHeader>
 

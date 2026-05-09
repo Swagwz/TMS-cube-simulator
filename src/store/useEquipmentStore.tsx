@@ -1,14 +1,18 @@
-import { create } from "zustand";
+﻿import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
 import { useActiveStore } from "./useActiveStore";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
 import type {
-  EquipmentApplicableEhmId,
   EquipmentSubcategory,
-  PotentialFeature,
+  EquipmentPotentialSlot,
 } from "@/domains/equipment/equipment.type";
-import type { RelationItemId } from "@/domains/enhancement/cube/cube.type";
+import type {
+  AdditionalCubeId,
+  CubeCompanionItemId,
+  MainCubeId,
+} from "@/domains/enhancement/cube/cube.type";
+import type { SoulId } from "@/domains/enhancement/soul/soul.type";
 
 type PotentialGroup = {
   tier: EquipmentRank;
@@ -30,9 +34,21 @@ export type EquipmentInstance = EquipmentStatus & {
   _origin: EquipmentStatus;
 
   statistics: {
-    counts: Partial<Record<EquipmentApplicableEhmId | RelationItemId, number>>;
+    counts: {
+      mainPot: Partial<Record<MainCubeId | CubeCompanionItemId, number>>;
+      additionalPot: Partial<Record<AdditionalCubeId, number>>;
+      soul: Partial<Record<SoulId, number>>;
+    };
   };
 };
+
+const createEmptyEquipmentStatistics = (): EquipmentInstance["statistics"] => ({
+  counts: {
+    mainPot: {},
+    additionalPot: {},
+    soul: {},
+  },
+});
 
 export type EquipData = Omit<
   EquipmentInstance,
@@ -55,13 +71,13 @@ type Actions = {
   updateInstance: (id: string, changes: Partial<EquipData>) => void;
   updatePotLine: (
     id: string,
-    potType: PotentialFeature,
+    potType: EquipmentPotentialSlot,
     index: number,
     newPotId: string,
   ) => void;
   updatePotTier: (
     id: string,
-    potType: PotentialFeature,
+    potType: EquipmentPotentialSlot,
     tier: EquipmentRank,
   ) => void;
   syncInstance: (instance: EquipmentInstance) => void;
@@ -82,9 +98,7 @@ export const useEquipmentStore = create<State & Actions>()(
         ...equipData,
         soul,
         _origin: origin,
-        statistics: {
-          counts: {},
-        },
+        statistics: createEmptyEquipmentStatistics(),
         entity: "equipment",
         id: crypto.randomUUID(),
       };
@@ -114,7 +128,7 @@ export const useEquipmentStore = create<State & Actions>()(
       set((state) => {
         const target = state.instanceMap[id];
         if (target) {
-          target.statistics = { counts: {} };
+          target.statistics = createEmptyEquipmentStatistics();
         }
       });
     },
@@ -126,7 +140,7 @@ export const useEquipmentStore = create<State & Actions>()(
           target.additionalPot = structuredClone(target._origin.additionalPot);
           target.soul = target._origin.soul;
 
-          target.statistics = { counts: {} };
+          target.statistics = createEmptyEquipmentStatistics();
         }
       });
     },

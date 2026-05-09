@@ -1,9 +1,9 @@
 import type { StatusField } from "../../potential/potential.type";
-import type { EhmMetadata } from "../enhancement.type";
+import type { EnhancementItemBase } from "../enhancement.type";
 
 export type SoulId = "wuGongJewel";
 
-export type SoulItem = EhmMetadata & {
+export type SoulItem = EnhancementItemBase & {
   id: SoulId;
   apply: "soul";
 };

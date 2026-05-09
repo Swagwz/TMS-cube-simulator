@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import type { EhmMetadata } from "@/domains/enhancement/enhancement.type";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import React from "react";
 
 type EhmCellProps = React.ComponentProps<"div"> & {
-  item: EhmMetadata;
+  name: string;
+  imagePath: string;
   count: number;
   isSelected?: boolean;
 };
@@ -13,13 +13,13 @@ type EhmCellProps = React.ComponentProps<"div"> & {
 const formattedCount = new Intl.NumberFormat("zh-tw");
 
 export default function EhmCell({
-  item,
+  name,
+  imagePath,
   count,
   isSelected = false,
   className,
   ...props
 }: EhmCellProps) {
-  const { imagePath, name } = item;
   return (
     <div className="flex flex-col items-center justify-center" {...props}>
       <div

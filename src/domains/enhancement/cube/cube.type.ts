@@ -1,14 +1,13 @@
-import type { EquipmentRank } from "@/domains/potential/potential.type";
-import type { EhmMetadata } from "../enhancement.type";
-import type { PotentialFeature } from "@/domains/equipment/equipment.type";
+﻿import type { EquipmentRank } from "@/domains/potential/potential.type";
+import type { EnhancementItemBase } from "../enhancement.type";
+import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 
-type CubeCommon = EhmMetadata & {
-  apply: PotentialFeature;
+type CubeCommon = EnhancementItemBase & {
+  id: CubeId;
+  apply: EquipmentPotentialSlot;
 
   rankUp: Partial<Record<EquipmentRank, number[]>> | null;
   lineRank: Partial<Record<EquipmentRank, number[][]>>;
-  minApplyTier?: EquipmentRank;
-  maxApplyTier?: EquipmentRank;
 };
 
 type RegularCube = CubeCommon & {
@@ -26,9 +25,9 @@ type MirrorCube = CubeCommon & {
   mirrorProb: number;
 };
 
-export type CubeItem = RegularCube | ShinyCube | MirrorCube;
+export type CubeDefinition = RegularCube | ShinyCube | MirrorCube;
 
-export type CubeApplicationType = PotentialFeature;
+export type CubeApplicationType = EquipmentPotentialSlot;
 
 export type CubeId = MainCubeId | AdditionalCubeId;
 
@@ -48,9 +47,8 @@ export type AdditionalCubeId =
   | "absAdditionalCube"
   | "combineAdditionalCube";
 
-export type RelationItemId = "fixPotential";
+export type CubeCompanionItemId = "fixPotential";
 
-export type RelationItem = EhmMetadata & {
-  id: RelationItemId;
-  apply: PotentialFeature;
+export type CubeCompanionItem = EnhancementItemBase & {
+  id: CubeCompanionItemId;
 };

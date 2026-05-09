@@ -25,8 +25,8 @@ export default function EqualCubeEnhancer() {
       produce((draft) => {
         draft!.mainPot.potIds = pots;
         draft!.mainPot.tier = nextRank;
-        draft!.statistics.counts.equalCube =
-          (draft?.statistics.counts.equalCube || 0) + 1;
+        draft!.statistics.counts.mainPot.equalCube =
+          (draft?.statistics.counts.mainPot.equalCube || 0) + 1;
       }),
     );
   };
@@ -47,7 +47,7 @@ export default function EqualCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          開始
+          ?��?
         </Button>
       </EquipFooter>
     </>

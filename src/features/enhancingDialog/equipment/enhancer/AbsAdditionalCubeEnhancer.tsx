@@ -18,7 +18,7 @@ export default function AbsAdditionalCubeEnhancer() {
   const { level, additionalPot, subcategory } = localData;
 
   const handleRoll = () => {
-    // 只能套用在"傳說"潛能
+    // ?�能套用???�說"潛能
     const newPots = CubeManager.rollPots(
       "absAdditionalCube",
       "legendary",
@@ -29,14 +29,14 @@ export default function AbsAdditionalCubeEnhancer() {
       produce((draft) => {
         if (draft) {
           draft!.additionalPot.potIds = newPots;
-          draft!.statistics.counts.absAdditionalCube =
-            (draft?.statistics.counts.absAdditionalCube || 0) + 1;
+          draft!.statistics.counts.additionalPot.absAdditionalCube =
+            (draft?.statistics.counts.additionalPot.absAdditionalCube || 0) + 1;
         }
       }),
     );
   };
 
-  // 只能套用在"傳說"潛能
+  // ?�能套用???�說"潛能
   if (additionalPot.tier !== "legendary") return null;
 
   return (
@@ -55,7 +55,7 @@ export default function AbsAdditionalCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          開始
+          ?��?
         </Button>
       </EquipFooter>
     </>

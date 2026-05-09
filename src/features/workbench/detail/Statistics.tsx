@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { memo } from "react";
 import {
   Table,
   TableBody,
@@ -10,14 +10,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import InfoPopover from "@/components/InfoPopover";
-import type { EhmId } from "@/domains/enhancement/enhancement.type";
-import type { MoeInstance } from "@/store/useMoeStore";
-import type { EquipmentInstance } from "@/store/useEquipmentStore";
-import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
-import { typedEntries } from "@/lib/utils";
-import { CUBE_LIST } from "@/domains/enhancement/cube/cube.config";
-import { MOE_CUBE_LIST } from "@/domains/enhancement/moe/moe.config";
-import { SOUL_LIST } from "@/domains/enhancement/soul/soul.config";
 
 const formattedCost = new Intl.NumberFormat("zh-tw", {
   style: "currency",
@@ -30,60 +22,34 @@ const formattedCount = new Intl.NumberFormat("zh-tw", {
   minimumFractionDigits: 0,
 });
 
-type Props = {
-  statistics: MoeInstance["statistics"] | EquipmentInstance["statistics"];
+export type StatisticsRow = {
+  id: string;
+  display: string;
+  count: number;
+  price: number;
+  discount: number;
 };
 
-function Statistics({ statistics }: Props) {
-  const rows = useMemo(() => {
-    const rst: {
-      id: string;
-      display: string;
-      count: number;
-      price: number;
-      discount: number;
-    }[] = [];
+type Props = {
+  rows: StatisticsRow[];
+};
 
-    Object.values(statistics).forEach((record) => {
-      typedEntries(record as Record<string, number>).forEach(([id, count]) => {
-        if (!count) return;
-        const { price, discount, name } = EnhancementManager.getItem(
-          id as EhmId,
-        );
-        rst.push({ id, display: name, count, price, discount });
-      });
-    });
-
-    const referenceOrder = [
-      ...CUBE_LIST.map(({ id }) => id),
-      ...MOE_CUBE_LIST.map(({ id }) => id),
-      ...SOUL_LIST.map(({ id }) => id),
-    ];
-
-    return rst.sort(
-      (a, b) =>
-        referenceOrder.indexOf(a.id as any) -
-        referenceOrder.indexOf(b.id as any),
-    );
-  }, [statistics]);
-
+function Statistics({ rows }: Props) {
   const totalCost = rows.reduce(
     (acc, { price, count, discount }) =>
       acc + ((price * (100 - discount)) / 100) * count,
     0,
   );
 
-  // if (rows.length === 0) return null;
-
   return (
     <Table>
-      <TableCaption className="text-glass-foreground">統計資料</TableCaption>
+      <TableCaption className="text-glass-foreground">�ϥβέp</TableCaption>
       <TableHeader className="bg-secondary-dark text-secondary-dark-foreground">
         <TableRow>
-          <TableHead className="w-[30%] text-inherit">名稱</TableHead>
-          <TableHead className="w-[35%] text-inherit">售價</TableHead>
+          <TableHead className="w-[30%] text-inherit">�D��</TableHead>
+          <TableHead className="w-[35%] text-inherit">����</TableHead>
           <TableHead className="w-[35%] text-right text-inherit">
-            使用次數
+            �ϥΦ���
           </TableHead>
         </TableRow>
       </TableHeader>
@@ -104,8 +70,8 @@ function Statistics({ statistics }: Props) {
         <TableRow>
           <TableCell colSpan={2}>
             <div className="flex flex-row items-center">
-              總花費
-              <InfoPopover>已扣除商城優惠</InfoPopover>
+              �`��O
+              <InfoPopover>����w�M�Χ馩�C</InfoPopover>
             </div>
           </TableCell>
           <TableCell className="text-right">

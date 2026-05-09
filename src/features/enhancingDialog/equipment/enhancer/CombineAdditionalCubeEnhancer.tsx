@@ -26,8 +26,9 @@ export default function CombineAdditionalCubeEnhancer() {
   const rollSlot = () => {
     setLocalData(
       produce((draft) => {
-        draft!.statistics.counts.combineAdditionalCube =
-          (draft?.statistics.counts.combineAdditionalCube || 0) + 1;
+        draft!.statistics.counts.additionalPot.combineAdditionalCube =
+          (draft?.statistics.counts.additionalPot.combineAdditionalCube || 0) +
+          1;
       }),
     );
     return rollWeightedIndex([1, 1, 1]);
@@ -134,7 +135,7 @@ export default function CombineAdditionalCubeEnhancer() {
         {targetIndex === -1 ? (
           <div className="flex flex-row gap-2">
             <Button variant="primary" onClick={handleRollSlot}>
-              {selectedIndex === -1 ? "開始" : "再一次"}
+              {selectedIndex === -1 ? "Roll" : "Reroll"}
             </Button>
             <Button
               variant="primary"

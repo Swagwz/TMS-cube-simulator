@@ -1,25 +1,25 @@
-import type { EhmId } from "@/domains/enhancement/enhancement.type";
 import EhmCell from "../workbench/enhancement/availableEhmList/EhmCell";
-import { EnhancementManager } from "@/domains/enhancement/enhancementManager";
 
 type Props = {
-  itemId: EhmId;
-  count: number;
-  relatedItems?: { itemId: EhmId; count: number }[];
+  items: {
+    id: string;
+    name: string;
+    imagePath: string;
+    count: number;
+  }[];
 };
 
-export default function Counter({ itemId, count, relatedItems }: Props) {
+export default function Counter({ items }: Props) {
   return (
     <div className="bg-glass-lighter flex flex-row gap-2 rounded-lg p-2">
-      <EhmCell item={EnhancementManager.getItem(itemId)} count={count} />
-      {relatedItems &&
-        relatedItems.map((related) => (
-          <EhmCell
-            key={related.itemId}
-            item={EnhancementManager.getItem(related.itemId)}
-            count={related.count}
-          />
-        ))}
+      {items.map((item) => (
+        <EhmCell
+          key={item.id}
+          name={item.name}
+          imagePath={item.imagePath}
+          count={item.count}
+        />
+      ))}
     </div>
   );
 }

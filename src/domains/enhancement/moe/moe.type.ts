@@ -1,10 +1,10 @@
 import type { StatusField } from "@/domains/potential/potential.type";
-import type { EhmMetadata } from "../enhancement.type";
+import type { EnhancementItemBase } from "../enhancement.type";
 import type { MoeCardSubcategory } from "@/domains/moeCard/moeCard.type";
 
 export type MoeCubeId = "moeCube" | "moeRestore";
 
-export type MoeCubeMetadata = EhmMetadata & {
+export type MoeCubeMetadata = EnhancementItemBase & {
   id: MoeCubeId;
   apply: "moe";
 };

@@ -30,8 +30,8 @@ export default function MirrorCubeEnhancer() {
       produce((draft) => {
         draft!.mainPot.potIds = pots;
         draft!.mainPot.tier = nextRank;
-        draft!.statistics.counts.mirrorCube =
-          (draft?.statistics.counts.mirrorCube || 0) + 1;
+        draft!.statistics.counts.mainPot.mirrorCube =
+          (draft?.statistics.counts.mainPot.mirrorCube || 0) + 1;
       }),
     );
   };
@@ -53,7 +53,7 @@ export default function MirrorCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          開始
+          ?��?
         </Button>
       </EquipFooter>
     </>

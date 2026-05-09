@@ -40,8 +40,8 @@ export default function ShinyAdditionalCubeEnhancer() {
       produce((draft) => {
         draft!.additionalPot.potIds = pots;
         draft!.additionalPot.tier = nextRank;
-        draft!.statistics.counts.shinyAdditionalCube =
-          (draft?.statistics.counts.shinyAdditionalCube || 0) + 1;
+        draft!.statistics.counts.additionalPot.shinyAdditionalCube =
+          (draft?.statistics.counts.additionalPot.shinyAdditionalCube || 0) + 1;
       }),
     );
   };
@@ -55,8 +55,8 @@ export default function ShinyAdditionalCubeEnhancer() {
           <p>
             使用次數: {pityCount} / {ceiling}
           </p>
-          <p>跳框機率: {`${currentProb}%`}</p>
-          <p>每次使用增加: {`${probIncr}%`}</p>
+          <p>跳�?機�?: {`${currentProb}%`}</p>
+          <p>每次使用增�?: {`${probIncr}%`}</p>
         </div>
       )}
       <DisplayContainer>
@@ -73,7 +73,7 @@ export default function ShinyAdditionalCubeEnhancer() {
       <EquipFooter>
         <CloseBtn onClose={handleClose} />
         <Button variant="primary" onClick={handleRoll}>
-          開始
+          ?��?
         </Button>
       </EquipFooter>
     </>
