@@ -1,5 +1,4 @@
-import type { EquipmentRank, StatusField } from "../potential/potential.type";
-import type { EquipmentSubcategory } from "../equipment/equipment.type";
+import type { StatusField } from "../potential/potential.type";
 
 // 基礎統計目標
 export type StatTarget = {
@@ -12,12 +11,6 @@ export type MoeAutoRollTarget = {
   stats: StatTarget[];
 };
 
-// Equipment 自動洗潛 (有等級)
-export type EquipmentAutoRollTarget = {
-  stats: StatTarget[];
-  rank: EquipmentRank | null;
-};
-
 // Soul 自動洗潛
 export type SoulAutoRollTarget = {
   stats: StatTarget[];
@@ -27,14 +20,6 @@ export type StatSummary = Map<StatusField, number[]>;
 
 export interface MoeStatParser {
   parse(ids: string[]): StatSummary;
-}
-
-export interface EquipmentStatParser {
-  parse(
-    ids: string[],
-    level: number,
-    subcategory: EquipmentSubcategory,
-  ): StatSummary;
 }
 
 export interface SoulStatParser {
