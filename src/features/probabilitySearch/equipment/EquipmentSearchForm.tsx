@@ -16,12 +16,12 @@ import FormField from "@/components/FormField";
 import EquipTypeSelect from "@/components/form/EquipTypeSelect";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import RankUpProb from "../RankUpProb";
 import PotentialLineRankTable from "./PotentialLineRankTable";
 import PotentialProbTable from "./PotentialProbTable";
 import NumberInput from "@/components/form/NumberInput";
 import { CollapsibleDetail } from "@/components/CollapsibleDetail";
+import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
 
 const EQUIP_CUBES = CUBE_LIST.map((item) => ({
   label: item.name,
@@ -66,7 +66,7 @@ export default function EquipmentSearchForm() {
     setSelectedLine(0);
   };
 
-  const lineRankArr = CubeManager.getItem(equipCube).lineRank[rank] || [];
+  const lineRankArr = getCubeDefinition(equipCube).lineRank[rank] || [];
   const selectedLineProbs = lineRankArr[selectedLine];
   return (
     <>

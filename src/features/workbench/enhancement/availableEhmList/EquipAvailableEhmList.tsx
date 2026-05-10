@@ -7,7 +7,6 @@ import type {
   EquipmentEnhancementItemId,
   EquipmentFeature,
 } from "@/domains/equipment/equipment.type";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import { SOUL_LIST } from "@/domains/enhancement/soul/soul.config";
 import type {
   AdditionalCubeId,
@@ -15,6 +14,7 @@ import type {
   MainCubeId,
 } from "@/domains/enhancement/cube/cube.type";
 import type { SoulItem } from "@/domains/enhancement/soul/soul.type";
+import { getApplicableCubeDefinitions } from "@/domains/enhancement/cube/cube.registry";
 
 type AvailableCubesListProps = {
   feature: EquipmentFeature;
@@ -36,12 +36,9 @@ export default function EquipAvailableEhmList({
 
     switch (feature) {
       case "mainPot":
-        return CubeManager.getApplicableCubes(
-          "mainPot",
-          activeItem.mainPot.tier,
-        );
+        return getApplicableCubeDefinitions("mainPot", activeItem.mainPot.tier);
       case "additionalPot":
-        return CubeManager.getApplicableCubes(
+        return getApplicableCubeDefinitions(
           "additionalPot",
           activeItem.additionalPot.tier,
         );

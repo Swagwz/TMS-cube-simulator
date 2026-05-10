@@ -8,11 +8,15 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import { PotManager } from "@/domains/potential/potManager";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
 import { weightsToProbabilities } from "@/utils/weightsToProbabilities";
 import MultiplierSelector from "@/components/MultiplierSelector";
+import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
+import {
+  getScaledRankUpWeights,
+  getShinyCeiling,
+} from "@/domains/enhancement/cube/cubeRoll.feature";
 
 type Props = {
   cube: CubeId;
@@ -21,7 +25,7 @@ type Props = {
 
 export default function RankUpProb({ cube, rank }: Props) {
   const [multiplier, setMultiplier] = useState(1);
-  const meta = CubeManager.getItem(cube);
+  const meta = getCubeDefinition(cube);
 
   if (!meta.rankUp) {
     return <div className="title-error">此方塊不可跳框</div>;
@@ -54,11 +58,12 @@ function StandardRankUpTable({
   rank: EquipmentRank;
   multiplier: number;
 }) {
-  const rankUpWeights = CubeManager.getScaledRankUpWeights(
-    cube,
-    rank,
-    multiplier,
-  );
+  const cubeDefinition = getCubeDefinition(cube);
+  const rankUpWeights = getScaledRankUpWeights({
+    cube: cubeDefinition,
+    currentTier: rank,
+    rankUpMultiplier: multiplier,
+  });
   const rankUpProbs = weightsToProbabilities(rankUpWeights);
   const currTierIndex = PotManager.getIndex(rank);
 
@@ -91,7 +96,7 @@ function StandardRankUpTable({
 }
 
 function ShinyAdditionalCubeRankUpTable({ rank }: { rank: EquipmentRank }) {
-  const { ceiling, probIncr, baseProb } = CubeManager.getShinyCeiling(rank);
+  const { ceiling, probIncr, baseProb } = getShinyCeiling(rank);
   return (
     <Table>
       <TableHeader>

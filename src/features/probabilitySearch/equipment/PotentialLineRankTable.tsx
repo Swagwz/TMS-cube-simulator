@@ -6,8 +6,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import type { EquipmentRank } from "@/domains/potential/potential.type";
 import { cn } from "@/lib/utils";
 
@@ -24,7 +24,7 @@ export default function PotentialLineRankTable({
   selectedLine,
   onLineSelect,
 }: Props) {
-  const lineRankArr = CubeManager.getItem(cube).lineRank[rank] || [];
+  const lineRankArr = getCubeDefinition(cube).lineRank[rank] || [];
 
   if (!lineRankArr.length)
     return <div className="title-error">此方塊不能套用該潛能階級</div>;

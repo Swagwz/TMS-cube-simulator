@@ -7,7 +7,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import type { EquipmentSubcategory } from "@/domains/equipment/equipment.type";
@@ -17,6 +16,7 @@ import ControllableTableHead, {
   type SortConfig,
   type SortDirection,
 } from "@/components/ControllableTableHead";
+import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
 
 function formatPotentialList(
   cube: CubeId,
@@ -59,7 +59,7 @@ export default function PotentialProbTable({
     direction: "desc",
   });
   const prevRank = PotManager.getPrev(rank);
-  const feature = CubeManager.getItem(cube).apply;
+  const feature = getCubeDefinition(cube).apply;
 
   const primeList = formatPotentialList(
     cube,

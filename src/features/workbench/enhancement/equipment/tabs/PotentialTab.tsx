@@ -9,8 +9,7 @@ import EquipAvailableEhmList from "../../availableEhmList/EquipAvailableEhmList"
 import InfoPopover from "@/components/InfoPopover";
 import EquipEnhancingDialog from "@/features/enhancingDialog/equipment/EquipEnhancingDialog";
 import { SoulManager } from "@/domains/enhancement/soul/soulManager";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
 
 type Props = {
   feature: EquipmentFeature;
@@ -35,7 +34,7 @@ export default function PotentialTab({ feature }: Props) {
   const selectedItem = selected
     ? selected === "wuGongJewel"
       ? SoulManager.getItem(selected)
-      : CubeManager.getCubeItem(selected as CubeId)
+      : getCubeDefinition(selected)
     : null;
 
   return (
