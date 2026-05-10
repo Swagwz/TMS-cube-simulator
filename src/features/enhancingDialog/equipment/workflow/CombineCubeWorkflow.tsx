@@ -24,7 +24,6 @@ export default function CombineCubeWorkflow() {
   const { tier, potentialIds } = working[cube.apply];
 
   const toggleTargetIndex = (index: number) => {
-    if (combineRoll) return;
     setTargetIndex((prev) => (prev === index ? -1 : index));
   };
 
@@ -34,10 +33,6 @@ export default function CombineCubeWorkflow() {
 
   const handleApply = () => {
     applyCombine(true);
-  };
-
-  const handleDiscard = () => {
-    applyCombine(false);
   };
 
   return (
@@ -52,10 +47,15 @@ export default function CombineCubeWorkflow() {
             <div
               key={`${id}-${index}`}
               className={cn(
-                "flex cursor-pointer flex-row items-center justify-between rounded p-1",
-                (isTarget || isSelected) &&
+                "flex cursor-pointer flex-row items-center justify-between rounded border border-transparent p-1 transition-colors",
+                isSelected &&
                   "bg-accent-main text-accent-main-foreground",
-                combineRoll && "cursor-default",
+                isTarget &&
+                  !isSelected &&
+                  "border-destructive bg-destructive/10 text-destructive",
+                isTarget &&
+                  isSelected &&
+                  "ring-destructive ring-offset-background ring-2 ring-offset-2",
               )}
               onClick={() => toggleTargetIndex(index)}
             >
@@ -73,11 +73,10 @@ export default function CombineCubeWorkflow() {
               <Button
                 size="icon-xs"
                 variant="ghost"
-                disabled={!!combineRoll}
                 className={cn(
-                  "hover:bg-accent-dark hover:text-accent-dark-foreground",
+                  "text-muted-foreground hover:bg-accent-dark hover:text-accent-dark-foreground",
                   isTarget &&
-                    "hover:bg-accent-main hover:text-accent-main-foreground text-red-700",
+                    "bg-destructive text-white hover:bg-destructive/90 hover:text-white",
                 )}
               >
                 <Crosshair />
@@ -88,20 +87,15 @@ export default function CombineCubeWorkflow() {
       </DisplayContainer>
 
       <EquipFooter>
-        <CloseBtn disabled={!!combineRoll} onClose={commitAndClose} />
+        <CloseBtn onClose={commitAndClose} />
         <div className="flex flex-row gap-2">
           <Button variant="primary" onClick={handleRoll}>
             {combineRoll ? "Reroll" : "Roll"}
           </Button>
           {combineRoll && (
-            <>
-              <Button variant="secondary" onClick={handleDiscard}>
-                Discard
-              </Button>
-              <Button variant="primary" onClick={handleApply}>
-                Apply
-              </Button>
-            </>
+            <Button variant="primary" onClick={handleApply}>
+              Apply
+            </Button>
           )}
         </div>
       </EquipFooter>
