@@ -227,13 +227,14 @@ describe("reduceCubeSession", () => {
     expect(result.session.pendingRoll).toBeNull();
   });
 
-  it("creates hexa pending candidates and increments cube count", () => {
+  it("creates hexa pending candidates, increments cube count, and immediately updates tier", () => {
     vi.spyOn(PotManager, "validateLineRules").mockReturnValue(true);
+    const session = createSession({
+      cubeId: "hexaCube",
+      rng: new FixedRNG([0.99, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
+    });
     const result = reduceCubeSession(
-      createSession({
-        cubeId: "hexaCube",
-        rng: new FixedRNG([0.99, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
-      }),
+      session,
       {
         type: "roll",
         input: { flow: "hexa" },
@@ -247,6 +248,45 @@ describe("reduceCubeSession", () => {
         : [],
     ).toHaveLength(6);
     expect(result.session.working.statistics.counts.mainPot.hexaCube).toBe(1);
+    expect(result.session.working.mainPot.tier).toBe("epic");
+    expect(result.session.working.mainPot.potentialIds).toEqual(
+      session.working.mainPot.potentialIds,
+    );
+  });
+
+  it("uses the updated hexa tier as the current tier when rerolling", () => {
+    vi.spyOn(PotManager, "validateLineRules").mockReturnValue(true);
+    const rngValues = [
+      0.99,
+      ...Array(12).fill(0),
+      0.99,
+      ...Array(12).fill(0),
+    ];
+    const firstRoll = reduceCubeSession(
+      createSession({
+        cubeId: "hexaCube",
+        rng: new FixedRNG(rngValues),
+      }),
+      {
+        type: "roll",
+        input: { flow: "hexa" },
+      },
+    );
+    const secondRoll = reduceCubeSession(firstRoll.session, {
+      type: "roll",
+      input: { flow: "hexa" },
+    });
+
+    expect(firstRoll.session.working.mainPot.tier).toBe("epic");
+    expect(secondRoll.session.working.mainPot.tier).toBe("unique");
+    expect(secondRoll.session.working.mainPot.potentialIds).toEqual([
+      "main-before-1",
+      "main-before-2",
+      "main-before-3",
+    ]);
+    expect(secondRoll.session.working.statistics.counts.mainPot.hexaCube).toBe(
+      2,
+    );
   });
 
   it("applies hexa selected lines in selection order and clears pending roll", () => {
@@ -483,6 +523,38 @@ describe("reduceCubeSession", () => {
 
     expect(result.session.pendingRoll).toBeNull();
     expect(result.event).toEqual({ type: "discardedPendingRoll" });
+  });
+
+  it("keeps the updated hexa tier when discarding pending candidates", () => {
+    const working = createEquipment();
+    working.mainPot.tier = "epic";
+    const session = createSession({
+      cubeId: "hexaCube",
+      working,
+      pendingRoll: {
+        flow: "hexa",
+        candidates: {
+          tier: "epic",
+          potentialIds: [
+            "candidate-0",
+            "candidate-1",
+            "candidate-2",
+            "candidate-3",
+            "candidate-4",
+            "candidate-5",
+          ],
+        },
+      },
+    });
+    const result = reduceCubeSession(session, { type: "discardPendingRoll" });
+
+    expect(result.session.pendingRoll).toBeNull();
+    expect(result.session.working.mainPot.tier).toBe("epic");
+    expect(result.session.working.mainPot.potentialIds).toEqual([
+      "main-before-1",
+      "main-before-2",
+      "main-before-3",
+    ]);
   });
 
   it("throws when applying without a pending roll", () => {

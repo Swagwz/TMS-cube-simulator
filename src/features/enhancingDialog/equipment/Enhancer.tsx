@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import HexaCubeEnhancer from "./enhancer/HexaCubeEnhancer";
 import CombineCubeEnhancer from "./enhancer/CombineCubeEnhancer";
 import CombineAdditionalCubeEnhancer from "./enhancer/CombineAdditionalCubeEnhancer";
 import WuGongJewelEnhancer from "./enhancer/WuGongJewelEnhancer";
@@ -7,6 +6,7 @@ import { useEnhancingContext } from "@/contexts/useEnhancingContext";
 import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import DirectCubeWorkflow from "./workflow/DirectCubeWorkflow";
+import HexaCubeWorkflow from "./workflow/HexaCubeWorkflow";
 import RestoreCubeWorkflow from "./workflow/RestoreCubeWorkflow";
 import { useOptionalEquipmentCubeSession } from "@/contexts/useEquipmentCubeSessionContext";
 
@@ -28,9 +28,11 @@ export default function Enhancer() {
       return cubeSession ? <RestoreCubeWorkflow /> : null;
     }
 
+    if (cube.workflow === "hexa") {
+      return cubeSession ? <HexaCubeWorkflow /> : null;
+    }
+
     switch (selectedItemId) {
-      case "hexaCube":
-        return <HexaCubeEnhancer />;
       case "combineCube":
         return <CombineCubeEnhancer />;
       case "combineAdditionalCube":

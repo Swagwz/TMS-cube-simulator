@@ -17,6 +17,8 @@ export type EquipmentCubeSessionController = {
   rollDirectAndApply: () => void;
   rollRestore: (fixedIndex: number) => void;
   applyRestore: (side: "before" | "after") => void;
+  rollHexa: () => void;
+  applyHexa: (selectedIndices: [number, number, number]) => void;
   discardPendingRoll: () => void;
 };
 

@@ -30,7 +30,9 @@ export function useEquipmentCubeSession({
     if (!selectedItemId || selectedItemId === "wuGongJewel") return null;
 
     const definition = getCubeDefinition(selectedItemId as CubeId);
-    return definition.workflow === "direct" || definition.workflow === "restore"
+    return definition.workflow === "direct" ||
+      definition.workflow === "restore" ||
+      definition.workflow === "hexa"
       ? definition
       : null;
   }, [selectedItemId]);
@@ -130,6 +132,35 @@ export function useEquipmentCubeSession({
     [session],
   );
 
+  const rollHexa = useCallback(() => {
+    if (!session) return;
+
+    const accountState = useAccountStore.getState();
+    const result = reduceCubeSession(session, {
+      type: "roll",
+      input: {
+        flow: "hexa",
+        rankUpMultiplier: accountState.rankUpMultiplier,
+      },
+    });
+
+    setSession(result.session);
+  }, [session]);
+
+  const applyHexa = useCallback(
+    (selectedIndices: [number, number, number]) => {
+      if (!session) return;
+
+      const result = reduceCubeSession(session, {
+        type: "apply",
+        decision: { flow: "hexa", selectedIndices },
+      });
+
+      setSession(result.session);
+    },
+    [session],
+  );
+
   const discardPendingRoll = useCallback(() => {
     if (!session) return;
 
@@ -153,13 +184,17 @@ export function useEquipmentCubeSession({
       rollDirectAndApply,
       rollRestore,
       applyRestore,
+      rollHexa,
+      applyHexa,
       discardPendingRoll,
     };
   }, [
+    applyHexa,
     applyRestore,
     commitAndClose,
     cube,
     discardPendingRoll,
+    rollHexa,
     rollDirectAndApply,
     rollRestore,
     session,

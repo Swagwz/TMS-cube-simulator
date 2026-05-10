@@ -124,12 +124,18 @@ function roll<TEquipment extends CubeSessionEquipment>(
       break;
     }
   }
-  const working = incrementCubeRollCount({
+  let working = incrementCubeRollCount({
     working: session.working,
     cube,
     rollCount,
     countFixPotential: shouldCountFixPotential,
   });
+
+  if (output.flow === "hexa") {
+    // Hexa reroll only skips choosing three lines; the rolled tier is applied immediately.
+    // Potential ids remain pending until the user confirms three candidate lines.
+    working = writePotentialTier(working, cube.apply, output.candidates.tier);
+  }
 
   return {
     session: {
@@ -280,6 +286,20 @@ function writePotentialLines<TEquipment extends CubeSessionEquipment>(
       ...working[slot],
       tier: lines.tier,
       potentialIds: [...lines.potentialIds],
+    },
+  } as TEquipment;
+}
+
+function writePotentialTier<TEquipment extends CubeSessionEquipment>(
+  working: TEquipment,
+  slot: EquipmentPotentialSlot,
+  tier: TEquipment[typeof slot]["tier"],
+) {
+  return {
+    ...working,
+    [slot]: {
+      ...working[slot],
+      tier,
     },
   } as TEquipment;
 }
