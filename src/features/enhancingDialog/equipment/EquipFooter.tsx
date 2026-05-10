@@ -2,7 +2,9 @@ import React from "react";
 import EnhancerFooter from "../EnhancerFooter";
 import Counter from "../Counter";
 import { useEnhancingContext } from "@/contexts/useEnhancingContext";
+import { useOptionalEquipmentCubeSession } from "@/contexts/useEquipmentCubeSessionContext";
 import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
+import { getCubeCompanionItems } from "@/domains/enhancement/cube/cube.registry";
 import type {
   AdditionalCubeId,
   CubeId,
@@ -16,6 +18,7 @@ type Props = {
 
 export default function EquipFooter({ children }: Props) {
   const { localData, selectedItemId } = useEnhancingContext();
+  const cubeSession = useOptionalEquipmentCubeSession();
 
   if (selectedItemId === "wuGongJewel") {
     const item = SoulManager.getItem(selectedItemId);
@@ -39,11 +42,12 @@ export default function EquipFooter({ children }: Props) {
     );
   }
 
-  const cube = CubeManager.getCubeItem(selectedItemId as CubeId);
+  const cube = cubeSession?.cube ?? CubeManager.getCubeItem(selectedItemId as CubeId);
+  const working = cubeSession?.working ?? localData;
   const count =
     cube.apply === "mainPot"
-      ? localData.statistics.counts.mainPot[cube.id as MainCubeId]
-      : localData.statistics.counts.additionalPot[cube.id as AdditionalCubeId];
+      ? working.statistics.counts.mainPot[cube.id as MainCubeId]
+      : working.statistics.counts.additionalPot[cube.id as AdditionalCubeId];
   const items = [
     {
       id: cube.id,
@@ -51,11 +55,11 @@ export default function EquipFooter({ children }: Props) {
       imagePath: cube.imagePath,
       count: count || 0,
     },
-    ...CubeManager.getRelatedItems(cube.id).map((item) => ({
+    ...getCubeCompanionItems(cube.id).map((item) => ({
       id: item.id,
       name: item.name,
       imagePath: item.imagePath,
-      count: localData.statistics.counts.mainPot[item.id] || 0,
+      count: working.statistics.counts.mainPot[item.id] || 0,
     })),
   ];
 

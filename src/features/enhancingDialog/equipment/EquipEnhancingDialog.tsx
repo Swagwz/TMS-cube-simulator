@@ -19,6 +19,8 @@ import type { EquipmentEnhancementItemId } from "@/domains/equipment/equipment.t
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import RankUpMultiplier from "./RankUpMultiplier";
+import { EquipmentCubeSessionContext } from "@/contexts/useEquipmentCubeSessionContext";
+import { useEquipmentCubeSession } from "@/hooks/useEquipmentCubeSession";
 
 type Props = {
   selectedItemId: EquipmentEnhancementItemId | null;
@@ -71,6 +73,12 @@ export default function EquipEnhancingDialog({
     }
   }, [selectedItemId, localData?.level, localData?.subcategory]);
 
+  const cubeSession = useEquipmentCubeSession({
+    selectedItemId,
+    localData,
+    closeModal,
+  });
+
   // Open dialog with a working copy of the selected equipment.
   useEffect(() => {
     if (selectedItemId && equipId) {
@@ -102,18 +110,20 @@ export default function EquipEnhancingDialog({
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
 
-        <EnhancingContext.Provider
-          value={{
-            localData,
-            setLocalData,
-            selectedItemId,
-            closeModal,
-            poolData,
-          }}
-        >
-          <RankUpMultiplier />
-          <Enhancer />
-        </EnhancingContext.Provider>
+        <EquipmentCubeSessionContext.Provider value={cubeSession}>
+          <EnhancingContext.Provider
+            value={{
+              localData,
+              setLocalData,
+              selectedItemId,
+              closeModal,
+              poolData,
+            }}
+          >
+            <RankUpMultiplier />
+            <Enhancer />
+          </EnhancingContext.Provider>
+        </EquipmentCubeSessionContext.Provider>
       </DialogContent>
     </Dialog>
   );

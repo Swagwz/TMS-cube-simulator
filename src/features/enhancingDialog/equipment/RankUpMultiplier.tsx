@@ -3,7 +3,10 @@ import { AnimatePresence, motion } from "motion/react";
 import { weightsToProbabilities } from "@/utils/weightsToProbabilities";
 
 import { useEnhancingContext } from "@/contexts/useEnhancingContext";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
+import { useOptionalEquipmentCubeSession } from "@/contexts/useEquipmentCubeSessionContext";
+import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
+import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import { getScaledRankUpWeights } from "@/domains/enhancement/cube/cubeRoll.feature";
 import { PotManager } from "@/domains/potential/potManager";
 import { useAccountStore } from "@/store/useAccountStore";
 import FormField from "@/components/FormField";
@@ -84,6 +87,7 @@ export default function RankUpMultiplier() {
 
 function useRankUpMultiplier() {
   const { selectedItemId, localData } = useEnhancingContext();
+  const cubeSession = useOptionalEquipmentCubeSession();
   const {
     rankUpMultiplier,
     setRankUpMultiplier,
@@ -92,26 +96,25 @@ function useRankUpMultiplier() {
   } = useAccountStore();
 
   const data = useMemo(() => {
-    if (
-      !selectedItemId ||
-      selectedItemId === "wuGongJewel" ||
-      selectedItemId === "shinyAdditionalCube"
-    ) {
+    if (!selectedItemId || selectedItemId === "wuGongJewel") {
       return null;
     }
 
-    const meta = CubeManager.getItem(selectedItemId);
-    const tier = localData[meta.apply].tier;
+    const cube = cubeSession?.cube ?? getCubeDefinition(selectedItemId as CubeId);
+    if (cube.rankUpType !== "standard") return null;
+
+    const working = cubeSession?.working ?? localData;
+    const tier = working[cube.apply].tier;
 
     if (tier === "legendary") {
       return null;
     }
 
-    const rankUpWeights = CubeManager.getScaledRankUpWeights(
-      selectedItemId,
-      tier,
+    const rankUpWeights = getScaledRankUpWeights({
+      cube,
+      currentTier: tier,
       rankUpMultiplier,
-    );
+    });
 
     if (rankUpWeights.length === 0) {
       return null;
@@ -124,7 +127,7 @@ function useRankUpMultiplier() {
       rankUpProbs,
       currTierIndex,
     };
-  }, [selectedItemId, localData, rankUpMultiplier]);
+  }, [cubeSession, localData, rankUpMultiplier, selectedItemId]);
 
   return {
     shouldRender: !!data,
