@@ -32,7 +32,8 @@ export function useEquipmentCubeSession({
     const definition = getCubeDefinition(selectedItemId as CubeId);
     return definition.workflow === "direct" ||
       definition.workflow === "restore" ||
-      definition.workflow === "hexa"
+      definition.workflow === "hexa" ||
+      definition.workflow === "combine"
       ? definition
       : null;
   }, [selectedItemId]);
@@ -161,6 +162,34 @@ export function useEquipmentCubeSession({
     [session],
   );
 
+  const rollCombine = useCallback(
+    (targetIndex: number) => {
+      if (!session) return;
+
+      const result = reduceCubeSession(session, {
+        type: "roll",
+        input: { flow: "combine", targetIndex },
+      });
+
+      setSession(result.session);
+    },
+    [session],
+  );
+
+  const applyCombine = useCallback(
+    (applyRolledLine: boolean) => {
+      if (!session) return;
+
+      const result = reduceCubeSession(session, {
+        type: "apply",
+        decision: { flow: "combine", applyRolledLine },
+      });
+
+      setSession(result.session);
+    },
+    [session],
+  );
+
   const discardPendingRoll = useCallback(() => {
     if (!session) return;
 
@@ -186,14 +215,18 @@ export function useEquipmentCubeSession({
       applyRestore,
       rollHexa,
       applyHexa,
+      rollCombine,
+      applyCombine,
       discardPendingRoll,
     };
   }, [
+    applyCombine,
     applyHexa,
     applyRestore,
     commitAndClose,
     cube,
     discardPendingRoll,
+    rollCombine,
     rollHexa,
     rollDirectAndApply,
     rollRestore,
