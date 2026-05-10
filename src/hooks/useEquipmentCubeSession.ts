@@ -30,7 +30,9 @@ export function useEquipmentCubeSession({
     if (!selectedItemId || selectedItemId === "wuGongJewel") return null;
 
     const definition = getCubeDefinition(selectedItemId as CubeId);
-    return definition.workflow === "direct" ? definition : null;
+    return definition.workflow === "direct" || definition.workflow === "restore"
+      ? definition
+      : null;
   }, [selectedItemId]);
 
   const [session, setSession] =
@@ -95,6 +97,49 @@ export function useEquipmentCubeSession({
     setSession(applied.session);
   }, [cube, session]);
 
+  const rollRestore = useCallback(
+    (fixedIndex: number) => {
+      if (!session || !cube) return;
+
+      const accountState = useAccountStore.getState();
+      const result = reduceCubeSession(session, {
+        type: "roll",
+        input: {
+          flow: "restore",
+          fixedIndex,
+          rankUpMultiplier: accountState.rankUpMultiplier,
+        },
+      });
+
+      setSession(result.session);
+    },
+    [cube, session],
+  );
+
+  const applyRestore = useCallback(
+    (side: "before" | "after") => {
+      if (!session) return;
+
+      const result = reduceCubeSession(session, {
+        type: "apply",
+        decision: { flow: "restore", side },
+      });
+
+      setSession(result.session);
+    },
+    [session],
+  );
+
+  const discardPendingRoll = useCallback(() => {
+    if (!session) return;
+
+    const result = reduceCubeSession(session, {
+      type: "discardPendingRoll",
+    });
+
+    setSession(result.session);
+  }, [session]);
+
   return useMemo(() => {
     if (!cube || !session) return null;
 
@@ -106,6 +151,17 @@ export function useEquipmentCubeSession({
       pendingRoll: session.pendingRoll,
       commitAndClose,
       rollDirectAndApply,
+      rollRestore,
+      applyRestore,
+      discardPendingRoll,
     };
-  }, [commitAndClose, cube, rollDirectAndApply, session]);
+  }, [
+    applyRestore,
+    commitAndClose,
+    cube,
+    discardPendingRoll,
+    rollDirectAndApply,
+    rollRestore,
+    session,
+  ]);
 }

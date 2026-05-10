@@ -15,6 +15,9 @@ export type EquipmentCubeSessionController = {
   pendingRoll: CubeRollOutput | null;
   commitAndClose: () => void;
   rollDirectAndApply: () => void;
+  rollRestore: (fixedIndex: number) => void;
+  applyRestore: (side: "before" | "after") => void;
+  discardPendingRoll: () => void;
 };
 
 export const EquipmentCubeSessionContext =
