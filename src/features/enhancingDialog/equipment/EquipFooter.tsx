@@ -3,11 +3,9 @@ import EnhancerFooter from "../EnhancerFooter";
 import Counter from "../Counter";
 import { useEnhancingContext } from "@/contexts/useEnhancingContext";
 import { useOptionalEquipmentCubeSession } from "@/contexts/useEquipmentCubeSessionContext";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import { getCubeCompanionItems } from "@/domains/enhancement/cube/cube.registry";
 import type {
   AdditionalCubeId,
-  CubeId,
   MainCubeId,
 } from "@/domains/enhancement/cube/cube.type";
 import { SoulManager } from "@/domains/enhancement/soul/soulManager";
@@ -42,8 +40,11 @@ export default function EquipFooter({ children }: Props) {
     );
   }
 
-  const cube = cubeSession?.cube ?? CubeManager.getCubeItem(selectedItemId as CubeId);
-  const working = cubeSession?.working ?? localData;
+  if (!cubeSession) {
+    throw new Error("Cube footer requires an active cube session");
+  }
+
+  const { cube, working } = cubeSession;
   const count =
     cube.apply === "mainPot"
       ? working.statistics.counts.mainPot[cube.id as MainCubeId]

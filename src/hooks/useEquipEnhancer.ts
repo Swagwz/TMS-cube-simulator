@@ -14,7 +14,7 @@ export function useEquipEnhancer<F extends EquipmentPotentialSlot | "soul">(
     useEnhancingContext();
 
   // 檢查當前 poolData 是否符合預期的 feature
-  const isValid = poolData.feature === feature;
+  const isValid = poolData?.feature === feature;
   const pools = isValid ? (poolData.pools as Pools<F>) : null;
 
   if (!pools) throw new Error("Invalid pool data");

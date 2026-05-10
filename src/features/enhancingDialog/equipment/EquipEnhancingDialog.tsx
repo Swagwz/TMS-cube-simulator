@@ -14,9 +14,9 @@ import {
 import { EnhancingContext } from "@/contexts/useEnhancingContext";
 import { useActiveStore } from "@/store/useActiveStore";
 import Enhancer from "./Enhancer";
-import { CubeManager } from "@/domains/enhancement/cube/cubeManager";
 import type { EquipmentEnhancementItemId } from "@/domains/equipment/equipment.type";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
 import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import RankUpMultiplier from "./RankUpMultiplier";
 import { EquipmentCubeSessionContext } from "@/contexts/useEquipmentCubeSessionContext";
@@ -41,13 +41,11 @@ export default function EquipEnhancingDialog({
   const title = selectedItemId
     ? selectedItemId === "wuGongJewel"
       ? SoulManager.getItem(selectedItemId).name
-      : CubeManager.getCubeItem(selectedItemId as CubeId).name
+      : getCubeDefinition(selectedItemId as CubeId).name
     : "";
 
   const poolData = useMemo(() => {
     if (!selectedItemId || !localData) return undefined;
-
-    const { subcategory, level } = localData;
 
     if (selectedItemId === "wuGongJewel") {
       return {
@@ -55,23 +53,7 @@ export default function EquipEnhancingDialog({
         pools: SoulManager.getPotPool(),
       };
     }
-
-    const cube = CubeManager.getCubeItem(selectedItemId as CubeId);
-
-    switch (cube.apply) {
-      case "mainPot":
-      case "additionalPot":
-        return {
-          feature: cube.apply,
-          pools: CubeManager.getCubePotentialPools(selectedItemId as CubeId, {
-            subcategory,
-            level,
-          }),
-        };
-      default:
-        return undefined;
-    }
-  }, [selectedItemId, localData?.level, localData?.subcategory]);
+  }, [selectedItemId, localData]);
 
   const cubeSession = useEquipmentCubeSession({
     selectedItemId,
@@ -88,7 +70,12 @@ export default function EquipEnhancingDialog({
     }
   }, [selectedItemId, equipId]);
 
-  const open = !!(selectedItemId && equipId && localData && poolData);
+  const open = !!(
+    selectedItemId &&
+    equipId &&
+    localData &&
+    (selectedItemId === "wuGongJewel" ? poolData : cubeSession)
+  );
 
   if (!open) return null;
 

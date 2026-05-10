@@ -12,7 +12,7 @@ import React, { createContext, useContext } from "react";
 type EnhancingContextValue = {
   selectedItemId: EquipmentEnhancementItemId;
   closeModal: () => void;
-  poolData:
+  poolData?:
     | {
         feature: EquipmentPotentialSlot;
         pools: Record<PotentialRank, { id: string; weight: number }[]>;
