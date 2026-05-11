@@ -20,9 +20,10 @@ import type {
 export const CUBE_LIST: CubeDefinition[] = [
   {
     id: "restoreCube",
-    name: "恢復方塊",
+    name: "\u9084\u539f\u65b9\u584a",
     price: 55,
-    description: "使用後可預覽重設結果，並由玩家選擇保留原始潛能或套用新潛能。",
+    description:
+      "\u91cd\u65b0\u6d17\u934a\u5f8c\uff0c\u53ef\u5728\u539f\u672c\u8207\u65b0\u7684\u4e00\u822c\u6f5b\u80fd\u4e4b\u9593\u64c7\u4e00\u5957\u5957\u7528\u3002",
     discount: 10,
     apply: "mainPot",
     workflow: "restore",
@@ -60,9 +61,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "hexaCube",
-    name: "閃炫方塊",
+    name: "\u516d\u89d2\u65b9\u584a",
     price: 60,
-    description: "使用後將顯示 6 條潛能屬性，玩家可從中任選 3 條進行套用。",
+    description:
+      "\u91cd\u65b0\u6d17\u51fa 6 \u689d\u5019\u9078\u6f5b\u80fd\uff0c\u518d\u4f9d\u9078\u53d6\u9806\u5e8f\u5957\u7528 3 \u689d\u3002",
     discount: 10,
     apply: "mainPot",
     workflow: "hexa",
@@ -112,9 +114,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "combineCube",
-    name: "結合方塊",
+    name: "\u7d50\u5408\u65b9\u584a",
     price: 120,
-    description: "隨機選擇一排潛能屬性，並決定是否重新設定。",
+    description:
+      "\u5148\u9078\u51fa\u4e00\u689d\u4e00\u822c\u6f5b\u80fd\u9032\u884c\u91cd\u6d17\uff0c\u4f60\u53ef\u4ee5\u6c7a\u5b9a\u662f\u5426\u5957\u7528\u8a72\u7d50\u679c\u3002",
     discount: 10,
     apply: "mainPot",
     workflow: "combine",
@@ -148,9 +151,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "equalCube",
-    name: "新對等方塊",
+    name: "\u5747\u7b49\u65b9\u584a",
     price: 65,
-    description: "重設潛能時，各排必定出現此裝備目前階級的潛能屬性。",
+    description:
+      "\u91cd\u65b0\u6d17\u934a\u6642\uff0c\u4e09\u689d\u6f5b\u80fd\u90fd\u6703\u4fdd\u6301\u70ba\u540c\u4e00\u500b\u7b49\u7d1a\u3002",
     discount: 10,
     apply: "mainPot",
     workflow: "direct",
@@ -188,9 +192,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "mirrorCube",
-    name: "閃耀鏡射方塊",
+    name: "\u93e1\u5c04\u65b9\u584a",
     price: 45,
-    description: "重設潛能時，有機率將第一排的潛能屬性複製並套用至第二排。",
+    description:
+      "20% \u6a5f\u7387\u5c07\u7b2c\u4e00\u689d\u6f5b\u80fd\u8907\u88fd\u5230\u7b2c\u4e8c\u689d\uff0c\u4e14\u4e0d\u53d7\u6f5b\u80fd\u884c\u6578\u9650\u5236\u3002",
     discount: 10,
     apply: "mainPot",
     workflow: "direct",
@@ -233,9 +238,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "craftsmanCube",
-    name: "工匠方塊",
+    name: "\u540d\u5320\u65b9\u584a",
     price: 0,
-    description: "重設裝備潛能，最高可將潛能階級提升至罕見等級。",
+    description:
+      "\u53ef\u91cd\u8a2d\u4e00\u822c\u6f5b\u80fd\uff0c\u4e26\u6709\u6a5f\u6703\u63d0\u5347\u6f5b\u80fd\u7b49\u7d1a\u3002",
     discount: 0,
     apply: "mainPot",
     workflow: "direct",
@@ -267,9 +273,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "masterCraftsmanCube",
-    name: "名匠方塊",
+    name: "\u5927\u5e2b\u65b9\u584a",
     price: 0,
-    description: "重設裝備潛能，最高可將潛能階級提升至傳說等級。",
+    description:
+      "\u53ef\u91cd\u8a2d\u4e00\u822c\u6f5b\u80fd\uff0c\u4e26\u64c1\u6709\u66f4\u9ad8\u7684\u8df3\u6846\u6a5f\u7387\u3002",
     discount: 0,
     apply: "mainPot",
     workflow: "direct",
@@ -307,9 +314,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "additionalCube",
-    name: "珍貴附加方塊",
+    name: "\u9644\u52a0\u65b9\u584a",
     price: 70,
-    description: "用於重設裝備的附加潛能屬性。",
+    description:
+      "\u53ef\u91cd\u8a2d\u9644\u52a0\u6f5b\u80fd\uff0c\u4e26\u6709\u6a5f\u6703\u63d0\u5347\u6f5b\u80fd\u7b49\u7d1a\u3002",
     discount: 10,
     apply: "additionalPot",
     workflow: "direct",
@@ -347,10 +355,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "restoreAdditionalCube",
-    name: "恢復附加方塊",
+    name: "\u9644\u52a0\u9084\u539f\u65b9\u584a",
     price: 75,
     description:
-      "使用後可預覽附加潛能重設結果，並由玩家選擇保留原始數值或套用新數值。",
+      "\u91cd\u65b0\u6d17\u934a\u5f8c\uff0c\u53ef\u5728\u539f\u672c\u8207\u65b0\u7684\u9644\u52a0\u6f5b\u80fd\u4e4b\u9593\u64c7\u4e00\u5957\u5957\u7528\u3002",
     discount: 10,
     apply: "additionalPot",
     workflow: "restore",
@@ -388,10 +396,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "shinyAdditionalCube",
-    name: "閃亮附加方塊",
+    name: "\u9583\u8000\u9644\u52a0\u65b9\u584a",
     price: 60,
     description:
-      "重設附加潛能。階級提升機率隨使用次數提高，並具備必定升階的保底機制。",
+      "\u53ef\u91cd\u8a2d\u9644\u52a0\u6f5b\u80fd\uff0c\u672a\u8df3\u6846\u6642\u6703\u7d2f\u7a4d\u6b21\u6578\uff0c\u63d0\u9ad8\u4e0b\u4e00\u6b21\u8df3\u6846\u6a5f\u7387\u3002",
     discount: 10,
     apply: "additionalPot",
     workflow: "direct",
@@ -439,10 +447,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "absAdditionalCube",
-    name: "絕對附加方塊",
+    name: "\u7d55\u5c0d\u9644\u52a0\u65b9\u584a",
     price: 100,
     description:
-      "僅限附加潛能為傳說等級之裝備使用。重設後第一、二排必定為傳說等級，第三排必定為罕見等級。",
+      "\u53ea\u6703\u91cd\u65b0\u6d17\u934a\u50b3\u8aaa\u9644\u52a0\u6f5b\u80fd\uff0c\u4e14\u7d50\u679c\u6703\u4fdd\u7559\u524d\u5169\u689d\u7684\u7b49\u7d1a\u7d50\u69cb\u3002",
     discount: 10,
     apply: "additionalPot",
     workflow: "direct",
@@ -461,9 +469,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "combineAdditionalCube",
-    name: "結合附加方塊",
+    name: "\u9644\u52a0\u7d50\u5408\u65b9\u584a",
     price: 150,
-    description: "隨機選擇一排附加潛能屬性，並決定是否重新設定。",
+    description:
+      "\u5148\u9078\u51fa\u4e00\u689d\u9644\u52a0\u6f5b\u80fd\u9032\u884c\u91cd\u6d17\uff0c\u4f60\u53ef\u4ee5\u6c7a\u5b9a\u662f\u5426\u5957\u7528\u8a72\u7d50\u679c\u3002",
     discount: 10,
     apply: "additionalPot",
     workflow: "combine",
@@ -500,15 +509,15 @@ export const CUBE_LIST: CubeDefinition[] = [
 export const CUBE_COMPANION_ITEMS: CubeCompanionItem[] = [
   {
     id: "fixPotential",
-    name: "固定潛能",
-    description: "與恢復方塊一起使用，可以固定其中一排的潛能屬性。",
+    name: "\u56fa\u5b9a\u6f5b\u80fd",
+    description:
+      "\u9396\u5b9a\u6307\u5b9a\u7684\u6f5b\u80fd\u884c\uff0c\u91cd\u6d17\u6642\u4fdd\u7559\u8a72\u884c\u539f\u672c\u7d50\u679c\u3002",
     imagePath: fixPotential,
     price: 0,
     discount: 0,
   },
 ];
 
-/** 定義方塊與 companion item 的關聯 */
 export const CUBE_COMPANIONS: Record<string, CubeCompanionItemId[]> = {
   restoreCube: ["fixPotential"],
 };

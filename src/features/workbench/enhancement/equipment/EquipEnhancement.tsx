@@ -1,32 +1,33 @@
-import { useState, type JSX } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
-
-import useActiveItem from "@/hooks/useActiveItem";
-import type { EquipmentFeature } from "@/domains/equipment/equipment.type";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import PotentialTab from "./tabs/PotentialTab";
+import type {
+  EquipmentEnhancementItemId,
+  EquipmentFeature,
+} from "@/domains/equipment/equipment.type";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
+import EquipEnhancingDialog from "@/features/enhancingDialog/equipment/EquipEnhancingDialog";
+import useActiveItem from "@/hooks/useActiveItem";
+import { useEquipmentEnhancingDialog } from "@/hooks/useEquipmentEnhancingDialog";
+import type { EquipmentInstance } from "@/store/useEquipmentStore";
+import PotentialTab from "./tabs/PotentialTab";
 
 const TABS_CONFIG: {
   value: EquipmentFeature;
   label: string;
-  content: JSX.Element | null;
 }[] = [
   {
     value: "mainPot",
     label: getEquipmentFeatureLabel("mainPot"),
-    content: <PotentialTab feature="mainPot" />,
   },
   {
     value: "additionalPot",
     label: getEquipmentFeatureLabel("additionalPot"),
-    content: <PotentialTab feature="additionalPot" />,
   },
   {
     value: "soul",
     label: getEquipmentFeatureLabel("soul"),
-    content: <PotentialTab feature="soul" />,
   },
 ];
 
@@ -34,12 +35,19 @@ type Tab = EquipmentFeature;
 
 export default function EquipEnhancement() {
   const [currentTab, setCurrentTab] = useState<Tab>(TABS_CONFIG[0].value);
-
+  const { request, openDialog, closeDialog } = useEquipmentEnhancingDialog();
   const instanceData = useActiveItem();
 
   if (!instanceData || instanceData.entity !== "equipment") {
     return null;
   }
+
+  const handleOpenDialog = (
+    equipment: EquipmentInstance,
+    itemId: EquipmentEnhancementItemId,
+  ) => {
+    openDialog(equipment, itemId);
+  };
 
   return (
     <div className="flex flex-col gap-4">
@@ -61,12 +69,14 @@ export default function EquipEnhancement() {
             </TabsTrigger>
           ))}
         </TabsList>
-        {TABS_CONFIG.map(({ value, content }) => (
+        {TABS_CONFIG.map(({ value }) => (
           <TabsContent key={value} value={value}>
-            {content}
+            <PotentialTab feature={value} onOpenDialog={handleOpenDialog} />
           </TabsContent>
         ))}
       </Tabs>
+
+      <EquipEnhancingDialog request={request} closeModal={closeDialog} />
     </div>
   );
 }

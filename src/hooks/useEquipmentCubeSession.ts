@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { EquipmentEnhancementItemId } from "@/domains/equipment/equipment.type";
 import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import { reduceCubeSession } from "@/domains/enhancement/cube/cubeSession.reducer";
@@ -7,42 +6,43 @@ import type {
   CubeRollInput,
   CubeSession,
 } from "@/domains/enhancement/cube/cubeSession.type";
+import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import { CryptoRNG } from "@/domains/random/cryptoRng";
 import { useAccountStore } from "@/store/useAccountStore";
 import {
   useEquipmentStore,
   type EquipmentInstance,
 } from "@/store/useEquipmentStore";
-import type { EquipmentCubeSessionController } from "@/contexts/useEquipmentCubeSessionContext";
+import type { EquipmentCubeSessionController } from "@/contexts/useEquipmentEnhancementSessionContext";
 
 type UseEquipmentCubeSessionParams = {
-  selectedItemId: EquipmentEnhancementItemId | null;
-  localData: EquipmentInstance | null;
+  itemId: string | null;
+  baseInstance: EquipmentInstance | null;
   closeModal: () => void;
 };
 
 export function useEquipmentCubeSession({
-  selectedItemId,
-  localData,
+  itemId,
+  baseInstance,
   closeModal,
 }: UseEquipmentCubeSessionParams): EquipmentCubeSessionController | null {
   const cube = useMemo(() => {
-    if (!selectedItemId || selectedItemId === "wuGongJewel") return null;
+    if (!itemId || SoulManager.isItem(itemId)) return null;
 
-    const definition = getCubeDefinition(selectedItemId as CubeId);
+    const definition = getCubeDefinition(itemId as CubeId);
     return definition.workflow === "direct" ||
       definition.workflow === "restore" ||
       definition.workflow === "hexa" ||
       definition.workflow === "combine"
       ? definition
       : null;
-  }, [selectedItemId]);
+  }, [itemId]);
 
   const [session, setSession] =
     useState<CubeSession<EquipmentInstance> | null>(null);
 
   useEffect(() => {
-    if (!cube || !localData) {
+    if (!cube || !baseInstance) {
       setSession(null);
       return;
     }
@@ -50,12 +50,12 @@ export function useEquipmentCubeSession({
     setSession({
       system: "cube",
       cubeId: cube.id,
-      base: structuredClone(localData),
-      working: structuredClone(localData),
+      base: structuredClone(baseInstance),
+      working: structuredClone(baseInstance),
       rng: new CryptoRNG(),
       pendingRoll: null,
     });
-  }, [cube, localData]);
+  }, [baseInstance, cube]);
 
   const commitAndClose = useCallback(() => {
     if (!session) return;

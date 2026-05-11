@@ -1,81 +1,39 @@
-import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
-
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import {
-  useEquipmentStore,
-  type EquipmentInstance,
-} from "@/store/useEquipmentStore";
-import { EnhancingContext } from "@/contexts/useEnhancingContext";
-import { useActiveStore } from "@/store/useActiveStore";
+import { EquipmentEnhancementSessionContext } from "@/contexts/useEquipmentEnhancementSessionContext";
+import { useEquipmentEnhancementNavigator } from "@/hooks/useEquipmentEnhancementNavigator";
+import type { EquipmentEnhancingDialogRequest } from "@/hooks/useEquipmentEnhancingDialog";
+import { useEquipmentStore } from "@/store/useEquipmentStore";
 import Enhancer from "./Enhancer";
-import type { EquipmentEnhancementItemId } from "@/domains/equipment/equipment.type";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
-import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
-import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import RankUpMultiplier from "./RankUpMultiplier";
-import { EquipmentCubeSessionContext } from "@/contexts/useEquipmentCubeSessionContext";
-import { useEquipmentCubeSession } from "@/hooks/useEquipmentCubeSession";
 
 type Props = {
-  selectedItemId: EquipmentEnhancementItemId | null;
+  request: EquipmentEnhancingDialogRequest | null;
   closeModal: () => void;
 };
 
-export default function EquipEnhancingDialog({
-  selectedItemId,
-  closeModal,
-}: Props) {
-  // TODO: replace localData/context working copy with EquipmentEnhancementSession after cube workflows move to reducers.
-  const [localData, setLocalData] = useState<EquipmentInstance | null>(null);
-
-  const equipId = useActiveStore((s) =>
-    s.activeState.activeType === "equipment" ? s.activeState.id : null,
+export default function EquipEnhancingDialog({ request, closeModal }: Props) {
+  const baseInstance = useEquipmentStore((s) =>
+    request ? s.instanceMap[request.equipmentId] : null,
   );
 
-  const title = selectedItemId
-    ? selectedItemId === "wuGongJewel"
-      ? SoulManager.getItem(selectedItemId).name
-      : getCubeDefinition(selectedItemId as CubeId).name
-    : "";
-
-  const poolData = useMemo(() => {
-    if (!selectedItemId || !localData) return undefined;
-
-    if (selectedItemId === "wuGongJewel") {
-      return {
-        feature: "soul" as const,
-        pools: SoulManager.getPotPool(),
-      };
-    }
-  }, [selectedItemId, localData]);
-
-  const cubeSession = useEquipmentCubeSession({
-    selectedItemId,
-    localData,
+  const navigator = useEquipmentEnhancementNavigator({
+    request,
+    baseInstance,
     closeModal,
   });
 
-  // Open dialog with a working copy of the selected equipment.
-  useEffect(() => {
-    if (selectedItemId && equipId) {
-      setLocalData(
-        structuredClone(useEquipmentStore.getState().instanceMap[equipId]),
-      );
-    }
-  }, [selectedItemId, equipId]);
-
-  const open = !!(
-    selectedItemId &&
-    equipId &&
-    localData &&
-    (selectedItemId === "wuGongJewel" ? poolData : cubeSession)
-  );
+  const title = navigator
+    ? navigator.kind === "soul"
+      ? navigator.controller.soul.name
+      : navigator.controller.cube.name
+    : "";
+  const open = !!(request && baseInstance && navigator);
 
   if (!open) return null;
 
@@ -97,20 +55,10 @@ export default function EquipEnhancingDialog({
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
 
-        <EquipmentCubeSessionContext.Provider value={cubeSession}>
-          <EnhancingContext.Provider
-            value={{
-              localData,
-              setLocalData,
-              selectedItemId,
-              closeModal,
-              poolData,
-            }}
-          >
-            <RankUpMultiplier />
-            <Enhancer />
-          </EnhancingContext.Provider>
-        </EquipmentCubeSessionContext.Provider>
+        <EquipmentEnhancementSessionContext.Provider value={navigator}>
+          <RankUpMultiplier />
+          <Enhancer />
+        </EquipmentEnhancementSessionContext.Provider>
       </DialogContent>
     </Dialog>
   );
