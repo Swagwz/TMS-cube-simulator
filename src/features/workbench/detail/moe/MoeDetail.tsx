@@ -1,4 +1,4 @@
-import DisplayField from "@/components/ui/DisplayField";
+import DisplayField from "@/features/workbench/detail/DisplayField";
 import MoePotentialDisplay from "./MoePotentialDisplay";
 import useActiveItem from "@/hooks/useActiveItem";
 import { MoeManager } from "@/domains/enhancement/moe/moeManager";

@@ -1,4 +1,4 @@
-import DisplayField from "@/components/ui/DisplayField";
+import DisplayField from "@/features/workbench/detail/DisplayField";
 import { EquipManager } from "@/domains/equipment/equipManager";
 import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import useActiveItem from "@/hooks/useActiveItem";

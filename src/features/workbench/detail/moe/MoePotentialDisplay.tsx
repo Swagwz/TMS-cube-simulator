@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import PotentialLineMarker from "@/components/potential/PotentialLineMarker";
-import DisplayField from "@/components/ui/DisplayField";
+import DisplayField from "@/features/workbench/detail/DisplayField";
 import { MoeManager } from "@/domains/enhancement/moe/moeManager";
 import useActiveItem from "@/hooks/useActiveItem";
 

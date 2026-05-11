@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import PotentialLineMarker from "@/components/potential/PotentialLineMarker";
 import RankBadge from "@/components/potential/RankBadge";
-import DisplayField from "@/components/ui/DisplayField";
 import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
+import DisplayField from "@/features/workbench/detail/DisplayField";
 import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
 import { PotManager } from "@/domains/potential/potManager";
 import useActiveItem from "@/hooks/useActiveItem";
