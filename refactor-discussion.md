@@ -1,46 +1,212 @@
 # Refactor Discussion
 
-本文件保留目前仍有價值的架構決策與後續工作。舊的逐題問答已精簡為決議紀錄；若與 `refactor.md` 或目前程式碼衝突，以目前程式碼與本文件的「目前決議」為準。
+這份文件整理目前已確認的重構結論，目的是取代先前已過時或已被新架構推翻的問答。
 
-## 目前決議
+原則：
 
-### App 邊界
+- 只保留對目前程式碼仍然成立的結論
+- 若實作已經更新，就直接改掉舊問答，不保留歷史包袱
+- 以目前 session / reducer / navigator 架構為準
 
-- 專案定位仍是 TMS 強化模擬器，不做完整角色傷害或戰力計算。
-- Store 維持 plain serializable app-domain model，不為了 Nexon API 改成 Nexon 欄位命名。
-- Nexon API 匯入是一次性 fetch / normalize 流程；不持久化 raw payload。
-- API key 不進前端 store；未來需要 serverless proxy 時，由 serverless 層處理。
-- 匯入後的裝備仍可由使用者修改，因此匯入資料要轉成 app instance，而不是保留外部 API shape。
+---
 
-### Store 與 Session
+## App / Store / Session
 
-- Zustand store 保存長期狀態：equipment / moe instance、statistics、active item。
-- Dialog / enhancement workflow 使用 session working copy，避免 UI 高頻操作直接污染 store。
-- Session 不是通用 FSM engine；每個 enhancement 只保留自己的最小共用狀態。
-- Session action 採 reducer 風格：
+### Q：Store 應該存什麼？
+
+回答：
+
+Store 只存 plain serializable app-domain data，例如：
+
+- `EquipmentInstance`
+- `MoeInstance`
+- `statistics`
+- active item id
+
+不要把以下內容放進 Zustand：
+
+- class instance
+- RNG instance
+- session object
+- React workflow state
+
+### Q：Dialog working copy 應該放哪？
+
+回答：
+
+應該放在 session，不放在 store。
+
+目前 equipment enhancement dialog 的 working copy 來自：
 
 ```ts
-const result = reduceCubeSession(session, command);
+base: structuredClone(baseInstance)
+working: structuredClone(baseInstance)
 ```
 
-- `working.statistics` 繼續留在 `working` instance 上，不拆成獨立 session statistics。
-- count 更新發生在成功 `roll`，不是 `apply`。
+session 是 dialog runtime state，不是 store state。
 
-### 命名
+### Q：還需要 `localData` 嗎？
 
-- equipment / moe / cube session 內的潛能 id 陣列統一使用 `potentialIds`。
-- `PotentialFeature` 已 rename 為 `EquipmentPotentialSlot`。
-- `fixed potential` 已改成 cube companion item，不再當作 cube relation 或獨立 apply item。
+回答：
 
-## Cube 架構現況
+不需要。
 
-### Metadata
+這是已經落地的新結論。equipment enhancement 主流程已不再依賴：
 
-- `cube.config.ts` 只放靜態 cube / companion item metadata。
-- `cube.registry.ts` 負責 cube 查詢、map、適用性與 companion 查詢。
-- `cube.type.ts` 使用資料欄位描述 workflow policy，不引入 cube class hierarchy。
+- `localData`
+- `setLocalData`
+- `EnhancingContext`
 
-目前 cube metadata policy：
+現在改成：
+
+```text
+dialog request
+-> navigator
+-> session
+```
+
+### Q：dialog 關閉並 sync 回 store 應該由誰負責？
+
+回答：
+
+應該由 UI-facing controller / hook action 層負責，不是 reducer。
+
+例如：
+
+```ts
+function commitAndClose() {
+  useEquipmentStore.getState().syncInstance(session.working);
+  closeModal();
+}
+```
+
+原因：
+
+- reducer 應保持 pure-ish
+- `syncInstance()` 是 app integration，不是 domain logic
+- `closeModal()` 更是 UI 行為
+
+---
+
+## Equipment Enhancement Dialog
+
+### Q：現在 dialog 是怎麼開的？
+
+回答：
+
+現在不是靠 `selectedItemId` state 控制，而是 event-driven request。
+
+流程：
+
+```text
+PotentialTab item click
+-> openDialog(equipment, itemId)
+-> request { equipmentId, itemId }
+-> EquipEnhancingDialog
+-> navigator
+-> session controller
+```
+
+`PotentialTab` 不再持有：
+
+- selected item state
+- dialog request state
+
+### Q：`PotentialTab` 現在的責任是什麼？
+
+回答：
+
+它現在只是 feature launcher。
+
+負責：
+
+- render `PotentialArea`
+- render 當前 feature 的 enhancement item list
+- 把 item click 往上送
+
+不負責：
+
+- 決定 dialog 開關
+- 保存 `selectedItemId`
+- 做 workflow state machine
+
+### Q：dialog 的 source of truth 是什麼？
+
+回答：
+
+是 active request：
+
+```ts
+type EquipmentEnhancingDialogRequest = {
+  equipmentId: string;
+  itemId: EquipmentEnhancementItemId;
+} | null;
+```
+
+只要 request 存在，且能從 store 取到 `baseInstance` 並建立 navigator，dialog 就開啟。
+
+---
+
+## Navigator / Context
+
+### Q：為什麼需要單一 navigator result？
+
+回答：
+
+因為目前同一個 equipment enhancement dialog，在同一時間只會有一種 controller：
+
+- cube controller
+- soul controller
+
+所以應該收成 discriminated union，而不是把 `cubeSession` / `soulSession` 都丟給 UI 自己猜。
+
+目前 shape：
+
+```ts
+type EquipmentEnhancementNavigatorResult =
+  | {
+      kind: "cube";
+      workflow: CubeDefinition["workflow"];
+      controller: EquipmentCubeSessionController;
+    }
+  | {
+      kind: "soul";
+      controller: EquipmentSoulSessionController;
+    }
+  | null;
+```
+
+這樣的好處：
+
+- `Enhancer.tsx` 直接 `switch (navigator.kind)`
+- `EquipFooter.tsx`、`RankUpMultiplier.tsx` 直接讀 navigator
+- 不需要再回頭追哪個 session 有值
+
+### Q：現在還需要 `EnhancingContext` 嗎？
+
+回答：
+
+不需要。
+
+equipment enhancement 主流程已改成：
+
+- `useEquipmentEnhancingDialog`
+- `useEquipmentEnhancementNavigator`
+- `EquipmentEnhancementSessionContext`
+
+舊的 `EnhancingContext` 已退出主流程。
+
+---
+
+## Cube Domain
+
+### Q：cube metadata 應該長怎樣？
+
+回答：
+
+應該用 plain TypeScript metadata + policy key，不用 class hierarchy。
+
+目前核心欄位：
 
 ```ts
 type CubeWorkflow = "direct" | "restore" | "hexa" | "combine";
@@ -51,443 +217,345 @@ type CubeLineEffect =
   | { type: "mirror"; probability: number; fromIndex: 0; toIndex: 1 };
 ```
 
-- `mirrorCube` 是 direct workflow，使用 `lineEffect: "mirror"` 與 `validationType: "none"`。
-- `shinyAdditionalCube` 是 direct workflow，使用 `rankUpType: "accumulate"`。
-- `restore*` 使用 restore workflow。
-- `hexaCube` 使用 hexa workflow。
-- `combine*` 使用 combine workflow。
-
-### Pure Roll Layer
-
-`cubeRoll.feature.ts` 是 pure roll behavior 層，所有隨機行為都要吃 injected RNG。
-
-已實作：
-
-- `rollDirectCube`
-- `rollRestoreCube`
-- `rollHexaCube`
-- `rollCombineCube`
-- `rollRankUpByType`
-- `applyLineEffect`
-- `validatePotentialLinesByType`
-
-保留相容：
-
-- `CubeManager` 暫時保留給舊 UI callsite。
-- UI 全部遷移到 session reducer 前，不刪 `CubeManager`。
-
-### Session Type
-
-```ts
-type PotentialLines = {
-  tier: EquipmentRank;
-  potentialIds: string[];
-};
-
-type CubeSession<TEquipment> = {
-  system: "cube";
-  cubeId: CubeId;
-  base: TEquipment;
-  working: TEquipment;
-  rng: RNG;
-  pendingRoll: CubeRollOutput | null;
-};
-
-type CubeRollOutput =
-  | { flow: "direct"; rolled: PotentialLines }
-  | {
-      flow: "restore";
-      before: PotentialLines;
-      after: PotentialLines;
-      fixedIndex: number;
-    }
-  | { flow: "hexa"; candidates: PotentialLines }
-  | {
-      flow: "combine";
-      step: "rolledLine";
-      selectedIndex: number;
-      rolledPotentialId: string;
-    };
-```
-
-說明：
-
-- `pendingRoll` 是 roll action output，不是 dialog layout state。
-- Dialog layout 不應依賴 `pendingRoll` 才決定 UI；應依 cube workflow / cubeId 決定。
-- `restore.before` 是 roll 當下 snapshot，不從目前 working 推斷。
-- `hexa.candidates.potentialIds` 預期長度為 6。
-- `combine` 不保留 `selectedLine` pending state；roll 時已選 line 並 roll 出隱藏 replacement line，apply 只寫入或丟棄。
-
-### Roll Input / Apply Decision
-
-```ts
-type CubeRollInput =
-  | { flow: "direct"; rankUpMultiplier?: number; accumulateCount?: number }
-  | { flow: "restore"; rankUpMultiplier?: number; fixedIndex?: number }
-  | { flow: "hexa"; rankUpMultiplier?: number }
-  | { flow: "combine"; targetIndex: number };
-
-type CubeApplyDecision =
-  | { flow: "direct" }
-  | { flow: "restore"; side: "before" | "after" }
-  | { flow: "hexa"; selectedIndices: [number, number, number] }
-  | { flow: "combine"; applyRolledLine: boolean };
-```
-
-說明：
-
-- `restore.fixedIndex` 省略時等同 `-1`。
-- `combine.targetIndex` 必填；`-1` 代表沒選 target，`0..2` 代表 target mode。
-- combine target mode 會累計每次 slot-roll attempt，直到 selected line 命中 target。
-- 已實作 cube workflow 的 `apply` 都不 consume RNG。
-
-## Auto-roll 暫定方向
-
-Auto-roll 暫時不做，等手動 cube workflow 完整接上 session model 後再開始。
-
-已收斂方向：
-
-- Auto-roll 應重用 cube session / reducer / pure roll function，不另建一套 cube workflow。
-- Runner 狀態與 session 分離：
-  - running / paused / completed
-  - attempt count
-  - stop reason
-  - target
-  - strategy
-- Strategy 負責提供 roll input 與 apply decision。
-- Matcher 可以讀 `pendingRoll`，但 UI layout 不該依賴 matcher 或 pending state。
-- Probability / matcher 應盡量共用 compiled target model。
-
-仍待設計：
-
-- target model 是否以 `potentialId` count、metric threshold、line pool 或混合模型表示。
-- imported unknown potential 是否能用 raw text / inferred field-value 參與 matching。
-- probability engine 對不同 workflow 要用精確枚舉、DP，還是允許 Monte Carlo fallback。
-- 極小機率顯示格式與 90% confidence attempt / time estimate。
-- hexa auto-roll 如何從 6 條候選選出最佳 3 條。
-- restore + fixed companion 的 auto-roll 策略預設。
-- combine auto-roll 是否固定 targetIndex，或由 strategy 選 line。
-
-## UI Session Hook / Action Migration 問答
-
-### Q：目前 equipment dialog 的主要問題是什麼？
+### Q：為什麼不要 cube class hierarchy？
 
 回答：
 
-目前 `EquipEnhancingDialog` 仍以 `localData + setLocalData` 當作 dialog working copy，並透過 `EnhancingContext` 傳給所有 enhancer。
+因為目前 cube 差異已能用 metadata + pure function policy 表達：
 
-這個模式可以保留「dialog 關閉才 sync 回 Zustand」的行為，但 cube workflow 已經有 `CubeSession` / `reduceCubeSession`，如果 UI 繼續在各 enhancer 內直接呼叫 `CubeManager.rollRankUp()`、`CubeManager.rollPots()`、`produce()` 改 working，就會變成兩套 cube 邏輯並存。
+- workflow
+- rank-up type
+- validation type
+- line effect
+- apply slot
+- line rank table
 
-結論：
+還沒有任何 cube 需要獨立 runtime state，因此沒有理由引入 subclass。
 
-- dialog 可以繼續持有 working copy。
-- cube UI 不應再直接改 `localData`。
-- cube UI 應透過 session action dispatch 到 `reduceCubeSession`。
-- 關閉 dialog 並 sync 回 Zustand 的責任仍放在 dialog / hook action layer，不放進 domain reducer。
-
-### Q：關掉 dialog 並 sync 回 Zustand 要放在哪？
+### Q：mirror / shinyAdditional / combine 這些特殊 cube 怎麼處理？
 
 回答：
 
-放在 UI-facing hook / action layer。
+不是做成不同 class，而是交給 metadata policy 與 reducer / feature function。
+
+例子：
+
+- `mirrorCube`
+  - `workflow: "direct"`
+  - `validationType: "none"`
+  - `lineEffect: "mirror"`
+- `shinyAdditionalCube`
+  - `workflow: "direct"`
+  - `rankUpType: "accumulate"`
+- `combineCube`
+  - `workflow: "combine"`
+
+---
+
+## Session / Reducer
+
+### Q：CubeSession 的邊界是什麼？
+
+回答：
+
+CubeSession 可以知道最小的 equipment-like shape，但不能 import Zustand store implementation type 來耦合 store。
+
+目前最小需求是：
+
+- `subcategory`
+- `level`
+- `mainPot`
+- `additionalPot`
+- `statistics.counts.mainPot`
+- `statistics.counts.additionalPot`
+
+這也是 `CubeSessionEquipment` 的存在理由。
+
+### Q：SoulSession 也需要嗎？
+
+回答：
+
+需要，而且已經完成。
+
+目前 soul 也已收成：
+
+- `SoulSession`
+- `reduceSoulSession`
+- `rollSoulPotential`
+- `useEquipmentSoulSession`
+
+所以 equipment enhancement 現在不再是 cube-only session 架構。
+
+### Q：statistics count 應該在哪裡更新？
+
+回答：
+
+應該在 reducer 的成功 `roll` 路徑更新，不在 UI，也不在 `apply`。
+
+這是目前已落地的規則。
 
 原因：
 
-- `reduceCubeSession` 是 domain reducer，只知道 `session.working`，不應知道 Zustand。
-- `syncInstance()` 是 store action，屬於 app integration。
-- 使用者已決定切換裝備必須關掉 dialog，因此 open dialog 期間不需要 `replaceWorking`。
+- count 是 workflow side effect
+- 它跟 roll 是否真的發生綁定
+- `apply` 只是決定是否採用 pending result，不代表一次新 roll
 
-建議責任分配：
+### Q：為什麼不直接用 Immer 更新 nested object？
+
+回答：
+
+因為 domain reducer 目前傾向維持 plain immutable update。
+
+但 nested count update 不能散落各處，所以目前已收斂成：
 
 ```ts
-function commitAndClose() {
-  useEquipmentStore.getState().syncInstance(session.working);
-  closeModal();
-}
+incrementStatisticsCount(working, feature, id, delta = 1)
 ```
 
-`commitAndClose` 可以由 cube session hook 回傳，或由 dialog 擁有後傳給 workflow component。重點是 enhancer component 不直接碰 `useEquipmentStore`。
+這樣：
 
-### Q：`EquipEnhancingDialog` 要直接改成只放 `CubeSession` 嗎？
+- 不依賴 Immer runtime
+- reducer 邏輯仍能保持可讀
+- 不會每個 reducer 都手寫一份 nested immutable update
 
-回答：
+---
 
-不要一次改掉全部。
+## Workflow 結論
 
-目前同一個 dialog 還服務：
-
-- cube
-- soul / `wuGongJewel`
-
-因此第一階段建議採混合過渡：
-
-- selected item 是 cube：建立 `CubeSession<EquipmentInstance>`，cube workflow component 只讀寫 session。
-- selected item 是 soul：暫時保留既有 `localData / useEquipEnhancer` 路徑。
-
-等 cube UI 全部遷完，再決定 soul 是否也抽成自己的 session。
-
-### Q：建議新增哪一層 hook？
+### Q：direct workflow 應該怎麼看待？
 
 回答：
 
-新增 cube 專用 UI-facing hook，例如：
+domain 上仍然是：
 
-```ts
-type EquipmentCubeSessionController = {
-  session: CubeSession<EquipmentInstance>;
-  cube: CubeDefinition;
-  slot: EquipmentPotentialSlot;
-  working: EquipmentInstance;
-  pendingRoll: CubeRollOutput | null;
-  displayLines: CubeSessionPotentialGroup;
-
-  dispatch: (command: CubeSessionCommand) => CubeSessionReduceResult<EquipmentInstance>;
-  rollDirectAndApply: (input?: Omit<Extract<CubeRollInput, { flow: "direct" }>, "flow">) => void;
-  roll: (input?: CubeRollInput) => void;
-  apply: (decision?: CubeApplyDecision) => void;
-  discardPendingRoll: () => void;
-  commitAndClose: () => void;
-};
-```
-
-可能檔案位置：
-
-- `src/hooks/useEquipmentCubeSession.ts`
-- 或 `src/features/enhancingDialog/equipment/hooks/useEquipmentCubeSession.ts`
-
-若只服務 equipment enhancing dialog，放在 feature folder 會比較貼近 UI migration；若未來 auto-roll / workflow panel 也會共用，再移到 `src/hooks`。
-
-### Q：direct cube UI 要不要真的顯示 pendingRoll？
-
-回答：
-
-不用。
-
-Direct workflow 的本質是「按下去立即套用」。雖然 reducer 的 domain 流程是：
-
-```ts
+```text
 roll -> pendingRoll -> apply
 ```
 
-但 UI action 可以包成一次動作：
+但 UI 上可以包成單次 action：
 
-```ts
-function rollDirectAndApply(input) {
-  setSession((current) => {
-    const rolled = reduceCubeSession(current, {
-      type: "roll",
-      input: { flow: "direct", ...input },
-    });
-
-    return reduceCubeSession(rolled.session, {
-      type: "apply",
-      decision: { flow: "direct" },
-    }).session;
-  });
-}
+```text
+rollDirectAndApply
 ```
 
-這樣可以同時滿足：
+這樣可以讓 reducer 保持一致，也能保留 direct UX。
 
-- domain reducer 保持一致模型。
-- direct UI 保持舊行為，一次 click 直接改 working。
-- statistics 只在 `roll` 增加，不會因 `apply` 再加一次。
-- mirror / abs / equal / standard direct 都走同一條 direct action。
-
-### Q：`Enhancer` navigator 應該怎麼改？
+### Q：restore workflow 的 fixed line 怎麼定義？
 
 回答：
 
-目前 `Enhancer.tsx` 是依 `selectedItemId` 分派到每顆 cube 的 component，導致每顆 cube 都重複 display / roll / statistics / close 行為。
+- `fixedIndex = -1`
+  - 不固定
+- `fixedIndex = 0..2`
+  - 固定指定那一排
 
-遷移方向應改成：
+`restoreAdditionalCube` 沒有 fixed companion，因此 UI 不提供 lock line。
 
-```ts
-if (selectedItemId === "wuGongJewel") {
-  return <SoulEnhancer />;
-}
-
-const cube = getCubeDefinition(selectedItemId);
-
-switch (cube.workflow) {
-  case "direct":
-    return <DirectCubeWorkflow />;
-  case "restore":
-    return <RestoreCubeWorkflow />;
-  case "hexa":
-    return <HexaCubeWorkflow />;
-  case "combine":
-    return <CombineCubeWorkflow />;
-}
-```
-
-這裡的 workflow component 是 UI workflow，不是 domain cube class。
-
-特殊 cube 差異不應回到「每顆 cube 一個 enhancer」：
-
-- `mirrorCube`：已由 `lineEffect` 處理。
-- `absAdditionalCube`：已由 `rankUpType: "none"` 與 `lineRank` 處理。
-- `equalCube`：已由 `lineRank` 處理。
-- `shinyAdditionalCube`：仍是 direct workflow，但 UI 可額外顯示 pity 資訊。
-- `craftsmanCube` legendary 不可用：應由 applicable list 擋掉；若仍進到 dialog，Direct UI 可顯示 disabled / null guard。
-
-### Q：direct UI 的畫面資料要從哪裡讀？
+### Q：hexa reroll 為什麼要先更新 tier？
 
 回答：
 
-讀 `session.working[cube.apply]`。
+因為 hexa 的 reroll 本質只是讓使用者不用先選 3 條再繼續洗。
 
-不要再讀舊的 `localData.mainPot` / `localData.additionalPot` 後自行判斷。Direct workflow component 可以用共用 display component：
+如果 roll 出來時實際 tier 已經改變，那 `working[cube.apply].tier` 就應立即更新，否則下一次 reroll 的起點會不對。
 
-```ts
-const lines = session.working[cube.apply];
-```
+目前結論：
 
-因此 direct UI 只需要知道：
+- roll 後先更新 `working tier`
+- `potentialIds` 仍等 confirm 選 3 條後才寫入
 
-- cube metadata
-- apply slot
-- working potential lines
-- `rollDirectAndApply`
-- `commitAndClose`
-
-### Q：`poolData` 還需要由 dialog 算好傳給 cube UI 嗎？
+### Q：combine target mode 應該怎麼處理？
 
 回答：
 
-cube session reducer 已經會根據：
+這是最近新增的重要結論。
 
-```ts
-session.working.subcategory
-session.working.level
-session.cubeId
+目前分成兩種：
+
+#### 1. `targetIndex < 0`
+
+維持一般 combine pending flow：
+
+```text
+roll -> pending rolled line -> apply/discard
 ```
 
-自行取得 cube potential pools。
+#### 2. `targetIndex >= 0`
 
-因此 cube UI 不需要 `poolData`。
+因為使用者已經指定要洗哪一排，而且 combine 一定會 loop 到目標排，所以不應再多按一次 apply。
 
-過渡期可以保留 `poolData` 給 soul 使用；cube session hook 不依賴它。
+現在正確流程是：
 
-### Q：rank-up multiplier 與 shiny accumulate count 放哪？
+```text
+roll + apply
+```
+
+也就是：
+
+- button 直接觸發 `rollCombineAndApply(targetIndex)`
+- target mode 下不顯示 `Apply`
+- 這是快速洗鍊 UX，不是一般 pending review UX
+
+---
+
+## Equipment Detail / Metadata
+
+### Q：為什麼 `EquipmentDetail` 不應直接讀 raw config array？
 
 回答：
 
-它們是 UI / account setting input，不是 cube metadata，也不應由 domain reducer 直接讀 store。
+因為那會讓展示層直接依賴 metadata 原始資料來源，容易破壞邊界。
 
-建議：
+目前正確方向是：
 
-- `rankUpMultiplier` 由 hook/action layer 從 `useAccountStore` 讀出後放進 roll input。
-- `shinyAdditionalCube` 的 `accumulateCount` 由 hook/action layer 從 `shinyPity[currentTier]` 讀出後放進 direct roll input。
-- pity counter 的 increment / reset 仍由 hook/action layer 根據 roll result 更新，不放進 reducer。
+- cube：走 cube registry / helper
+- soul：走 `SoulManager`
+- detail rows：由 read-model helper 組裝
 
-Direct action 可以在 roll 後比較：
+目前 `EquipmentDetail` 已改成透過：
 
-```ts
-const beforeTier = current.working[cube.apply].tier;
-const afterTier = rolled.event.output.rolled.tier;
-```
+- `getEquipmentStatisticsRows(instance)`
 
-如果 cube 是 `shinyAdditionalCube`：
+來 render statistics。
 
-- `afterTier !== beforeTier`：reset pity。
-- `afterTier === beforeTier`：increment pity。
-
-### Q：statistics count 由誰處理？
+### Q：companion item 為什麼不能再手寫一份？
 
 回答：
 
-cube 使用次數仍由 `reduceCubeSession` 在 successful `roll` 更新 `session.working.statistics.counts`。
+因為 companion metadata 的單一來源已經在 `cube.config.ts`。
 
-UI 不再手動：
+後來的修正結論是：
 
-```ts
-draft.statistics.counts.mainPot.craftsmanCube += 1;
-```
+- `equipmentStatisticsRows.ts` 不應再自建一份 companion constant
+- companion lookup 應走 `cube.registry.ts`
 
-這是 direct UI migration 的重要收益：UI 不再知道 cube count path。
+目前已補：
 
-### Q：舊的各種 `*CubeEnhancer.tsx` 什麼時候刪？
+- `getCubeCompanionItem(id)`
+- `isCubeCompanionItemId(id)`
+
+所以 detail read-model 已回到 SSoT。
+
+---
+
+## 測試策略
+
+### Q：為什麼這次沒有直接上 React component test？
 
 回答：
 
-不要先刪。
+因為目前 repo 沒有現成的 `jsdom` / Testing Library setup，而這次真正高風險的是：
+
+- dialog request 建立條件
+- navigator 分流
+- combine target mode `roll + apply`
+
+這些都可以透過 pure helper 或 controller-adjacent 測試覆蓋，不需要先引入完整 React test infra。
+
+### Q：目前已補哪些邊界測試？
+
+回答：
+
+目前已補：
+
+- `createEquipmentEnhancingDialogRequest(...)`
+- `resolveEquipmentEnhancementNavigator(...)`
+- `runCombineRollAndApply(...)`
+- `equipmentEnhancementItems` read-model
+- cube / soul reducer
+- `incrementStatisticsCount(...)`
+
+這代表目前 session / dialog / combine target mode 已有基本回歸保護。
+
+### Q：`vi.spyOn(...).mockReturnValue(true)` 在測試裡是在做什麼？
+
+回答：
+
+它是在攔截內部 dependency，讓較高層的 helper / reducer 在執行時拿到固定結果。
+
+例如：
+
+```ts
+vi.spyOn(PotManager, "validateLineRules").mockReturnValue(true);
+```
+
+意思不是「我在下面直接呼叫 spy」，而是：
+
+- 當 `runCombineRollAndApply(...)`
+- 或它內部呼叫到的 reducer / feature
+- 執行 `PotManager.validateLineRules(...)`
+
+時，一律回傳 `true`。
+
+用途是把 validation 規則排除掉，讓測試聚焦在 combine target mode flow，而不是潛能驗證本身。
+
+---
+
+## Auto-roll
+
+### Q：現在可以開始 auto-roll 了嗎？
+
+回答：
+
+可以。
+
+目前前置條件都已具備：
+
+- cube workflow 都已進 session / reducer
+- direct / restore / hexa / combine command model 已固定
+- RNG 可注入
+- dialog / navigator / controller 邊界已形成
+- combine target mode 特例也已有穩定 action
+
+### Q：下一步應該從哪裡開始？
+
+回答：
+
+先做 equipment cube auto-roll runner，不先碰 UI。
 
 建議順序：
 
-1. 新增 cube session hook / action layer。
-2. 新增 workflow-level components：
-   - `DirectCubeWorkflow`
-   - `RestoreCubeWorkflow`
-   - `HexaCubeWorkflow`
-   - `CombineCubeWorkflow`
-3. 先讓 `Enhancer.tsx` 對 direct workflow 改走 `DirectCubeWorkflow`。
-4. 驗證 direct cubes：
-   - craftsman
-   - masterCraftsman
-   - equal
-   - mirror
-   - additional
-   - shinyAdditional
-   - absAdditional
-5. direct 穩定後刪除 direct 類舊 enhancer。
-6. 再依序遷 restore、hexa、combine。
+1. runner 直接操作 session / reducer
+2. 再做 workflow-specific decision adapter
+3. 最後才做 matcher / probability / auto-roll panel
 
-這樣每一步都可以用目前 reducer tests 作為 domain 保護，不會把 UI rewrite 和 domain behavior 改動混在一起。
+不要反過來先做 UI 或 DSL，否則 runner shape 會被 UI 反綁。
 
-### Q：第一個 direct UI PR 的最小 scope 是什麼？
+---
 
-回答：
+## 現在仍然不做的事
 
-最小 scope：
+目前仍不應優先做：
 
-- `EquipEnhancingDialog` 在 cube selected 時建立 cube session。
-- 新增 cube session controller hook。
-- `Enhancer.tsx` 對 `cube.workflow === "direct"` 回傳 `DirectCubeWorkflow`。
-- `DirectCubeWorkflow` 使用 session working 顯示潛能。
-- click roll 時呼叫 `rollDirectAndApply()`。
-- close 時 sync `session.working` 回 Zustand。
-- soul / restore / hexa / combine 先走舊 component。
+- generic FSM engine
+- cube / equipment class hierarchy
+- 把 metadata 全移去 JSON
+- 為 auto-roll 提前做一個過度 generic 的 engine
+- 把 UI component 自己變成 domain rule owner
 
-這個 scope 完成後，direct cube 的 UI 就不再依賴：
+---
 
-- `CubeManager.rollRankUp`
-- `CubeManager.rollPots`
-- component 內手動 statistics mutation
-- 每顆 direct cube 一個 enhancer component
+## 總結
 
-## Nexon Import 待決議
+目前架構已經從舊的：
 
-- 匯入資料應 normalize 成 app-domain `EquipmentInstance`，不直接保存 Nexon raw shape。
-- unknown potential 需要有出口，避免匯入資料因找不到 app potential id 而丟失。
-- 可能模型：
-
-```ts
-type PotentialLine =
-  | { kind: "known"; potentialId: string }
-  | {
-      kind: "unknown";
-      rawText: string;
-      infer?: {
-        template: string;
-        value: number;
-        field: string;
-        potentialName: string;
-      };
-    };
+```text
+selected item state
+-> localData
+-> enhancer
+-> manager
 ```
 
-仍待決議：
+收斂成：
 
-- unknown line 是否可以被 auto-roll target matcher 使用。
-- capabilities 要由 Nexon 裝備部位 / 等級推導，還是匯入時給較寬鬆預設再讓使用者修正。
-- 同一角色 / 同一件裝備再次匯入時，要新增 instance 還是更新既有 instance。
+```text
+item click event
+-> dialog request
+-> navigator
+-> session controller
+-> reducer
+-> pure feature
+-> RNG
+```
 
-## 下一步
-
-1. 先 commit 目前 cube domain / session / naming refactor。
-2. 新增 UI-facing cube session hook / action boundary。
-3. 先接 direct cube UI 到 `reduceCubeSession`，並保留 restore / hexa / combine 舊路徑。
-4. direct 穩定後，再依序遷 restore、hexa、combine。
-5. UI migration 完成後再縮小或移除 `CubeManager`。
-6. 手動 cube workflow 穩定後，再開始 auto-roll target / matcher / probability / runner。
+這也是接下來 auto-roll 應該建立的邊界。
