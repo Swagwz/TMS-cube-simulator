@@ -34,13 +34,17 @@ function createSession(params?: {
     base: createEquipment(),
     working,
     rng: params?.rng ?? new FixedRNG([0]),
+    pool: SoulManager.getPotPool(working.level).map(({ id, weight }) => ({
+      id,
+      weight,
+    })),
     pendingRoll: params?.pendingRoll ?? null,
   };
 }
 
 describe("reduceSoulSession", () => {
   it("creates a pending roll without changing working soul", () => {
-    const firstSoulId = SoulManager.getPotPool()[0]!.id;
+    const firstSoulId = SoulManager.getPotPool(200)[0]!.id;
     const session = createSession({
       working: {
         ...createEquipment(),
@@ -101,6 +105,19 @@ describe("reduceSoulSession", () => {
   it("throws when applying without a pending roll", () => {
     expect(() => reduceSoulSession(createSession(), { type: "apply" })).toThrow(
       "Cannot apply soul session without a pending roll",
+    );
+  });
+
+  it("stores a level-derived soul pool on the session", () => {
+    const session = createSession({
+      working: {
+        ...createEquipment(),
+        level: 120,
+      },
+    });
+
+    expect(session.pool).toEqual(
+      SoulManager.getPotPool(120).map(({ id, weight }) => ({ id, weight })),
     );
   });
 });

@@ -25,7 +25,7 @@ export default function SoulProbTable({ level }: FormData) {
     direction: "desc",
   });
   const data = useMemo(() => {
-    const pool = SoulManager.getPotPool();
+    const pool = SoulManager.getPotPool(level);
     return pool.map((item) => ({
       ...item,
       display: SoulManager.getLine(item.id, level),

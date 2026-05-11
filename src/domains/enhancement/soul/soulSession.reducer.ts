@@ -1,4 +1,3 @@
-import { SoulManager } from "./soulManager";
 import { rollSoulPotential } from "./soulRoll.feature";
 import { incrementStatisticsCount } from "@/domains/equipment/equipmentStatistics";
 import type {
@@ -30,7 +29,7 @@ function roll<TEquipment extends SoulSessionEquipment>(
 ): SoulSessionReduceResult<TEquipment> {
   const output = {
     rolledSoulId: rollSoulPotential({
-      pool: SoulManager.getPotPool(),
+      pool: session.pool,
       rng: session.rng,
     }),
   };

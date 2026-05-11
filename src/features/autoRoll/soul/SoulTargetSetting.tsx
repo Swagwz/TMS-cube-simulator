@@ -26,7 +26,7 @@ export default function SoulTargetSetting({
   level,
   variant = "glass",
 }: Props) {
-  const options = SoulAutoRoll.getOptions();
+  const options = SoulAutoRoll.getOptions(level);
 
   return (
     <TargetAccordion

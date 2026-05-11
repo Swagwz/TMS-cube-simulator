@@ -1,4 +1,5 @@
 import type { RNG } from "@/domains/random/rng.type";
+import type { SoulPotentialPoolEntry } from "./soulRoll.feature";
 import type { SoulId } from "./soul.type";
 
 export type SoulSessionEquipment = {
@@ -21,6 +22,7 @@ export type SoulSession<TEquipment = unknown> = {
   base: TEquipment;
   working: TEquipment;
   rng: RNG;
+  pool: SoulPotentialPoolEntry[];
   pendingRoll: SoulRollOutput | null;
 };
 

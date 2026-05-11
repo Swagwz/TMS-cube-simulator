@@ -84,8 +84,8 @@ export const StatParser: SoulStatParser = {
 };
 
 export const SoulAutoRoll = {
-  getOptions() {
-    const potList = SoulManager.getPotPool().map((entry) =>
+  getOptions(level: number) {
+    const potList = SoulManager.getPotPool(level).map((entry) =>
       SoulManager.getPotentialMetadata(entry.id),
     );
 
@@ -106,7 +106,7 @@ export const SoulAutoRoll = {
     });
   },
   calcProb(target: SoulAutoRollTarget, level: number) {
-    const pool = SoulManager.getPotPool();
+    const pool = SoulManager.getPotPool(level);
     const matcher = new SoulAutoRollMatcher([target]);
 
     let totalProb = 0;

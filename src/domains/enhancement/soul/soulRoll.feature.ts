@@ -6,6 +6,10 @@ export type SoulPotentialPoolEntry = {
   weight: number;
 };
 
+export type SoulPotentialProbPoolEntry = SoulPotentialPoolEntry & {
+  prob: number;
+};
+
 export function rollSoulPotential(params: {
   pool: SoulPotentialPoolEntry[];
   rng: RNG;

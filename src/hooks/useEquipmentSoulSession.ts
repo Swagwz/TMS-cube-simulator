@@ -41,6 +41,10 @@ export function useEquipmentSoulSession({
       base: structuredClone(baseInstance),
       working: structuredClone(baseInstance),
       rng: new CryptoRNG(),
+      pool: SoulManager.getPotPool(baseInstance.level).map(({ id, weight }) => ({
+        id,
+        weight,
+      })),
       pendingRoll: null,
     });
   }, [baseInstance, soul]);

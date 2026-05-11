@@ -1,5 +1,9 @@
 import { SOUL_LIST, SOUL_METADATA_MAP } from "./soul.config";
 import { SOUL_POTENTIAL_ID_MAP, SOUL_POTENTIAL_SOURCE } from "./soul.data";
+import type {
+  SoulPotentialPoolEntry,
+  SoulPotentialProbPoolEntry,
+} from "./soulRoll.feature";
 import formatTemplate from "@/utils/formatTemplate";
 import type { SoulId } from "./soul.type";
 
@@ -38,8 +42,10 @@ export const SoulManager = {
     }
     return template;
   },
-  getPotPool() {
-    const pool = SOUL_POTENTIAL_SOURCE.map(({ id, weight }) => ({
+  getPotPool(level: number): SoulPotentialProbPoolEntry[] {
+    const pool: SoulPotentialPoolEntry[] = SOUL_POTENTIAL_SOURCE.filter(
+      (entry) => entry.values.some(({ minLevel }) => level >= minLevel),
+    ).map(({ id, weight }) => ({
       id,
       weight,
     }));
@@ -47,7 +53,7 @@ export const SoulManager = {
     return pool.map(({ id, weight }) => ({
       id,
       weight,
-      prob: (weight / totalWeight) * 100,
+      prob: totalWeight === 0 ? 0 : (weight / totalWeight) * 100,
     }));
   },
 };
