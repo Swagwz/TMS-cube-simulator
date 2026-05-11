@@ -28,19 +28,11 @@ export default function RankUpProb({ cube, rank }: Props) {
   const meta = getCubeDefinition(cube);
 
   if (!meta.rankUp) {
-    return (
-      <div className="title-error">
-        {"\u9019\u500b\u65b9\u584a\u4e0d\u6703\u8df3\u6846"}
-      </div>
-    );
+    return <div className="title-error">這個方塊不會跳框</div>;
   }
 
   if (!meta.rankUp[rank]) {
-    return (
-      <div className="title-error">
-        {"\u9019\u500b\u65b9\u584a\u5728\u6b64\u968e\u7d1a\u4e0d\u6703\u8df3\u6846"}
-      </div>
-    );
+    return <div className="title-error">這個方塊在此階級不會跳框</div>;
   }
 
   if (cube === "shinyAdditionalCube") {
@@ -79,15 +71,15 @@ function StandardRankUpTable({
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>{"\u7d50\u679c"}</TableHead>
-          <TableHead className="text-right">{"\u6a5f\u7387"}</TableHead>
+          <TableHead>結果</TableHead>
+          <TableHead className="text-right">機率</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {rankUpProbs.map((prob, i) => {
           const label =
             i === 0
-              ? "\u7dad\u6301"
+              ? "維持"
               : `${PotManager.rankToZh(PotManager.indexToRank(currTierIndex + i))}`;
           return (
             <TableRow key={i}>
@@ -109,9 +101,9 @@ function ShinyAdditionalCubeRankUpTable({ rank }: { rank: EquipmentRank }) {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>{"\u57fa\u790e\u6a5f\u7387"}</TableHead>
-          <TableHead>{"\u6bcf\u6b21\u589e\u52a0"}</TableHead>
-          <TableHead>{"\u4fdd\u5e95\u6b21\u6578"}</TableHead>
+          <TableHead>基礎機率</TableHead>
+          <TableHead>每次增加</TableHead>
+          <TableHead>保底次數</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>

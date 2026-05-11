@@ -20,15 +20,13 @@ export default function WuGongJewelEnhancer() {
             text={SoulManager.getLine(soul, level)}
           />
         ) : (
-          <p className="text-center">
-            {"\u76ee\u524d\u6c92\u6709\u6b66\u529f\u5bf6\u73e0"}
-          </p>
+          <p className="text-center">目前沒有武公寶珠</p>
         )}
       </DisplayContainer>
       <EquipFooter>
         <CloseBtn onClose={commitAndClose} />
         <Button variant="primary" onClick={rollSoulAndApply}>
-          {"\u91cd\u65b0\u6d17\u934a"}
+          重新洗鍊
         </Button>
       </EquipFooter>
     </>

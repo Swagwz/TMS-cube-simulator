@@ -36,13 +36,13 @@ export default function SoulSearchForm() {
 
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      <FormField label="\u5bf6\u73e0\u985e\u578b">
+      <FormField label="寶珠類型">
         <SoulTypeSelect
           value={formData.type}
           onValueChange={handleSoulTypeSelect}
         />
       </FormField>
-      <FormField label="\u7b49\u7d1a">
+      <FormField label="等級">
         <NumberInput
           value={formData.level}
           onChange={handleLevelChange}
@@ -52,15 +52,11 @@ export default function SoulSearchForm() {
       <div className="col-span-1 md:col-span-2">
         <Tabs defaultValue="table">
           <TabsList>
-            <TabsTrigger value="table">
-              {"\u6a5f\u7387\u8868"}
-            </TabsTrigger>
-            <TabsTrigger value="calc">
-              {"\u6a5f\u7387\u8a08\u7b97"}
-            </TabsTrigger>
+            <TabsTrigger value="table">機率表</TabsTrigger>
+            <TabsTrigger value="calc">機率計算</TabsTrigger>
           </TabsList>
           <TabsContent value="table">
-            <CollapsibleDetail title="\u6240\u6709\u5bf6\u73e0\u6f5b\u80fd">
+            <CollapsibleDetail title="所有寶珠潛能">
               <SoulProbTable level={formData.level} />
             </CollapsibleDetail>
           </TabsContent>

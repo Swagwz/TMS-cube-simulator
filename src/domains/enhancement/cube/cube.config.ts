@@ -20,10 +20,10 @@ import type {
 export const CUBE_LIST: CubeDefinition[] = [
   {
     id: "restoreCube",
-    name: "\u9084\u539f\u65b9\u584a",
+    name: "恢復方塊",
     price: 55,
     description:
-      "\u91cd\u65b0\u6d17\u934a\u5f8c\uff0c\u53ef\u5728\u539f\u672c\u8207\u65b0\u7684\u4e00\u822c\u6f5b\u80fd\u4e4b\u9593\u64c7\u4e00\u5957\u5957\u7528\u3002",
+      "重新洗鍊後，可在原本與新的一般潛能之間擇一套用。",
     discount: 10,
     apply: "mainPot",
     workflow: "restore",
@@ -61,10 +61,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "hexaCube",
-    name: "\u516d\u89d2\u65b9\u584a",
+    name: "閃炫方塊",
     price: 60,
     description:
-      "\u91cd\u65b0\u6d17\u51fa 6 \u689d\u5019\u9078\u6f5b\u80fd\uff0c\u518d\u4f9d\u9078\u53d6\u9806\u5e8f\u5957\u7528 3 \u689d\u3002",
+      "重新洗出 6 條候選潛能，再依選取順序套用 3 條。",
     discount: 10,
     apply: "mainPot",
     workflow: "hexa",
@@ -114,10 +114,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "combineCube",
-    name: "\u7d50\u5408\u65b9\u584a",
+    name: "結合方塊",
     price: 120,
     description:
-      "\u5148\u9078\u51fa\u4e00\u689d\u4e00\u822c\u6f5b\u80fd\u9032\u884c\u91cd\u6d17\uff0c\u4f60\u53ef\u4ee5\u6c7a\u5b9a\u662f\u5426\u5957\u7528\u8a72\u7d50\u679c\u3002",
+      "先選出一條一般潛能進行重洗，你可以決定是否套用該結果。",
     discount: 10,
     apply: "mainPot",
     workflow: "combine",
@@ -151,10 +151,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "equalCube",
-    name: "\u5747\u7b49\u65b9\u584a",
+    name: "新對等方塊",
     price: 65,
     description:
-      "\u91cd\u65b0\u6d17\u934a\u6642\uff0c\u4e09\u689d\u6f5b\u80fd\u90fd\u6703\u4fdd\u6301\u70ba\u540c\u4e00\u500b\u7b49\u7d1a\u3002",
+      "重新洗鍊時，三條潛能都會保持為同一個等級。",
     discount: 10,
     apply: "mainPot",
     workflow: "direct",
@@ -192,10 +192,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "mirrorCube",
-    name: "\u93e1\u5c04\u65b9\u584a",
+    name: "閃耀鏡射方塊",
     price: 45,
     description:
-      "20% \u6a5f\u7387\u5c07\u7b2c\u4e00\u689d\u6f5b\u80fd\u8907\u88fd\u5230\u7b2c\u4e8c\u689d\uff0c\u4e14\u4e0d\u53d7\u6f5b\u80fd\u884c\u6578\u9650\u5236\u3002",
+      "20% 機率將第一條潛能複製到第二條，且不受潛能行數限制。",
     discount: 10,
     apply: "mainPot",
     workflow: "direct",
@@ -238,10 +238,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "craftsmanCube",
-    name: "\u540d\u5320\u65b9\u584a",
+    name: "工匠方塊",
     price: 0,
     description:
-      "\u53ef\u91cd\u8a2d\u4e00\u822c\u6f5b\u80fd\uff0c\u4e26\u6709\u6a5f\u6703\u63d0\u5347\u6f5b\u80fd\u7b49\u7d1a\u3002",
+      "可重新設定一般潛能，並有機會提升潛能等級。",
     discount: 0,
     apply: "mainPot",
     workflow: "direct",
@@ -273,10 +273,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "masterCraftsmanCube",
-    name: "\u5927\u5e2b\u65b9\u584a",
+    name: "名匠方塊",
     price: 0,
     description:
-      "\u53ef\u91cd\u8a2d\u4e00\u822c\u6f5b\u80fd\uff0c\u4e26\u64c1\u6709\u66f4\u9ad8\u7684\u8df3\u6846\u6a5f\u7387\u3002",
+      "可重新設定一般潛能，並擁有更高的跳框機率。",
     discount: 0,
     apply: "mainPot",
     workflow: "direct",
@@ -314,10 +314,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "additionalCube",
-    name: "\u9644\u52a0\u65b9\u584a",
+    name: "珍貴附加方塊",
     price: 70,
     description:
-      "\u53ef\u91cd\u8a2d\u9644\u52a0\u6f5b\u80fd\uff0c\u4e26\u6709\u6a5f\u6703\u63d0\u5347\u6f5b\u80fd\u7b49\u7d1a\u3002",
+      "可重新設定附加潛能，並有機會提升潛能等級。",
     discount: 10,
     apply: "additionalPot",
     workflow: "direct",
@@ -355,10 +355,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "restoreAdditionalCube",
-    name: "\u9644\u52a0\u9084\u539f\u65b9\u584a",
+    name: "恢復附加方塊",
     price: 75,
     description:
-      "\u91cd\u65b0\u6d17\u934a\u5f8c\uff0c\u53ef\u5728\u539f\u672c\u8207\u65b0\u7684\u9644\u52a0\u6f5b\u80fd\u4e4b\u9593\u64c7\u4e00\u5957\u5957\u7528\u3002",
+      "重新洗鍊後，可在原本與新的附加潛能之間擇一套用。",
     discount: 10,
     apply: "additionalPot",
     workflow: "restore",
@@ -396,10 +396,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "shinyAdditionalCube",
-    name: "\u9583\u8000\u9644\u52a0\u65b9\u584a",
+    name: "閃亮附加方塊",
     price: 60,
     description:
-      "\u53ef\u91cd\u8a2d\u9644\u52a0\u6f5b\u80fd\uff0c\u672a\u8df3\u6846\u6642\u6703\u7d2f\u7a4d\u6b21\u6578\uff0c\u63d0\u9ad8\u4e0b\u4e00\u6b21\u8df3\u6846\u6a5f\u7387\u3002",
+      "可重新設定附加潛能，未跳框時會累積次數，提高下一次跳框機率。",
     discount: 10,
     apply: "additionalPot",
     workflow: "direct",
@@ -447,10 +447,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "absAdditionalCube",
-    name: "\u7d55\u5c0d\u9644\u52a0\u65b9\u584a",
+    name: "絕對附加方塊",
     price: 100,
     description:
-      "\u53ea\u6703\u91cd\u65b0\u6d17\u934a\u50b3\u8aaa\u9644\u52a0\u6f5b\u80fd\uff0c\u4e14\u7d50\u679c\u6703\u4fdd\u7559\u524d\u5169\u689d\u7684\u7b49\u7d1a\u7d50\u69cb\u3002",
+      "只會重新洗鍊傳說附加潛能，且結果會保留前兩條的等級結構。",
     discount: 10,
     apply: "additionalPot",
     workflow: "direct",
@@ -469,10 +469,10 @@ export const CUBE_LIST: CubeDefinition[] = [
   },
   {
     id: "combineAdditionalCube",
-    name: "\u9644\u52a0\u7d50\u5408\u65b9\u584a",
+    name: "結合附加方塊",
     price: 150,
     description:
-      "\u5148\u9078\u51fa\u4e00\u689d\u9644\u52a0\u6f5b\u80fd\u9032\u884c\u91cd\u6d17\uff0c\u4f60\u53ef\u4ee5\u6c7a\u5b9a\u662f\u5426\u5957\u7528\u8a72\u7d50\u679c\u3002",
+      "先選出一條附加潛能進行重洗，你可以決定是否套用該結果。",
     discount: 10,
     apply: "additionalPot",
     workflow: "combine",
@@ -509,9 +509,8 @@ export const CUBE_LIST: CubeDefinition[] = [
 export const CUBE_COMPANION_ITEMS: CubeCompanionItem[] = [
   {
     id: "fixPotential",
-    name: "\u56fa\u5b9a\u6f5b\u80fd",
-    description:
-      "\u9396\u5b9a\u6307\u5b9a\u7684\u6f5b\u80fd\u884c\uff0c\u91cd\u6d17\u6642\u4fdd\u7559\u8a72\u884c\u539f\u672c\u7d50\u679c\u3002",
+    name: "固定潛能",
+    description: "鎖定指定的潛能行，重洗時保留該行原本結果。",
     imagePath: fixPotential,
     price: 0,
     discount: 0,

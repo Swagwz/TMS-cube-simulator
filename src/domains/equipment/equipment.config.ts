@@ -130,7 +130,7 @@ const EQUIPMENT_LIST: EquipmentMetadata[] = [
     isFixedLevel: false,
   },
   {
-    name: "項鍊",
+    name: "墜飾",
     subcategory: "pendant",
     category: "accessory",
     features: ["mainPot", "additionalPot"],
@@ -161,7 +161,6 @@ const EQUIPMENT_LIST: EquipmentMetadata[] = [
     commonLevels: [160],
     isFixedLevel: false,
   },
-
   {
     name: "胸章",
     subcategory: "badge",

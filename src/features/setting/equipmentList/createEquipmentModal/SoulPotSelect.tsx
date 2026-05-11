@@ -29,17 +29,15 @@ export default function SoulPotSelect() {
     <FieldGroup>
       <Field orientation="vertical" className="min-w-0">
         <FieldContent>
-          <FieldLabel className="font-bold">
-            {"\u6b66\u529f\u5bf6\u73e0\u6f5b\u80fd"}
-          </FieldLabel>
+          <FieldLabel className="font-bold">靈魂寶珠潛能</FieldLabel>
         </FieldContent>
         <Select onValueChange={selectRank} value={equipmentData.soul || ""}>
           <SelectTrigger>
-            <SelectValue placeholder="\u8acb\u9078\u64c7\u5bf6\u73e0\u6f5b\u80fd" />
+            <SelectValue placeholder="請選擇寶珠潛能" />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value={NONE_VALUE} className="text-muted-foreground">
-              {"\u8acb\u9078\u64c7\u5bf6\u73e0\u6f5b\u80fd"}
+              請選擇寶珠潛能
             </SelectItem>
             {SOUL_POTENTIAL_SOURCE.map(({ id }) => (
               <SelectItem key={id} value={id}>

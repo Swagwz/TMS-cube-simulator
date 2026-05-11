@@ -1,4 +1,5 @@
 import { memo } from "react";
+import InfoPopover from "@/components/InfoPopover";
 import {
   Table,
   TableBody,
@@ -9,7 +10,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import InfoPopover from "@/components/InfoPopover";
 
 const formattedCost = new Intl.NumberFormat("zh-tw", {
   style: "currency",
@@ -46,7 +46,7 @@ function Statistics({ rows }: Props) {
       <TableCaption className="text-glass-foreground">使用統計</TableCaption>
       <TableHeader className="bg-secondary-dark text-secondary-dark-foreground">
         <TableRow>
-          <TableHead className="w-[30%] text-inherit">項目</TableHead>
+          <TableHead className="w-[30%] text-inherit">道具</TableHead>
           <TableHead className="w-[35%] text-inherit">單價</TableHead>
           <TableHead className="w-[35%] text-right text-inherit">
             使用次數
@@ -71,7 +71,7 @@ function Statistics({ rows }: Props) {
           <TableCell colSpan={2}>
             <div className="flex flex-row items-center">
               總花費
-              <InfoPopover>已套用道具折扣。</InfoPopover>
+              <InfoPopover>已套用折扣後的總花費。</InfoPopover>
             </div>
           </TableCell>
           <TableCell className="text-right">

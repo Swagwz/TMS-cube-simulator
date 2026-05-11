@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { EquipManager } from "@/domains/equipment/equipManager";
+import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
 import type {
   EquipmentEnhancementItemId,
   EquipmentFeature,
 } from "@/domains/equipment/equipment.type";
-import { EquipManager } from "@/domains/equipment/equipManager";
-import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
 import EquipEnhancingDialog from "@/features/enhancingDialog/equipment/EquipEnhancingDialog";
 import useActiveItem from "@/hooks/useActiveItem";
 import { useEquipmentEnhancingDialog } from "@/hooks/useEquipmentEnhancingDialog";
+import { cn } from "@/lib/utils";
 import type { EquipmentInstance } from "@/store/useEquipmentStore";
 import PotentialTab from "./tabs/PotentialTab";
 

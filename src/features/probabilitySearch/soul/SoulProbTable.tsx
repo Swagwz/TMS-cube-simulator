@@ -82,21 +82,21 @@ export default function SoulProbTable({ level }: FormData) {
             sortConfig={sortConfig}
             onSort={handleSort}
           >
-            {"\u6f5b\u80fd"}
+            潛能
           </ControllableTableHead>
           <ControllableTableHead
             sortKey="weight"
             sortConfig={sortConfig}
             onSort={handleSort}
           >
-            {"\u6b0a\u91cd"}
+            權重
           </ControllableTableHead>
           <ControllableTableHead
             sortKey="prob"
             sortConfig={sortConfig}
             onSort={handleSort}
           >
-            {"\u6a5f\u7387"}
+            機率
           </ControllableTableHead>
         </TableRow>
       </TableHeader>
@@ -111,7 +111,7 @@ export default function SoulProbTable({ level }: FormData) {
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell>{"\u7e3d\u8a08"}</TableCell>
+          <TableCell>總計</TableCell>
           <TableCell>{totalWeight}</TableCell>
           <TableCell>{totalProb.toFixed(4)}%</TableCell>
         </TableRow>
