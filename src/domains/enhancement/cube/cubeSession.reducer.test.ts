@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { FixedRNG } from "@/domains/random/fixedRng";
 import { SeededRNG } from "@/domains/random/seededRng";
 import { PotManager } from "@/domains/potential/potManager";
+import { getCubePotentialPools } from "./cubeRoll.feature";
 import { reduceCubeSession } from "./cubeSession.reducer";
 import type { CubeId } from "./cube.type";
 import type {
@@ -50,6 +51,10 @@ function createSession(params?: {
     base: createEquipment(),
     working,
     rng: params?.rng ?? new SeededRNG(1),
+    pools: getCubePotentialPools(params?.cubeId ?? "craftsmanCube", {
+      subcategory: working.subcategory,
+      level: working.level,
+    }),
     pendingRoll: params?.pendingRoll ?? null,
   };
 }

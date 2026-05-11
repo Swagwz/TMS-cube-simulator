@@ -6,6 +6,7 @@ import type {
   CubeSession,
   CubeSessionEquipment,
 } from "@/domains/enhancement/cube/cubeSession.type";
+import { getCubePotentialPools } from "@/domains/enhancement/cube/cubeRoll.feature";
 import { runCombineRollAndApply } from "./useEquipmentCubeSession";
 
 type TestEquipment = CubeSessionEquipment & {
@@ -47,6 +48,10 @@ function createSession(params?: {
     base: createEquipment(),
     working,
     rng: params?.rng ?? new FixedRNG([0, 0, 0]),
+    pools: getCubePotentialPools("combineCube", {
+      subcategory: working.subcategory,
+      level: working.level,
+    }),
     pendingRoll: params?.pendingRoll ?? null,
   };
 }

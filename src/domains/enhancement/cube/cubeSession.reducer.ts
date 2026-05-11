@@ -1,6 +1,5 @@
 import { getCubeCompanionItems, getCubeDefinition } from "./cube.registry";
 import {
-  getCubePotentialPools,
   rollCombineCube,
   rollDirectCube,
   rollHexaCube,
@@ -49,10 +48,6 @@ function roll<TEquipment extends CubeSessionEquipment>(
     );
   }
 
-  const pools = getCubePotentialPools(session.cubeId, {
-    subcategory: session.working.subcategory,
-    level: session.working.level,
-  });
   let output: CubeRollOutput;
   let shouldCountFixPotential = false;
   let rollCount = 1;
@@ -66,7 +61,7 @@ function roll<TEquipment extends CubeSessionEquipment>(
       output = rollDirectCube({
         cube,
         current: getCurrentPotentialLines(session.working, cube.apply),
-        pools,
+        pools: session.pools,
         rankUpMultiplier: finalInput.rankUpMultiplier,
         accumulateCount: finalInput.accumulateCount,
         rng: session.rng,
@@ -85,7 +80,7 @@ function roll<TEquipment extends CubeSessionEquipment>(
       output = rollRestoreCube({
         cube,
         current: getCurrentPotentialLines(session.working, cube.apply),
-        pools,
+        pools: session.pools,
         fixedIndex,
         canFixLine,
         rankUpMultiplier: finalInput.rankUpMultiplier,
@@ -102,7 +97,7 @@ function roll<TEquipment extends CubeSessionEquipment>(
       output = rollHexaCube({
         cube,
         current: getCurrentPotentialLines(session.working, cube.apply),
-        pools,
+        pools: session.pools,
         rankUpMultiplier: finalInput.rankUpMultiplier,
         rng: session.rng,
       });
@@ -116,7 +111,7 @@ function roll<TEquipment extends CubeSessionEquipment>(
       const result = rollCombineCube({
         cube,
         current: getCurrentPotentialLines(session.working, cube.apply),
-        pools,
+        pools: session.pools,
         targetIndex: finalInput.targetIndex,
         rng: session.rng,
       });

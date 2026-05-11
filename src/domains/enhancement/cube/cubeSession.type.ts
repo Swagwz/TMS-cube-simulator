@@ -2,7 +2,10 @@ import type {
   EquipmentPotentialSlot,
   EquipmentSubcategory,
 } from "@/domains/equipment/equipment.type";
-import type { EquipmentRank } from "@/domains/potential/potential.type";
+import type {
+  EquipmentRank,
+  PotentialRank,
+} from "@/domains/potential/potential.type";
 import type { RNG } from "@/domains/random/rng.type";
 import type { CubeId, CubeCompanionItemId } from "./cube.type";
 
@@ -15,6 +18,11 @@ export type CubeSessionPotentialGroup = {
   tier: EquipmentRank;
   potentialIds: string[];
 };
+
+export type PotentialPoolMap = Record<
+  PotentialRank,
+  { id: string; weight: number }[]
+>;
 
 export type CubeSessionEquipment = {
   subcategory: EquipmentSubcategory;
@@ -36,6 +44,7 @@ export type CubeSession<TEquipment = unknown> =
   BaseEquipmentSession<TEquipment> & {
     system: "cube";
     cubeId: CubeId;
+    pools: PotentialPoolMap;
     pendingRoll: CubeRollOutput | null;
   };
 

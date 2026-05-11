@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
+import { getCubePotentialPools } from "@/domains/enhancement/cube/cubeRoll.feature";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import { reduceCubeSession } from "@/domains/enhancement/cube/cubeSession.reducer";
 import type {
@@ -72,6 +73,10 @@ export function useEquipmentCubeSession({
       base: structuredClone(baseInstance),
       working: structuredClone(baseInstance),
       rng: new CryptoRNG(),
+      pools: getCubePotentialPools(cube.id, {
+        subcategory: baseInstance.subcategory,
+        level: baseInstance.level,
+      }),
       pendingRoll: null,
     });
   }, [baseInstance, cube]);

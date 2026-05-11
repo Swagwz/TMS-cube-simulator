@@ -13,14 +13,10 @@ import type {
   CombineCubeRollOutput,
   DirectCubeRollOutput,
   HexaCubeRollOutput,
+  PotentialPoolMap,
   PotentialLines,
   RestoreCubeRollOutput,
 } from "./cubeSession.type";
-
-export type PotentialPoolMap = Record<
-  PotentialRank,
-  { id: string; weight: number }[]
->;
 
 export function getScaledRankUpWeights(params: {
   cube: CubeDefinition;
