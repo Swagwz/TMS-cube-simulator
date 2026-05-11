@@ -8,6 +8,18 @@ export type EquipmentEnhancingDialogRequest = {
   itemId: EquipmentEnhancementItemId;
 };
 
+export function createEquipmentEnhancingDialogRequest(
+  equipment: EquipmentInstance,
+  itemId: EquipmentEnhancementItemId,
+): EquipmentEnhancingDialogRequest | null {
+  if (!canUseEquipmentEnhancementItem(equipment, itemId)) return null;
+
+  return {
+    equipmentId: equipment.id,
+    itemId,
+  };
+}
+
 export function useEquipmentEnhancingDialog() {
   const [request, setRequest] = useState<EquipmentEnhancingDialogRequest | null>(
     null,
@@ -15,12 +27,7 @@ export function useEquipmentEnhancingDialog() {
 
   const openDialog = useCallback(
     (equipment: EquipmentInstance, itemId: EquipmentEnhancementItemId) => {
-      if (!canUseEquipmentEnhancementItem(equipment, itemId)) return;
-
-      setRequest({
-        equipmentId: equipment.id,
-        itemId,
-      });
+      setRequest(createEquipmentEnhancingDialogRequest(equipment, itemId));
     },
     [],
   );

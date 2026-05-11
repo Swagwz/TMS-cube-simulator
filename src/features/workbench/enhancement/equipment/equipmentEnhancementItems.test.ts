@@ -61,6 +61,19 @@ describe("equipmentEnhancementItems", () => {
     expect(items.every((item) => item.kind === "cube")).toBe(true);
     expect(items.every((item) => item.feature === "mainPot")).toBe(true);
     expect(items.find((item) => item.id === "craftsmanCube")?.count).toBe(3);
+    expect(items.every((item) => item.disabled === false)).toBe(true);
+  });
+
+  it("returns only additional potential cube items for the additional tab", () => {
+    const items = getEquipmentEnhancementItemsForFeature(
+      createEquipment(),
+      "additionalPot",
+    );
+
+    expect(items.length).toBeGreaterThan(0);
+    expect(items.every((item) => item.kind === "cube")).toBe(true);
+    expect(items.every((item) => item.feature === "additionalPot")).toBe(true);
+    expect(items.find((item) => item.id === "additionalCube")?.count).toBe(5);
   });
 
   it("returns soul items with counts", () => {

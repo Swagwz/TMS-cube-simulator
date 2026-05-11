@@ -3,8 +3,10 @@ import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
 import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import { reduceCubeSession } from "@/domains/enhancement/cube/cubeSession.reducer";
 import type {
+  CubeSessionReduceResult,
   CubeRollInput,
   CubeSession,
+  CubeSessionEquipment,
 } from "@/domains/enhancement/cube/cubeSession.type";
 import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import { CryptoRNG } from "@/domains/random/cryptoRng";
@@ -20,6 +22,23 @@ type UseEquipmentCubeSessionParams = {
   baseInstance: EquipmentInstance | null;
   closeModal: () => void;
 };
+
+export function runCombineRollAndApply<
+  TEquipment extends CubeSessionEquipment,
+>(
+  session: CubeSession<TEquipment>,
+  targetIndex: number,
+): CubeSessionReduceResult<TEquipment> {
+  const rolled = reduceCubeSession(session, {
+    type: "roll",
+    input: { flow: "combine", targetIndex },
+  });
+
+  return reduceCubeSession(rolled.session, {
+    type: "apply",
+    decision: { flow: "combine", applyRolledLine: true },
+  });
+}
 
 export function useEquipmentCubeSession({
   itemId,
@@ -180,16 +199,7 @@ export function useEquipmentCubeSession({
     (targetIndex: number) => {
       if (!session) return;
 
-      const rolled = reduceCubeSession(session, {
-        type: "roll",
-        input: { flow: "combine", targetIndex },
-      });
-
-      const applied = reduceCubeSession(rolled.session, {
-        type: "apply",
-        decision: { flow: "combine", applyRolledLine: true },
-      });
-
+      const applied = runCombineRollAndApply(session, targetIndex);
       setSession(applied.session);
     },
     [session],
