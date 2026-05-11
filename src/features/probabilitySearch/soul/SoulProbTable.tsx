@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
-
-import { SoulManager } from "@/domains/enhancement/soul/soulManager";
-
+import ControllableTableHead, {
+  type SortConfig,
+  type SortDirection,
+} from "@/components/ControllableTableHead";
 import {
   Table,
   TableBody,
@@ -10,10 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import ControllableTableHead, {
-  type SortConfig,
-  type SortDirection,
-} from "@/components/ControllableTableHead";
+import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 
 type SortKey = "display" | "weight" | "prob";
 
@@ -84,21 +82,21 @@ export default function SoulProbTable({ level }: FormData) {
             sortConfig={sortConfig}
             onSort={handleSort}
           >
-            潛能
+            {"\u6f5b\u80fd"}
           </ControllableTableHead>
           <ControllableTableHead
             sortKey="weight"
             sortConfig={sortConfig}
             onSort={handleSort}
           >
-            權重
+            {"\u6b0a\u91cd"}
           </ControllableTableHead>
           <ControllableTableHead
             sortKey="prob"
             sortConfig={sortConfig}
             onSort={handleSort}
           >
-            機率
+            {"\u6a5f\u7387"}
           </ControllableTableHead>
         </TableRow>
       </TableHeader>
@@ -113,7 +111,7 @@ export default function SoulProbTable({ level }: FormData) {
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell>總計</TableCell>
+          <TableCell>{"\u7e3d\u8a08"}</TableCell>
           <TableCell>{totalWeight}</TableCell>
           <TableCell>{totalProb.toFixed(4)}%</TableCell>
         </TableRow>

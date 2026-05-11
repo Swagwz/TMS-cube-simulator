@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { PotManager } from "@/domains/potential/potManager";
 import DisplayContainer from "../../DisplayContainer";
 import EquipFooter from "../EquipFooter";
-import { useEquipmentCubeSessionContext } from "@/contexts/useEquipmentCubeSessionContext";
+import { useRequiredCubeEnhancementController } from "@/contexts/useEquipmentEnhancementSessionContext";
 
 export default function CombineCubeWorkflow() {
   const {
@@ -18,7 +18,7 @@ export default function CombineCubeWorkflow() {
     rollCombine,
     applyCombine,
     commitAndClose,
-  } = useEquipmentCubeSessionContext();
+  } = useRequiredCubeEnhancementController();
   const [targetIndex, setTargetIndex] = useState(-1);
   const combineRoll = pendingRoll?.flow === "combine" ? pendingRoll : null;
   const { tier, potentialIds } = working[cube.apply];
@@ -48,8 +48,7 @@ export default function CombineCubeWorkflow() {
               key={`${id}-${index}`}
               className={cn(
                 "flex cursor-pointer flex-row items-center justify-between rounded border border-transparent p-1 transition-colors",
-                isSelected &&
-                  "bg-accent-main text-accent-main-foreground",
+                isSelected && "bg-accent-main text-accent-main-foreground",
                 isTarget &&
                   !isSelected &&
                   "border-destructive bg-destructive/10 text-destructive",

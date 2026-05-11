@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MultiplierSelector from "@/components/MultiplierSelector";
 import {
   Table,
   TableBody,
@@ -7,16 +8,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
-import { PotManager } from "@/domains/potential/potManager";
-import type { EquipmentRank } from "@/domains/potential/potential.type";
-import { weightsToProbabilities } from "@/utils/weightsToProbabilities";
-import MultiplierSelector from "@/components/MultiplierSelector";
 import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
+import type { CubeId } from "@/domains/enhancement/cube/cube.type";
 import {
   getScaledRankUpWeights,
   getShinyCeiling,
 } from "@/domains/enhancement/cube/cubeRoll.feature";
+import { PotManager } from "@/domains/potential/potManager";
+import type { EquipmentRank } from "@/domains/potential/potential.type";
+import { weightsToProbabilities } from "@/utils/weightsToProbabilities";
 
 type Props = {
   cube: CubeId;
@@ -28,11 +28,19 @@ export default function RankUpProb({ cube, rank }: Props) {
   const meta = getCubeDefinition(cube);
 
   if (!meta.rankUp) {
-    return <div className="title-error">此方塊不可跳框</div>;
+    return (
+      <div className="title-error">
+        {"\u9019\u500b\u65b9\u584a\u4e0d\u6703\u8df3\u6846"}
+      </div>
+    );
   }
 
   if (!meta.rankUp[rank]) {
-    return <div className="title-error">此方塊已至最高階級，不可跳框</div>;
+    return (
+      <div className="title-error">
+        {"\u9019\u500b\u65b9\u584a\u5728\u6b64\u968e\u7d1a\u4e0d\u6703\u8df3\u6846"}
+      </div>
+    );
   }
 
   if (cube === "shinyAdditionalCube") {
@@ -71,16 +79,16 @@ function StandardRankUpTable({
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>結果</TableHead>
-          <TableHead className="text-right">機率</TableHead>
+          <TableHead>{"\u7d50\u679c"}</TableHead>
+          <TableHead className="text-right">{"\u6a5f\u7387"}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {rankUpProbs.map((prob, i) => {
           const label =
             i === 0
-              ? "同階"
-              : `升${PotManager.rankToZh(PotManager.indexToRank(currTierIndex + i))}`;
+              ? "\u7dad\u6301"
+              : `${PotManager.rankToZh(PotManager.indexToRank(currTierIndex + i))}`;
           return (
             <TableRow key={i}>
               <TableCell>{label}</TableCell>
@@ -101,9 +109,9 @@ function ShinyAdditionalCubeRankUpTable({ rank }: { rank: EquipmentRank }) {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>基礎機率</TableHead>
-          <TableHead>每次增加</TableHead>
-          <TableHead>保底次數</TableHead>
+          <TableHead>{"\u57fa\u790e\u6a5f\u7387"}</TableHead>
+          <TableHead>{"\u6bcf\u6b21\u589e\u52a0"}</TableHead>
+          <TableHead>{"\u4fdd\u5e95\u6b21\u6578"}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>

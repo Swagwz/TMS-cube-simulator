@@ -1,11 +1,20 @@
-import { rollWeightedIndex } from "@/utils/rollWeightedIndex";
-import { productionRng } from "@/domains/random/productionRng";
+import { SOUL_LIST, SOUL_METADATA_MAP } from "./soul.config";
 import { SOUL_POTENTIAL_ID_MAP, SOUL_POTENTIAL_SOURCE } from "./soul.data";
-import { SOUL_METADATA_MAP } from "./soul.config";
 import formatTemplate from "@/utils/formatTemplate";
 import type { SoulId } from "./soul.type";
 
 export const SoulManager = {
+  isItem(id: string): id is SoulId {
+    return SOUL_METADATA_MAP.has(id as SoulId);
+  },
+  getItems() {
+    return SOUL_LIST;
+  },
+  getDefaultItemId() {
+    const item = SOUL_LIST[0];
+    if (!item) throw new Error("No soul items configured");
+    return item.id;
+  },
   getItem(id: string) {
     const meta = SOUL_METADATA_MAP.get(id as SoulId);
     if (!meta) throw new Error("Invalid soul id");
@@ -37,15 +46,8 @@ export const SoulManager = {
     const totalWeight = pool.reduce((acc, curr) => acc + curr.weight, 0);
     return pool.map(({ id, weight }) => ({
       id,
-      weight: weight,
+      weight,
       prob: (weight / totalWeight) * 100,
     }));
-  },
-  rollPot(pool: { id: string; weight: number }[]) {
-    const rstIndex = rollWeightedIndex(
-      pool.map(({ weight }) => weight),
-      productionRng,
-    );
-    return pool[rstIndex].id;
   },
 };

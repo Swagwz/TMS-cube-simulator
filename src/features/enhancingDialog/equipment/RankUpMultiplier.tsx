@@ -2,10 +2,7 @@ import { useMemo } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { weightsToProbabilities } from "@/utils/weightsToProbabilities";
 
-import { useEnhancingContext } from "@/contexts/useEnhancingContext";
-import { useOptionalEquipmentCubeSession } from "@/contexts/useEquipmentCubeSessionContext";
-import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import { useEquipmentEnhancementNavigator } from "@/contexts/useEquipmentEnhancementSessionContext";
 import { getScaledRankUpWeights } from "@/domains/enhancement/cube/cubeRoll.feature";
 import { PotManager } from "@/domains/potential/potManager";
 import { useAccountStore } from "@/store/useAccountStore";
@@ -31,7 +28,7 @@ export default function RankUpMultiplier() {
       <FormField
         label={
           <div className="flex items-center gap-2">
-            跳階機率倍率
+            跳框機率倍率
             <div className="flex items-center gap-1">
               <Checkbox
                 id="show-prob"
@@ -86,8 +83,7 @@ export default function RankUpMultiplier() {
 }
 
 function useRankUpMultiplier() {
-  const { selectedItemId, localData } = useEnhancingContext();
-  const cubeSession = useOptionalEquipmentCubeSession();
+  const navigator = useEquipmentEnhancementNavigator();
   const {
     rankUpMultiplier,
     setRankUpMultiplier,
@@ -96,14 +92,13 @@ function useRankUpMultiplier() {
   } = useAccountStore();
 
   const data = useMemo(() => {
-    if (!selectedItemId || selectedItemId === "wuGongJewel") {
+    if (!navigator || navigator.kind !== "cube") {
       return null;
     }
 
-    const cube = cubeSession?.cube ?? getCubeDefinition(selectedItemId as CubeId);
+    const { cube, working } = navigator.controller;
     if (cube.rankUpType !== "standard") return null;
 
-    const working = cubeSession?.working ?? localData;
     const tier = working[cube.apply].tier;
 
     if (tier === "legendary") {
@@ -127,7 +122,7 @@ function useRankUpMultiplier() {
       rankUpProbs,
       currTierIndex,
     };
-  }, [cubeSession, localData, rankUpMultiplier, selectedItemId]);
+  }, [navigator, rankUpMultiplier]);
 
   return {
     shouldRender: !!data,

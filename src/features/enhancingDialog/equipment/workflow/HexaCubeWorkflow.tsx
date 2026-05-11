@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { PotManager } from "@/domains/potential/potManager";
 import DisplayContainer from "../../DisplayContainer";
 import EquipFooter from "../EquipFooter";
-import { useEquipmentCubeSessionContext } from "@/contexts/useEquipmentCubeSessionContext";
+import { useRequiredCubeEnhancementController } from "@/contexts/useEquipmentEnhancementSessionContext";
 
 export default function HexaCubeWorkflow() {
   const { cube, working, pendingRoll, rollHexa, applyHexa, commitAndClose } =
-    useEquipmentCubeSessionContext();
+    useRequiredCubeEnhancementController();
   const [selectedIndices, setSelectedIndices] = useState<number[]>([]);
   const hexaRoll = pendingRoll?.flow === "hexa" ? pendingRoll : null;
   const current = working[cube.apply];

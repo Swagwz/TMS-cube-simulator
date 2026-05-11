@@ -9,11 +9,11 @@ import { PotManager } from "@/domains/potential/potManager";
 import { useAccountStore } from "@/store/useAccountStore";
 import DisplayContainer from "../../DisplayContainer";
 import EquipFooter from "../EquipFooter";
-import { useEquipmentCubeSessionContext } from "@/contexts/useEquipmentCubeSessionContext";
+import { useRequiredCubeEnhancementController } from "@/contexts/useEquipmentEnhancementSessionContext";
 
 export default function DirectCubeWorkflow() {
   const { cube, working, rollDirectAndApply, commitAndClose } =
-    useEquipmentCubeSessionContext();
+    useRequiredCubeEnhancementController();
   const { tier, potentialIds } = working[cube.apply];
   const canApply = canApplyCubeAtTier(cube, tier);
   const pityCount = useAccountStore((s) => s.shinyPity[tier]);

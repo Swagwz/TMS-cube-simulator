@@ -11,7 +11,7 @@ import type { PotentialLines } from "@/domains/enhancement/cube/cubeSession.type
 import { PotManager } from "@/domains/potential/potManager";
 import DisplayContainer from "../../DisplayContainer";
 import EquipFooter from "../EquipFooter";
-import { useEquipmentCubeSessionContext } from "@/contexts/useEquipmentCubeSessionContext";
+import { useRequiredCubeEnhancementController } from "@/contexts/useEquipmentEnhancementSessionContext";
 
 export default function RestoreCubeWorkflow() {
   const {
@@ -21,7 +21,7 @@ export default function RestoreCubeWorkflow() {
     rollRestore,
     applyRestore,
     commitAndClose,
-  } = useEquipmentCubeSessionContext();
+  } = useRequiredCubeEnhancementController();
   const [fixedIndex, setFixedIndex] = useState(-1);
   const restoreRoll = pendingRoll?.flow === "restore" ? pendingRoll : null;
   const before = restoreRoll?.before ?? working[cube.apply];
@@ -29,7 +29,9 @@ export default function RestoreCubeWorkflow() {
   const canFixLine = getCubeCompanionItems(cube.id).some(
     (item) => item.id === "fixPotential",
   );
-  const activeFixedIndex = canFixLine ? (restoreRoll?.fixedIndex ?? fixedIndex) : -1;
+  const activeFixedIndex = canFixLine
+    ? (restoreRoll?.fixedIndex ?? fixedIndex)
+    : -1;
   const isRankUp = Boolean(after && after.tier !== before.tier);
 
   const toggleFixedIndex = (index: number) => {

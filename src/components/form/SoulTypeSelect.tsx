@@ -5,7 +5,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { SOUL_LIST } from "@/domains/enhancement/soul/soul.config";
+import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 
 type Props = {
   value: string;
@@ -19,7 +19,7 @@ export default function SoulTypeSelect({ value, onValueChange }: Props) {
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
-        {SOUL_LIST.map(({ name, id }) => (
+        {SoulManager.getItems().map(({ name, id }) => (
           <SelectItem key={id} value={id}>
             {name}
           </SelectItem>

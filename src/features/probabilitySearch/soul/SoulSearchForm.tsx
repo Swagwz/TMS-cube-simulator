@@ -1,15 +1,15 @@
 import { useState } from "react";
-
-import SoulTypeSelect from "@/components/form/SoulTypeSelect";
-import FormField from "@/components/FormField";
-import type { SoulId } from "@/domains/enhancement/soul/soul.type";
-import { EquipManager } from "@/domains/equipment/equipManager";
-import SoulProbTable from "./SoulProbTable";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import SoulProbCalc from "./SoulProbCalc";
-import type { SoulAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
-import NumberInput from "@/components/form/NumberInput";
 import { CollapsibleDetail } from "@/components/CollapsibleDetail";
+import FormField from "@/components/FormField";
+import NumberInput from "@/components/form/NumberInput";
+import SoulTypeSelect from "@/components/form/SoulTypeSelect";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { SoulAutoRollTarget } from "@/domains/autoRoll/autoRoll.type";
+import { EquipManager } from "@/domains/equipment/equipManager";
+import { SoulManager } from "@/domains/enhancement/soul/soulManager";
+import type { SoulId } from "@/domains/enhancement/soul/soul.type";
+import SoulProbCalc from "./SoulProbCalc";
+import SoulProbTable from "./SoulProbTable";
 
 type FormData = {
   type: SoulId;
@@ -18,7 +18,7 @@ type FormData = {
 
 export default function SoulSearchForm() {
   const [formData, setFormData] = useState<FormData>({
-    type: "wuGongJewel",
+    type: SoulManager.getDefaultItemId(),
     level: 250,
   });
   const [targets, setTargets] = useState<SoulAutoRollTarget[]>([]);
@@ -36,13 +36,13 @@ export default function SoulSearchForm() {
 
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      <FormField label="寶珠種類">
+      <FormField label="\u5bf6\u73e0\u985e\u578b">
         <SoulTypeSelect
           value={formData.type}
           onValueChange={handleSoulTypeSelect}
         />
       </FormField>
-      <FormField label="等級">
+      <FormField label="\u7b49\u7d1a">
         <NumberInput
           value={formData.level}
           onChange={handleLevelChange}
@@ -52,11 +52,15 @@ export default function SoulSearchForm() {
       <div className="col-span-1 md:col-span-2">
         <Tabs defaultValue="table">
           <TabsList>
-            <TabsTrigger value="table">機率表</TabsTrigger>
-            <TabsTrigger value="calc">機率計算</TabsTrigger>
+            <TabsTrigger value="table">
+              {"\u6a5f\u7387\u8868"}
+            </TabsTrigger>
+            <TabsTrigger value="calc">
+              {"\u6a5f\u7387\u8a08\u7b97"}
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="table">
-            <CollapsibleDetail title="各潛能出現機率">
+            <CollapsibleDetail title="\u6240\u6709\u5bf6\u73e0\u6f5b\u80fd">
               <SoulProbTable level={formData.level} />
             </CollapsibleDetail>
           </TabsContent>

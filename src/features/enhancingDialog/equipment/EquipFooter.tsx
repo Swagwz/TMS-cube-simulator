@@ -1,35 +1,36 @@
 import React from "react";
 import EnhancerFooter from "../EnhancerFooter";
 import Counter from "../Counter";
-import { useEnhancingContext } from "@/contexts/useEnhancingContext";
-import { useOptionalEquipmentCubeSession } from "@/contexts/useEquipmentCubeSessionContext";
+import { useEquipmentEnhancementNavigator } from "@/contexts/useEquipmentEnhancementSessionContext";
 import { getCubeCompanionItems } from "@/domains/enhancement/cube/cube.registry";
 import type {
   AdditionalCubeId,
   MainCubeId,
 } from "@/domains/enhancement/cube/cube.type";
-import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export default function EquipFooter({ children }: Props) {
-  const { localData, selectedItemId } = useEnhancingContext();
-  const cubeSession = useOptionalEquipmentCubeSession();
+  const navigator = useEquipmentEnhancementNavigator();
 
-  if (selectedItemId === "wuGongJewel") {
-    const item = SoulManager.getItem(selectedItemId);
+  if (!navigator) {
+    throw new Error("EquipFooter requires an active enhancement navigator");
+  }
+
+  if (navigator.kind === "soul") {
+    const { soul, working } = navigator.controller;
     return (
       <EnhancerFooter
         counter={
           <Counter
             items={[
               {
-                id: item.id,
-                name: item.name,
-                imagePath: item.imagePath,
-                count: localData.statistics.counts.soul[item.id] || 0,
+                id: soul.id,
+                name: soul.name,
+                imagePath: soul.imagePath,
+                count: working.statistics.counts.soul[soul.id] || 0,
               },
             ]}
           />
@@ -40,11 +41,7 @@ export default function EquipFooter({ children }: Props) {
     );
   }
 
-  if (!cubeSession) {
-    throw new Error("Cube footer requires an active cube session");
-  }
-
-  const { cube, working } = cubeSession;
+  const { cube, working } = navigator.controller;
   const count =
     cube.apply === "mainPot"
       ? working.statistics.counts.mainPot[cube.id as MainCubeId]

@@ -7,6 +7,7 @@ import {
   rollRestoreCube,
 } from "./cubeRoll.feature";
 import type { EquipmentPotentialSlot } from "@/domains/equipment/equipment.type";
+import { incrementStatisticsCount } from "@/domains/equipment/equipmentStatistics";
 import type { CubeDefinition } from "./cube.type";
 import type {
   CubeApplyDecision,
@@ -315,30 +316,15 @@ function incrementCubeRollCount<TEquipment extends CubeSessionEquipment>({
   rollCount: number;
   countFixPotential: boolean;
 }) {
-  const slot = cube.apply;
-  const counts = working.statistics.counts;
-  const slotCounts = counts[slot];
-  const nextSlotCounts = {
-    ...slotCounts,
-    [cube.id]: (slotCounts[cube.id] ?? 0) + rollCount,
-  };
-  const nextCounts = {
-    ...counts,
-    [slot]: nextSlotCounts,
-  };
+  let nextWorking = incrementStatisticsCount(working, cube.apply, cube.id, rollCount);
 
   if (countFixPotential) {
-    nextCounts.mainPot = {
-      ...nextCounts.mainPot,
-      fixPotential: (nextCounts.mainPot.fixPotential ?? 0) + 1,
-    };
+    nextWorking = incrementStatisticsCount(
+      nextWorking,
+      "mainPot",
+      "fixPotential",
+    );
   }
 
-  return {
-    ...working,
-    statistics: {
-      ...working.statistics,
-      counts: nextCounts,
-    },
-  } as TEquipment;
+  return nextWorking;
 }

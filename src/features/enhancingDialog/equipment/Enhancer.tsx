@@ -1,38 +1,30 @@
 import { useMemo } from "react";
 import WuGongJewelEnhancer from "./enhancer/WuGongJewelEnhancer";
-import { useEnhancingContext } from "@/contexts/useEnhancingContext";
-import { getCubeDefinition } from "@/domains/enhancement/cube/cube.registry";
-import type { CubeId } from "@/domains/enhancement/cube/cube.type";
+import { useEquipmentEnhancementNavigator } from "@/contexts/useEquipmentEnhancementSessionContext";
 import CombineCubeWorkflow from "./workflow/CombineCubeWorkflow";
 import DirectCubeWorkflow from "./workflow/DirectCubeWorkflow";
 import HexaCubeWorkflow from "./workflow/HexaCubeWorkflow";
 import RestoreCubeWorkflow from "./workflow/RestoreCubeWorkflow";
-import { useOptionalEquipmentCubeSession } from "@/contexts/useEquipmentCubeSessionContext";
 
 export default function Enhancer() {
-  const { selectedItemId } = useEnhancingContext();
-  const cubeSession = useOptionalEquipmentCubeSession();
+  const navigator = useEquipmentEnhancementNavigator();
 
   return useMemo(() => {
-    if (selectedItemId === "wuGongJewel") {
+    if (!navigator) return null;
+
+    if (navigator.kind === "soul") {
       return <WuGongJewelEnhancer />;
     }
 
-    const cube = getCubeDefinition(selectedItemId as CubeId);
-    if (cube.workflow === "direct") {
-      return cubeSession ? <DirectCubeWorkflow /> : null;
+    switch (navigator.workflow) {
+      case "direct":
+        return <DirectCubeWorkflow />;
+      case "restore":
+        return <RestoreCubeWorkflow />;
+      case "hexa":
+        return <HexaCubeWorkflow />;
+      case "combine":
+        return <CombineCubeWorkflow />;
     }
-
-    if (cube.workflow === "restore") {
-      return cubeSession ? <RestoreCubeWorkflow /> : null;
-    }
-
-    if (cube.workflow === "hexa") {
-      return cubeSession ? <HexaCubeWorkflow /> : null;
-    }
-
-    if (cube.workflow === "combine") {
-      return cubeSession ? <CombineCubeWorkflow /> : null;
-    }
-  }, [cubeSession, selectedItemId]);
+  }, [navigator]);
 }

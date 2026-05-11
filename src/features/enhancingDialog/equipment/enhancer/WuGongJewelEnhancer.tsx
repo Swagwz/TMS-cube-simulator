@@ -1,31 +1,15 @@
-import { produce } from "immer";
-
-import { useEquipEnhancer } from "@/hooks/useEquipEnhancer";
-import { SoulManager } from "@/domains/enhancement/soul/soulManager";
-
+import CloseBtn from "@/components/CloseBtn";
 import PotentialLineBadge from "@/components/potential/PotentialLineBadge";
 import { Button } from "@/components/ui/button";
-
+import { useRequiredSoulEnhancementController } from "@/contexts/useEquipmentEnhancementSessionContext";
+import { SoulManager } from "@/domains/enhancement/soul/soulManager";
 import DisplayContainer from "../../DisplayContainer";
-import CloseBtn from "@/components/CloseBtn";
 import EquipFooter from "../EquipFooter";
 
 export default function WuGongJewelEnhancer() {
-  const { localData, setLocalData, pools, handleClose } =
-    useEquipEnhancer("soul");
-  const { level, soul } = localData;
-
-  const handleRoll = () => {
-    const rolledPot = SoulManager.rollPot(pools);
-
-    setLocalData(
-      produce((draft) => {
-        draft!.soul = rolledPot;
-        draft!.statistics.counts.soul.wuGongJewel =
-          (draft?.statistics.counts.soul.wuGongJewel || 0) + 1;
-      }),
-    );
-  };
+  const { working, rollSoulAndApply, commitAndClose } =
+    useRequiredSoulEnhancementController();
+  const { level, soul } = working;
 
   return (
     <>
@@ -36,13 +20,15 @@ export default function WuGongJewelEnhancer() {
             text={SoulManager.getLine(soul, level)}
           />
         ) : (
-          <p className="text-center">尚未設定</p>
+          <p className="text-center">
+            {"\u76ee\u524d\u6c92\u6709\u6b66\u529f\u5bf6\u73e0"}
+          </p>
         )}
       </DisplayContainer>
       <EquipFooter>
-        <CloseBtn onClose={handleClose} />
-        <Button variant="primary" onClick={handleRoll}>
-          使用
+        <CloseBtn onClose={commitAndClose} />
+        <Button variant="primary" onClick={rollSoulAndApply}>
+          {"\u91cd\u65b0\u6d17\u934a"}
         </Button>
       </EquipFooter>
     </>
