@@ -16,6 +16,7 @@ export default function CombineCubeWorkflow() {
     working,
     pendingRoll,
     rollCombine,
+    rollCombineAndApply,
     applyCombine,
     commitAndClose,
   } = useRequiredCubeEnhancementController();
@@ -28,6 +29,11 @@ export default function CombineCubeWorkflow() {
   };
 
   const handleRoll = () => {
+    if (targetIndex >= 0) {
+      rollCombineAndApply(targetIndex);
+      return;
+    }
+
     rollCombine(targetIndex);
   };
 
@@ -75,7 +81,7 @@ export default function CombineCubeWorkflow() {
                 className={cn(
                   "text-muted-foreground hover:bg-accent-dark hover:text-accent-dark-foreground",
                   isTarget &&
-                    "bg-destructive text-white hover:bg-destructive/90 hover:text-white",
+                    "bg-destructive hover:bg-destructive/90 text-white hover:text-white",
                 )}
               >
                 <Crosshair />
@@ -88,14 +94,18 @@ export default function CombineCubeWorkflow() {
       <EquipFooter>
         <CloseBtn onClose={commitAndClose} />
         <div className="flex flex-row gap-2">
-          <Button variant="primary" onClick={handleRoll}>
-            {combineRoll ? "Reroll" : "Roll"}
-          </Button>
-          {combineRoll && (
-            <Button variant="primary" onClick={handleApply}>
+          {targetIndex < 0 && (
+            <Button
+              disabled={!combineRoll}
+              variant="primary"
+              onClick={handleApply}
+            >
               Apply
             </Button>
           )}
+          <Button variant="primary" onClick={handleRoll}>
+            {targetIndex >= 0 ? "指定洗鍊" : combineRoll ? "Reroll" : "Roll"}
+          </Button>
         </div>
       </EquipFooter>
     </>

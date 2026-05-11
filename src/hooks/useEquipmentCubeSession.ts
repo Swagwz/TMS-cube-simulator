@@ -176,6 +176,25 @@ export function useEquipmentCubeSession({
     [session],
   );
 
+  const rollCombineAndApply = useCallback(
+    (targetIndex: number) => {
+      if (!session) return;
+
+      const rolled = reduceCubeSession(session, {
+        type: "roll",
+        input: { flow: "combine", targetIndex },
+      });
+
+      const applied = reduceCubeSession(rolled.session, {
+        type: "apply",
+        decision: { flow: "combine", applyRolledLine: true },
+      });
+
+      setSession(applied.session);
+    },
+    [session],
+  );
+
   const applyCombine = useCallback(
     (applyRolledLine: boolean) => {
       if (!session) return;
@@ -216,6 +235,7 @@ export function useEquipmentCubeSession({
       rollHexa,
       applyHexa,
       rollCombine,
+      rollCombineAndApply,
       applyCombine,
       discardPendingRoll,
     };
@@ -227,6 +247,7 @@ export function useEquipmentCubeSession({
     cube,
     discardPendingRoll,
     rollCombine,
+    rollCombineAndApply,
     rollHexa,
     rollDirectAndApply,
     rollRestore,

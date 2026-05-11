@@ -25,6 +25,7 @@ export type EquipmentCubeSessionController = {
   rollHexa: () => void;
   applyHexa: (selectedIndices: [number, number, number]) => void;
   rollCombine: (targetIndex: number) => void;
+  rollCombineAndApply: (targetIndex: number) => void;
   applyCombine: (applyRolledLine: boolean) => void;
   discardPendingRoll: () => void;
 };

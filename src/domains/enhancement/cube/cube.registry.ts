@@ -5,6 +5,7 @@ import {
 } from "./cube.config";
 import type {
   CubeApplicationType,
+  CubeCompanionItemId,
   CubeDefinition,
   CubeId,
 } from "./cube.type";
@@ -41,6 +42,16 @@ export function getApplicableCubeDefinitions(
     (cube) =>
       cube.apply === applyType && canApplyCubeAtTier(cube, currentTier),
   );
+}
+
+export function isCubeCompanionItemId(id: string): id is CubeCompanionItemId {
+  return CUBE_COMPANION_ITEM_MAP.has(id as CubeCompanionItemId);
+}
+
+export function getCubeCompanionItem(id: CubeCompanionItemId) {
+  const item = CUBE_COMPANION_ITEM_MAP.get(id);
+  if (!item) throw new Error("Invalid cube companion item id");
+  return item;
 }
 
 export function getCubeCompanionItems(cubeId: string) {
