@@ -1,22 +1,22 @@
 import { PotManager } from "@/domains/potential/potManager";
 import { getEquipmentFeatureLabel } from "./equipmentFeature.config";
-import type { PotentialFeature } from "./equipment.type";
+import type { EquipmentPotentialSlot } from "./equipment.type";
 
 export type EquipmentPotentialGroups = Record<
-  PotentialFeature,
-  { potIds: string[] }
+  EquipmentPotentialSlot,
+  { potentialIds: string[] }
 >;
 
 export type EquipmentPotentialValidationResult = {
   valid: boolean;
-  invalidFeatures: PotentialFeature[];
+  invalidFeatures: EquipmentPotentialSlot[];
 };
 
 export function validateEquipmentPotentialGroups(
   equipment: EquipmentPotentialGroups,
 ): EquipmentPotentialValidationResult {
   const invalidFeatures = (["mainPot", "additionalPot"] as const).filter(
-    (feature) => !PotManager.validateLineRules(equipment[feature].potIds),
+    (feature) => !PotManager.validateLineRules(equipment[feature].potentialIds),
   );
 
   return {

@@ -15,10 +15,14 @@ describe("validateEquipmentPotentialGroups", () => {
   it("rejects a main potential group that exceeds a shared limit", () => {
     const result = validateEquipmentPotentialGroups({
       mainPot: {
-        potIds: [LIMITED_SKILL_A, LIMITED_SKILL_A, UNLIMITED_POTENTIAL],
+        potentialIds: [LIMITED_SKILL_A, LIMITED_SKILL_A, UNLIMITED_POTENTIAL],
       },
       additionalPot: {
-        potIds: [UNLIMITED_POTENTIAL, UNLIMITED_POTENTIAL, UNLIMITED_POTENTIAL],
+        potentialIds: [
+          UNLIMITED_POTENTIAL,
+          UNLIMITED_POTENTIAL,
+          UNLIMITED_POTENTIAL,
+        ],
       },
     });
 
@@ -32,10 +36,14 @@ describe("validateEquipmentPotentialGroups", () => {
   it("rejects an additional potential group that exceeds a shared limit", () => {
     const result = validateEquipmentPotentialGroups({
       mainPot: {
-        potIds: [UNLIMITED_POTENTIAL, UNLIMITED_POTENTIAL, UNLIMITED_POTENTIAL],
+        potentialIds: [
+          UNLIMITED_POTENTIAL,
+          UNLIMITED_POTENTIAL,
+          UNLIMITED_POTENTIAL,
+        ],
       },
       additionalPot: {
-        potIds: [LIMITED_SKILL_A, LIMITED_SKILL_B, UNLIMITED_POTENTIAL],
+        potentialIds: [LIMITED_SKILL_A, LIMITED_SKILL_B, UNLIMITED_POTENTIAL],
       },
     });
 
@@ -49,10 +57,14 @@ describe("validateEquipmentPotentialGroups", () => {
   it("accepts valid main and additional potential groups", () => {
     const result = validateEquipmentPotentialGroups({
       mainPot: {
-        potIds: [LIMITED_SKILL_A, UNLIMITED_POTENTIAL, UNLIMITED_POTENTIAL],
+        potentialIds: [LIMITED_SKILL_A, UNLIMITED_POTENTIAL, UNLIMITED_POTENTIAL],
       },
       additionalPot: {
-        potIds: [UNLIMITED_POTENTIAL, UNLIMITED_POTENTIAL, UNLIMITED_POTENTIAL],
+        potentialIds: [
+          UNLIMITED_POTENTIAL,
+          UNLIMITED_POTENTIAL,
+          UNLIMITED_POTENTIAL,
+        ],
       },
     });
 
