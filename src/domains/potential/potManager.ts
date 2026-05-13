@@ -57,6 +57,20 @@ export const PotManager = {
 
     return true;
   },
+  validateLineReplacement(ids: string[], index: number, nextId: string) {
+    const { limit } = this.getPotentialMetadata(nextId);
+
+    if (!limit) return true;
+
+    const existingCount = ids.reduce((count, id, currentIndex) => {
+      if (currentIndex === index) return count;
+
+      const meta = this.getPotentialMetadata(id);
+      return meta.limit?.key === limit.key ? count + 1 : count;
+    }, 0);
+
+    return existingCount + 1 <= limit.max;
+  },
   /**  解析潛能：回傳數值、顯示文字與相關資訊 */
   resolvePotential(
     id: string,

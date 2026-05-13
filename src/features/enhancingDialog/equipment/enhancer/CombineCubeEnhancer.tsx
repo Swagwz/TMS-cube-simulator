@@ -44,7 +44,11 @@ export default function CombineCubeEnhancer() {
     while (!isValid) {
       const pots = CubeManager.rollPots("combineCube", mainPot.tier, pools);
       nextPotIds[index] = pots[index];
-      isValid = PotManager.validateLineRules(nextPotIds);
+      isValid = PotManager.validateLineReplacement(
+        mainPot.potIds,
+        index,
+        pots[index],
+      );
     }
     return nextPotIds;
   };
