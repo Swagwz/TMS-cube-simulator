@@ -5,6 +5,7 @@ import RankSelect from "./RankSelect";
 import FormField from "@/components/FormField";
 import EquipLevelInput from "./EquipLevelInput";
 import { useCreateEquipmentContext } from "@/contexts/useCreateEquipmentContext";
+import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
 
 export default function SetupEquipBasicInfo() {
   const { equipmentData, updateType } = useCreateEquipmentContext();
@@ -23,11 +24,11 @@ export default function SetupEquipBasicInfo() {
           <EquipLevelInput />
         </FormField>
 
-        <FormField label="一般潛能等級">
+        <FormField label={`${getEquipmentFeatureLabel("mainPot")}等級`}>
           <RankSelect feature="mainPot" />
         </FormField>
 
-        <FormField label="附加潛能等級">
+        <FormField label={`${getEquipmentFeatureLabel("additionalPot")}等級`}>
           <RankSelect feature="additionalPot" />
         </FormField>
       </FieldGroup>

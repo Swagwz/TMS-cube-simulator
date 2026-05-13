@@ -17,6 +17,10 @@ import SetupEquipBasicInfo from "./basicInfoSetup/BasicInfoSetup";
 import PotSelectGroup from "./potSelectGroup/PotSelectGroup";
 import SoulPotSelect from "./SoulPotSelect";
 import { EquipManager } from "@/domains/equipment/equipManager";
+import {
+  formatEquipmentPotentialValidationMessage,
+  validateEquipmentPotentialGroups,
+} from "@/domains/equipment/equipmentPotentialValidation";
 
 const BASE_STAGES = [
   { view: <SetupEquipBasicInfo />, id: "basic" },
@@ -29,6 +33,7 @@ const BASE_STAGES = [
 
 export default function CreateEquipmentModal() {
   const [open, setOpen] = useState(false);
+  const [validationMessage, setValidationMessage] = useState("");
   const { addEquipment, newInstance } = useEquipmentStore();
   const { equipmentData, resetData, randomPotIds } =
     useCreateEquipmentContext();
@@ -49,17 +54,30 @@ export default function CreateEquipmentModal() {
     if (currStage.id === "basic") {
       randomPotIds("mainPot");
       randomPotIds("additionalPot");
+      setValidationMessage("");
     }
   };
 
   const handleFinish = () => {
+    const validation = validateEquipmentPotentialGroups(equipmentData);
+    if (!validation.valid) {
+      setValidationMessage(
+        formatEquipmentPotentialValidationMessage(validation),
+      );
+      return;
+    }
+
     const inst = newInstance(equipmentData);
     addEquipment(inst);
+    setValidationMessage("");
     setOpen(false);
   };
 
   const toggleOpen = (isOpen: boolean) => {
-    if (isOpen) resetData();
+    if (isOpen) {
+      resetData();
+      setValidationMessage("");
+    }
     setOpen(isOpen);
   };
 
@@ -76,6 +94,15 @@ export default function CreateEquipmentModal() {
         <MultiStepDialogHeader>
           <DialogTitle className="text-xl font-bold">新增裝備</DialogTitle>
         </MultiStepDialogHeader>
+
+        {validationMessage && (
+          <p
+            role="alert"
+            className="border-destructive/30 bg-destructive/10 text-destructive rounded-md border px-3 py-2 text-sm"
+          >
+            {validationMessage}
+          </p>
+        )}
 
         <MultiStepDialogSteps>
           {stages.map(({ view, id }) => (

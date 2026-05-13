@@ -48,7 +48,11 @@ export default function CombineAdditionalCubeEnhancer() {
         pools,
       );
       nextPotIds[index] = pots[index];
-      isValid = PotManager.validateLineRules(nextPotIds);
+      isValid = PotManager.validateLineReplacement(
+        additionalPot.potIds,
+        index,
+        pots[index],
+      );
     }
     return nextPotIds;
   };
