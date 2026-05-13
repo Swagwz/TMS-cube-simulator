@@ -15,10 +15,7 @@ import type {
   PotentialFeature,
 } from "@/domains/equipment/equipment.type";
 import EQUIPMENT_LIST from "@/domains/equipment/equipment.config";
-
-/* -------------------------------------------------------------------------------------------------
- * Context type
- * ----------------------------------------------------------------------------------------------- */
+import { rollValidPotIds } from "@/domains/equipment/equipmentPotentialRoll";
 
 type ContextState = { equipmentData: EquipData };
 
@@ -35,15 +32,7 @@ type ContextActions = {
 
 type ContextType = ContextState & ContextActions;
 
-/* -------------------------------------------------------------------------------------------------
- * Create context
- * ----------------------------------------------------------------------------------------------- */
-
 const CreateEquipmentContext = createContext<ContextType | null>(null);
-
-/* -------------------------------------------------------------------------------------------------
- * Provider component
- * ----------------------------------------------------------------------------------------------- */
 
 type CreateEquipmentProviderProps = {
   children: ReactNode;
@@ -58,11 +47,10 @@ export function CreateEquipmentProvider({
 
   const actions = useMemo(
     () => ({
-      /** 初始化EquipmentData */
       resetData: () => {
         setEquipmentData(generateDefaultEquipData());
       },
-      /** 隨機產生可能的potential lines */
+
       randomPotIds: (feature: PotentialFeature) => {
         setEquipmentData(
           produce((draft) => {
@@ -73,7 +61,6 @@ export function CreateEquipmentProvider({
             } = draft;
 
             const prevTier = PotManager.getPrev(tier);
-
             const params = { subcategory, level, feature };
 
             const prime = EquipManager.getPotentialOptions({
@@ -85,7 +72,7 @@ export function CreateEquipmentProvider({
               rank: prevTier,
             });
 
-            draft[feature].potIds = rollPotIds({ prime, nonPrime });
+            draft[feature].potIds = rollValidPotIds({ prime, nonPrime });
           }),
         );
       },
@@ -138,10 +125,6 @@ export function CreateEquipmentProvider({
   );
 }
 
-/* -------------------------------------------------------------------------------------------------
- * custom hook
- * ----------------------------------------------------------------------------------------------- */
-
 export function useCreateEquipmentContext() {
   const context = useContext(CreateEquipmentContext);
   if (!context) {
@@ -150,28 +133,6 @@ export function useCreateEquipmentContext() {
     );
   }
   return context;
-}
-
-/* -------------------------------------------------------------------------------------------------
- * helper
- * ----------------------------------------------------------------------------------------------- */
-
-type PotentialPool = {
-  prime: string[];
-  nonPrime: string[];
-};
-
-function rollPotIds({ prime, nonPrime }: PotentialPool) {
-  const all = [...prime, ...nonPrime];
-
-  if (all.length === 0) return [];
-
-  return Array.from({ length: 3 }, (_, i) => {
-    // 第一排保prime
-    const list = i === 0 && prime.length > 0 ? prime : all;
-    const randomNum = Math.floor(Math.random() * list.length);
-    return list[randomNum];
-  });
 }
 
 function generateDefaultEquipData(): EquipData {
@@ -193,7 +154,7 @@ function generateDefaultEquipData(): EquipData {
 
     return {
       tier: defaultTier,
-      potIds: rollPotIds({ prime, nonPrime }),
+      potIds: rollValidPotIds({ prime, nonPrime }),
     };
   };
 

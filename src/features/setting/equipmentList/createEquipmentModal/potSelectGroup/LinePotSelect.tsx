@@ -55,11 +55,31 @@ export default function LinePotSelect({ index, feature }: Props) {
           {groupPotList.map(({ rank, name, potIds }) => (
             <SelectGroup key={rank}>
               <SelectLabel variant={rank}>{name}</SelectLabel>
-              {potIds.map((id) => (
-                <SelectItem value={id} key={id}>
-                  {PotManager.resolvePotential(id, level, subcategory).display}
-                </SelectItem>
-              ))}
+              {potIds.map((id) => {
+                const resolved = PotManager.resolvePotential(
+                  id,
+                  level,
+                  subcategory,
+                );
+                const { limit } = resolved.meta;
+
+                return (
+                  <SelectItem
+                    value={id}
+                    key={id}
+                    textValue={resolved.display}
+                  >
+                    <span className="flex min-w-0 items-center gap-2">
+                      <span className="truncate">{resolved.display}</span>
+                      {limit && (
+                        <span className="text-muted-foreground shrink-0 text-xs">
+                          限制：{limit.key} 最多 {limit.max} 條
+                        </span>
+                      )}
+                    </span>
+                  </SelectItem>
+                );
+              })}
             </SelectGroup>
           ))}
         </SelectContent>
