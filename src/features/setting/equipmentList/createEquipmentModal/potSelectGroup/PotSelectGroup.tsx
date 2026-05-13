@@ -5,17 +5,13 @@ import FormField from "@/components/FormField";
 
 import LinePotSelect from "./LinePotSelect";
 import { useCreateEquipmentContext } from "@/contexts/useCreateEquipmentContext";
+import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
 import type { PotentialFeature } from "@/domains/equipment/equipment.type";
 
 const CN_NUMBERS = ["一", "二", "三"];
 
 type PotSelectGroupProps = {
   feature: PotentialFeature;
-};
-
-const TitleConfig = {
-  mainPot: "一般潛能",
-  additionalPot: "附加潛能",
 };
 
 export default function PotSelectGroup({ feature }: PotSelectGroupProps) {
@@ -25,7 +21,7 @@ export default function PotSelectGroup({ feature }: PotSelectGroupProps) {
   return (
     <>
       <div className="mb-2 flex flex-row items-center gap-2 font-bold">
-        <p>{TitleConfig[feature]}</p>
+        <p>{getEquipmentFeatureLabel(feature)}</p>
         <Button size="icon-sm" onClick={handleRandomPot} variant="ghost">
           <RefreshCw />
         </Button>

@@ -6,6 +6,7 @@ import type { EquipmentFeature } from "@/domains/equipment/equipment.type";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PotentialTab from "./tabs/PotentialTab";
 import { EquipManager } from "@/domains/equipment/equipManager";
+import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
 
 const TABS_CONFIG: {
   value: EquipmentFeature;
@@ -14,17 +15,17 @@ const TABS_CONFIG: {
 }[] = [
   {
     value: "mainPot",
-    label: "一般潛能",
+    label: getEquipmentFeatureLabel("mainPot"),
     content: <PotentialTab feature="mainPot" />,
   },
   {
     value: "additionalPot",
-    label: "附加潛能",
+    label: getEquipmentFeatureLabel("additionalPot"),
     content: <PotentialTab feature="additionalPot" />,
   },
   {
     value: "soul",
-    label: "靈魂寶珠",
+    label: getEquipmentFeatureLabel("soul"),
     content: <PotentialTab feature="soul" />,
   },
 ];

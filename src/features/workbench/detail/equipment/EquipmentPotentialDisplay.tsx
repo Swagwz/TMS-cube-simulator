@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import PotentialLineMarker from "@/components/potential/PotentialLineMarker";
 import RankBadge from "@/components/potential/RankBadge";
 import DisplayField from "@/components/ui/DisplayField";
+import { getEquipmentFeatureLabel } from "@/domains/equipment/equipmentFeature.config";
 import type { PotentialFeature } from "@/domains/equipment/equipment.type";
 import { PotManager } from "@/domains/potential/potManager";
 import useActiveItem from "@/hooks/useActiveItem";
@@ -17,7 +18,7 @@ export default function EquipmentPotentialDisplay({ feature }: Props) {
     return null;
   }
 
-  const title = feature === "mainPot" ? "一般潛能" : "附加潛能";
+  const title = getEquipmentFeatureLabel(feature);
 
   const {
     [feature]: { tier, potIds },
