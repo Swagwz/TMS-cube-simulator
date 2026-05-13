@@ -68,15 +68,13 @@ export default function LinePotSelect({ index, feature }: Props) {
                     value={id}
                     key={id}
                     textValue={resolved.display}
+                    description={
+                      limit
+                        ? `限制：${limit.key} 最多 ${limit.max} 條`
+                        : undefined
+                    }
                   >
-                    <span className="flex min-w-0 items-center gap-2">
-                      <span className="truncate">{resolved.display}</span>
-                      {limit && (
-                        <span className="text-muted-foreground shrink-0 text-xs">
-                          限制：{limit.key} 最多 {limit.max} 條
-                        </span>
-                      )}
-                    </span>
+                    {resolved.display}
                   </SelectItem>
                 );
               })}
